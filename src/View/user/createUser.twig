@@ -1,0 +1,98 @@
+{# **************************** #}
+{# ***** CREATE USER VIEW ***** #}
+{# **************************** #}
+
+
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Création d'un nouveau compte utilisateur{% endblock %}
+
+{% block description %}{% endblock %}
+
+
+{% block main %}
+
+<main>
+
+  <form action={{ url('user!create') }} method="post" enctype="multipart/form-data">
+
+    <fieldset>
+      <legend><i class="fa fa-id-card"></i> Identité</legend>
+      <ul>
+
+        <!-- First name field -->
+        <li>
+          <label for="first_name">Prénom</label>
+          <input id="first_name" name="first_name" type="text" placeholder="Prénom usuel" maxlength="20" required>
+        </li>
+
+        <!-- Last name field -->
+        <li>
+          <label for="last_name">Nom</label>
+          <input id="last_name" name="last_name" type="text" placeholder="Nom de famille" maxlength="20" required>
+        </li>
+
+        <!-- User avatar restriction -->
+        <input name="MAX_FILE_SIZE" type="hidden" value="5000000" />
+
+        <!-- Article avatar field -->
+        <li>
+          <label for="file">Photo</label>
+          <input id="file" name="file" type="file" accept=".jpg, .jpeg, .png, .svg, .gif">
+        </li>
+
+      </ul>
+    </fieldset>
+
+    <fieldset>
+      <legend><i class="fa fa-compass"></i> Localisation</legend>
+      <ul>
+
+        <!-- Zipcode field -->
+        <li>
+          <label for="zipcode">Code Postal</label>
+          <input id="zipcode" name="zipcode" type="text" inputmode="numeric" placeholder="Lieu de résidence" minlength="5" maxlength="5" required>
+        </li>
+
+        <!-- Country field -->
+        <li>
+          <label for="country">Pays</label>
+          <input id="country" name="country" type="text" placeholder="Pays de résidence" maxlength="20" required>
+        </li>
+
+      </ul>
+    </fieldset>
+
+    <fieldset>
+      <legend><i class="fa fa-lock"></i> Authentification</legend>
+      <ul>
+
+        <!-- Champ Email -->
+        <li>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Addresse email" maxlength="50" minlength="5" required>
+        </li>
+
+        <!-- Champ Mot de Passe -->
+        <li>
+          <label for="pass">Mot de passe</label>
+          <input id="pass" name="pass" type="password" placeholder="8 caractères minimum" maxlength="50" minlength="8" required>
+        </label>
+      </li>
+
+    </ul>
+  </fieldset>
+
+  <!-- User date field -->
+  <input name="date" type="hidden" value="{{ date()|date('Y-m-d H:i:s') }}">
+
+  <!-- Boutons de contrôle -->
+  <div class="btn-group">
+    <a class="btn delete-btn outset-slight inset-blur" href="./">Annulation</a>
+    <input class="btn cancel-btn outset-slight inset-blur" type="reset" value="Correction">
+    <input class="btn valid-btn outset-slight inset-blur" type="submit" value="Création">
+  </div>
+
+</form>
+</main>
+{% endblock %}
