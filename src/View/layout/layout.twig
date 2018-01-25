@@ -1,0 +1,144 @@
+{# ****************** #}
+{# ***** LAYOUT ***** #}
+{# ****************** #}
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<!-- ***** Head ***** -->
+<head>
+
+  <!-- Main Meta Data -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main Title -->
+  <title>{% block title %}{% endblock %} - {% block author %}Philippe Beck{% endblock %}</title>
+
+  <!-- Favorite URL -->
+  <link rel="canonical" href="{% block canonical %}http://philippebeck.net{% endblock %}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Secondary Meta Data -->
+  <meta name="description" content="{{ block('description') }}">
+  <meta name="author" content="{{ block('author') }}">
+  <meta name="copyright" content="MIT">
+  <meta name="google-site-verification" content="7S4IjLLopc3fohzOLoH35hD9vx7tr7IT07PmlQ2EX5M">
+
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="{{ block('author') }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ block('canonical') }}">
+  <meta property="og:image" content="{% block image %}http://philippebeck.net/img/user/philippe.jpg{% endblock %}">
+  <meta property="og:description" content="{{ block('description') }}">
+
+  <!-- FaceBook App Id -->
+  <meta property="fb:app_id" content="1316979581722641">
+
+  <!-- Twitter Card Data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="{{ block('canonical') }}">
+  <meta name="twitter:title" content="{{ block('author') }}">
+  <meta name="twitter:description" content="{{ block('description') }}">
+  <meta name="twitter:creator" content="@philippepjbeck">
+  <meta name="twitter:image" content="{{ block('image') }}">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+
+  <!-- Sam StyleSheet -->
+  <link rel="stylesheet" href="../node_modules/sam.scss/dist/sam.min.css">
+  <!-- <link rel="stylesheet" href="../public/css/sam.css"> -->
+
+  <!-- Project StyleSheet -->
+  <link rel="stylesheet" href="../public/css/style.css">
+
+</head>
+<body>
+
+
+  <!-- ***** Header ***** -->
+  <header>
+
+    <!-- Main Navigation -->
+    {{ include('layout/navbar.twig') }}
+
+    <!-- Alert Message -->
+    {% if (hasAlert()) %}
+
+    <p id="alert" class="{{ readType() }} solid p-sm center">{{ readMessage() }}</p>
+
+    {% endif %}
+
+
+    {# Condition to change the main title color #}
+    {% if "now"|date("H:i") > date("06:00")|date("H:i") and "now"|date("H:i") < date("18:00")|date("H:i") %}
+
+    <!-- Day Main Title -->
+    <h1 class="main-title primary">{{ block('title') }}</h1>
+
+    {% else %}
+
+    <!-- Night Main Title -->
+    <h1 class="main-title secondary">{{ block('title') }}</h1>
+
+    {% endif %}
+
+    <ul id="jim-help" class="double blur-br-sm anime-grow-sm none">
+      <li>A => Atlas</li>
+      <li>B => Blog</li>
+      <li>C => CodePen</li>
+      <li>D => Donation</li>
+      <li>E => Enter Login</li>
+      <li>F => Free Code Camp</li>
+      <li>G => GitHub</li>
+      <li>H => Home</li>
+      <li>I => Instructions</li>
+      <li>J => Jim</li>
+      <li>K => Stack Overflow</li>
+      <li>L => LinkedIn</li>
+      <li>M => Mail</li>
+      <li>N => Npm</li>
+      <li>O => OpenClassrooms</li>
+      <li>P => Pam</li>
+      <li>Q => Quit Logout</li>
+      <li>R => Portfolio</li>
+      <li>S => Sam</li>
+      <li>T => Twitter</li>
+      <li>U => Univers</li>
+      <li>V => Pjs</li>
+      <li>W => 3W Academy</li>
+      <li>X => License</li>
+      <li>Y => YouTube</li>
+      <li>Z => Message</li>
+    </ul>
+
+  </header>
+
+
+  <!-- ***** Main ***** -->
+  {% block main %}{% endblock %}
+
+
+  <!-- ***** Footer ***** -->
+  {{ include('layout/footer.twig') }}
+
+  <!-- Loads variables for Jim -->
+  <script src="js/datas.js"></script>
+
+  <!-- Loads Jim scripts -->
+  <script src="../node_modules/jim-js/jim.js"></script>
+
+  {# Adds specifics scripts to pages here #}
+  {% block script %}{% endblock %}
+
+  <!-- Loads Project Scripts -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>

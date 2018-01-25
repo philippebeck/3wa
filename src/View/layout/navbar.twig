@@ -1,0 +1,146 @@
+{# *********************** #}
+{# ***** NAVBAR VIEW ***** #}
+{# *********************** #}
+
+
+<!-- *************** -->
+<!-- MAIN NAVIGATION -->
+
+{# Condition to change the navbar color #}
+{% if "now"|date("H:i") > date("06:00")|date("H:i") and "now"|date("H:i") < date("18:00")|date("H:i") %}
+
+<!-- Day navbar -->
+<nav class="navbar fixed-top secondary">
+
+{% else %}
+
+<!-- Night navbar -->
+<nav class="navbar fixed-top primary">
+
+{% endif %}
+
+  <!-- Home access -->
+  <ul class="brand-nav">
+    <li>
+      <a class="child-slideR-tn" href="./" title="Accueil">
+        {{ include('svg/phi.svg.twig') }}
+      </a>
+    </li>
+  </ul>
+
+  <!-- Main access -->
+  <ul class="main-nav">
+
+    <!-- Portfolio access -->
+    <li>
+      <a href="{{ url('portfolio') }}" title="Projets & Formations">
+        <i class="fa fa-suitcase fa-fw" aria-hidden="true"></i>
+        <span>Portfolio</span>
+      </a>
+    </li>
+
+    <!-- Pjs access -->
+    <li>
+      <a href="{{ url('pjs') }}" title="Pam, Jim & Sam">
+        <i class="fa fa-sitemap fa-fw" aria-hidden="true"></i>
+        <span>Pjs</span>
+      </a>
+    </li>
+
+    <!-- Blog access -->
+    <li>
+      <a href="{{ url('article') }}" title="Articles & Nouvelles">
+        <i class="fa fa-rss fa-fw" aria-hidden="true"></i>
+        <span>Blog</span>
+      </a>
+    </li>
+
+    <!-- Photos access -->
+    <li>
+      <a href="{{ url('photo') }}" title="Photos d'objets stellaires">
+        <i class="fa fa-picture-o fa-fw" aria-hidden="true"></i>
+        <span>Univers</span>
+      </a>
+    </li>
+
+    <!-- Atlas access -->
+    <li>
+      <a href="{{ url('atlas') }}" title="Atlas de cartes célestes">
+        <i class="fa fa-map-o fa-fw" aria-hidden="true"></i>
+        <span>Atlas</span>
+      </a>
+    </li>
+
+  </ul>
+
+  <form class="anime-slideB-tn" role="search">
+    <input id="access" type="text" placeholder="Jim" title="Taper 'C' pour voir les commandes" autofocus>
+    <button id="help-btn" class="btn info-btn solid-round-sm help" type="button" title="Voir les commandes au clavier">
+      <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+    </button>
+  </form>
+
+  <!-- User access -->
+  <ul class="user-nav">
+
+    <!--  -->
+    {% if (isLogged()) %}
+
+    <li>
+      <p>Bonjour {{ userName() }} !</p>
+    </li>
+
+    <li>
+      <a href="{{ url('user!update', {'id': userId()}) }}" title="Modifier mon profil">
+        <img class="solid-round-sm hover-full-sm-double-alt visible" src="img/user/{{ userImage() }}" alt="Photo de profil de l'utilisateur">
+      </a>
+    </li>
+
+    <!-- Logout access -->
+    <li>
+      <a href="{{ url('user!logout') }}" title="Déconnexion">
+        <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>
+      </a>
+    </li>
+
+    {% if (userEmail() == adminEmail() or userEmail() == ownerEmail()) %}
+
+    <!-- Admin access -->
+    <li>
+      <a href="{{ url('admin') }}" title="Administration">
+        <i class="fa fa-unlock-alt fa-fw" aria-hidden="true"></i>
+      </a>
+    </li>
+
+    {% endif %}
+
+    {% if (userEmail() == adminEmail() or userEmail() == ownerEmail()) %}
+
+    <!-- Owner access -->
+    <li>
+      <a href="{{ url('owner') }}" title="jury 3W Academy">
+        <i class="fa fa-university fa-fw" aria-hidden="true"></i>
+      </a>
+    </li>
+
+    {% endif %}
+
+    {% else %}
+
+    <!-- Login access -->
+    <li>
+      <a href="{{ url('user!login') }}" title="Connexion">
+        <i class="fa fa-sign-in fa-fw" aria-hidden="true"></i>
+      </a>
+    </li>
+
+    <!-- Create user access -->
+    <li>
+      <a href="{{ url('user!create') }}" title="Nouvel utilisateur">
+        <i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>
+      </a>
+    </li>
+
+    {% endif %}
+  </ul>
+</nav>
