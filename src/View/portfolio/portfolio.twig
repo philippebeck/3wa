@@ -1,0 +1,246 @@
+{# ************************** #}
+{# ***** PORTFOLIO VIEW ***** #}
+{# ************************** #}
+
+
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block description %}{% endblock %}
+
+
+{% block main %}
+
+<main id="portfolio" class="center">
+
+  <!-- *************** -->
+  <!-- Project Section -->
+  <section id="project">
+    <h2 class="primary-sea solid-slight">
+      <i class="fa fa-github" aria-hidden="true"></i> Projets
+    </h2>
+
+    <p class="intro primary-sea double-slight-lg inset-spread-sm anime-shrinkS-sm">Mes <strong>projets</strong> touchent diverses <em>technologies</em> :<br><strong>HTML5, Twig, Pug, CSS3, Sass, Stylus, JavaScript, jQuery, Nodejs, PHP7, Symfony3, MySQL</strong></p>
+
+    <ul class="grid-2sm-3md-4lg gap-lg items-end content-center">
+
+      <!-- Loop on all projects -->
+      {% for project in allProjects %}
+
+      <li>
+
+        <!-- Project link to GitHub -->
+        <a href="{{ project.link }}" rel="noopener" rel="noreferrer" target="_blank" title="Voir le projet sur GitHub">
+
+          <figure class="btn primary-outline solid-rounder-lg inset-spread-lg anime-grow-sm">
+
+            <!-- Project screenshot -->
+            <img class="visible anime-full-sm-inv-double" src="img/portfolio/{{ project.image }}" alt="Screenshot du projet {{ project.name }}">
+
+            <figcaption class="visible anime-full-md">
+
+              <!-- Project name & starting year -->
+              <h3>{{ project.name }}</h3>
+
+              <!-- Project description -->
+              <p>{{ project.description }} <span class="block">{{ project.year }}</span></p>
+
+            </figcaption>
+          </figure>
+        </a>
+
+      </li>
+
+      {% endfor %}
+
+    </ul>
+
+  </section>
+
+
+  <!-- *********** -->
+  <!-- Pen Section -->
+  <section id="pen">
+    <h2 class="primary-glass solid-slight"><i class="fa fa-codepen" aria-hidden="true"></i> Pens</h2>
+
+    <p class="intro primary-glass double-slight-lg inset-spread-sm">Mes <strong>pens</strong> font partie du cursus de <em>Free Code Camp</em> pour la certification de <strong>développement front-end</strong>...</p>
+
+    <!-- Pens list -->
+    <ul>
+
+      <!-- Loop on all pens -->
+      {% for pen in allPens %}
+
+      <li>
+
+        <!-- The pen name -->
+        <h3>{{ pen.name }}</h3>
+
+        <!-- The pen objective link -->
+        <a class="btn freecodecamp-btn solid-round-sm blur mr-sm" href="{{ pen.description}}" rel="noopener" rel="noreferrer" target="_blank" title="Voir les objectifs">
+          <i class="fa fa-free-code-camp fa-lg fa-fw" aria-hidden="true"></i>
+        </a>
+
+        <!-- The pen -->
+        <a class="btn default-btn solid-round-sm blur" href="{{ pen.link }}" rel="noopener" rel="noreferrer" target="_blank" title="Voir le pen">
+          <i class="fa fa-codepen fa-lg fa-fw" aria-hidden="true"></i>
+        </a>
+
+      </li>
+
+      {% endfor %}
+
+    </ul>
+  </section>
+
+
+  <!-- ***************** -->
+  <!-- Formation Section -->
+  <section id="formation">
+    <h2 class="primary-sea solid-slight"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Formation</h2>
+
+    <p class="intro primary-sea double-slight-lg inset-spread-sm"><strong>La formation</strong> de la <em>3W Academy</em> m'a permis de devenir <strong>Fullstack</strong>, consolidant mes bases <em>back-end</em>, et perfectionnant mon savoir-faire <em>front-end</em>.</p>
+
+    <ul class="gmt-sm">
+      <li>
+        <!-- Access to the school -->
+        <a href="https://3wa.fr" rel="noopener" rel="noreferrer" target="_blank" title="Voir l'école">
+
+          <figure class="btn secondary-trans solid-rounder-lg inset-spread max-w100">
+
+            {{ include('svg/3wa.svg.twig') }}
+
+            <!-- Formation name -->
+            <figcaption>
+              <h3>Développeur intégrateur en réalisation d'applications Web</h3>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li>
+        <!-- Access to the formation resume -->
+        <a href="https://3wa.fr/la-formation-developpeur-php" rel="noopener" rel="noreferrer" target="_blank" title="Voir le résumé de la formation">
+          <figure class="btn secondary-trans solid-rounder-lg inset-spread">
+
+            <!-- Technologies logos -->
+            {{ include('svg/html.svg.twig') }}
+            {{ include('svg/css.svg.twig') }}
+            {{ include('svg/js.svg.twig') }}
+            {{ include('svg/php.svg.twig') }}
+            {{ include('svg/sql.svg.twig') }}
+
+            <!-- Technologies informations -->
+            <figcaption><em>Formation intensive sur 5 technologies</em></figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li>
+        <!-- Access to the government certification -->
+        <a href="http://www.rncp.cncp.gouv.fr/grand-public/visualisationFiche?format=fr&fiche=25468" rel="noopener" rel="noreferrer" target="_blank" title="Voir la fiche RNCP">
+          <figure class="btn secondary-trans solid-rounder-lg inset-spread">
+
+            <!-- Cncp Logos -->
+            {{ include('svg/cncp.svg.twig') }}
+
+            <figcaption><strong>Certification N° 25468</strong></figcaption>
+          </figure>
+        </a>
+      </li>
+    </ul>
+
+  </section>
+
+
+  <!-- ************* -->
+  <!-- Route Section -->
+  <section id="route">
+    <h2 class="primary-glass solid-slight"><i class="fa fa-road" aria-hidden="true"></i> Parcours</h2>
+
+    <p class="intro primary-glass double-slight-lg inset-spread-sm">Chaque <strong>certificat de parcours</strong>, délivré par <em>OpenClassrooms</em>, est disponible en cliquant sur son <b>bouton vert Certification</b>.</p>
+
+    <!-- Route table -->
+    <table class="ridge inset-blur">
+
+      <!-- Table header -->
+      <thead>
+        <tr>
+          <th>Parcours</th>
+          <th>Certification</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <!-- Loop on all routes -->
+        {% for route in allRoutes %}
+        <tr>
+
+          <!-- Route name -->
+          <td>{{ route.name }}</td>
+
+          <!-- Route certificate & link -->
+          <td>
+            <a class="btn valid-outline solid-rounder inset-blur" href="{{ route.certif_link }}" rel="noopener" rel="noreferrer" target="_blank" title="Voir le certificat n° {{ route.certif_id }}">
+              {{ date(route.certif_date)|date('d/m/y') }}
+            </a>
+          </td>
+
+        </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+  </section>
+
+
+  <!-- ************** -->
+  <!-- Course Section -->
+  <section id="course">
+    <h2 class="primary-sea solid-slight"><i class="fa fa-book" aria-hidden="true"></i> Cours</h2>
+
+    <p class="intro primary-sea double-slight-lg inset-spread-sm">Chaque <strong>cours</strong>, <em>OpenClassrooms ou SoloLearn</em>, est accessible en cliquant sur son <b>nom</b> & chaque <strong>certificat</strong> en cliquant sur son <b>bouton vert Certification</b>.</p>
+
+    <!-- Course table -->
+    <table class="ridge inset-blur">
+
+      <!-- Table header -->
+      <thead>
+        <tr>
+          <th>Cours</th>
+          <th>Certification</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <!-- Loop on all courses -->
+        {% for course in allCourses %}
+        <tr>
+
+          <!-- Course name & link -->
+          <td>
+            <a class="btn info-outline solid-rounder inset-spread-sm" href="{{ course.link }}" rel="noopener" rel="noreferrer" target="_blank" title="Accéder au cours">
+              {{ course.name }}
+            </a>
+          </td>
+
+          <!-- Course certificate & link -->
+          <td>
+            <a class="btn valid-outline solid-rounder inset-blur" href="{{ course.certif_link }}" rel="noopener" rel="noreferrer" target="_blank" title="Voir le certificat n° {{ course.certif_id }}">
+              {{ date(course.certif_date)|date('d/m/y') }}
+            </a>
+          </td>
+
+        </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+{% endblock %}
