@@ -1,0 +1,193 @@
+{# ********************* #}
+{# ***** HOME VIEW ***** #}
+{# ********************* #}
+
+
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Développeur Web Fullstack{% endblock %}
+
+{% block description %}Développement Web Fullstack - Technologies Open-sources - Languages HTML, CSS, JavaScript, PHP & SQL - Formations OpenClassrooms, 3W Academy, Free Code Camp, SoloLearn & Video2Brain{% endblock %}
+
+
+{% block main %}
+
+<main id="home">
+
+  <p class="intro special double-slight-lg inset-spread-sm anime-growX-sm center"><b>Bienvenue</b>, je me nomme <strong>Philippe Beck</strong>, j'adore la philosophie <em>open-source</em> & les technologies <em>cross-plateformes</em></p>
+
+  <div class="grid-2md-3lg gap-lg">
+
+    <!-- ***************** -->
+    <!-- Portfolio section -->
+    <section class="col items-center content-between anime-slipBR-sm">
+
+      <!-- Portfolio title -->
+      <h2>
+        <i class="fa fa-suitcase fa-fw" aria-hidden="true"></i> Portfolio
+      </h2>
+
+      <!-- Link to the portfolio page on the figure image -->
+      <a href="{{ url('portfolio') }}" title="Accéder au portfolio">
+        <figure class="btn special-light solid-rounded inset-spread">
+
+          <!-- Project screenshot -->
+          <img src="img/portfolio/{{ project.image }}" alt="Screenshot du projet {{ project.name }}">
+
+          <!-- Project name & starting year -->
+          <figcaption>{{ project.name }} ({{ project.year }})</figcaption>
+        </figure>
+      </a>
+
+      <p>Mon <strong>Portfolio</strong> liste mes <strong>projets</strong> hébergés sur <em>GitHub</em>, mes <strong>pens</strong> consultables sur <em>CodePen</em>, ma <strong>formation</strong> à la <em>3W Academy</em>, mes <strong>parcours</strong> certifiés par <em>OpenClassrooms</em> & ainsi que mes <strong>cours</strong> certifiés par <em>OpenClassrooms</em> & <em>SoloLearn</em>.</p>
+
+      <a class="btn valid-btn double-rounder inset-blur self-center" href="{{ url('portfolio') }}" title="Accéder au portfolio">
+        Voir mes travaux <i class="fa fa-code fa-fw" aria-hidden="true"></i>
+      </a>
+    </section>
+
+
+    <!-- *********** -->
+    <!-- Pjs section -->
+    <section class="col items-center content-between anime-slipB-sm">
+
+      <!-- Pjs title -->
+      <h2>
+        <i class="fa fa-sitemap fa-fw" aria-hidden="true"></i> Pjs
+      </h2>
+
+      <a href="{{ url('pjs') }}" title="Accéder aux outils">
+        <figure class="btn special-light solid-rounded inset-spread child-fallXL-sm">
+
+          {{ include('svg/pjs.svg.twig') }}
+
+          <figcaption class="no-transform">Le microCMS pour coder en pyjamas !</figcaption>
+        </figure>
+      </a>
+
+      <p><strong>Pjs</strong> est un <em>Micro Système de Management de Contenu</em> "fait maison" composé de 3 outils dédiés chacun à un langage : <strong>Pam</strong>, <em>Php Approachable Microframework</em>, <strong>Jim</strong>, <em>Javascript Interactive Microlibrary</em> & <strong>Sam</strong>, <em>Scss Animated Microframework</em>.</p>
+
+      <a class="btn valid-btn double-rounder inset-blur self-center" href="{{ url('pjs') }}" title="Accéder aux outils">
+        Découvrir les outils ! <i class="fa fa-code-fork fa-fw" aria-hidden="true"></i>
+      </a>
+    </section>
+
+
+    <!-- ************ -->
+    <!-- Blog section -->
+    <section class="col items-center content-between anime-slipBL-sm">
+
+      <!-- Blog title -->
+      <h2>
+        <i class="fa fa-rss fa-fw" aria-hidden="true"></i> Blog
+      </h2>
+
+      <!-- Link to the article page on the article figure -->
+      <a href="{{ url('article') }}" title="Accéder au blog">
+        <figure class="btn special-light solid-rounded inset-spread">
+
+          <!-- Article image thumbnail -->
+          <img class="solid-slight p-0" src="img/blog/{{ article.image }}" alt="{{ article.image }}">
+
+          <!-- Article title -->
+          <figcaption>{{ article.title }}</figcaption>
+        </figure>
+      </a>
+
+      <p>La partie <strong>Blog</strong> de mon site permet d'accéder aux <em>articles</em> que je publie, et sous réserve d'avoir créer un compte <em>utilisateur</em>, d'y ajouter des <em>commentaires</em>.</p>
+
+      <a class="btn valid-btn double-rounder inset-blur self-center" href="{{ url('article') }}" title="Accéder au blog">
+        Lire un article <i class="fa fa-newspaper-o fa-fw" aria-hidden="true"></i>
+      </a>
+    </section>
+
+
+    <!-- ************* -->
+    <!-- Photos section -->
+    <section class="col items-center content-between anime-slipTR-sm">
+
+      <!-- Photos title -->
+      <h2>
+        <i class="fa fa-picture-o fa-fw" aria-hidden="true"></i> Univers
+      </h2>
+
+      <!-- Photo link to the picture -->
+      <a href="{{ url('photo') }}" title="Accéder aux photos">
+        <figure class="btn special-light solid-rounded inset-spread">
+
+          <!-- Photo thumbnail  -->
+          <img class="solid-slight p-0" src="img/photo/300x240/{{ photo.image }}t.jpg" alt="Photo {{ photo.image }}">
+
+          <!-- Photo description -->
+          <figcaption>{{ photo.image }}</figcaption>
+        </figure>
+      </a>
+
+      <p>La rubrique <strong>Univers</strong> regroupe une collection de photographies prise par <strong>Hubble</strong>. Chacun des clichés est agrémenté de quelques <em>informations</em>, de <em>liens</em> vers les <em>bases de données officielles</em>, ainsi que de divers <em>fonds d'écrans</em>.</p>
+
+      <a class="btn valid-btn double-rounder inset-blur self-center" href="{{ url('photo') }}" title="Accéder aux photos !">
+        Comtempler les galaxies ! <i class="fa fa-star fa-fw" aria-hidden="true"></i>
+      </a>
+    </section>
+
+
+    <!-- ***************** -->
+    <!-- Formation section -->
+    <section class="col items-center content-between anime-slipT-sm">
+
+      <!-- Formation title -->
+      <h2>
+        <i class="fa fa-university fa-fw" aria-hidden="true"></i> Formations
+      </h2>
+
+      <figure class="special-glass solid-rounded inset-spread half-block crosshair">
+
+        <a class="oc btn special-outline solid-round inset-blur" href="https://openclassrooms.com" rel="noopener" rel="noreferrer" target="_blank" title="Accéder à OpenClassrooms">
+          {{ include('svg/oc.svg.twig') }}
+        </a>
+
+        <a class="troiswa btn special-outline solid-round inset-blur" href="https://3wa.fr" rel="noopener" rel="noreferrer" target="_blank" title="Accéder à la 3W Academy">
+          {{ include('svg/3wa.svg.twig') }}
+        </a>
+
+        <figcaption class="duo"><span class="default-text mr-tn">Le duo</span> <span class="base-text">de choc</span></figcaption>
+      </figure>
+
+      <p>Spéciales dédicaces à <strong>OpenClassrooms</strong> & à la <strong>3W Academy</strong>, le duo qui m'a permis d'en arriver là ! Merci à <em>Mathieu, Pierre, Karim</em> & toute l'équipe d'OpenClassrooms ! Merci à <em>Djamchid, Olivier, Véronique</em> & toute la 3W Academy !</p>
+
+    </section>
+
+
+    <!-- ************* -->
+    <!-- Atlas section -->
+    <section class="col items-center content-betweenanime-slipTL-sm">
+
+      <!-- Atlas title -->
+      <h2>
+        <i class="fa fa-map-o fa-fw" aria-hidden="true"></i> Atlas
+      </h2>
+
+      <!-- Map link to the picture -->
+      <a href="{{ url('atlas') }}" title="Accéder aux atlas">
+        <figure class="btn special-light solid-rounded inset-spread">
+
+          <!-- Map thumbnail  -->
+          <img class="solid-slight p-0" src="img/atlas/thumb/{{ map.name }}t.jpg" alt="Carte céleste : {{ map.description }}" title="Accéder aux Atlas">
+
+          <!-- Map description -->
+          <figcaption>{{ map.description }}</figcaption>
+        </figure>
+      </a>
+
+      <p>La section <strong>Atlas</strong> est dédiée à l'histoire de l'<strong>astronomie</strong> au travers d'<strong>atlas célestes</strong> rares & anciens. Vous y trouverez donc des <strong>cartes du ciel</strong> en couleurs couvrant une période de près d'un millier d'années, ainsi que des liens <em>Wikipedia</em> pour certains atlas & auteurs...</p>
+
+      <a class="btn valid-btn double-rounder inset-blur self-center" href="{{ url('atlas') }}" title="Accéder aux atlas">
+        Admirer des constellations ! <i class="fa fa-star-o fa-fw" aria-hidden="true"></i>
+      </a>
+    </section>
+
+  </div>
+
+</main>
+
+{% endblock %}
