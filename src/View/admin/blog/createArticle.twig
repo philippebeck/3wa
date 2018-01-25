@@ -1,0 +1,69 @@
+{# ******************************* #}
+{# ***** CREATE ARTICLE VIEW ***** #}
+{# ******************************* #}
+
+
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Création d'un nouvel article{% endblock %}
+
+{% block description %}Administration : Création d'un nouvel article{% endblock %}
+
+
+{% block main %}
+
+<main id="blog">
+
+  <!-- Create article form -->
+  <form action="{{ url('article!create') }}" method="post" enctype="multipart/form-data">
+
+    <!-- Article illustration restriction -->
+    <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
+
+    <fieldset>
+      <legend>
+        <i class="fa fa-newspaper-o fa-fw fa-2x" aria-hidden="true"></i>
+      </legend>
+
+      <ul>
+        <li>
+          <!-- Article title field -->
+          <label for="title">Titre</label>
+          <input id="title" name="title" type="text" placeholder="Titre de l'article">
+        </li>
+
+        <li>
+          <!-- Article illustration field -->
+          <label for="file">Illustration</label>
+          <input id="file" name="file" type="file" accept=".jpg, .jpeg, .png, .svg, .gif, .pdf">
+        </li>
+
+        <li>
+          <!-- Article link field -->
+          <label for="link">Lien</label>
+          <input id="link" name="link" type="text" placeholder="Lien lié à l'article">
+        </li>
+
+        <li>
+          <!-- Article content field -->
+          <label for="content">Contenu</label>
+          <textarea id="content" name="content" rows="5" placeholder="Contenu de l'article"></textarea>
+        </li>
+
+        <!-- Controls buttons -->
+        <li class="btn-group">
+          <a class="btn delete-btn outset-slight inset-blur" href="{{ url('admin') }}">Quitter</a>
+          <input class="btn cancel-btn outset-slight inset-blur" type="reset" value="Réinitialiser">
+          <input class="btn valid-btn outset-slight inset-blur" type="submit" value="Créer">
+        </li>
+
+      </ul>
+    </fieldset>
+
+    <!-- Article date field -->
+    <input name="date" type="hidden" value="{{ date()|date('Y-m-d H:i:s') }}">
+
+  </form>
+</main>
+
+{% endblock %}
