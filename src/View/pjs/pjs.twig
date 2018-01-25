@@ -1,0 +1,264 @@
+{# ******************** #}
+{# ***** PJS VIEW ***** #}
+{# ******************** #}
+
+
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Pjs : Pam, Jim & Sam{% endblock %}
+
+{% block description %}Pjs : Pam, Jim & Sam - Le MicroCMS pour les développeurs en Pyjamas ! - PHP (MVC), JavaScript (Events), CSS (SCSS) & HTML (Twig){% endblock %}
+
+
+{% block main %}
+
+<main id="pjs" class="center">
+
+  <p class="intro secondary-sea double-slight-lg inset-spread-sm anime-growY-sm">
+    Cliquer sur un <b>bouton noir
+    <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
+  </b> ouvre le <strong>repository sur GitHub</strong><br>
+    Cliquer sur un <b>bouton jaune ou rouge
+    <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
+  </b> ouvre la <strong>page du package manager Packagist ou npm</strong><br>
+    Cliquer sur un <b>bouton bleu
+    <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
+  </b> télécharge le <strong>zip du projet depuis GitHub</strong><br>
+    Cliquer sur un <b>bouton blanc "Documentation"</b> donne accès à la <strong>documentation de l'outil</strong>.
+  </p>
+
+
+  <!-- *********************** -->
+  <!-- ***** Pjs section ***** -->
+
+  <section>
+    <h2 class="primary solid-slight mb-lg">Le Micro "Content Management System" fait main</h2>
+
+    <ul class="grid">
+
+      <li class="col items-center special-sea solid-round-lg">
+
+        <article class="col items-center gw50 gp-sm gm-tn">
+
+          <h3 class="wavy-underline">PJS</h3>
+
+          <figure class="child-flipY-tn">
+            {{ include('svg/pjs.svg.twig') }}
+            <figcaption class="anime-slipT-tn">Le microCMS pour coder en pyjamas</figcaption>
+          </figure>
+
+          <p>Pjs est un outil simple & efficace, combinant Pam, Jim & Sam, afin de créer des applications originales.</p>
+
+          <p>Pjs intégre une administration avec gestion des utilisateurs, des articles, des commentaires & quelques autres fonctionnalités indispensables...</p>
+
+          <p>Lire les documentations de ses dépendances, Twig y compris, est indispensable pour en faire bon usage.</p>
+
+          <p>Vous trouverez beaucoup de fonctionnalités pour construire un site web: les classes Php fournies par Pam, le microframework, les fonctions JavaScript fournies par Jim, la micro-librairie, les classes Css fournies par Sam, le microframework, des filtres & des classes pour les Vues venant de Twig, le moteur de template.</p>
+
+        </article>
+
+        <p>
+          Installer Pjs via composer :<br>
+          <strong><i class="fa fa-code-fork fa-lg fa-fw" aria-hidden="true"></i> composer require pjs/pjs</strong>
+        </p>
+
+        <div class="btn-group m-md">
+
+          <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pjs" rel="noopener" rel="noreferrer" target="_blank" title="Voir le repository GitHub">
+            <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
+          </a>
+
+          <a class="btn packagist-outline solid-rounder inset-spread" href="https://packagist.org/packages/pjs/pjs" rel="noopener" rel="noreferrer" target="_blank" title="Voir le package Packagist">
+            <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
+          </a>
+
+          <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pjs/archive/master.zip" title="Télécharger Pjs">
+            <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
+          </a>
+
+        </div>
+      </li>
+    </ul>
+  </section>
+
+
+  <!-- ******************************** -->
+  <!-- ***** Dependancies section ***** -->
+
+  <section>
+    <h2 class="secondary solid-slight mt-wd mb-lg">Ses dépendances maisons "on scratch"</h2>
+    <ul class="grid-3lg gap-lg">
+
+      <!-- ******************** -->
+      <!-- ***** Pam part ***** -->
+
+      <li class="col items-center info-sea solid-rounder">
+
+        <article class="col items-center">
+
+          <h3>PAM<br>Php Approachable Microframework</h3>
+
+          <p>Pam est un microframework PHP basé sur l'architecture MVC.</p>
+
+          <p>Pam est très facile à utiliser et très léger à mettre en œuvre.</p>
+
+          <p>La partie Modèle peut être utilisée pour toutes les actions CRUD et n'a pas besoin d'être surchargée pour les actions de base.</p>
+
+          <p>La partie View utilise le moteur de template Twig, il est donc possible d'utiliser des variables, des fonctions, des filtres, etc...</p>
+
+          <p>La partie Controller hérite des méthodes indispensables du contrôleur principal et le FrontController structure l'entrée de l'application.</p>
+
+          <p>Les sessions sont gérées par Pam pour les actions de connexion et de message utilisateur.</p>
+
+          <p>L'accès à la base de données est évidemment géré par la partie Database, via la classe PDO.</p>
+
+        </article>
+
+        <a class="btn info-outline double-round inset-spread" href="{{ url('pjs!pam') }}" title="Voir la documentation">
+          <figure>
+            {{ include('svg/pam.svg.twig') }}
+            <figcaption>Documentation</figcaption>
+          </figure>
+        </a>
+
+        <p>
+          Installer Pam via composer :<br>
+          <strong><i class="fa fa-code-fork fa-lg fa-fw" aria-hidden="true"></i> composer require pjs/pam</strong>
+        </p>
+
+        <div class="btn-group">
+
+          <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pam" rel="noopener" rel="noreferrer" target="_blank" title="Voir le repository GitHub">
+            <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
+          </a>
+
+          <a class="btn packagist-outline solid-rounder inset-spread" href="https://packagist.org/packages/pjs/pam" rel="noopener" rel="noreferrer" target="_blank" title="Voir le package Packagist">
+            <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
+          </a>
+
+          <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pam/archive/master.zip" title="Télécharger Pam">
+            <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
+          </a>
+
+        </div>
+      </li>
+
+
+      <!-- ******************** -->
+      <!-- ***** Jim part ***** -->
+
+      <li class="col items-center valid-sea solid-rounder">
+
+        <article class="col items-center">
+
+          <h3 class="dashed-underline">JIM<br>Javascript Interactive Microlibrary</h3>
+
+          <p>Jim est une micro-librairie JavaScript qui utilise les événements pour l'interactivité.</p>
+
+          <p>Jim propose un système de gestion du clavier permettant d'associer une action à définir avec une touche.</p>
+
+          <p>Il donc est possible d'accéder à une page précise, que ce soit sur site ou sur le web, ou encore de lancer des animations ou des actions, par exemple, donner la possibilité à l'utilisateur de se déconnecter en appuyant sur "Q"...</p>
+
+          <p>Jim est fourni sans aucune ligne de code jQuery, ni aucune dépendance...</p>
+
+          <p>Jim n'en est qu'à ses débuts, il va grandir dans un futur proche...</p>
+
+        </article>
+
+        <a class="btn valid-outline double-round inset-spread" href="{{ url('pjs!jim') }}" title="Voir la documentation">
+          <figure>
+            {{ include('svg/jim.svg.twig') }}
+            <figcaption>Documentation</figcaption>
+          </figure>
+        </a>
+
+        <p>
+          Installer Jim via npm :<br>
+          <strong><i class="fa fa-code-fork fa-lg fa-fw" aria-hidden="true"></i> npm install jim-js</strong>
+        </p>
+
+        <p>Installer Jim via bower :<br>
+          <strong><i class="fa fa-code-fork fa-lg fa-fw" aria-hidden="true"></i> bower install jim-js --save</strong>
+        </p>
+
+
+        <div class="btn-group">
+
+          <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/jim" rel="noopener" rel="noreferrer" target="_blank" title="Voir le repository GitHub">
+            <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
+          </a>
+
+          <a class="btn npm-outline solid-rounder inset-spread" href="https://www.npmjs.com/package/jim" rel="noopener" rel="noreferrer" target="_blank" title="Voir le package npm">
+            <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
+          </a>
+
+          <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/jim/archive/master.zip" title="Télécharger Jim">
+            <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
+          </a>
+
+        </div>
+      </li>
+
+
+      <!-- ******************** -->
+      <!-- ***** Sam part ***** -->
+
+      <li class="col items-center delete-sea solid-rounder">
+
+        <article class="col items-center">
+
+          <h3 class="dashed-underline">SAM<br>Scss Animated Microframework</h3>
+
+          <p>Sam est un microframework SCSS qui regroupe certaines propriétés CSS importantes par classe.</p>
+
+          <p>Sam est orienté vers l'animation au travers de règles @keyframes et de propriétés CSS d'animation & de transformation.
+
+            <p>Sam est fourni sans aucune ligne de code JavaScript, ses animations ne peuvent donc être désactivées...</p>
+
+            <p>Sam peut faire une grille avec flexbox layout ou grid layout!</p>
+
+            <p>Sam peut être utilisé sans aucune connaissance SCSS, Sass ou Ruby, en utilisant uniquement la bibliothèque CSS.</p>
+
+            <p>Sam est construit autour de 6 caractéristiques principales: l'affichage, les couleurs, les bordures, les ombres, les animations et les helpers.</p>
+
+            <p>Sam fournit 3 éléments de base en plus, la barre de navigation, les boutons et les formulaires.</p>
+
+            <a class="btn delete-outline double-round inset-spread" href="{{ url('pjs!sam') }}" title="Voir la documentation">
+              <figure>
+                {{ include('svg/sam.svg.twig') }}
+                <figcaption>Documentation</figcaption>
+              </figure>
+            </a>
+
+            <p>
+              Installer Sam via npm :<br>
+              <strong><i class="fa fa-code-fork fa-lg fa-fw" aria-hidden="true"></i> npm install sam.scss</strong>
+            </p>
+
+            <p>Installer Sam via bower :<br>
+              <strong><i class="fa fa-code-fork fa-lg fa-fw" aria-hidden="true"></i> bower install sam.scss --save</strong>
+            </p>
+
+          </article>
+
+          <div class="btn-group">
+
+            <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir le repository GitHub">
+              <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
+            </a>
+
+            <a class="btn npm-outline solid-rounder inset-spread" href="https://www.npmjs.com/package/sam.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir le package npm">
+              <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
+            </a>
+
+            <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss/archive/master.zip" title="Télécharger Sam">
+              <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
+            </a>
+
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+{% endblock %}
