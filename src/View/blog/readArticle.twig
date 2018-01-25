@@ -1,0 +1,87 @@
+{# ***************************** #}
+{# ***** READ ARTICLE VIEW ***** #}
+{# ***************************** #}
+
+
+{% extends 'layout/layout.twig' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block description %}Développement Web - Lecture de l'article : {{ article.title }}{% endblock %}
+
+
+{% block main %}
+
+<main id="article" class="grid-2lg gap-md center">
+
+  <!-- Article to Read -->
+  <article>
+    <h2><i class="fa fa-newspaper-o" aria-hidden="true"></i> L'article</h2>
+
+    <!-- Article Infos -->
+    <p class="italic">Posté le {{ date(article.created_date)|date('d M Y') }} à {{ date(article.created_date)|date('H:i') }}</p>
+
+    <!-- Article Image -->
+    <a class="btn warning-light solid-rounded inset-blur" href="{{ article.link }}" rel="noopener" rel="noreferrer" target="_blank" title="Voir la source">
+      <img src="img/blog/{{ article.image }}" alt="{{ article.image }}">
+    </a>
+
+    <!-- Article Content -->
+    <p class="justify">{{ article.content }}</p>
+  </article>
+
+
+  <!-- Comment Section -->
+  <section>
+    <h2><i class="fa fa-comments-o" aria-hidden="true"></i> Les Commentaires</h2>
+
+    <!-- Add Comment Form -->
+    <form id="comment" method="post" action={{ url('comment!create', {'id': article.id}) }}>
+
+      <fieldset>
+        <legend><i class="fa fa-comment-o fa-lg" aria-hidden="true"></i> Ajouter un commentaire</legend>
+
+        <ul>
+          <li>
+            <!-- Comment Content Field -->
+            <textarea class="mr-auto ml-auto" name="content" rows="3" placeholder="Insérez votre commentaire ici"></textarea>
+          </li>
+
+          <li class="btn-group">
+            <!-- Controls Buttons -->
+            <a class="btn delete-btn solid-rounder-sm blur-br" href="{{ url('home') }}">Quitter</a>
+            <input class="btn cancel-btn solid-rounder-sm blur-br" type="reset" value="Réinitialiser">
+            <input class="btn valid-btn solid-rounder-sm blur-br" type="submit" value="Commenter">
+          </li>
+        </ul>
+
+        <!-- Comment Date Field -->
+        <input name="date" type="hidden" value="{{ date()|date('Y-m-d H:i:s') }}">
+
+      </fieldset>
+    </form>
+
+    <!-- Comments list -->
+    <ul>
+
+      <!-- Comments Foreach -->
+      {% for comment in comments %}
+      <li>
+
+        <!-- Comment Infos -->
+        <p class="text-warning">
+          Commentaire ajouté le {{ date(comment.created_date)|date('d M Y') }} à {{ date(comment.created_date)|date('H:i') }} par {{ comment.user }}
+          <img class="solid-rounded-sm" src="img/user/{{ comment.image }}" alt="Photo de profil" width="30px">
+        </p>
+
+        <!-- Comment Content -->
+        <p>{{ comment.content }}</p>
+      </li>
+      {% endfor %}
+
+    </ul>
+  </section>
+
+</main>
+
+{% endblock %}
