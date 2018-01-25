@@ -1,0 +1,617 @@
+/* ***************** */
+/* ***** STYLE ***** */
+/* ***************** */
+
+
+/* ***************** */
+/* ***** Fonts ***** */
+
+/* Font for all btn classes except in tables */
+@font-face {
+  font-family: 'eczar';
+  src: url('../fonts/eczar/Eczar.eot');
+  src: url('../fonts/eczar/Eczar.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/eczar/Eczar.woff') format('woff'),
+  url('../fonts/eczar/Eczar.ttf') format('truetype'),
+  url('../fonts/eczar/Eczar.svg#eczarregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font for all p tags in the blog & in the article */
+@font-face {
+  font-family: 'elite';
+  src: url('../fonts/elite/SpecialElite.eot');
+  src: url('../fonts/elite/SpecialElite.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/elite/SpecialElite.woff') format('woff'),
+  url('../fonts/elite/SpecialElite.ttf') format('truetype'),
+  url('../fonts/elite/SpecialElite.svg#special_eliteregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font for all tables & all classes btn in tables */
+@font-face {
+  font-family: 'fantasque';
+  src: url('../fonts/fantasque/fantasquesansmono.eot');
+  src: url('../fonts/fantasque/fantasquesansmono.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/fantasque/fantasquesansmono.otf') format('otf'),
+  url('../fonts/fantasque/fantasquesansmono.woff') format('woff'),
+  url('../fonts/fantasque/fantasquesansmono.ttf') format('truetype'),
+  url('../fonts/fantasque/fantasquesansmono.svg#fantasque_sans_monoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font for all h3 */
+@font-face {
+  font-family: 'kelvinch';
+  src: url('../fonts/kelvinch/Kelvinch.eot');
+  src: url('../fonts/kelvinch/Kelvinch.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/kelvinch/Kelvinch.otf') format('otf'),
+  url('../fonts/kelvinch/Kelvinch.woff') format('woff'),
+  url('../fonts/kelvinch/Kelvinch.ttf') format('truetype'),
+  url('../fonts/kelvinch/Kelvinch.svg#kelvinchregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font for all h4, h5 & h6 */
+@font-face {
+  font-family: 'latinia';
+  src: url('../fonts/latinia/Latinia.eot');
+  src: url('../fonts/latinia/Latinia.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/latinia/Latinia.woff') format('woff'),
+  url('../fonts/latinia/Latinia.ttf') format('truetype'),
+  url('../fonts/latinia/Latinia.svg#latiniaregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font for all h1 */
+@font-face {
+  font-family: 'luxi';
+  src: url('../fonts/luxi/luximr.eot');
+  src: url('../fonts/luxi/luximr.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/luxi/luximr.woff') format('woff'),
+  url('../fonts/luxi/luximr.ttf') format('truetype'),
+  url('../fonts/luxi/luximr.svg#luxi_monoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global font */
+@font-face {
+  font-family: 'neris';
+  src: url('../fonts/neris/Neris.eot');
+  src: url('../fonts/neris/Neris.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/neris/Neris.otf') format('otf'),
+  url('../fonts/neris/Neris.woff') format('woff'),
+  url('../fonts/neris/Neris.ttf') format('truetype'),
+  url('../fonts/neris/Neris.svg#nerislight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font for all forms */
+@font-face {
+  font-family: 'quantico';
+  src: url('../fonts/quantico/Quantico.eot');
+  src: url('../fonts/quantico/Quantico.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/quantico/Quantico.otf') format('otf'),
+  url('../fonts/quantico/Quantico.woff') format('woff'),
+  url('../fonts/quantico/Quantico.ttf') format('truetype'),
+  url('../fonts/quantico/Quantico.svg#quanticoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font for all h2 */
+@font-face {
+  font-family: 'sansation';
+  src: url('../fonts/sansation/Sansation.eot');
+  src: url('../fonts/sansation/Sansation.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/sansation/Sansation.woff') format('woff'),
+  url('../fonts/sansation/Sansation.ttf') format('truetype'),
+  url('../fonts/sansation/Sansation.svg#sansationregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font for all p tags in the Pjs part */
+@font-face {
+  font-family: 'tuffy';
+  src: url('../fonts/tuffy/Tuffy.eot');
+  src: url('../fonts/tuffy/Tuffy.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/tuffy/Tuffy.otf') format('otf'),
+  url('../fonts/tuffy/Tuffy.woff') format('woff'),
+  url('../fonts/tuffy/Tuffy.ttf') format('truetype'),
+  url('../fonts/tuffy/Tuffy.svg#tuffyregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* ********************* */
+/* ***** Keyframes ***** */
+
+
+/* Special animation for alert messages */
+@keyframes alert
+{
+  0% {
+    transform: translateY(-21rem);
+  }
+
+  50% {
+    transform: translateY(21rem);
+  }
+}
+
+
+/* ****************** */
+/* ***** Layout ***** */
+
+
+/* ***** Global ***** */
+
+
+body {
+  font-family: 'neris', sans-serif;
+  background-image: url("../img/background/lightcyan.jpg");
+}
+
+
+/* ***** Titles ***** */
+
+h1 {
+  font-family: 'luxi', serif;
+  text-align: center;
+}
+
+h2 {
+  padding: .5rem 1rem;
+  font-family: 'sansation', sans-serif;
+}
+
+h3 {
+  padding: .4rem .8rem;
+  font-family: 'kelvinch', serif;
+}
+
+h4,
+h5,
+h6 {
+  font-family: 'latinia', serif;
+}
+
+h4 {
+  padding: .3rem .6rem;
+}
+
+h5 {
+  padding: .2rem .4rem;
+}
+
+h6 {
+  padding: .1rem .2rem;
+}
+
+/* ***** Tables ***** */
+
+table,
+table .btn {
+  font-family: 'fantasque', sans-serif;
+}
+
+th, td {
+  border: thin solid;
+  padding: 1rem;
+}
+
+
+/* ***** Forms ***** */
+
+form {
+  font-family: 'quantico', sans-serif;
+}
+
+/* ***** Medias ***** */
+
+figure {
+  max-width: 25rem;
+}
+
+figure img,
+figcaption {
+  padding: 1rem;
+}
+
+/* ***** Footer ***** */
+
+.license {
+  display: block;
+  padding: .5rem 0;
+  cursor: help;
+}
+
+
+/* ***** Ids ***** */
+
+#alert {
+  position: absolute;
+  top: -10rem;
+  right: 0;
+  left: 0;
+  z-index: 1002;
+  border-right: none;
+  border-left: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  animation: alert 10s;
+}
+
+#jim-help {
+  position: fixed;
+  top: 13rem;
+  left: 0;
+  z-index: 1001;
+  padding: 1rem;
+  background-color: PaleGreen;
+}
+
+#access,
+#help-btn {
+  width: 4rem;
+}
+
+
+/* ***** Classes ***** */
+
+.btn {
+  font-family: 'eczar', serif;
+}
+
+.intro {
+  max-width: 90rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5rem;
+  padding: 1rem 2rem;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.half-block {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  background: linear-gradient(130deg, white 0%, white 50%, black 50%, black 100%);
+}
+
+.oc {
+  position: absolute;
+  top: 6%;
+  left: 8%;
+}
+
+
+.troiswa {
+  position: absolute;
+  bottom: 8%;
+  right: 10%;
+}
+
+.duo {
+  position: absolute;
+  top: 13rem;
+  left: 6rem;
+}
+
+
+/* **************** */
+/* ***** Main ***** */
+
+main {
+  padding: 5rem 0;
+}
+
+/* ***** Home ***** */
+
+#home {
+  background-image: url("../img/background/lavender.jpg");
+}
+
+#home img,
+#home svg {
+  max-height: 15rem;
+  max-width: 15rem;
+}
+
+#home p {
+  text-align: justify;
+}
+
+
+
+/* ***** Portfolio ***** */
+
+#portfolio {
+  padding: 0;
+  background-color: MintCream;
+}
+
+#portfolio section {
+  padding: 5rem 0;
+}
+
+#portfolio h2 {
+  margin-top: 0;
+}
+
+#portfolio table {
+  background-color: Snow;
+}
+
+#portfolio h2 {
+  display: inline-block;
+  margin-bottom: 4rem;
+}
+
+#portfolio img,
+#portfolio svg {
+  max-height: 15rem;
+}
+
+#project {
+  /* Needs to set the background without fixed for working on ios */
+  background: url('../img/background/project.jpg');
+  background-size: cover;
+  /* Needs to set this position for working on smartphones */
+  background-position: 15% 50%;
+}
+}
+
+/* Needs to set the position again for working on tablets */
+@media (min-width: 576px) and (max-width: 1023px)
+{
+  #project {
+    background-position: 25% 50%;
+  }
+}
+
+/* Needs to set the background again but with fixed for working completly on desktop */
+@media (min-width: 1025px)
+{
+  #project {
+    background: url('../img/background/project.jpg') fixed;
+  }
+}
+
+#pen h2 {
+  margin-bottom: 2rem;
+}
+
+#formation {
+  /* Needs to set the background without fixed for working on ios */
+  background: url('../img/background/formation.jpg');
+  background-size: cover;
+  /* Needs to set this position for working on smartphones */
+  background-position: 15% 50%;
+}
+}
+
+/* Needs to set the position again for working on tablets */
+@media (min-width: 576px) and (max-width: 1023px)
+{
+  #formation {
+    background-position: 25% 50%;
+  }
+}
+
+/* Needs to set the background again but with fixed for working completly on desktop */
+@media (min-width: 1025px)
+{
+  #formation {
+    background: url('../img/background/formation.jpg') fixed;
+  }
+}
+
+#course {
+  /* Needs to set the background without fixed for working on ios */
+  background: url('../img/background/course.jpg');
+  background-size: cover;
+  /* Needs to set this position for working on smartphones */
+  background-position: 80% 50%;
+}
+}
+
+/* Needs to set the position again for working on tablets */
+@media (min-width: 576px) and (max-width: 1023px)
+{
+  #course {
+    background-position: 90% 50%;
+  }
+}
+
+/* Needs to set the background again but with fixed for working completly on desktop */
+@media (min-width: 1025px)
+{
+  #course {
+    background: url('../img/background/course.jpg') fixed;
+  }
+}
+
+
+/* ***** Pjs ***** */
+
+#pjs {
+  background: url('../img/background/pjs.jpg') fixed;
+}
+
+#pjs .intro {
+  text-align: center;
+}
+
+#pjs h2,
+#pam h2,
+#pam h3,
+#jim h2,
+#jim h3,
+#sam h2,
+#sam h3,
+#sam h4 {
+  display: inline-block;
+}
+
+#pjs p {
+  font-family: 'tuffy', sans-serif;
+  text-align: justify;
+}
+
+#pjs li {
+  padding: 2rem;
+}
+
+.syntax {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Explorer & Edge */
+  user-select: none; /* Chrome & Opera */
+}
+
+
+/* ***** Blog ***** */
+
+#blog img {
+  max-height: 15rem;
+  max-width: 15rem;
+}
+
+#blog p,
+#article p {
+  font-family: 'elite', serif;
+}
+
+#blog .italic,
+#article .italic,
+#article legend {
+  font-size: 1.2rem;
+}
+
+#article {
+  line-height: 2;
+}
+
+#article img {
+  max-height: 50rem;
+  max-width: 50rem;
+}
+
+
+/* ***** Photo ***** */
+
+#photo {
+  background-image: url("../img/background/lavender.jpg");
+
+}
+
+#photo main {
+  padding: 5rem 0;
+}
+
+#read-photo {
+  background: url('../img/background/photo.jpg');
+}
+
+
+.slider
+{
+  -webkit-backface-visibility: hidden;
+  max-width: 1024px;
+  margin: auto;
+  transform-origin: 50% 50%;
+}
+
+
+.slider figcaption
+{
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.slider-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+}
+
+
+
+/* ***** Atlas ***** */
+
+#atlas {
+  background: url('../img/background/atlas.jpg') 50% 50%;
+  background-size: cover;
+}
+
+#atlas main {
+  padding: 5rem 0;
+}
+
+#read-atlas {
+  background-image: url('../img/background/antiquewhite.jpg');
+}
+
+
+/* ***** Admin ***** */
+
+#admin h2 {
+  display: inline-block;
+}
+
+#admin h3 {
+  text-decoration: underline wavy;
+}
+
+#admin h3 + a {
+  margin-bottom: 3rem;
+}
+
+#admin td {
+  hyphens: auto;
+  word-wrap: break-word;
+}
+
+#admin img {
+  max-height: 10rem;
+  max-width: 10rem;
+}
+
+#admin td:last-of-type {
+  width: 7rem;
+}
+
+
+
+/* ***** Hidden ***** */
+
+#hidden {
+  background: url('../img/background/hidden.jpg') 50% 80%;
+}
+
+#hidden h1 {
+  padding: 5rem;
+}
+
+#hidden h2 {
+  padding: 4rem;
+}
+
+#hidden blockquote {
+  padding-left: 3rem;
+  padding-bottom: 10rem;
+}
