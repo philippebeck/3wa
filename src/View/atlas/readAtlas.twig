@@ -1,0 +1,43 @@
+{# *************************** #}
+{# ***** READ ATLAS VIEW ***** #}
+{# *************************** #}
+
+
+{% extends 'layout/layout.twig' %}
+
+{% block title %}{{ atlas.name }}{% endblock %}
+
+{% block description %}Galerie des cartes célestes de l'oeuvre de {{ atlas.author_name }} : {{ atlas.name }}{% endblock %}
+
+
+{% block main %}
+
+<main id="read-atlas">
+
+  <!-- Map list -->
+  <ul class="grid-2sm-3md-4lg-5wd gap-lg items-end">
+
+    <!-- Map foreach -->
+    {% for key, map in atlasMaps %}
+    <li>
+
+      <!-- Map link to the picture -->
+      <a href="img/atlas/img/{{ map.name}}.jpg" rel="noopener" rel="noreferrer" target="_blank" title="Cliquer pour agrandir">
+        <figure class="btn classic-light solid-rounded-lg spread">
+
+          <!-- Map thumbnail  -->
+          <img src="img/atlas/thumb/{{ map.name }}t.jpg" alt="{{ atlas.name }} planche n°{{ key + 1 }}">
+
+          <!-- Map description -->
+          <figcaption>{{ map.description }}</figcaption>
+
+        </figure>
+      </a>
+    </li>
+    {% endfor %}
+
+  </ul>
+
+</main>
+
+{% endblock %}

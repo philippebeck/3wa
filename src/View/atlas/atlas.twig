@@ -1,0 +1,78 @@
+{# ********************** #}
+{# ***** ATLAS VIEW ***** #}
+{# ********************** #}
+
+
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Atlas de cartes célestes{% endblock %}
+
+{% block description %}Atlas Célestes - Cartes du ciel anciennes - Editions rares - Manuscrits - Planches en couleur{% endblock %}
+
+
+{% block main %}
+
+<main id="atlas">
+
+  <p class="intro cancel-sea double-slight-lg inset-spread-sm anime-slideB-sm center">
+    Cliquer sur un <b>bouton vert
+    <i class="fa fa-map-o fa-lg" aria-hidden="true"></i>
+    </b> donne accès aux <strong>cartes de l'atlas</strong><br>
+    Cliquer sur un <b>bouton bleu</b> ouvre l'<strong>article Wikipedia de l'atlas ou de l'auteur</strong><br>
+    (l'article peut être en anglais, si la version franophone est inexistante)
+  </p>
+
+  <!-- Atlas table -->
+  <table class="cancel-sea outset-lg inset-blur anime-slideT-sm">
+
+    <!-- Table header -->
+    <thead>
+      <tr>
+        <th>Atlas</th>
+        <th>Cartes</th>
+        <th>Auteur</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <!-- Loop on all atlas -->
+      {% for atlas in allAtlas %}
+      <tr>
+
+        <!-- Atlas name -->
+        <td>
+          {% if atlas.wiki %}
+          <a class="btn primary-light solid-rounder help anime-flipY-md" href="{{ atlas.wiki }}" rel="noopener" rel="noreferrer" target="_blank" title="Wiki sur l'atlas">
+            {{ atlas.name }}
+          </a>
+          {% else %}
+          {{ atlas.name }}
+          {% endif %}
+        </td>
+
+        <!-- Read atlas button -->
+        <td>
+          <a class="btn valid-btn solid-round blur crosshair anime-flipX-md" href="{{ url('atlas!read', {'id': atlas.id}) }}" title="Voir l'atlas">
+            <i class="fa fa-map-o fa-lg" aria-hidden="true"></i>
+            <span class="block">{{ atlas.year }}</span>
+          </a>
+        </td>
+
+        <!-- Atlas author -->
+        <td>
+          {% if atlas.author_wiki %}
+          <a class="btn secondary-light solid-rounder help anime-flipY-md" href="{{ atlas.author_wiki }}" rel="noopener" rel="noreferrer" target="_blank" title="Wiki sur l'auteur">
+            {{ atlas.author_name }}
+          </a>
+          {% else %}
+          {{ atlas.author_name }}
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</main>
+
+{% endblock %}
