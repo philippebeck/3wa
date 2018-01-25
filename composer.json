@@ -1,0 +1,30 @@
+{
+  "name": "philippebeck",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philippebeck/philippebeck"
+  },
+  "type": "personal website",
+  "description": "Web Development - Open-source Technologies - HTML, CSS, JavaScript, PHP, SQL - 3W Academy, OpenClassrooms, Free Code Camp, SoloLearn, Video2Brain",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/",
+      "Tests\\": "tests/",
+      "Pam\\": "vendor/pjs/pam/"
+    }
+  },
+  "require": {
+    "twig/twig": "^2.0",
+    "phpunit/phpunit": "^6.4",
+    "pjs/pam": "^0.1.2"
+  },
+  "require-dev": {
+    "panique/php-sass": "1.0"
+  },
+  "config": {
+    "platform": {
+      "php": "7.0.22"
+    }
+  }
+}
