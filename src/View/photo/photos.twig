@@ -1,0 +1,85 @@
+{# *********************** #}
+{# ***** PHOTOS VIEW ***** #}
+{# *********************** #}
+
+
+{% extends 'layout/layout.twig' %}
+
+{% block title %}<i class="fa fa-picture-o" aria-hidden="true"></i> Galerie d'objets stellaires{% endblock %}
+
+{% block description %}Galerie d'objets stellaires - Photographies du satellite Hubble - Nébuleuses, Amas, Etoiles & Galaxies{% endblock %}
+
+{% block script %}<script src="js/Slider.js"></script>{% endblock %}
+
+{% block main %}
+
+<main id="photo">
+
+  <p class="intro default-glass double-slight-lg inset-spread-sm anime-slipT-sm">
+    Cliquer sur le <b>bouton gris
+    <i class="fa fa-toggle-off fa-fw"></i>
+    </b> en bas à gauche dépliera la <strong>barre de contrôle du diaporama</strong><br>
+    Cliquer sur n'importe quelle <b>image de la galerie</b> ouvrira une <strong>page dédiée à l'objet céleste</strong>.
+  </p>
+
+  <figure id="slider" class="slider default-glass solid-rounded inset-spread p-md center">
+    <img class="solid-slight-lg p-0" src="" alt="Photo du slider">
+    <figcaption></figcaption>
+  </figure>
+
+  <nav class="slider-nav">
+    <ul class="none">
+      <li>
+        <button id="slider-previous" class="btn cancel-btn solid-rounded inset-blur" title="Précédente">
+          <i class="fa fa-backward fa-fw"></i>
+        </button>
+      </li>
+      <li>
+        <button id="slider-next" class="btn cancel-btn solid-rounded inset-blur" title="Suivante">
+          <i class="fa fa-forward fa-fw"></i>
+        </button>
+      </li>
+      <li>
+        <button id="slider-toggle" class="btn cancel-btn solid-rounded inset-blur" title="Pause">
+          <i class="fa fa-pause fa-fw"></i>
+        </button>
+      </li>
+      <li>
+        <button id="slider-random" class="btn cancel-btn solid-rounded inset-blur" title="Image aléatoire">
+          <i class="fa fa-random fa-fw"></i>
+        </button>
+      </li>
+    </ul>
+    <a id="toolbar-toggle" class="btn cancel-btn solid-rounded inset-blur" href="#" title="Déplier la barre de contrôle du diaporama">
+      <i class="fa fa-toggle-off fa-fw"></i>
+    </a>
+  </nav>
+
+  <!-- Photo list -->
+  <ul class="grid-2sm-3md-4lg-5wd gap-lg mt-lg">
+
+    <!-- Photo foreach -->
+    {% for photo in allPhotos %}
+    <li>
+
+      <!-- Photo link to the picture -->
+      <a href="{{ url('photo!read', {'id': photo.id}) }}" title="Voir la photo">
+        <figure class="btn default-light solid-rounded inset-spread-sm">
+
+          <!-- Photo thumbnail  -->
+          <img class="solid-slight-lg p-0" src="img/photo/300x240/{{ photo.image }}t.jpg" alt="Photo {{ photo.image }}">
+
+          <!-- Photo description -->
+          <figcaption>
+            <strong>{{ photo.image }}</strong>
+          </figcaption>
+
+        </figure>
+      </a>
+    </li>
+    {% endfor %}
+
+  </ul>
+</main>
+
+{% endblock %}
