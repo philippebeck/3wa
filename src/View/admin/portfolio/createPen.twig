@@ -1,0 +1,55 @@
+{# *************************** #}
+{# ***** CREATE PEN VIEW ***** #}
+{# *************************** #}
+
+
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Création d'un nouveau pen{% endblock %}
+
+{% block description %}{% endblock %}
+
+
+{% block main %}
+
+<main>
+
+  <!-- Create pen form -->
+  <form method="post" action={{ url('pen!create') }}>
+    <fieldset>
+      <legend>
+        <i class="fa fa-codepen fa-fw fa-2x" aria-hidden="true"></i>
+      </legend>
+      <ul>
+
+        <!-- Pen name field -->
+        <li>
+          <label for="name">Nom</label>
+            <input id="name" name="name" type="text" placeholder="Nom du pen" maxlength="50" required>
+        </li>
+
+        <!-- Pen link field -->
+        <li>
+          <label for="link">Pen</label>
+            <input id="link" name="link" type="text" placeholder="Lien vers le pen" maxlength="50" required>
+        </li>
+
+        <!-- Pen objective link field -->
+        <li>
+          <label for="objective_link">Objectifs</label>
+            <input id="objective_link" name="objective_link" type="text" placeholder="Lien vers les objectifs du pen" maxlength="50" required>
+        </li>
+
+        <!-- Controls buttons -->
+        <li class="btn-group">
+          <a class="btn delete-btn outset-slight inset-blur" href="{{ url('admin') }}">Quitter</a>
+          <input class="btn cancel-btn outset-slight inset-blur" type="reset" value="Réinitialiser">
+          <input class="btn valid-btn outset-slight inset-blur" type="submit" value="Créer">
+        </li>
+
+      </ul>
+    </fieldset>
+  </form>
+</main>
+
+{% endblock %}

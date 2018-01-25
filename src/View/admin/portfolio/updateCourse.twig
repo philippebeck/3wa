@@ -1,0 +1,67 @@
+{# ****************************** #}
+{# ***** UPDATE COURSE VIEW ***** #}
+{# ****************************** #}
+
+
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Edition d'un cours{% endblock %}
+
+{% block description %}{% endblock %}
+
+
+{% block main %}
+
+<main>
+
+  <!-- Update course form -->
+  <form method="post" action={{ url('course!update', {'id': course.id}) }}>
+    <fieldset>
+      <legend>
+        <i class="fa fa-book fa-fw fa-2x" aria-hidden="true"></i>
+      </legend>
+      <ul>
+
+        <!-- Course name field -->
+        <li>
+          <label for="name">Nom</label>
+          <input id="name" name="name" type="text" maxlength="100" required value="{{ course.name }}">
+        </li>
+
+        <!-- Course link field -->
+        <li>
+          <label for="link">Cours</label>
+          <input id="link" name="link" type="text" maxlength="100" required value="{{ course.link }}">
+        </li>
+
+        <!-- Course certif id field -->
+        <li>
+          <label for="certif_id">Id</label>
+          <input id="certif_id" name="certif_id" type="text" maxlength="20" required value="{{ course.certif_id }}">
+        </li>
+
+        <!-- Course certif link field -->
+        <li>
+          <label for="certif_link">Certificat</label>
+          <input id="certif_link" name="certif_link" type="text" maxlength="100" required value="{{ course.certif_link }}">
+        </li>
+
+        <!-- Course certif date field -->
+        <li>
+          <label for="certif_date">Date</label>
+          <input id="certif_date" name="certif_date" type="text" maxlength="30" required value="{{ course.certif_date}}">
+        </li>
+
+        <!-- Controls buttons -->
+        <li class="btn-group">
+          <a class="btn delete-btn outset-slight inset-blur" href="{{ url('admin') }}">Quitter</a>
+          <input class="btn cancel-btn outset-slight inset-blur" type="reset" value="Réinitialiser">
+          <input class="btn valid-btn outset-slight inset-blur" type="submit" value="Modifier">
+        </li>
+
+      </ul>
+    </fieldset>
+  </form>
+</main>
+
+{% endblock %}

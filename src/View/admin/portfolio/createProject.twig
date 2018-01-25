@@ -1,0 +1,72 @@
+{# ******************************* #}
+{# ***** CREATE PROJECT VIEW ***** #}
+{# ******************************* #}
+
+
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Création d'un nouveau projet{% endblock %}
+
+{% block description %}{% endblock %}
+
+
+{% block main %}
+
+<main>
+
+  <!-- Create project form -->
+  <form method="post" action={{ url('project!create') }} enctype="multipart/form-data">
+
+    <!-- Project illustration restriction -->
+    <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
+
+    <fieldset>
+      <legend>
+        <i class="fa fa-github fa-fw fa-2x" aria-hidden="true"></i>
+      </legend>
+      <ul>
+
+        <li>
+          <!-- Project name field -->
+          <label for="name">Nom</label>
+          <input id="name" name="name" type="text" placeholder="Nom du projet" maxlength="50" required>
+        </li>
+
+        <li>
+          <!-- Project screenshot field -->
+          <label for="file">Screenshot</label>
+          <input name="file" type="file" accept=".jpg, .jpeg, .png, .svg, .gif, .pdf" required>
+        </label>
+      </li>
+
+      <li>
+        <!-- Project link field -->
+        <label for="link">Lien</label>
+        <input id="link" name="link" type="text" placeholder="Lien vers le projet" maxlength="50" required>
+      </li>
+
+      <li>
+        <!-- Project year field -->
+        <label for="year">Année</label>
+        <input id="year" name="year" type="number" placeholder="Année de création du projet" required>
+      </li>
+
+      <li>
+        <!-- Project description field -->
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="10" placeholder="Description du projet" maxlength="255" required></textarea>
+      </li>
+
+      <li class="btn-group">
+        <!-- Controls buttons -->
+        <a class="btn delete-btn outset-slight inset-blur" href="{{ url('admin') }}">Quitter</a>
+        <input class="btn cancel-btn outset-slight inset-blur" type="reset" value="Réinitialiser">
+        <input class="btn valid-btn outset-slight inset-blur" type="submit" value="Créer">
+      </li>
+
+    </ul>
+  </fieldset>
+</form>
+</main>
+
+{% endblock %}

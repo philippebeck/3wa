@@ -1,0 +1,72 @@
+{# ******************************* #}
+{# ***** UPDATE PROJECT VIEW ***** #}
+{# ******************************* #}
+
+
+{% extends 'layout/layout.twig' %}
+
+{% block title %}Edition d'un projet{% endblock %}
+
+{% block description %}{% endblock %}
+
+
+{% block main %}
+
+<main>
+
+  <!-- Update project form -->
+  <form method="post" action={{ url('project!update', {'id': project.id}) }} enctype="multipart/form-data">
+
+    <!-- Project illustration restriction -->
+    <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+
+    <fieldset>
+      <legend>
+        <i class="fa fa-github fa-fw fa-2x" aria-hidden="true"></i>
+      </legend>
+      <ul>
+
+        <li>
+          <!-- Project name field -->
+          <label for="name">Nom</label>
+          <input id="name" name="name" type="text" maxlength="50" required value="{{ project.name }}">
+        </li>
+
+        <li>
+          <!-- Project screenshot field -->
+          <label for="file">Screenshot</label>
+          <input name="file" type="file" accept=".jpg, .jpeg, .png, .svg, .gif, .pdf">
+        </label>
+      </li>
+
+      <li>
+        <!-- Project link field -->
+        <label for="link">Lien</label>
+        <input id="link" name="link" type="text" maxlength="50" required value="{{ project.link }}">
+      </li>
+
+      <li>
+        <!-- Project year field -->
+        <label for="year">Année</label>
+        <input id="year" name="year" type="number" required value="{{ project.year }}">
+      </li>
+
+      <li>
+        <!-- Project description field -->
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="10" maxlength="255" required>{{ project.description }}</textarea>
+      </li>
+
+      <li class="btn-group">
+        <!-- Controls buttons -->
+        <a class="btn delete-btn outset-slight inset-blur" href="{{ url('admin') }}">Quitter</a>
+        <input class="btn cancel-btn outset-slight inset-blur" type="reset" value="Réinitialiser">
+        <input class="btn valid-btn outset-slight inset-blur" type="submit" value="Modifier">
+      </li>
+
+    </ul>
+  </fieldset>
+</form>
+</main>
+
+{% endblock %}
