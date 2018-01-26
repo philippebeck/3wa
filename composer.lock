@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5e1104119533de5a6a7db97038ada517",
-    "content-hash": "22cb4f85d9b5f12b7cbdfba6161dbe8e",
+    "hash": "03a18553c11fbb1baf5dc67da841f301",
+    "content-hash": "dbd6a478f73e4b650b5b41fece412062",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -857,6 +857,57 @@
                 "php"
             ],
             "time": "2018-01-26 08:57:21"
+        },
+        {
+            "name": "pjs/pjs",
+            "version": "0.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/philippebeck/pjs.git",
+                "reference": "c10dc8aee66c5bbe8bf4e9315e38ee13ac54603c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/philippebeck/pjs/zipball/c10dc8aee66c5bbe8bf4e9315e38ee13ac54603c",
+                "reference": "c10dc8aee66c5bbe8bf4e9315e38ee13ac54603c",
+                "shasum": ""
+            },
+            "require": {
+                "phpunit/phpunit": "^6.4",
+                "pjs/pam": "^0.1.2",
+                "twig/twig": "^2.0"
+            },
+            "type": "cms",
+            "autoload": {
+                "psr-4": {
+                    "App\\": "src/",
+                    "Tests\\": "tests/",
+                    "Pam\\": "vendor/pjs/pam/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Philippe Beck",
+                    "email": "philippe@philippebeck.net",
+                    "homepage": "http://philippebeck.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PJS, a micro-CMS for coding in pyjamas, with Pam, Jim & Sam",
+            "keywords": [
+                "JS",
+                "cms",
+                "css",
+                "event",
+                "mvc",
+                "php",
+                "scss"
+            ],
+            "time": "2018-01-24 08:17:07"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
