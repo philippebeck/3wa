@@ -19,7 +19,7 @@
   <title>{% block title %}{% endblock %} - {% block author %}Philippe Beck{% endblock %}</title>
 
   <!-- Favorite URL -->
-  <link rel="canonical" href="{% block canonical %}http://philippebeck.net{% endblock %}">
+  <link rel="canonical" href="{% block canonical %}https://philippebeck.net{% endblock %}">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -34,7 +34,7 @@
   <meta property="og:title" content="{{ block('author') }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ block('canonical') }}">
-  <meta property="og:image" content="{% block image %}http://philippebeck.net/img/user/philippe.jpg{% endblock %}">
+  <meta property="og:image" content="{% block image %}https://philippebeck.net/img/user/philippe.jpg{% endblock %}">
   <meta property="og:description" content="{{ block('description') }}">
 
   <!-- FaceBook App Id -->
@@ -49,14 +49,14 @@
   <meta name="twitter:image" content="{{ block('image') }}">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
 
   <!-- Sam StyleSheet -->
-  <link rel="stylesheet" href="../node_modules/sam.scss/dist/sam.min.css">
-  <!-- <link rel="stylesheet" href="../public/css/sam.css"> -->
+  <link rel="stylesheet" href="node_modules/sam.scss/dist/sam.min.css">
+  <!-- <link rel="stylesheet" href="css/sam.css"> -->
 
   <!-- Project StyleSheet -->
-  <link rel="stylesheet" href="../public/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
@@ -132,7 +132,7 @@
   <script src="js/datas.js"></script>
 
   <!-- Loads Jim scripts -->
-  <script src="../node_modules/jim-js/jim.js"></script>
+  <script src="node_modules/jim-js/jim.js"></script>
 
   {# Adds specifics scripts to pages here #}
   {% block script %}{% endblock %}

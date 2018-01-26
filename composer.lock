@@ -817,16 +817,16 @@
         },
         {
             "name": "pjs/pam",
-            "version": "0.1.7",
+            "version": "0.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/philippebeck/pam.git",
-                "reference": "bea2dd7909465ccf26e815561cd3de1ffc58180b"
+                "reference": "adc4815ddb317e8ccef8ce46d1073532e5d29cdf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/philippebeck/pam/zipball/bea2dd7909465ccf26e815561cd3de1ffc58180b",
-                "reference": "bea2dd7909465ccf26e815561cd3de1ffc58180b",
+                "url": "https://api.github.com/repos/philippebeck/pam/zipball/adc4815ddb317e8ccef8ce46d1073532e5d29cdf",
+                "reference": "adc4815ddb317e8ccef8ce46d1073532e5d29cdf",
                 "shasum": ""
             },
             "require": {
@@ -856,7 +856,7 @@
                 "mvc",
                 "php"
             ],
-            "time": "2018-01-24 16:53:58"
+            "time": "2018-01-26 08:57:21"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
