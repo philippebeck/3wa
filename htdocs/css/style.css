@@ -287,26 +287,26 @@ figcaption {
   position: relative;
   width: 30rem;
   height: 30rem;
-  background: linear-gradient(130deg, white 0%, white 50%, black 50%, black 100%);
+  background: linear-gradient(122deg, white 0%, white 50%, black 50%, black 100%);
 }
 
 .oc {
   position: absolute;
-  top: 6%;
-  left: 8%;
+  top: 3%;
+  left: 6%;
 }
 
 
 .troiswa {
   position: absolute;
-  bottom: 8%;
+  bottom: 5%;
   right: 10%;
 }
 
 .duo {
   position: absolute;
   top: 13rem;
-  left: 6rem;
+  left: 3.5rem;
 }
 
 
@@ -325,6 +325,10 @@ main {
 
 #home h2 {
   color: MidnightBlue;
+}
+
+#home figure {
+  max-width: 20rem;
 }
 
 #home img,
