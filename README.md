@@ -11,7 +11,7 @@ This project is the main project of my current study.
 
 To use the minimum of external code, I created 4 tools to build this website, then published them:
 
-- Pjs, a CMS for coding in pyjamas;
+- Pjs, a microCMS for coding in pyjamas;
 
 - Pam, Php Appoachable Microframework;
 
@@ -44,4 +44,4 @@ For my main project, I choose to build my personal website, with 5 main categori
 
 - Universe, a section showing an image gallery of Hubble, with a lot of things about the main object of the image, such as basic information, images, official databases & wallpapers;
 
-- Atlas, another section on astronomy, presenting a table of rare and ancient atlases, in color and covering a millennium; opening to the celestial card galleries & to Wikipedia articles.
+- Atlas, another section on astronomy, presenting a table of rare & ancient atlases, in color & covering a millennium; opening to the celestial card galleries & to Wikipedia articles.
