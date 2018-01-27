@@ -323,14 +323,19 @@ main {
   background-image: url("../img/background/lavender.jpg");
 }
 
+#home h2 {
+  color: MidnightBlue;
+}
+
 #home img,
 #home svg {
   max-height: 15rem;
   max-width: 15rem;
 }
 
-#home p {
+#home section p {
   text-align: justify;
+  color: MidnightBlue;
 }
 
 
@@ -340,6 +345,7 @@ main {
 #portfolio {
   padding: 0;
   background-color: MintCream;
+  color: MidnightBlue;
 }
 
 #portfolio section {
@@ -425,7 +431,6 @@ main {
   /* Needs to set this position for working on smartphones */
   background-position: 80% 50%;
 }
-}
 
 /* Needs to set the position again for working on tablets */
 @media (min-width: 576px) and (max-width: 1023px)
@@ -484,6 +489,13 @@ main {
 
 
 /* ***** Blog ***** */
+
+#blog h2,
+#blog li p,
+#article h2,
+#article p {
+  color: DarkSlateBlue;
+}
 
 #blog img {
   max-height: 15rem;
@@ -571,14 +583,20 @@ main {
 
 #admin h2 {
   display: inline-block;
+  color: MidnightBlue;
 }
 
 #admin h3 {
   text-decoration: underline wavy;
+  color: DarkSlateBlue;
 }
 
 #admin h3 + a {
   margin-bottom: 3rem;
+}
+
+#admin table {
+  color: SteelBlue;
 }
 
 #admin td {
@@ -593,25 +611,4 @@ main {
 
 #admin td:last-of-type {
   width: 7rem;
-}
-
-
-
-/* ***** Hidden ***** */
-
-#hidden {
-  background: url('../img/background/hidden.jpg') 50% 80%;
-}
-
-#hidden h1 {
-  padding: 5rem;
-}
-
-#hidden h2 {
-  padding: 4rem;
-}
-
-#hidden blockquote {
-  padding-left: 3rem;
-  padding-bottom: 10rem;
 }
