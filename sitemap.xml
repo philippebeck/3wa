@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://philippebeck.net/</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?access=portfolio</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?access=pjs</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?access=article</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?access=photo</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?access=atlas</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?access=user%21login</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?access=user%21create</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?access=pjs%21pam</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?access=pjs%21jim</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?access=pjs%21sam</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=9&amp;access=article%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=8&amp;access=article%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=7&amp;access=article%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=6&amp;access=article%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=5&amp;access=article%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=4&amp;access=article%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=3&amp;access=article%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=2&amp;access=article%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=1&amp;access=article%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=63&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=62&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=61&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=60&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=59&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=58&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=57&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=56&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=55&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=54&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=53&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=52&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=51&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=50&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=49&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=48&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=47&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=46&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=45&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=44&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=43&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=42&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=41&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=40&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=39&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=38&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=37&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=36&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=35&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=34&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=33&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=32&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=31&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=30&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=29&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=28&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=27&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=26&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=25&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=24&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=23&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=22&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=21&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=20&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=19&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=18&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=17&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=16&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=15&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=14&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=13&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=12&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=11&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=10&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=9&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=8&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=7&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=6&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=5&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=4&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=3&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=2&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=1&amp;access=photo%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=19&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=18&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=17&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=16&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=15&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=14&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=13&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=12&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=11&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=10&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=9&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=8&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=7&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=6&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=5&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=4&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=3&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=2&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?id=1&amp;access=atlas%21read</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/index.php?access=home</loc>
+  <lastmod>2018-01-27T13:27:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://philippebeck.net/img/blog/3wa-provence.pdf</loc>
+  <lastmod>2018-01-25T18:13:12+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
