@@ -172,6 +172,7 @@ h1 {
 
 h2 {
   padding: .5rem 1rem;
+  max-width: 95%;
   font-family: 'sansation', sans-serif;
 }
 
@@ -198,6 +199,7 @@ h6 {
   padding: .1rem .2rem;
 }
 
+
 /* ***** Tables ***** */
 
 table,
@@ -217,6 +219,7 @@ form {
   font-family: 'quantico', sans-serif;
 }
 
+
 /* ***** Medias ***** */
 
 figure {
@@ -226,14 +229,6 @@ figure {
 figure img,
 figcaption {
   padding: 1rem;
-}
-
-/* ***** Footer ***** */
-
-.license {
-  display: block;
-  padding: .5rem 0;
-  cursor: help;
 }
 
 
@@ -273,14 +268,10 @@ figcaption {
   font-family: 'eczar', serif;
 }
 
-.intro {
-  max-width: 90rem;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 5rem;
-  padding: 1rem 2rem;
-  font-size: 1.7rem;
-  text-align: center;
+.duo {
+  position: absolute;
+  top: 13rem;
+  left: 3.5rem;
 }
 
 .half-block {
@@ -290,25 +281,34 @@ figcaption {
   background: linear-gradient(122deg, white 0%, white 50%, black 50%, black 100%);
 }
 
+.intro {
+  width: 90rem;
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5rem;
+  padding: 1rem 2rem;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.license {
+  display: block;
+  padding: .5rem 0;
+  cursor: help;
+}
+
 .oc {
   position: absolute;
   top: 3%;
   left: 6%;
 }
 
-
 .troiswa {
   position: absolute;
   bottom: 5%;
   right: 10%;
 }
-
-.duo {
-  position: absolute;
-  top: 13rem;
-  left: 3.5rem;
-}
-
 
 /* **************** */
 /* ***** Main ***** */
@@ -482,6 +482,15 @@ main {
 #pjs li {
   padding: 2rem;
 }
+
+@media (min-width: 1024px)
+{
+  #cms {
+    width: 50%;
+  }
+}
+
+
 
 .syntax {
   -webkit-touch-callout: none; /* iOS Safari */
