@@ -479,6 +479,14 @@ main {
   text-align: justify;
 }
 
+#pam p,
+#jim p,
+#sam p {
+  max-width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 #pjs li {
   padding: 2rem;
 }
