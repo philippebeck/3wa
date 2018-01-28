@@ -18,7 +18,6 @@
     <i class="fa fa-ban fa-lg fa-fw delete-text" aria-hidden="true"></i>
     En construction !
     <i class="fa fa-ban fa-lg fa-fw delete-text" aria-hidden="true"></i><br>
-    La documentation sera disponible ci-dessous avant lundi, merci de votre patience...
   </p>
 
   <article class="container">
@@ -33,6 +32,31 @@
     <section>
       <h3 class="primary-sea solid-rounded mt-wd mb-lg">II - Database</h3>
 
+      <p>Ce dossier contient les fichiers destinés à interagir directement avec la base de données & qui sont au nombre de 3 : DatabaseInterface, PDODatabase & PDOFactory.</p>
+
+      <section>
+        <h4>1 / DatabaseInterface</h4>
+
+        <p>Il s'agit de l'interface de la base de données qui contient les spécifications nécessaires à la création de tous types d'accès à une base de données.</p>
+
+        <p>Son contenu effectif actuel se compose de 3 signatures de méthodes : "result()", qui retourne un résultat unique, "results()", qui retourne tous les résultats spécifiés & "action()", qui exécute une action.<p>
+      </section>
+
+      <section>
+        <h4>2 / PDODatabase</h4>
+
+        <p>"PDODatabase" est propre à "PDO" et implémente l'Interface précédente.</p>
+
+        <p>Son rôle est de recupèrer la connexion "PDO" avec son contructeur ainsi que de préparer chaque requête afin d'éviter les injections SQL.</p>
+      </section>
+
+      <section>
+        <h4>3 / PDOFactory</h4>
+
+        <p>PDOFactory établit la connexion avec la base de données grâce à "PDO" & permettant à la classe "PDODatabase" d'effectué les requêtes.</p>
+
+        <p>Ce fichier appelle le fichier "app/config.php" contenant les informations d'accès à la base de données ; mais il configure aussi l'encodage de caractères.</p>
+      </section>
     </section>
 
     <section>
