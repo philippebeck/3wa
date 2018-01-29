@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e973ce5f94bfd726e84b41972a3fe0b9",
-    "content-hash": "35b72eecdaac6426b1a6a4ba97025681",
+    "hash": "662c1a62162ac3bb05b4ba38d1b64e5d",
+    "content-hash": "d64614a7ac1ba17cdaf00b40ad5ab52b",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -817,16 +817,16 @@
         },
         {
             "name": "pjs/pam",
-            "version": "0.1.8",
+            "version": "0.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/philippebeck/pam.git",
-                "reference": "adc4815ddb317e8ccef8ce46d1073532e5d29cdf"
+                "reference": "7113b3c3f10714d52c8a2e774282f6d02b9dc113"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/philippebeck/pam/zipball/adc4815ddb317e8ccef8ce46d1073532e5d29cdf",
-                "reference": "adc4815ddb317e8ccef8ce46d1073532e5d29cdf",
+                "url": "https://api.github.com/repos/philippebeck/pam/zipball/7113b3c3f10714d52c8a2e774282f6d02b9dc113",
+                "reference": "7113b3c3f10714d52c8a2e774282f6d02b9dc113",
                 "shasum": ""
             },
             "require": {
@@ -846,7 +846,7 @@
                 {
                     "name": "Philippe Beck",
                     "email": "philippe@philippebeck.net",
-                    "homepage": "http://philippebeck.net",
+                    "homepage": "https://philippebeck.net",
                     "role": "Developer"
                 }
             ],
@@ -856,7 +856,7 @@
                 "mvc",
                 "php"
             ],
-            "time": "2018-01-26 08:57:21"
+            "time": "2018-01-29 14:39:17"
         },
         {
             "name": "pjs/pjs",
@@ -1635,16 +1635,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "2db61e59ff05fe5126d152bd0655c9ea113e550f"
+                "reference": "0df1908962e7a3071564e857d86874dad1ef204a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/2db61e59ff05fe5126d152bd0655c9ea113e550f",
-                "reference": "2db61e59ff05fe5126d152bd0655c9ea113e550f",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/0df1908962e7a3071564e857d86874dad1ef204a",
+                "reference": "0df1908962e7a3071564e857d86874dad1ef204a",
                 "shasum": ""
             },
             "require": {
@@ -1681,7 +1681,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2016-11-23 20:04:58"
+            "time": "2018-01-29 19:49:41"
         }
     ],
     "packages-dev": [],
