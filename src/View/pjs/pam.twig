@@ -14,68 +14,97 @@
 
 <main id="pam" class="container center">
 
-  <p class="intro warning-sea solid-rounded">
-    <i class="fa fa-ban fa-lg fa-fw delete-text" aria-hidden="true"></i>
-    En construction !
-    <i class="fa fa-ban fa-lg fa-fw delete-text" aria-hidden="true"></i><br>
-  </p>
-
-  <article class="container">
+  <article>
 
     <h2 class="info-sea solid-slight p-md">Documentation de Pam</h2>
+
 
     <section>
       <h3 class="primary-sea solid-rounded mt-wd mb-lg">I - Installation</h3>
 
+      <ol>
+        <li>Ouvrez un terminal, placez-vous dans le dossier de votre projet, puis tapez :
+          <pre class="valid-text">composer require pjs/pam</pre>
+        </li>
+        <li>Copiez dans le dossier de votre projet tout le contenu du dossier :
+          <pre class="info-text">votreProjet/vendor/pjs/pam/Project</pre>
+        </li>
+        <li>Toujours dans le dossier de votre projet, tapez dans le terminal :
+          <pre class="valid-text">composer dump-autoload</pre>
+        </li>
+      </ol>
+
     </section>
 
     <section>
-      <h3 class="primary-sea solid-rounded mt-wd mb-lg">II - Database</h3>
+      <h3 class="primary-sea solid-rounded mt-wd mb-lg">II - MVC</h3>
 
-      <p>Ce dossier contient les fichiers destinés à interagir directement avec la base de données & qui sont au nombre de 3 : DatabaseInterface, PDODatabase & PDOFactory.</p>
+      <p><strong>Pam</strong> est construit suivant une architecture <strong>MVC : Model - View - Controller</strong>.</p>
 
-      <section>
-        <h4>1 / DatabaseInterface</h4>
-
-        <p>Il s'agit de l'interface de la base de données qui contient les spécifications nécessaires à la création de tous types d'accès à une base de données.</p>
-
-        <p>Son contenu effectif actuel se compose de 3 signatures de méthodes : "result()", qui retourne un résultat unique, "results()", qui retourne tous les résultats spécifiés & "action()", qui exécute une action.<p>
-      </section>
-
-      <section>
-        <h4>2 / PDODatabase</h4>
-
-        <p>"PDODatabase" est propre à "PDO" et implémente l'Interface précédente.</p>
-
-        <p>Son rôle est de recupèrer la connexion "PDO" avec son contructeur ainsi que de préparer chaque requête afin d'éviter les injections SQL.</p>
-      </section>
-
-      <section>
-        <h4>3 / PDOFactory</h4>
-
-        <p>PDOFactory établit la connexion avec la base de données grâce à "PDO" & permettant à la classe "PDODatabase" d'effectué les requêtes.</p>
-
-        <p>Ce fichier appelle le fichier "app/config.php" contenant les informations d'accès à la base de données ; mais il configure aussi l'encodage de caractères.</p>
-      </section>
     </section>
 
     <section>
       <h3 class="primary-sea solid-rounded mt-wd mb-lg">III - Model</h3>
 
+      <section>
+        <h4>1 / Les méthodes disponibles</h4>
+
+        <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> La méthode statique <strong class="valid-text">get()</strong> de la classe <strong class="info-text">ModelFactory</strong> sert à obtenir une connexion à la base données.</p>
+
+        <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Et les méthodes <strong class="valid-text">list(), create(), read(), update(), delete()</strong> de la classe abstraite <strong class="info-text">Model</strong> permettent d'effectuer les opérations CRUD.</p>
+
+        <p>Pour les utiliser, il faut commencer par créer une classe héritant de la classe abstraite <strong class="info-text">Model</strong>.</p>
+
+      </section>
+
+      <section>
+
+        <h4>2 / Le Model de la table</h4>
+
+        <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Cette classe doit être nommée & placée tel que spécifiés dans la classe <strong class="info-text">ModelFactory</strong> en ligne 37 :
+          <pre class="info-text">votreProjet/src/Model/<i>table</i>Model.php</pre> où <i class="info-text">table</i> doit être remplacé par le nom de la table en question.
+        </p>
+
+        <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Le contenu de cette classe peut être réduit au minimum :
+          <pre><span class="delete-text">class</span> <span class="info-text">TableModel</span> <span class="delete-text">extends</span> <span class="valid-text">Model</span> {}</pre>
+        </p>
+
+        <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Vous trouverez des exemples <a class="btn info-outline solid-round inset-blur" href="https://github.com/philippebeck/philippebeck/tree/master/src/Model" rel="noopener" rel="noreferrer" target="_blank" title="Voir les classes Model du site">ici</a></p>
+
+      </section>
+
+      <section>
+
+        <h4>3 / L'appel depuis un Controller</h4>
+
+        <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Il suffit ensuite d'appeler la méthode nécessaire depuis un <strong class="info-text">Controller</strong> de la manière suivante :
+          <pre><span class="info-text">ModelFactory</span>::<span class="valid-text">get</span>('<i class="warning-text">table</i>')-><i class="valid-text">crud</i>();</pre> où <i class="warning-text">table</i> doit être remplacé par la table en question & <i class="valid-text">crud</i> par la méthode choisie.
+        </p>
+
+        <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Vous trouverez des exemples <a class="btn info-outline solid-round inset-blur" href="https://github.com/philippebeck/philippebeck/tree/master/src/Controller" rel="noopener" rel="noreferrer" target="_blank" title="Voir les classes Controller du site">ici</a></p>
+
+      </section>
     </section>
 
     <section>
-      <h3 class="primary-sea solid-rounded mt-wd mb-lg">IV - Controller</h3>
+      <h3 class="primary-sea solid-rounded mt-wd mb-lg">IV - View</h3>
+
+      <p></p>
 
     </section>
 
     <section>
-      <h3 class="primary-sea solid-rounded mt-wd mb-lg">V - View</h3>
+      <h3 class="primary-sea solid-rounded mt-wd mb-lg">V - Controller</h3>
+
+      <p></p>
 
     </section>
+
 
     <section>
       <h3 class="primary-sea solid-rounded mt-wd mb-lg">VI - Helper</h3>
+
+      <p></p>
 
     </section>
 

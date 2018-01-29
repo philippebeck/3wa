@@ -482,7 +482,6 @@ main {
 #pam p,
 #jim p,
 #sam p {
-  max-width: 50%;
   margin-right: auto;
   margin-left: auto;
 }
