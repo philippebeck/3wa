@@ -23,13 +23,13 @@
       <h3 class="primary-sea solid-rounded mt-wd mb-lg">I - Installation</h3>
 
       <ol>
-        <li>Ouvrez un terminal, placez-vous dans le dossier de votre projet, puis tapez :
+        <li>Ouvrez un terminal, placez-vous <i>dans le dossier de votre projet</i>, puis tapez :
           <pre class="valid-text">composer require pjs/pam</pre>
         </li>
-        <li>Copiez dans le dossier de votre projet tout le contenu du dossier :
-          <pre class="info-text">votreProjet/vendor/pjs/pam/Project</pre>
+        <li>Copiez <i>dans le dossier de votre projet</i> tout le contenu du dossier :
+          <pre class="classic-text">votreProjet/vendor/pjs/pam/Project</pre>
         </li>
-        <li>Toujours dans le dossier de votre projet, tapez dans le terminal :
+        <li>Toujours <i>dans le dossier de votre projet</i>, tapez dans le terminal :
           <pre class="valid-text">composer dump-autoload</pre>
         </li>
       </ol>
@@ -61,15 +61,15 @@
 
         <h4>2 / Le Model de la table</h4>
 
-        <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Cette classe doit être nommée & placée tel que spécifiés dans la classe <strong class="info-text">ModelFactory</strong> en ligne 37 :
-          <pre class="info-text">votreProjet/src/Model/<i>table</i>Model.php</pre> où <i class="info-text">table</i> doit être remplacé par le nom de la table en question.
+        <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Cette classe doit être nommée & placée tel que spécifiés dans la classe <strong class="info-text">ModelFactory</strong> :
+          <pre class="classic-text">votreProjet/src/Model/<i>table</i>Model.php</pre> où <i class="info-text">table</i> doit être remplacé par le nom de la table en question.
         </p>
 
         <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Le contenu de cette classe peut être réduit au minimum :
           <pre><span class="delete-text">class</span> <span class="info-text">TableModel</span> <span class="delete-text">extends</span> <span class="valid-text">Model</span> {}</pre>
         </p>
 
-        <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Vous trouverez des exemples <a class="btn info-outline solid-rounder inset-blur" href="https://github.com/philippebeck/philippebeck/tree/master/src/Model" rel="noopener" rel="noreferrer" target="_blank" title="Voir les classes Model du site">ici</a></p>
+        <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Vous trouverez des exemples de <a class="btn info-outline solid-rounder inset-blur" href="https://github.com/philippebeck/philippebeck/tree/master/src/Model" rel="noopener" rel="noreferrer" target="_blank" title="Voir les classes Model du site">Model ici</a></p>
 
       </section>
 
@@ -81,7 +81,7 @@
           <pre><span class="info-text">ModelFactory</span>::<span class="valid-text">get</span>('<i class="warning-text">table</i>')-><i class="valid-text">crud</i>();</pre> où <i class="warning-text">table</i> doit être remplacé par la table en question & <i class="valid-text">crud</i> par la méthode choisie.
         </p>
 
-        <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Vous trouverez des exemples <a class="btn info-outline solid-rounder inset-blur" href="https://github.com/philippebeck/philippebeck/tree/master/src/Controller" rel="noopener" rel="noreferrer" target="_blank" title="Voir les classes Controller du site">ici</a></p>
+        <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Vous trouverez des exemples de <a class="btn info-outline solid-rounder inset-blur" href="https://github.com/philippebeck/philippebeck/tree/master/src/Controller" rel="noopener" rel="noreferrer" target="_blank" title="Voir les classes Controller du site">Controller ici</a></p>
 
       </section>
     </section>
@@ -99,57 +99,107 @@
       <section>
         <h4>2 / Pam_Twig_Extension</h4>
 
-        <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Il s'agit d'une extension de <strong class="valid-text">Twig</strong> destiné à définir des fonctions supplémentaires au sein du <strong class="special-text">framework</strong>.</p>
+        <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Il s'agit d'une <a class="btn info-outline solid-rounder inset-blur" href="https://twig.symfony.com/doc/2.x/advanced.html" rel="noopener" rel="noreferrer" target="_blank" title="Voir la documentation de Twig Extension">extension</a> de <strong class="valid-text">Twig</strong> destiné à définir des fonctions supplémentaires au sein du <strong class="special-text">framework</strong>.</p>
 
         <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Ces fonctions sont au nombre de 9 :
-        <ul class="valid-text">
-          <li>url()</li>
-          <li>isLogged()</li>
-          <li>userId()</li>
-          <li>userName()</li>
-          <li>userImage()</li>
-          <li>userEmail()</li>
-          <li>hasAlert()</li>
-          <li>readType()</li>
-          <li>readMessage()</li>
-        </ul></p>
+          <ul class="valid-text">
+            <li>url()</li>
+            <li>isLogged()</li>
+            <li>userId()</li>
+            <li>userName()</li>
+            <li>userImage()</li>
+            <li>userEmail()</li>
+            <li>hasAlert()</li>
+            <li>readType()</li>
+            <li>readMessage()</li>
+          </ul></p>
+
+        </section>
+
+        <section>
+          <h4>3 / App_Twig_Extension</h4>
+
+          <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Il s'agit d'une <a class="btn info-outline solid-rounder inset-blur" href="https://twig.symfony.com/doc/2.x/advanced.html" rel="noopener" rel="noreferrer" target="_blank" title="Voir la documentation de Twig Extension">extension</a> de <strong class="valid-text">Twig</strong> destiné à définir des fonctions supplémentaires au sein de chaque <strong class="special-text">projet</strong>.</p>
+
+          <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Vous trouverez un exemple de <a class="btn info-outline solid-rounder inset-blur" href="https://github.com/philippebeck/philippebeck/blob/master/src/Helper/App_Twig_Extension.php" rel="noopener" rel="noreferrer" target="_blank" title="Voir la classe App_Twig_Extension du site">App_Twig_Extension ici</a></p>
+
+        </section>
 
       </section>
 
       <section>
-        <h4>3 / App_Twig_Extension</h4>
+        <h3 class="primary-sea solid-rounded mt-wd mb-lg">V - Controller</h3>
 
-        <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Il s'agit d'une extension de <strong class="valid-text">Twig</strong> destiné à définir des fonctions supplémentaires au sein du <strong class="special-text">projet</strong>.</p>
+        <section>
+          <h4>1 / Les méthodes disponibles</h4>
 
-        <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Vous trouverez un exemple <a class="btn info-outline solid-rounder inset-blur" href="https://github.com/philippebeck/philippebeck/blob/master/src/Helper/App_Twig_Extension.php" rel="noopener" rel="noreferrer" target="_blank" title="Voir la classe App_Twig_Extension du site">ici</a></p>
+          <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les méthodes <strong class="valid-text">url(), redirect(), render(), upload()</strong> de la classe abstraite <strong class="info-text">Controller</strong> permettent de gérer les transferts des pages & des fichiers.</p>
 
+          <p>Pour les utiliser, il faut commencer par créer une classe héritant de la classe abstraite <strong class="info-text">Controller</strong>.</p>
+
+        </section>
+
+        <section>
+
+          <h4>2 / Le Controller de la page</h4>
+
+          <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Cette classe doit être nommée & placée tel que spécifiés dans la classe <strong class="info-text">FrontController</strong> :
+            <pre class="classic-text">votreProjet/src/Controller/<i>page</i>Controller.php</pre> où <i class="info-text">page</i> doit être remplacé par le nom de la page en question.
+          </p>
+
+          <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Vous trouverez des exemples de <a class="btn info-outline solid-rounder inset-blur" href="https://github.com/philippebeck/philippebeck/tree/master/src/Controller" rel="noopener" rel="noreferrer" target="_blank" title="Voir les classes Controller du site">Controller ici</a></p>
+
+        </section>
+
+        <section>
+
+          <h4>3 / L'Action de la controller</h4>
+
+          <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong class="special-text">L'Action d'un Controller</strong> doit être nommée tel que spécifiée dans la classe <strong class="info-text">FrontController</strong> :
+            <pre><span class="delete-text">public function</span> <span class="valid-text"><i>Index</i>Action</span>() {}</pre> où <i class="valid-text">Index</i> peut être remplacé par le nom d'une opération CRUD si nécessaire.
+          </p>
+
+          <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Vous trouverez des exemples d'<a class="btn info-outline solid-rounder inset-blur" href="https://github.com/philippebeck/philippebeck/tree/master/src/Controller" rel="noopener" rel="noreferrer" target="_blank" title="Voir les classes Controller du site">Action ici</a></p>
+
+        </section>
       </section>
 
-    </section>
-
-    <section>
-      <h3 class="primary-sea solid-rounded mt-wd mb-lg">V - Controller</h3>
 
       <section>
-        <h4></h4>
+        <h3 class="primary-sea solid-rounded mt-wd mb-lg">VI - Helper</h3>
+
+        <section>
+          <h4>1 / Les Sessions</h4>
+
+          <p>La classe <strong class="info-text">Session</strong> dispose de nombreuses méthodes statiques :
+            <ul class="valid-text">
+              <li>createSession()</li>
+              <li>destroySession()</li>
+              <li>isLogged()</li>
+              <li>userId()</li>
+              <li>userName()</li>
+              <li>userImage</li>
+              <li>userEmail</li>
+              <li>createAlert()</li>
+              <li>hasAlert()</li>
+              <li>readType()</li>
+              <li>readMessage()</li>
+            </ul>
+          </p>
+
+        </section>
+
+        <section>
+          <h4>2 / L'appel des méthodes de Session</h4>
+
+          <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Il suffit d'appeler la méthode nécessaire depuis un <strong class="info-text">Controller</strong> de la manière suivante :
+            <pre><span class="info-text">Session</span>::<span class="valid-text">method</span>();</pre> où <i class="valid-text">method</i> doit être remplacé par la méthode en question.
+          </p>
+
+        </section>
 
       </section>
-
-    </section>
-
-
-    <section>
-      <h3 class="primary-sea solid-rounded mt-wd mb-lg">VI - Helper</h3>
-
-      <section>
-        <h4></h4>
-
-      </section>
-
-    </section>
-
-  </article>
-
-</main>
+    </article>
+  </main>
 
 {% endblock %}
