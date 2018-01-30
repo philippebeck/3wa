@@ -25,11 +25,29 @@
 
     <h2 class="info-sea solid-slight p-md">Documentation de Sam</h2>
 
+    <p><strong class="delete-text">Sam</strong> est un <strong class="special-text">microframework SCSS</strong> générant une <strong class="info-text">librairie CSS</strong>.</p>
+
     <!-- ************************** -->
     <!-- ***** Navbar section ***** -->
 
     <section>
-      <h3 class="primary-sea solid-rounded mt-wd mb-lg">I - La Barre de Navigation</h3>
+      <h3 class="primary-sea solid-rounded mt-wd mb-lg">I - Installation</h3>
+
+      <ol>
+        <li>Ouvrez un terminal, placez-vous dans <i>votre dossier web</i>, puis tapez  <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i>
+          <pre class="classic-text">npm install sam.scss</pre>
+        </li>
+        <li>Appelez depuis votre layout :
+          <ul>
+            <li><strong class="valid-text">sam.css</strong> pour la version dev <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i>
+              <pre>&lt;<span class="delete-text">link</span> <span class="info-text">rel</span>=<span class="warning-text">"stylesheet"</span> <span class="info-text">href</span>=<span class="warning-text">"node_modules/sam.scss/dist/sam.css"</span>&gt;</pre>
+            </li>
+            <li><strong class="valid-text">sam.min.css</strong> pour la version prod <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i>
+              <pre>&lt;<span class="delete-text">link</span> <span class="info-text">rel</span>=<span class="warning-text">"stylesheet"</span> <span class="info-text">href</span>=<span class="warning-text">"node_modules/sam.scss/dist/sam.min.css"</span>&gt;</pre>(attention toutefois, il s'agit d'un pre-release pour le moment)
+            </li>
+          </ul>
+        </li>
+      </ol>
 
     </section>
 
