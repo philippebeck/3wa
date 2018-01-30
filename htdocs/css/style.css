@@ -172,7 +172,6 @@ h1 {
 
 h2 {
   padding: .5rem 1rem;
-  max-width: 95%;
   font-family: 'sansation', sans-serif;
 }
 
@@ -359,6 +358,7 @@ main {
 
 #portfolio h2 {
   margin-top: 0;
+  max-width: 95%;
 }
 
 #portfolio table {
@@ -473,6 +473,7 @@ main {
 #sam h3,
 #sam h4 {
   display: inline-block;
+  max-width: 95%;
 }
 
 #pam h4,
