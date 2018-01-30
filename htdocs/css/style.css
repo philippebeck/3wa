@@ -474,6 +474,12 @@ main {
   display: inline-block;
 }
 
+#pam h4,
+#jim h4,
+#sam h4 {
+  color: MidnightBlue;
+}
+
 #pjs p {
   font-family: 'tuffy', sans-serif;
   text-align: justify;
