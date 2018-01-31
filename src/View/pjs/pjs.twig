@@ -107,25 +107,7 @@
 
       <li class="col items-center info-sea solid-rounded">
 
-        <article class="col items-center">
-
-          <h3>PAM<br>Php Approachable Microframework</h3>
-
-          <p>Pam est un microframework PHP basé sur l'architecture MVC.</p>
-
-          <p>Pam est très facile à utiliser et très léger à mettre en œuvre.</p>
-
-          <p>La partie Modèle peut être utilisée pour toutes les actions CRUD et n'a pas besoin d'être surchargée pour les actions de base.</p>
-
-          <p>La partie View utilise le moteur de template Twig, il est donc possible d'utiliser des variables, des fonctions, des filtres, etc...</p>
-
-          <p>La partie Controller hérite des méthodes indispensables du contrôleur principal et le FrontController structure l'entrée de l'application.</p>
-
-          <p>Les sessions sont gérées par Pam pour les actions de connexion et de message utilisateur.</p>
-
-          <p>L'accès à la base de données est évidemment géré par la partie Database, via la classe PDO.</p>
-
-        </article>
+        <h3>PAM<br>Php Approachable Microframework</h3>
 
         <a class="btn info-outline double-round inset-spread" href="{{ url('pjs!pam') }}" title="Voir la documentation">
           <figure>
@@ -162,21 +144,7 @@
 
       <li class="col items-center valid-sea solid-rounded">
 
-        <article class="col items-center">
-
-          <h3>JIM<br>Javascript Interactive Microlibrary</h3>
-
-          <p>Jim est une micro-librairie JavaScript qui utilise les événements pour l'interactivité.</p>
-
-          <p>Jim propose un système de gestion du clavier permettant d'associer une touche avec une action paramétrable.</p>
-
-          <p>Il donc est possible d'accéder à une page précise, que ce soit sur site ou sur le web, ou encore de lancer des animations ou des actions ; par exemple, donner la possibilité à l'utilisateur de se déconnecter en appuyant sur la touche "Q"...</p>
-
-          <p>Jim est fourni sans aucune ligne de code jQuery, ni aucune dépendance...</p>
-
-          <p>Jim n'en est qu'à ses débuts, il va grandir dans un futur proche...</p>
-
-        </article>
+        <h3>JIM<br>Javascript Interactive Microlibrary</h3>
 
         <a class="btn valid-outline double-round inset-spread" href="{{ url('pjs!jim') }}" title="Voir la documentation">
           <figure>
@@ -218,60 +186,42 @@
 
       <li class="col items-center delete-sea solid-rounded">
 
-        <article class="col items-center">
+        <h3>SAM<br>Scss Animated Microframework</h3>
 
-          <h3>SAM<br>Scss Animated Microframework</h3>
+        <a class="btn delete-outline double-round inset-spread" href="{{ url('pjs!sam') }}" title="Voir la documentation">
+          <figure>
+            {{ include('svg/sam.svg.twig') }}
+            <figcaption>Documentation</figcaption>
+          </figure>
+        </a>
 
-          <p>Sam est un microframework SCSS qui regroupe certaines propriétés CSS importantes par classe.</p>
+        <p>
+          Installer Sam via npm :<br>
+          <strong><i class="fa fa-code-fork fa-lg fa-fw" aria-hidden="true"></i> npm install sam.scss</strong>
+        </p>
 
-          <p>Sam est orienté vers l'animation au travers de règles @keyframes et de propriétés CSS d'animation & de transformation.
+        <p>Installer Sam via bower :<br>
+          <strong><i class="fa fa-code-fork fa-lg fa-fw" aria-hidden="true"></i> bower install sam.scss --save</strong>
+        </p>
 
-            <p>Sam est fourni sans aucune ligne de code JavaScript, ses animations ne peuvent donc être désactivées...</p>
+        <div class="btn-group">
 
-            <p>Sam peut faire une grille avec flexbox layout ou grid layout!</p>
+          <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir le repository GitHub">
+            <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
+          </a>
 
-            <p>Sam peut être utilisé sans aucune connaissance SCSS, Sass ou Ruby, en utilisant uniquement la bibliothèque CSS.</p>
+          <a class="btn npm-outline solid-rounder inset-spread" href="https://www.npmjs.com/package/sam.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir le package npm">
+            <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
+          </a>
 
-            <p>Sam est construit autour de 6 caractéristiques principales: l'affichage, les couleurs, les bordures, les ombres, les animations et les helpers.</p>
+          <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss/archive/master.zip" title="Télécharger Sam">
+            <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
+          </a>
 
-            <p>Sam fournit 3 éléments de base en plus, la barre de navigation, les boutons et les formulaires.</p>
-
-            <a class="btn delete-outline double-round inset-spread" href="{{ url('pjs!sam') }}" title="Voir la documentation">
-              <figure>
-                {{ include('svg/sam.svg.twig') }}
-                <figcaption>Documentation</figcaption>
-              </figure>
-            </a>
-
-            <p>
-              Installer Sam via npm :<br>
-              <strong><i class="fa fa-code-fork fa-lg fa-fw" aria-hidden="true"></i> npm install sam.scss</strong>
-            </p>
-
-            <p>Installer Sam via bower :<br>
-              <strong><i class="fa fa-code-fork fa-lg fa-fw" aria-hidden="true"></i> bower install sam.scss --save</strong>
-            </p>
-
-          </article>
-
-          <div class="btn-group">
-
-            <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir le repository GitHub">
-              <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
-            </a>
-
-            <a class="btn npm-outline solid-rounder inset-spread" href="https://www.npmjs.com/package/sam.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir le package npm">
-              <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
-            </a>
-
-            <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss/archive/master.zip" title="Télécharger Sam">
-              <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
-            </a>
-
-          </div>
-        </li>
-      </ul>
-    </section>
-  </main>
+        </div>
+      </li>
+    </ul>
+  </section>
+</main>
 
 {% endblock %}

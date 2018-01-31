@@ -18,7 +18,10 @@
 
     <h2 class="info-sea solid-slight p-md">Documentation de Pam</h2>
 
-    <p><strong>Pam</strong> est construit suivant une architecture <strong>MVC : Model - View - Controller</strong>.</p>
+    <figure class="mr-auto ml-auto">
+      {{ include('svg/pam.svg.twig') }}
+      <figcaption>PAM</figcaption>
+    </figure>
 
     <div class="btn-group m-md">
       <!-- Facebook buttons -->
@@ -31,6 +34,37 @@
       <!-- linkedIn button -->
       <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: fr_FR</script>
       <script type="IN/Share" data-url="https://philippebeck.net/index.php?access=pjs!pam" data-counter="right"></script>
+    </div>
+
+    <p>Pam est un microframework PHP basé sur l'architecture MVC.</p>
+
+    <p>Pam est très facile à utiliser et très léger à mettre en œuvre.</p>
+
+    <p>La partie Modèle peut être utilisée pour toutes les actions CRUD et n'a pas besoin d'être surchargée pour les actions de base.</p>
+
+    <p>La partie View utilise le moteur de template Twig, il est donc possible d'utiliser des variables, des fonctions, des filtres, etc...</p>
+
+    <p>La partie Controller hérite des méthodes indispensables du contrôleur principal et le FrontController structure l'entrée de l'application.</p>
+
+    <p>Les sessions sont gérées par Pam pour les actions de connexion et de message utilisateur.</p>
+
+    <p>L'accès à la base de données est évidemment géré par la partie Database, via la classe PDO.</p>
+
+
+    <div class="btn-group">
+
+      <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pam" rel="noopener" rel="noreferrer" target="_blank" title="Voir le repository GitHub">
+        <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
+      </a>
+
+      <a class="btn packagist-outline solid-rounder inset-spread" href="https://packagist.org/packages/pjs/pam" rel="noopener" rel="noreferrer" target="_blank" title="Voir le package Packagist">
+        <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
+      </a>
+
+      <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pam/archive/master.zip" title="Télécharger Pam">
+        <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
+      </a>
+
     </div>
 
     <section>
