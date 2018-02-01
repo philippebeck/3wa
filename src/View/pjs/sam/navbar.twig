@@ -1,0 +1,813 @@
+<!-- ************************** -->
+<!-- ***** Navbar section ***** -->
+
+<section>
+  <h3 class="primary-sea solid-rounded mt-wd mb-lg">II - La Navbar</h3>
+
+  <p>La classe <strong class="valid-text">navbar</strong> est caractérisée par une particularité : son adaptation au différentes tailles d'écrans <em>laisse toujours une visibilité directe</em> sur les rubriques listées.</p>
+
+  <p>C'est-à-dire qu'il n'est pas nécessaire d'appuyer sur un bouton pour découvrir le contenu de la navbar : il est toujours présent...</p>
+
+  <p>En fait, sur un smartphone, seules les icones subsistent ; les textes, ainsi que d'autres éléments, apparaissent sur de plus grands formats d'affichage.</p>
+
+  <p>Vous trouverez des exemples de navbar ci-dessous, n'hésitez pas à faire varier la taille de la fenêtre pour voir la navbar changer...</p>
+
+  <a class="btn info-outline solid-rounder inset-blur" href="https://github.com/philippebeck/philippebeck/tree/master/src/View/layout/navbar.twig" rel="noopener" rel="noreferrer" target="_blank" title="Voir la navbar du site">Code exemple de la classe Navbar</a>
+
+
+  <section>
+
+    <h4 class="secondary-sea solid-rounder-sm">1 / Navbar & Connexion</h4>
+
+    <h5>1.1 / Navbar avec Connexion</h5>
+
+    <!-- Main Navigation -->
+    <nav class="navbar">
+
+      <!-- Home access -->
+      <ul class="brand-nav">
+        <li>
+          <a href="./" title="Accueil">
+            {{ include('svg/phi.svg.twig') }}
+          </a>
+        </li>
+      </ul>
+
+      <!-- Main access -->
+      <ul class="main-nav">
+
+        <!-- Pam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!pam" title="Php Approachable Microframework Documentation">
+            <i class="fa fa-universal-access fa-fw" aria-hidden="true"></i>
+            <span>Pam</span>
+          </a>
+        </li>
+
+        <!-- Jim documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!jim" title="JavaScript Interactive Microlibrary Documentation">
+            <i class="fa fa-keyboard-o fa-fw" aria-hidden="true"></i>
+            <span>Jim</span>
+          </a>
+        </li>
+
+        <!-- Sam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!sam" title="Scss Animated Microframework Documentation">
+            <i class="fa fa-css3 fa-fw" aria-hidden="true"></i>
+            <span>Sam</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <form role="search">
+        <input type="text" placeholder="Rechercher">
+      </form>
+
+      <!-- User access -->
+      <ul class="user-nav">
+
+        <li>
+          <p>Bonjour Utilisateur !</p>
+        </li>
+
+        <li>
+          <a href="#" title="Edit my profile">
+            <img class="solid-round-sm hover-full-sm-double-alt visible" src="img/user/3wa.svg" alt="User Picture">
+          </a>
+        </li>
+
+        <!-- Logout access -->
+        <li>
+          <a href="#" title="Logout">
+            <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <h5>1.2 / Navbar sans Connexion</h5>
+
+    <!-- Main Navigation -->
+    <nav class="navbar">
+
+      <!-- Home access -->
+      <ul class="brand-nav">
+        <li>
+          <a href="./" title="Accueil">
+            {{ include('svg/phi.svg.twig') }}
+          </a>
+        </li>
+      </ul>
+
+      <!-- Main access -->
+      <ul class="main-nav">
+
+        <!-- Pam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!pam" title="Php Approachable Microframework Documentation">
+            <i class="fa fa-universal-access fa-fw" aria-hidden="true"></i>
+            <span>Pam</span>
+          </a>
+        </li>
+
+        <!-- Jim documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!jim" title="JavaScript Interactive Microlibrary Documentation">
+            <i class="fa fa-keyboard-o fa-fw" aria-hidden="true"></i>
+            <span>Jim</span>
+          </a>
+        </li>
+
+        <!-- Sam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!sam" title="Scss Animated Microframework Documentation">
+            <i class="fa fa-css3 fa-fw" aria-hidden="true"></i>
+            <span>Sam</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <form role="search">
+        <input type="text" placeholder="Rechercher">
+      </form>
+
+      <!-- User access -->
+      <ul class="user-nav">
+
+        <!-- Login access -->
+        <li>
+          <a href="#" title="Login">
+            <i class="fa fa-sign-in fa-fw" aria-hidden="true"></i>
+          </a>
+        </li>
+
+        <!-- Create user access -->
+        <li>
+          <a href="#" title="New user">
+            <i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </section>
+
+
+  <section>
+    <h4 class="secondary-sea solid-rounder-sm">2 / Navbar & Couleurs</h4>
+
+
+    <h5>2.1 / Navbar Info</h5>
+
+    <!-- Main Navigation -->
+    <nav class="navbar info">
+
+      <!-- Home access -->
+      <ul class="brand-nav">
+        <li>
+          <a href="./" title="Accueil">
+            {{ include('svg/phi.svg.twig') }}
+          </a>
+        </li>
+      </ul>
+
+      <!-- Main access -->
+      <ul class="main-nav">
+
+        <!-- Pam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!pam" title="Php Approachable Microframework Documentation">
+            <i class="fa fa-universal-access fa-fw" aria-hidden="true"></i>
+            <span>Pam</span>
+          </a>
+        </li>
+
+        <!-- Jim documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!jim" title="JavaScript Interactive Microlibrary Documentation">
+            <i class="fa fa-keyboard-o fa-fw" aria-hidden="true"></i>
+            <span>Jim</span>
+          </a>
+        </li>
+
+        <!-- Sam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!sam" title="Scss Animated Microframework Documentation">
+            <i class="fa fa-css3 fa-fw" aria-hidden="true"></i>
+            <span>Sam</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <form role="search">
+        <input type="text" placeholder="Rechercher">
+      </form>
+
+      <!-- User access -->
+      <ul class="user-nav">
+
+        <li>
+          <p>Bonjour Utilisateur !</p>
+        </li>
+
+        <li>
+          <a href="#" title="Edit my profile">
+            <img class="solid-round-sm hover-full-sm-double-alt visible" src="img/user/3wa.svg" alt="User Picture">
+          </a>
+        </li>
+
+        <!-- Logout access -->
+        <li>
+          <a href="#" title="Logout">
+            <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+
+
+    <h5>2.2 / Navbar Classic</h5>
+
+    <!-- Main Navigation -->
+    <nav class="navbar classic">
+
+      <!-- Home access -->
+      <ul class="brand-nav">
+        <li>
+          <a href="./" title="Accueil">
+            {{ include('svg/phi.svg.twig') }}
+          </a>
+        </li>
+      </ul>
+
+      <!-- Main access -->
+      <ul class="main-nav">
+
+        <!-- Pam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!pam" title="Php Approachable Microframework Documentation">
+            <i class="fa fa-universal-access fa-fw" aria-hidden="true"></i>
+            <span>Pam</span>
+          </a>
+        </li>
+
+        <!-- Jim documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!jim" title="JavaScript Interactive Microlibrary Documentation">
+            <i class="fa fa-keyboard-o fa-fw" aria-hidden="true"></i>
+            <span>Jim</span>
+          </a>
+        </li>
+
+        <!-- Sam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!sam" title="Scss Animated Microframework Documentation">
+            <i class="fa fa-css3 fa-fw" aria-hidden="true"></i>
+            <span>Sam</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <form role="search">
+        <input type="text" placeholder="Rechercher">
+      </form>
+
+      <!-- User access -->
+      <ul class="user-nav">
+
+        <li>
+          <p>Bonjour Utilisateur !</p>
+        </li>
+
+        <li>
+          <a href="#" title="Edit my profile">
+            <img class="solid-round-sm hover-full-sm-double-alt visible" src="img/user/3wa.svg" alt="User Picture">
+          </a>
+        </li>
+
+        <!-- Logout access -->
+        <li>
+          <a href="#" title="Logout">
+            <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+
+    <h5>2.3 / Navbar Valid</h5>
+
+    <!-- Main Navigation -->
+    <nav class="navbar valid">
+
+      <!-- Home access -->
+      <ul class="brand-nav">
+        <li>
+          <a href="./" title="Accueil">
+            {{ include('svg/phi.svg.twig') }}
+          </a>
+        </li>
+      </ul>
+
+      <!-- Main access -->
+      <ul class="main-nav">
+
+        <!-- Pam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!pam" title="Php Approachable Microframework Documentation">
+            <i class="fa fa-universal-access fa-fw" aria-hidden="true"></i>
+            <span>Pam</span>
+          </a>
+        </li>
+
+        <!-- Jim documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!jim" title="JavaScript Interactive Microlibrary Documentation">
+            <i class="fa fa-keyboard-o fa-fw" aria-hidden="true"></i>
+            <span>Jim</span>
+          </a>
+        </li>
+
+        <!-- Sam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!sam" title="Scss Animated Microframework Documentation">
+            <i class="fa fa-css3 fa-fw" aria-hidden="true"></i>
+            <span>Sam</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <form role="search">
+        <input type="text" placeholder="Rechercher">
+      </form>
+
+      <!-- User access -->
+      <ul class="user-nav">
+
+        <li>
+          <p>Bonjour Utilisateur !</p>
+        </li>
+
+        <li>
+          <a href="#" title="Edit my profile">
+            <img class="solid-round-sm hover-full-sm-double-alt visible" src="img/user/3wa.svg" alt="User Picture">
+          </a>
+        </li>
+
+        <!-- Logout access -->
+        <li>
+          <a href="#" title="Logout">
+            <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+
+    <h5>2.4 / Navbar Warning</h5>
+
+    <!-- Main Navigation -->
+    <nav class="navbar warning">
+
+      <!-- Home access -->
+      <ul class="brand-nav">
+        <li>
+          <a href="./" title="Accueil">
+            {{ include('svg/phi.svg.twig') }}
+          </a>
+        </li>
+      </ul>
+
+      <!-- Main access -->
+      <ul class="main-nav">
+
+        <!-- Pam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!pam" title="Php Approachable Microframework Documentation">
+            <i class="fa fa-universal-access fa-fw" aria-hidden="true"></i>
+            <span>Pam</span>
+          </a>
+        </li>
+
+        <!-- Jim documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!jim" title="JavaScript Interactive Microlibrary Documentation">
+            <i class="fa fa-keyboard-o fa-fw" aria-hidden="true"></i>
+            <span>Jim</span>
+          </a>
+        </li>
+
+        <!-- Sam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!sam" title="Scss Animated Microframework Documentation">
+            <i class="fa fa-css3 fa-fw" aria-hidden="true"></i>
+            <span>Sam</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <form role="search">
+        <input type="text" placeholder="Rechercher">
+      </form>
+
+      <!-- User access -->
+      <ul class="user-nav">
+
+        <li>
+          <p>Bonjour Utilisateur !</p>
+        </li>
+
+        <li>
+          <a href="#" title="Edit my profile">
+            <img class="solid-round-sm hover-full-sm-double-alt visible" src="img/user/3wa.svg" alt="User Picture">
+          </a>
+        </li>
+
+        <!-- Logout access -->
+        <li>
+          <a href="#" title="Logout">
+            <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+
+    <h5>2.5 / Navbar Delete</h5>
+
+    <!-- Main Navigation -->
+    <nav class="navbar delete">
+
+      <!-- Home access -->
+      <ul class="brand-nav">
+        <li>
+          <a href="./" title="Accueil">
+            {{ include('svg/phi.svg.twig') }}
+          </a>
+        </li>
+      </ul>
+
+      <!-- Main access -->
+      <ul class="main-nav">
+
+        <!-- Pam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!pam" title="Php Approachable Microframework Documentation">
+            <i class="fa fa-universal-access fa-fw" aria-hidden="true"></i>
+            <span>Pam</span>
+          </a>
+        </li>
+
+        <!-- Jim documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!jim" title="JavaScript Interactive Microlibrary Documentation">
+            <i class="fa fa-keyboard-o fa-fw" aria-hidden="true"></i>
+            <span>Jim</span>
+          </a>
+        </li>
+
+        <!-- Sam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!sam" title="Scss Animated Microframework Documentation">
+            <i class="fa fa-css3 fa-fw" aria-hidden="true"></i>
+            <span>Sam</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <form role="search">
+        <input type="text" placeholder="Rechercher">
+      </form>
+
+      <!-- User access -->
+      <ul class="user-nav">
+
+        <li>
+          <p>Bonjour Utilisateur !</p>
+        </li>
+
+        <li>
+          <a href="#" title="Edit my profile">
+            <img class="solid-round-sm hover-full-sm-double-alt visible" src="img/user/3wa.svg" alt="User Picture">
+          </a>
+        </li>
+
+        <!-- Logout access -->
+        <li>
+          <a href="#" title="Logout">
+            <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+
+    <h5>2.6 / Navbar Special</h5>
+
+    <!-- Main Navigation -->
+    <nav class="navbar special">
+
+      <!-- Home access -->
+      <ul class="brand-nav">
+        <li>
+          <a href="./" title="Accueil">
+            {{ include('svg/phi.svg.twig') }}
+          </a>
+        </li>
+      </ul>
+
+      <!-- Main access -->
+      <ul class="main-nav">
+
+        <!-- Pam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!pam" title="Php Approachable Microframework Documentation">
+            <i class="fa fa-universal-access fa-fw" aria-hidden="true"></i>
+            <span>Pam</span>
+          </a>
+        </li>
+
+        <!-- Jim documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!jim" title="JavaScript Interactive Microlibrary Documentation">
+            <i class="fa fa-keyboard-o fa-fw" aria-hidden="true"></i>
+            <span>Jim</span>
+          </a>
+        </li>
+
+        <!-- Sam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!sam" title="Scss Animated Microframework Documentation">
+            <i class="fa fa-css3 fa-fw" aria-hidden="true"></i>
+            <span>Sam</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <form role="search">
+        <input type="text" placeholder="Rechercher">
+      </form>
+
+      <!-- User access -->
+      <ul class="user-nav">
+
+        <li>
+          <p>Bonjour Utilisateur !</p>
+        </li>
+
+        <li>
+          <a href="#" title="Edit my profile">
+            <img class="solid-round-sm hover-full-sm-double-alt visible" src="img/user/3wa.svg" alt="User Picture">
+          </a>
+        </li>
+
+        <!-- Logout access -->
+        <li>
+          <a href="#" title="Logout">
+            <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+
+    <h5>2.7 / Navbar New</h5>
+
+    <!-- Main Navigation -->
+    <nav class="navbar new">
+
+      <!-- Home access -->
+      <ul class="brand-nav">
+        <li>
+          <a href="./" title="Accueil">
+            {{ include('svg/phi.svg.twig') }}
+          </a>
+        </li>
+      </ul>
+
+      <!-- Main access -->
+      <ul class="main-nav">
+
+        <!-- Pam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!pam" title="Php Approachable Microframework Documentation">
+            <i class="fa fa-universal-access fa-fw" aria-hidden="true"></i>
+            <span>Pam</span>
+          </a>
+        </li>
+
+        <!-- Jim documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!jim" title="JavaScript Interactive Microlibrary Documentation">
+            <i class="fa fa-keyboard-o fa-fw" aria-hidden="true"></i>
+            <span>Jim</span>
+          </a>
+        </li>
+
+        <!-- Sam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!sam" title="Scss Animated Microframework Documentation">
+            <i class="fa fa-css3 fa-fw" aria-hidden="true"></i>
+            <span>Sam</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <form role="search">
+        <input type="text" placeholder="Rechercher">
+      </form>
+
+      <!-- User access -->
+      <ul class="user-nav">
+
+        <li>
+          <p>Bonjour Utilisateur !</p>
+        </li>
+
+        <li>
+          <a href="#" title="Edit my profile">
+            <img class="solid-round-sm hover-full-sm-double-alt visible" src="img/user/3wa.svg" alt="User Picture">
+          </a>
+        </li>
+
+        <!-- Logout access -->
+        <li>
+          <a href="#" title="Logout">
+            <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+  </section>
+
+  <section>
+
+    <h4 class="secondary-sea solid-rounder-sm">3 / Navbar & Jim</h4>
+
+    <h5>3.1 / Navbar avec Jim</h5>
+
+    <!-- Main Navigation -->
+    <nav class="navbar">
+
+      <!-- Home access -->
+      <ul class="brand-nav">
+        <li>
+          <a href="./" title="Accueil">
+            {{ include('svg/phi.svg.twig') }}
+          </a>
+        </li>
+      </ul>
+
+      <!-- Main access -->
+      <ul class="main-nav">
+
+        <!-- Pam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!pam" title="Php Approachable Microframework Documentation">
+            <i class="fa fa-universal-access fa-fw" aria-hidden="true"></i>
+            <span>Pam</span>
+          </a>
+        </li>
+
+        <!-- Jim documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!jim" title="JavaScript Interactive Microlibrary Documentation">
+            <i class="fa fa-keyboard-o fa-fw" aria-hidden="true"></i>
+            <span>Jim</span>
+          </a>
+        </li>
+
+        <!-- Sam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!sam" title="Scss Animated Microframework Documentation">
+            <i class="fa fa-css3 fa-fw" aria-hidden="true"></i>
+            <span>Sam</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <form class="anime-slideB-tn" role="search">
+        <input id="access" type="text" placeholder="Jim" title="Taper 'C' pour voir les commandes" autofocus>
+        <button id="help-btn" class="btn info-btn solid-round-sm help" type="button" title="Voir les commandes au clavier">
+          <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <!-- User access -->
+      <ul class="user-nav">
+
+        <li>
+          <p>Bonjour Utilisateur !</p>
+        </li>
+
+        <li>
+          <a href="#" title="Edit my profile">
+            <img class="solid-round-sm hover-full-sm-double-alt visible" src="img/user/3wa.svg" alt="User Picture">
+          </a>
+        </li>
+
+        <!-- Logout access -->
+        <li>
+          <a href="#" title="Logout">
+            <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <h5>3.2 / Navbar sans Jim</h5>
+
+    <!-- Main Navigation -->
+    <nav class="navbar">
+
+      <!-- Home access -->
+      <ul class="brand-nav">
+        <li>
+          <a href="./" title="Accueil">
+            {{ include('svg/phi.svg.twig') }}
+          </a>
+        </li>
+      </ul>
+
+      <!-- Main access -->
+      <ul class="main-nav">
+
+        <!-- Pam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!pam" title="Php Approachable Microframework Documentation">
+            <i class="fa fa-universal-access fa-fw" aria-hidden="true"></i>
+            <span>Pam</span>
+          </a>
+        </li>
+
+        <!-- Jim documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!jim" title="JavaScript Interactive Microlibrary Documentation">
+            <i class="fa fa-keyboard-o fa-fw" aria-hidden="true"></i>
+            <span>Jim</span>
+          </a>
+        </li>
+
+        <!-- Sam documentation access -->
+        <li>
+          <a href="https://philippebeck.net/index.php?access=pjs!sam" title="Scss Animated Microframework Documentation">
+            <i class="fa fa-css3 fa-fw" aria-hidden="true"></i>
+            <span>Sam</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <form role="search">
+        <input type="text" placeholder="Rechercher">
+      </form>
+
+      <!-- User access -->
+      <ul class="user-nav">
+
+        <li>
+          <p>Bonjour Utilisateur !</p>
+        </li>
+
+        <li>
+          <a href="#" title="Edit my profile">
+            <img class="solid-round-sm hover-full-sm-double-alt visible" src="img/user/3wa.svg" alt="User Picture">
+          </a>
+        </li>
+
+        <!-- Logout access -->
+        <li>
+          <a href="#" title="Logout">
+            <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </section>
+
+
+</section>

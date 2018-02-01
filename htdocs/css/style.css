@@ -479,6 +479,7 @@ main {
 #pam h4,
 #jim h4,
 #sam h4 {
+  margin-top: 8rem;
   color: MidnightBlue;
 }
 

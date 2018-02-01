@@ -30,40 +30,38 @@
       <figcaption>SAM</figcaption>
     </figure>
 
-    <p><strong class="delete-text">Sam</strong> est un <strong class="special-text">microframework SCSS</strong> générant une <strong class="info-text">librairie CSS</strong>.</p>
+    <p>Sam est un microframework SCSS générant une librairie CSS.</p>
 
-    <p>Sam est un microframework SCSS qui regroupe certaines propriétés CSS importantes par classe.</p>
+    <p>Sam est orienté vers l'animation au travers de règles @keyframes et de propriétés CSS d'animation & de transformation.</p>
 
-    <p>Sam est orienté vers l'animation au travers de règles @keyframes et de propriétés CSS d'animation & de transformation.
+    <p>Sam est fourni sans aucune ligne de code JavaScript...</p>
 
-      <p>Sam est fourni sans aucune ligne de code JavaScript, ses animations ne peuvent donc être désactivées...</p>
+    <p>Sam peut faire une grille avec flexbox layout ou grid layout!</p>
 
-      <p>Sam peut faire une grille avec flexbox layout ou grid layout!</p>
+    <p>Sam peut être utilisé sans aucune connaissance SCSS, Sass ou Ruby, en utilisant uniquement la bibliothèque CSS.</p>
 
-      <p>Sam peut être utilisé sans aucune connaissance SCSS, Sass ou Ruby, en utilisant uniquement la bibliothèque CSS.</p>
+    <p>Sam est construit autour de 6 caractéristiques principales: l'affichage, les couleurs, les bordures, les ombres, les animations et les helpers.</p>
 
-      <p>Sam est construit autour de 6 caractéristiques principales: l'affichage, les couleurs, les bordures, les ombres, les animations et les helpers.</p>
+    <p>Sam fournit 3 éléments de base en plus, la barre de navigation, les boutons et les formulaires.</p>
 
-      <p>Sam fournit 3 éléments de base en plus, la barre de navigation, les boutons et les formulaires.</p>
+    <div class="btn-group">
 
-      <div class="btn-group">
+      <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir le repository GitHub">
+        <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
+      </a>
 
-        <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir le repository GitHub">
-          <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
-        </a>
+      <a class="btn npm-outline solid-rounder inset-spread" href="https://www.npmjs.com/package/sam.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir le package npm">
+        <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
+      </a>
 
-        <a class="btn npm-outline solid-rounder inset-spread" href="https://www.npmjs.com/package/sam.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir le package npm">
-          <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
-        </a>
+      <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss/archive/master.zip" title="Télécharger Sam">
+        <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
+      </a>
 
-        <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss/archive/master.zip" title="Télécharger Sam">
-          <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
-        </a>
+    </div>
 
-      </div>
-
-    <!-- ************************** -->
-    <!-- ***** Navbar section ***** -->
+    <!-- ******************************** -->
+    <!-- ***** Installation section ***** -->
 
     <section>
       <h3 class="primary-sea solid-rounded mt-wd mb-lg">I - Installation</h3>
@@ -88,517 +86,53 @@
 
 
     <!-- ************************** -->
+    <!-- ***** Navbar section ***** -->
+    {{ include('pjs/sam/navbar.twig') }}
+
+
+    <!-- ************************** -->
     <!-- ***** Button section ***** -->
+    {{ include('pjs/sam/button.twig') }}
 
-    <section>
-      <h3 class="primary-sea solid-rounded mt-wd mb-lg">II - Les Boutons</h3>
-
-    </section>
 
 
     <!-- ************************ -->
     <!-- ***** Form section ***** -->
+    {{ include('pjs/sam/form.twig') }}
 
-    <section>
-      <h3 class="primary-sea solid-rounded mt-wd mb-lg">III - Les Formulaires</h3>
-
-    </section>
 
 
     <!-- *************************** -->
     <!-- ***** Display section ***** -->
-
-    <section>
-      <h3 class="primary-sea solid-rounded mt-wd mb-lg">IV - L'Affichage</h3>
-
-    </section>
+    {{ include('pjs/sam/display.twig') }}
 
 
     <!-- ************************** -->
     <!-- ***** Border section ***** -->
-
-    <section>
-      <h3 class="primary-sea solid-rounded mt-wd mb-lg">V - Les Bordures</h3>
-
-    </section>
+    {{ include('pjs/sam/border.twig') }}
 
 
     <!-- ************************** -->
     <!-- ***** Shadow section ***** -->
+    {{ include('pjs/sam/shadow.twig') }}
 
-    <section>
-      <h3 class="primary-sea solid-rounded mt-wd mb-lg">VI - Les Ombres</h3>
-
-    </section>
 
 
     <!-- ************************* -->
     <!-- ***** Color section ***** -->
-
-    <section>
-      <h3 class="primary-sea solid-rounded mt-wd mb-lg">VII - Les Couleurs</h3>
-
-      <p class="container">La partie Couleur se composent de 3 familles de couleurs : les basiques, les personnalisées & celles de marques. Chaque couleur possède 10 variations au total, dont certaines sont simples, n'affectant q'une partie de l'élément, & d'autres multiples, affectant le fond, la bordure et le texte.</p>
-
-      <section>
-        <h4>1 / Les couleurs</h4>
-
-        <h5>1.1 / Les couleurs basiques</h5>
-
-        <ul class="row content-center gm-md content-center gp-md">
-
-          <li class="default solid-rounder">default</li>
-          <li class="info solid-rounder">info</li>
-          <li class="classic solid-rounder">classic</li>
-          <li class="cancel solid-rounder">cancel</li>
-          <li class="valid solid-rounder">valid</li>
-          <li class="warning solid-rounder">warning</li>
-          <li class="delete solid-rounder">delete</li>
-          <li class="special solid-rounder">special</li>
-          <li class="base solid-rounder">base</li>
-          <li class="new solid-rounder">new</li>
-
-        </ul>
-
-        <h5>1.2 / Les couleurs personnalisées</h5>
-
-        <ul class="row content-center gm-md content-center gp-md">
-
-          <li class="primary solid-rounder">primary</li>
-          <li class="secondary solid-rounder">secondary</li>
-
-        </ul>
-
-        <h5>1.3 / Les couleurs de marques</h5>
-
-        <ul class="row content-center gm-md content-center gp-md">
-
-          <li class="facebook solid-rounder">facebook</li>
-          <li class="freecodecamp solid-rounder">freecodecamp</li>
-          <li class="github solid-rounder">github</li>
-          <li class="linkedin solid-rounder">linkedin</li>
-          <li class="medium solid-rounder">medium</li>
-          <li class="npm solid-rounder">npm</li>
-          <li class="packagist solid-rounder">packagist</li>
-          <li class="stackoverflow solid-rounder">stackoverflow</li>
-          <li class="twitter default-text solid-rounder">twitter</li>
-
-        </ul>
-      </section>
-
-
-      <section>
-        <h4>2 / Les variations de couleurs</h4>
-
-        <ul class="row content-center gm-md content-center gp-md">
-
-          <li class="info solid-rounder">info</li>
-          <li class="info-btn solid-rounder">info-btn</li>
-          <li class="info-outline solid-rounder">info-outline</li>
-          <li class="info-light solid-rounder">info-light</li>
-          <li class="info-dark solid-rounder">info-dark</li>
-          <li class="info-sea solid-rounder">info-sea</li>
-          <li class="info-glass solid-rounder">info-glass</li>
-          <li class="info-trans solid-rounder">info-trans</li>
-          <li class="info-border default-text solid-rounder">info-border</li>
-          <li class="info-text default-text solid-rounder">info-text</li>
-
-        </ul>
-      </section>
-
-    </section>
+    {{ include('pjs/sam/color.twig') }}
 
 
     <!-- *************************** -->
     <!-- ***** Animate section ***** -->
+    {{ include('pjs/sam/animate.twig') }}
 
-    <section>
-      <h3 class="primary-sea solid-rounded mt-wd mb-lg">VIII - Les Animations</h3>
+    <!-- ************************** -->
+    <!-- ***** Helper section ***** -->
+    {{ include('pjs/sam/helper.twig') }}
 
 
-      <!-- ***** Construction of a simple animation ***** -->
-      <section>
-        <h4 class="secondary-sea solid-rounder-sm">1 / La construction d'une animation simple</h4>
+  </article>
+</main>
 
-        <p>Toutes les animations s'implémentent à l'aide d'une classe composées de 3 parties : son type, son nom & sa durée, séparées par un tiret.</p>
-        <p>La syntaxe formelle est donc la suivante : "type"-"nom"-"durée".</p>
-        <p>Exemples : "anime-grow-md" ou "hover-full-lg".</p>
-      </section>
-
-      <!-- ***** Types of animations ***** -->
-      <section>
-        <h4 class="secondary-sea solid-rounder-sm">2 / Les types d'animations</h4>
-
-        <p>Il y a 4 types d'animations :
-          <ul>
-            <li>Anime</li>
-            <li>Child</li>
-            <li>Active</li>
-            <li>Hover</li>
-          </ul>
-        </p>
-
-        <!-- Anime -->
-        <h5>2.1 / Les animations "Anime"</h5>
-
-        <p>Les "anime" sont des animations qui s'activent sur l'élément ciblé, dès que le chargement de la page est effectuée.</p>
-
-        <!-- Child -->
-        <h5>2.2 / Les animations "Child"</h5>
-
-        <p>Les "child" sont des animations qui s'activent sur le ou les enfants de l'élément ciblé, dès que le chargement de la page est effectuée.</p>
-
-        <!-- Active -->
-        <h5>2.3 / Les animations "Active"</h5>
-
-        <p>Les "active" sont des animations qui s'activent sur l'élément ciblé dès que l'utilisateur rend l'élément "actif", tel que les exemples d'animations dans la section suivantes, c'est-à-dire au clic sans relâchement, ou lors de l'activation d'un élément sélectionné.</p>
-
-        <!-- Hover -->
-        <h5>2.4 / Les animations "Hover"</h5>
-
-        <p>Les "hover" sont des animations qui s'activent sur l'élément ciblé dès que l'utilisateur survole l'élément.</p>
-
-      </section>
-
-      <!-- ***** Names of animations ***** -->
-      <section class="syntax">
-
-        <h4 class="secondary-sea solid-rounder-sm">3 / Les noms des animations</h4>
-
-        <p class="intro valid-sea solid-rounded inset-blur"><b>Cliquez</b> sur l'<strong>animation</strong> de votre choix <b>sans relâcher</b> pour voir son effet</p>
-
-        <!-- Quarter animations exemples -->
-        <h5>3.1 / Les animations "Quarter"</h5>
-
-        <ul class="row content-center gm-md content-center gp-md">
-          <li class="btn delete-sea solid-rounder active-quarter-sm visible">quarter</li>
-          <li class="btn delete-sea solid-rounder active-quarterX-sm visible">quarterX</li>
-          <li class="btn delete-sea solid-rounder active-quarterY-sm visible">quarterY</li>
-        </ul>
-
-        <!-- Half animations exemples -->
-        <h5>3.2 / Les animations "Half"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-half-sm visible">half</li>
-          <li class="btn delete-sea solid-rounder active-halfX-sm visible">halfX</li>
-          <li class="btn delete-sea solid-rounder active-halfY-sm visible">halfY</li>
-        </ul>
-
-        <!-- Full animations exemples -->
-        <h5>3.3 / Les animations "Full"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-full-sm visible">full</li>
-          <li class="btn delete-sea solid-rounder active-fullX-sm visible">fullX</li>
-          <li class="btn delete-sea solid-rounder active-fullY-sm visible">fullY</li>
-        </ul>
-
-        <!-- Quarter 3d animations exemples -->
-        <h5>3.4 / Les animations "Quarter 3d"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-quarter3d-sm visible">quarter3d</li>
-          <li class="btn delete-sea solid-rounder active-quarterX3d-sm visible">quarterX3d</li>
-          <li class="btn delete-sea solid-rounder active-quarterY3d-sm visible">quarterY3d</li>
-          <li class="btn delete-sea solid-rounder active-quarterZ3d-sm visible">quarterZ3d</li>
-        </ul>
-
-        <!-- Half 3d animations exemples -->
-        <h5>3.5 / Les animations "Half 3d"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-half3d-sm visible">half3d</li>
-          <li class="btn delete-sea solid-rounder active-halfX3d-sm visible">halfX3d</li>
-          <li class="btn delete-sea solid-rounder active-halfY3d-sm visible">halfY3d</li>
-          <li class="btn delete-sea solid-rounder active-halfZ3d-sm visible">halfZ3d</li>
-        </ul>
-
-        <!-- Full 3d animations exemples -->
-        <h5>3.6 / Les animations "Full 3d"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-full3d-sm visible">full3d</li>
-          <li class="btn delete-sea solid-rounder active-fullX3d-sm visible">fullX3d</li>
-          <li class="btn delete-sea solid-rounder active-fullY3d-sm visible">fullY3d</li>
-          <li class="btn delete-sea solid-rounder active-fullZ3d-sm visible">fullZ3d</li>
-        </ul>
-
-
-        <!-- Flip animations exemples -->
-        <h5>3.7 / Les animations "Flip"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-flipX-sm visible">flipX</li>
-          <li class="btn delete-sea solid-rounder active-flipY-sm visible">flipY</li>
-        </ul>
-
-        <!-- Grow animations exemples -->
-        <h5>3.8 / Les animations "Grow"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-grow-sm visible">grow</li>
-          <li class="btn delete-sea solid-rounder active-growX-sm visible">growX</li>
-          <li class="btn delete-sea solid-rounder active-growY-sm visible">growY</li>
-        </ul>
-
-        <!-- Shrink animations exemples -->
-        <h5>3.9 / Les animations "Shrink"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-shrinkX-sm visible">shrinkX</li>
-          <li class="btn delete-sea solid-rounder active-shrinkY-sm visible">shrinkY</li>
-          <li class="btn delete-sea solid-rounder active-shrinkS-sm visible">shrinkS</li>
-          <li class="btn delete-sea solid-rounder active-shrinkM-sm visible">shrinkM</li>
-          <li class="btn delete-sea solid-rounder active-shrinkL-sm visible">shrinkL</li>
-        </ul>
-
-        <!-- Bounce animations exemples -->
-        <h5>3.10 / Les animations "Bounce"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-bounceS-sm visible">bounceS</li>
-          <li class="btn delete-sea solid-rounder active-bounceM-sm visible">bounceM</li>
-          <li class="btn delete-sea solid-rounder active-bounceL-sm visible">bounceL</li>
-        </ul>
-
-        <!-- Fall animations exemples -->
-        <h5>3.11 / Les animations "Fall"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-fallXS-sm visible">fallXS</li>
-          <li class="btn delete-sea solid-rounder active-fallXM-sm visible">fallXM</li>
-          <li class="btn delete-sea solid-rounder active-fallXL-sm visible">fallXL</li>
-          <li class="btn delete-sea solid-rounder active-fallYS-sm visible">fallYS</li>
-          <li class="btn delete-sea solid-rounder active-fallYM-sm visible">fallYM</li>
-          <li class="btn delete-sea solid-rounder active-fallYL-sm visible">fallYL</li>
-        </ul>
-
-        <!-- Flipper animations exemples -->
-        <h5>3.12 / Les animations "Flipper"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-flipperXS-sm visible">flipperXS</li>
-          <li class="btn delete-sea solid-rounder active-flipperXM-sm visible">flipperXM</li>
-          <li class="btn delete-sea solid-rounder active-flipperXL-sm visible">flipperXL</li>
-          <li class="btn delete-sea solid-rounder active-flipperYS-sm visible">flipperYS</li>
-          <li class="btn delete-sea solid-rounder active-flipperYM-sm visible">flipperYM</li>
-          <li class="btn delete-sea solid-rounder active-flipperYL-sm visible">flipperYL</li>
-        </ul>
-
-        <!-- Open animations exemples -->
-        <h5>3.13 / Les animations "Open"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-openXS-sm visible">openXS</li>
-          <li class="btn delete-sea solid-rounder active-openXM-sm visible">openXM</li>
-          <li class="btn delete-sea solid-rounder active-openXL-sm visible">openXL</li>
-          <li class="btn delete-sea solid-rounder active-openYS-sm visible">openYS</li>
-          <li class="btn delete-sea solid-rounder active-openYM-sm visible">openYM</li>
-          <li class="btn delete-sea solid-rounder active-openYL-sm visible">openYL</li>
-        </ul>
-
-        <!-- Twist animations exemples -->
-        <h5>3.14 / Les animations "Twist"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-twistT-sm visible">twistT</li>
-          <li class="btn delete-sea solid-rounder active-twistR-sm visible">twistR</li>
-          <li class="btn delete-sea solid-rounder active-twistB-sm visible">twistB</li>
-          <li class="btn delete-sea solid-rounder active-twistL-sm visible">twistL</li>
-        </ul>
-
-        <!-- Torsion animations exemples -->
-        <h5>3.15 / Les animations "Torsion"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-torsionT-sm visible">torsionT</li>
-          <li class="btn delete-sea solid-rounder active-torsionR-sm visible">torsionR</li>
-          <li class="btn delete-sea solid-rounder active-torsionB-sm visible">torsionB</li>
-          <li class="btn delete-sea solid-rounder active-torsionL-sm visible">torsionL</li>
-        </ul>
-
-        <!-- Twister animations exemples -->
-        <h5>3.16 / Les animations "Twister"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-twisterT-sm visible">twisterT</li>
-          <li class="btn delete-sea solid-rounder active-twisterR-sm visible">twisterR</li>
-          <li class="btn delete-sea solid-rounder active-twisterB-sm visible">twisterB</li>
-          <li class="btn delete-sea solid-rounder active-twisterL-sm visible">twisterL</li>
-        </ul>
-
-        <!-- Cyclone animations exemples -->
-        <h5>3.17 / Les animations "Cyclone"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-cycloneT-sm visible">cycloneT</li>
-          <li class="btn delete-sea solid-rounder active-cycloneR-sm visible">cycloneR</li>
-          <li class="btn delete-sea solid-rounder active-cycloneB-sm visible">cycloneB</li>
-          <li class="btn delete-sea solid-rounder active-cycloneL-sm visible">cycloneL</li>
-        </ul>
-
-        <!-- Slip animations exemples -->
-        <h5>3.18 / Les animations "Slip"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-slipT-sm visible">slipT</li>
-          <li class="btn delete-sea solid-rounder active-slipR-sm visible">slipR</li>
-          <li class="btn delete-sea solid-rounder active-slipB-sm visible">slipB</li>
-          <li class="btn delete-sea solid-rounder active-slipL-sm visible">slipL</li>
-          <li class="btn delete-sea solid-rounder active-slipTR-sm visible">slipTR</li>
-          <li class="btn delete-sea solid-rounder active-slipBR-sm visible">slipBR</li>
-          <li class="btn delete-sea solid-rounder active-slipTL-sm visible">slipTL</li>
-          <li class="btn delete-sea solid-rounder active-slipBL-sm visible">slipBL</li>
-        </ul>
-
-        <!-- Slide animations exemples -->
-        <h5>3.19 / Les animations "Slide"</h5>
-
-        <ul class="row content-center gm-md gp-md">
-          <li class="btn delete-sea solid-rounder active-slideT-sm visible">slideT</li>
-          <li class="btn delete-sea solid-rounder active-slideR-sm visible">slideR</li>
-          <li class="btn delete-sea solid-rounder active-slideB-sm visible">slideB</li>
-          <li class="btn delete-sea solid-rounder active-slideL-sm visible">slideL</li>
-          <li class="btn delete-sea solid-rounder active-slideTR-sm visible">slideTR</li>
-          <li class="btn delete-sea solid-rounder active-slideBR-sm visible">slideBR</li>
-          <li class="btn delete-sea solid-rounder active-slideTL-sm visible">slideTL</li>
-          <li class="btn delete-sea solid-rounder active-slideBL-sm visible">slideBL</li>
-        </ul>
-
-      </section>
-
-
-      <!-- ***** Durations of animations ***** -->
-      <section>
-        <h4 class="secondary-sea solid-rounder-sm">4 / Les durées d'animations</h4>
-
-        <p>La durée de l'animation correspond à l'attribut <a href="https://developer.mozilla.org/fr/docs/Web/CSS/animation-duration" rel="noopener" rel="noreferrer" target="_blank" title="Voir la documentation sur MDN">animation-duration</a>.</p>
-        <p>Il y a 5 durée d'animations :
-          <ul>
-            <li>tn  => 1s</li>
-            <li>sm  => 2s</li>
-            <li>md  => 5s</li>
-            <li>lg  => 10s</li>
-            <li>wd  => 60s</li>
-          </p>
-        </section>
-
-
-        <!-- ***** Construction of a complex animation ***** -->
-        <section>
-          <h4 class="secondary-sea solid-rounder-sm">5 / La construction d'une animation complexe</h4>
-
-          <p>Toutes les animations peuvent aussi s'implémenter à l'aide d'une classe composées de plus de 3 parties, on peut y adjoindre jusqu'à 6 options en les concatenants à l'aide du tiret.</p>
-          <p>Il est possible de concatener le nombre d'options que l'on souhaite, l'ordre n'ayant aucune importance, du moins concernant ces options.</p>
-          <p>La syntaxe formelle est donc la suivante : "type"-"nom"-"durée"-"option1"-"option2"...</p>
-          <p>Exemples : "anime-grow-md-loop" ou "hover-full-lg-double-alt" ou "child-cycloneT-sm-linear-inv-large".</p>
-
-        </section>
-
-
-        <!-- ***** Concatenable options of animations ***** -->
-        <section>
-          <h4 class="secondary-sea solid-rounder-sm">6 / Les options concatenables des animations</h4>
-
-          <p>Les options concatenables sont les suivantes : "timing-function", "delay", "iteration-count", "direction", "fill-mode" & "origin".</p>
-
-          <!-- Animation Timing function -->
-          <h5>6.1 / Les options "Animation Timing Function"</h5>
-
-          <p>L'option <a href="https://developer.mozilla.org/fr/docs/Web/CSS/animation-timing-function" rel="noopener" rel="noreferrer" target="_blank" title="Voir la documentation sur MDN">animation-timing-function</a> permet de définir la courbe de progression de l'animation.</p>
-          <p>Ces options sont au nombre de 10 et correspondent chacune à la valeur précisée après la flèche :
-            <ul>
-              <li>in      => ease-in</li>
-              <li>out     => ease-out</li>
-              <li>ease    => ease-in-out</li>
-              <li>linear  => linear</li>
-              <li>start   => steps(4, start)</li>
-              <li>end     => steps(4)</li>
-              <li>chrono  => steps(60, start)</li>
-              <li>springS => cubic-bezier(1, 2, 1, -2)</li>
-              <li>springM => cubic-bezier(1, 5, 1, -5)</li>
-              <li>springL => cubic-bezier(1, 10, 1, -10)</li>
-            </ul>
-          </p>
-
-          <!-- Animation Delay -->
-          <h5>6.2 / Les options "Animation Delay"</h5>
-
-          <p>L'option <a href="https://developer.mozilla.org/fr/docs/Web/CSS/animation-delay" rel="noopener" rel="noreferrer" target="_blank" title="Voir la documentation sur MDN">animation-delay</a> permet de définit le délai avant que l'animation ne s'active.</p>
-          <p>Ces options sont au nombre de 5 et correspondent chacune à la valeur "duration" équivalente :
-            <ul>
-              <li>tiny    => 1s</li>
-              <li>small   => 2s</li>
-              <li>medium  => 5s</li>
-              <li>large   => 10s</li>
-              <li>wide    => 60s</li>
-            </p>
-
-            <!-- Animation Iteration Count -->
-            <h5>6.3 / Les options "Animation Iteration Count"</h5>
-
-            <p>L'option <a href="https://developer.mozilla.org/fr/docs/Web/CSS/animation-iteration-count" rel="noopener" rel="noreferrer" target="_blank" title="Voir la documentation sur MDN">animation-iteration-count</a> permet de définir le nombre d'itération que l'animation doit effectuer.</p>
-            <p>Ces options sont au nombre de 3 :
-              <ul>
-                <li>double  => 2</li>
-                <li>triple  => 3</li>
-                <li>loop    => infinite</li>
-              </p>
-
-              <!-- Animation Direction -->
-              <h5>6.4 / Les options "Animation Direction"</h5>
-
-              <p>L'option <a href="https://developer.mozilla.org/fr/docs/Web/CSS/animation-direction" rel="noopener" rel="noreferrer" target="_blank" title="Voir la documentation sur MDN">animation-direction</a> permet de définir dans quel sens l'animation va s'effectuée.</p>
-              <p>Ces options sont au nombre de 3 :
-                <ul>
-                  <li>rev  => reverse</li>
-                  <li>alt  => alternate</li>
-                  <li>inv  => alternate-reverse</li>
-                </p>
-
-                <!-- Animation Fill Mode -->
-                <h5>6.5 / Les options "Animation Fill Mode"</h5>
-
-                <p>L'option <a href="https://developer.mozilla.org/fr/docs/Web/CSS/animation-fill-mode" rel="noopener" rel="noreferrer" target="_blank" title="Voir la documentation sur MDN">animation-fill-mode</a> permet de définir la façon dont l'animation applique ses styles avant & après son exécution.</p>
-                <p>Ces options sont au nombre de 3 :
-                  <ul>
-                    <li>front  => forwards</li>
-                    <li>back   => backwards</li>
-                    <li>both   => both</li>
-                  </p>
-
-                  <!-- Transform Origin -->
-                  <h5>6.6 / Les options "Transform Origin"</h5>
-
-                  <p>L'option <a href="https://developer.mozilla.org/fr/docs/Web/CSS/transform-origin" rel="noopener" rel="noreferrer" target="_blank" title="Voir la documentation sur MDN">transform-origin</a> permet de définit l'origine de l'élément animé.</p>
-                  <p>Ces options sont au nombre de 5 et leur nom correspond à leur valeur :
-                    <ul>
-                      <li>center</li>
-                      <li>top</li>
-                      <li>right</li>
-                      <li>bottom</li>
-                      <li>left</li>
-                    </p>
-                    <p>Ces valeurs sont associées à l'axe des X et à celui des Y :
-                      <ul>
-                        <li>Si les 2 valeurs sont identiques, l'option s'implémente avec son simple nom.</li>
-                        <li>Si les valeurs diffèrent, les initiales seront utilisées, dans l'ordre "XY", par exemple : "tr" pour "top right", "bc" pour "bottom center", etc ...</li>
-                      </ul></p>
-
-                    </section>
-                  </section>
-
-
-                  <!-- ************************** -->
-                  <!-- ***** Helper section ***** -->
-
-                  <section>
-                    <h3 class="primary-sea solid-rounded mt-wd mb-lg">IX - Les Helpers</h3>
-
-                  </section>
-
-                </article>
-              </main>
-
-              {% endblock %}
+{% endblock %}
