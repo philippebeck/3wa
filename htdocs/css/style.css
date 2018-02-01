@@ -483,9 +483,12 @@ main {
   color: MidnightBlue;
 }
 
-#pjs p {
+#pjs p,
+#pam p,
+#jim p,
+#sam p {
   font-family: 'tuffy', sans-serif;
-  text-align: justify;
+  text-align: center;
 }
 
 #pam p,
