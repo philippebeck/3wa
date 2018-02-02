@@ -6,4 +6,45 @@
 <section>
   <h3 class="primary-sea solid-rounded mt-wd mb-lg">IV - Form</h3>
 
+  <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les <strong>formulaires</strong> sont gérés sans classe, uniquement par des règles sur les balises.</p>
+
+  <form>
+    <fieldset>
+      <legend>Exemple de Formulaire</legend>
+
+      <ul>
+        <li>
+          <label for="pseudo">Pseudo</label>
+          <input id="pseudo" type="text" name="pseudo" placeholder="Insérez 20 caractères maximum" maxlength="20" required>
+        </li>
+
+        <li>
+          <label for="avatar">Avatar</label>
+          <input id="avatar" type="file" name="avatar" accept=".jpg, .jpeg, .png, .svg, .gif">
+        </li>
+
+        <li>
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="Insérez un email valide" maxlength="50" minlength="5" required>
+        </li>
+
+        <li>
+          <label for="pass">Mot de passe</label>
+          <input id="pass" type="password" name="pass" placeholder="Insérez 8 caractères minimum" maxlength="50" minlength="8" required>
+        </li>
+      </ul>
+
+      <li class="btn-group">
+        <a class="btn delete-btn outset-slight inset-blur" href="#">Quitter</a>
+        <input class="btn cancel-btn outset-slight inset-blur" type="reset" value="Réinitialiser">
+        <input class="btn valid-btn outset-slight inset-blur" type="submit" value="Valider">
+      </li>
+
+    </fieldset>
+  </form>
+
+  <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Le <em>code source</em> est disponible ci-dessous :</p>
+
+  <a class="btn info-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/main/_form.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir le fichier form.scss">form</a>
+
 </section>
