@@ -464,6 +464,10 @@ main {
   text-align: center;
 }
 
+.height {
+  height: 50rem;
+}
+
 #pjs h2,
 #pam h2,
 #pam h3,

@@ -6,4 +6,243 @@
 <section>
   <h3 class="primary-sea solid-rounded mt-wd mb-lg">X - Helper</h3>
 
+  <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les classes <strong>helper</strong> sont des classes permettant de d'attribuer certaines <em>propriétés CSS</em> sur un ou des éléments précis.</p>
+
+  <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Ces <em>propriétés CSS & donc ces classes</em> sont classées dans <strong>8 groupes</strong> :
+
+    <pre class="delete-text">Width</pre>
+    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la largeur d'un élément
+
+    <pre class="delete-text">Height</pre>
+    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la hauteur d'un élément
+
+    <pre class="delete-text">Margin</pre>
+    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge extérieure d'un élément
+
+    <pre class="delete-text">Padding</pre>
+    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge intérieure d'un élément
+
+    <pre class="delete-text">Text Align</pre>
+    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier l'alignement d'un texte
+
+    <pre class="delete-text">Font</pre>
+    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier le style ou la graisse d'un texte
+
+    <pre class="delete-text">Text Decoration</pre>
+    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la décoration d'un texte
+
+    <pre class="delete-text">Cursor</pre>
+    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier le curseur de la souris
+  </p>
+
+  <div class="btn-group">
+    <a class="btn delete-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/variables/_helper.var.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir les variables Helper">Variables</a>
+
+    <a class="btn valid-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/mixins/_helper.mix.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir les mixins Helper">Mixins</a>
+
+    <a class="btn info-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/main/_helper.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir les classes Helper">Classes</a>
+  </div>
+
+
+  <!-- Width Section -->
+  <section>
+    <h4 class="secondary-sea solid-rounder-sm">1 / Width</h4>
+
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Width</strong> peuvent affecter <em>3 propriétés CSS</em> :
+
+      <pre class="info-text">width</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la largeur d'un élément
+
+      <pre class="info-text">min-width</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la largeur minimale d'un élément
+
+      <pre class="info-text">max-width</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la largeur maximale d'un élément
+    </p>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Ces classes peuvent affecter :
+      <ol>
+        <li>soit l'élément lui-même lorsque l'on appelle une classe dont le préfixe est :
+          <pre class="valid-text">.w</pre>
+          <pre class="valid-text">.min-w</pre>
+          <pre class="valid-text">.max-w</pre>
+        </li>
+        <li>soit les éléments enfants du parent lorsque l'on appelle une classe dont le préfixe est :
+          <pre class="valid-text">.gw</pre>
+          <pre class="valid-text">.min-gw</pre>
+          <pre class="valid-text">.max-gw</pre>
+        </li>
+      </ol>
+    </p>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> L'appel d'une <strong>classe width</strong> se fait en concaténant l'<em>un des préfixes précédents avec en suffixe la valeur nécessaire</em>.</p>
+
+    <h5>1.1 / Width</h5>
+
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de largeurs</strong> sont disponibles :
+      <ul class="gmb-sm gmr-auto gml-auto">
+        <li class="wauto  solid cancel">.wauto</li>
+        <li class="w25    solid cancel">.w25</li>
+        <li class="w33    solid cancel">.w33</li>
+        <li class="w50    solid cancel">.w50</li>
+        <li class="w66    solid cancel">.w66</li>
+        <li class="w75    solid cancel">.w75</li>
+        <li class="w100   solid cancel">.w100</li>
+      </ul>
+    </p>
+
+    <h5>1.2 / Min-Width</h5>
+
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de largeurs minimales</strong> sont disponibles :
+      <ul class="gmb-sm gmr-auto gml-auto">
+        <li class="min-wauto  solid cancel">.min-wauto</li>
+        <li class="min-w25    solid cancel">.min-w25</li>
+        <li class="min-w33    solid cancel">.min-w33</li>
+        <li class="min-w50    solid cancel">.min-w50</li>
+        <li class="min-w66    solid cancel">.min-w66</li>
+        <li class="min-w75    solid cancel">.min-w75</li>
+        <li class="min-w100   solid cancel">.min-w100</li>
+      </ul>
+    </p>
+
+    <h5>1.3 / Max-Width</h5>
+
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de largeurs maximales</strong> sont disponibles :
+      <ul class="gmb-sm gmr-auto gml-auto">
+        <li class="max-wauto  solid cancel">.max-wauto</li>
+        <li class="max-w25    solid cancel">.max-w25</li>
+        <li class="max-w33    solid cancel">.max-w33</li>
+        <li class="max-w50    solid cancel">.max-w50</li>
+        <li class="max-w66    solid cancel">.max-w66</li>
+        <li class="max-w75    solid cancel">.max-w75</li>
+        <li class="max-w100   solid cancel">.max-w100</li>
+      </ul>
+    </p>
+  </section>
+
+
+  <!-- Height Section -->
+  <section>
+    <h4 class="secondary-sea solid-rounder-sm">2 / Height</h4>
+
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Height</strong> peuvent affecter <em>3 propriétés CSS</em> :
+
+      <pre class="info-text">height</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la hauteur d'un élément
+
+      <pre class="info-text">min-height</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la hauteur minimale d'un élément
+
+      <pre class="info-text">max-height</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la hauteur maximale d'un élément
+    </p>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Ces classes peuvent affecter :
+      <ol>
+        <li>soit l'élément lui-même lorsque l'on appelle une classe dont le préfixe est :
+          <pre class="valid-text">.h</pre>
+          <pre class="valid-text">.min-h</pre>
+          <pre class="valid-text">.max-h</pre>
+        </li>
+        <li>soit les éléments enfants du parent lorsque l'on appelle une classe dont le préfixe est :
+          <pre class="valid-text">.gh</pre>
+          <pre class="valid-text">.min-gh</pre>
+          <pre class="valid-text">.max-gh</pre>
+        </li>
+      </ol>
+    </p>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> L'appel d'une <strong>classe height</strong> se fait en concaténant l'<em>un des préfixes précédents avec en suffixe la valeur nécessaire</em>.</p>
+
+    <h5>1.1 / Height</h5>
+
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de hauteurs</strong> sont disponibles :
+      <ul class="gmb-sm gmr-auto gml-auto height">
+        <li class="hauto  solid cancel in-block">.hauto</li>
+        <li class="h25    solid cancel in-block">.h25</li>
+        <li class="h33    solid cancel in-block">.h33</li>
+        <li class="h50    solid cancel in-block">.h50</li>
+        <li class="h66    solid cancel in-block">.h66</li>
+        <li class="h75    solid cancel in-block">.h75</li>
+        <li class="h100   solid cancel in-block">.h100</li>
+      </ul>
+    </p>
+
+    <h5>1.2 / Min-Height</h5>
+
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de hauteurs minimales</strong> sont disponibles :
+      <ul class="gmb-sm gmr-auto gml-auto height">
+        <li class="min-hauto  solid cancel in-block">.min-hauto</li>
+        <li class="min-h25    solid cancel in-block">.min-h25</li>
+        <li class="min-h33    solid cancel in-block">.min-h33</li>
+        <li class="min-h50    solid cancel in-block">.min-h50</li>
+        <li class="min-h66    solid cancel in-block">.min-h66</li>
+        <li class="min-h75    solid cancel in-block">.min-h75</li>
+        <li class="min-h100   solid cancel in-block">.min-h100</li>
+      </ul>
+    </p>
+
+    <h5>1.3 / Max-Height</h5>
+
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de hauteurs maximales</strong> sont disponibles :
+      <ul class="gmb-sm gmr-auto gml-auto height">
+        <li class="max-hauto  solid cancel in-block">.max-hauto</li>
+        <li class="max-h25    solid cancel in-block">.max-h25</li>
+        <li class="max-h33    solid cancel in-block">.max-h33</li>
+        <li class="max-h50    solid cancel in-block">.max-h50</li>
+        <li class="max-h66    solid cancel in-block">.max-h66</li>
+        <li class="max-h75    solid cancel in-block">.max-h75</li>
+        <li class="max-h100   solid cancel in-block">.max-h100</li>
+      </ul>
+    </p>
+  </section>
+
+
+  <!-- Margin Section -->
+  <section>
+    <h4 class="secondary-sea solid-rounder-sm">3 / Margin</h4>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> </p>
+  </section>
+
+
+  <!-- Padding Section -->
+  <section>
+    <h4 class="secondary-sea solid-rounder-sm">4 / Padding</h4>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> </p>
+  </section>
+
+
+  <!-- Text Align Section -->
+  <section>
+    <h4 class="secondary-sea solid-rounder-sm">5 / Text Align</h4>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> </p>
+  </section>
+
+
+  <!-- Font Section -->
+  <section>
+    <h4 class="secondary-sea solid-rounder-sm">6 / Font</h4>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> </p>
+  </section>
+
+
+  <!-- Text Decoration Section -->
+  <section>
+    <h4 class="secondary-sea solid-rounder-sm">7 / Text Decoration</h4>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> </p>
+  </section>
+
+
+  <!-- Cursor Section -->
+  <section>
+    <h4 class="secondary-sea solid-rounder-sm">8 / Cursor</h4>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> </p>
+  </section>
+
 </section>
