@@ -16,10 +16,7 @@
     "galleries"
   ],
   "author": "Philippe Beck <philippe@philippebeck.net>",
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/philippebeck/philippebeck/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/philippebeck/philippebeck/issues"
   },
@@ -27,6 +24,6 @@
   "dependencies": {
     "font-awesome": "^4.7.0",
     "jim-js": "^0.1.6",
-    "sam.scss": "^0.1.17"
+    "sam.scss": "^0.1.18"
   }
 }
