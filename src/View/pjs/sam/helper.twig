@@ -6,36 +6,34 @@
 <section>
   <h3 class="primary-sea solid-rounded mt-wd mb-lg">X - Helper</h3>
 
-  <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les classes <strong>helper</strong> sont des classes permettant de d'attribuer certaines <em>propriétés CSS</em> sur un ou des éléments précis.</p>
+  <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les classes <strong>helper</strong> sont constituées de <strong>8 groupes</strong> :
 
-  <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Ces <em>propriétés CSS & donc ces classes</em> sont classées dans <strong>8 groupes</strong> :
-
-    <pre class="delete-text">Width</pre>
+    <pre class="special-text">Width</pre>
     <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la largeur d'un élément
 
-    <pre class="delete-text">Height</pre>
+    <pre class="special-text">Height</pre>
     <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la hauteur d'un élément
 
-    <pre class="delete-text">Margin</pre>
+    <pre class="special-text">Margin</pre>
     <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge extérieure d'un élément
 
-    <pre class="delete-text">Padding</pre>
+    <pre class="special-text">Padding</pre>
     <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge intérieure d'un élément
 
-    <pre class="delete-text">Text Align</pre>
+    <pre class="special-text">Text Align</pre>
     <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier l'alignement d'un texte
 
-    <pre class="delete-text">Font</pre>
+    <pre class="special-text">Font</pre>
     <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier le style ou la graisse d'un texte
 
-    <pre class="delete-text">Text Decoration</pre>
+    <pre class="special-text">Text Decoration</pre>
     <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la décoration d'un texte
 
-    <pre class="delete-text">Cursor</pre>
+    <pre class="special-text">Cursor</pre>
     <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier le curseur de la souris
   </p>
 
-  <div class="btn-group">
+  <div class="btn-group m-lg gm-sm">
     <a class="btn delete-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/variables/_helper.var.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir les variables Helper">Variables</a>
 
     <a class="btn valid-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/mixins/_helper.mix.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir les mixins Helper">Mixins</a>
@@ -44,11 +42,12 @@
   </div>
 
 
-  <!-- Width Section -->
+  <!-- ************************* -->
+  <!-- ***** Width Section ***** -->
   <section>
     <h4 class="secondary-sea solid-rounder-sm">1 / Width</h4>
 
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Width</strong> peuvent affecter <em>3 propriétés CSS</em> :
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Width</strong> gèrent <em>3 propriétés CSS</em> :
 
       <pre class="info-text">width</pre>
       <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la largeur d'un élément
@@ -79,53 +78,48 @@
 
     <h5>1.1 / Width</h5>
 
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de largeurs</strong> sont disponibles :
-      <ul class="gmb-sm gmr-auto gml-auto">
-        <li class="wauto  solid cancel">.wauto</li>
-        <li class="w25    solid cancel">.w25</li>
-        <li class="w33    solid cancel">.w33</li>
-        <li class="w50    solid cancel">.w50</li>
-        <li class="w66    solid cancel">.w66</li>
-        <li class="w75    solid cancel">.w75</li>
-        <li class="w100   solid cancel">.w100</li>
-      </ul>
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de largeurs</strong> sont disponibles (<i>+ 6 classes globales de largeurs</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">w25</span>"&gt;Width = 25%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">w33</span>"&gt;Width = 33%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">w50</span>"&gt;Width = 50%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">w66</span>"&gt;Width = 66%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">w75</span>"&gt;Width = 75%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">w100</span>"&gt;Width = 100%&lt;/<span class="delete-text">div</span>&gt;</pre>
     </p>
 
     <h5>1.2 / Min-Width</h5>
 
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de largeurs minimales</strong> sont disponibles :
-      <ul class="gmb-sm gmr-auto gml-auto">
-        <li class="min-wauto  solid cancel">.min-wauto</li>
-        <li class="min-w25    solid cancel">.min-w25</li>
-        <li class="min-w33    solid cancel">.min-w33</li>
-        <li class="min-w50    solid cancel">.min-w50</li>
-        <li class="min-w66    solid cancel">.min-w66</li>
-        <li class="min-w75    solid cancel">.min-w75</li>
-        <li class="min-w100   solid cancel">.min-w100</li>
-      </ul>
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de largeurs minimales</strong> sont disponibles (<i>+ 6 classes globales de largeurs minimales</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-w25</span>"&gt;Min-width = 25%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-w33</span>"&gt;Min-width = 33%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-w50</span>"&gt;Min-width = 50%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-w66</span>"&gt;Min-width = 66%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-w75</span>"&gt;Min-width = 75%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-w100</span>"&gt;Min-width = 100%&lt;/<span class="delete-text">div</span>&gt;</pre>
     </p>
 
     <h5>1.3 / Max-Width</h5>
 
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de largeurs maximales</strong> sont disponibles :
-      <ul class="gmb-sm gmr-auto gml-auto">
-        <li class="max-wauto  solid cancel">.max-wauto</li>
-        <li class="max-w25    solid cancel">.max-w25</li>
-        <li class="max-w33    solid cancel">.max-w33</li>
-        <li class="max-w50    solid cancel">.max-w50</li>
-        <li class="max-w66    solid cancel">.max-w66</li>
-        <li class="max-w75    solid cancel">.max-w75</li>
-        <li class="max-w100   solid cancel">.max-w100</li>
-      </ul>
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de largeurs maximales</strong> sont disponibles (<i>+ 6 classes globales de largeurs maximales</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-w25</span>"&gt;Max-width = 25%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-w33</span>"&gt;Max-width = 33%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-w50</span>"&gt;Max-width = 50%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-w66</span>"&gt;Max-width = 66%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-w75</span>"&gt;Max-width = 75%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-w100</span>"&gt;Max-width = 100%&lt;/<span class="delete-text">div</span>&gt;</pre>
     </p>
   </section>
 
 
-  <!-- Height Section -->
+  <!-- ************************** -->
+  <!-- ***** Height Section ***** -->
   <section>
     <h4 class="secondary-sea solid-rounder-sm">2 / Height</h4>
 
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Height</strong> peuvent affecter <em>3 propriétés CSS</em> :
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Height</strong> gèrent <em>3 propriétés CSS</em> :
 
       <pre class="info-text">height</pre>
       <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la hauteur d'un élément
@@ -156,93 +150,387 @@
 
     <h5>1.1 / Height</h5>
 
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de hauteurs</strong> sont disponibles :
-      <ul class="gmb-sm gmr-auto gml-auto height">
-        <li class="hauto  solid cancel in-block">.hauto</li>
-        <li class="h25    solid cancel in-block">.h25</li>
-        <li class="h33    solid cancel in-block">.h33</li>
-        <li class="h50    solid cancel in-block">.h50</li>
-        <li class="h66    solid cancel in-block">.h66</li>
-        <li class="h75    solid cancel in-block">.h75</li>
-        <li class="h100   solid cancel in-block">.h100</li>
-      </ul>
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de hauteurs</strong> sont disponibles (<i>+ 6 classes globales de hauteurs</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">h25</span>"&gt;Height = 25%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">h33</span>"&gt;Height = 33%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">h50</span>"&gt;Height = 50%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">h66</span>"&gt;Height = 66%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">h75</span>"&gt;Height = 75%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">h100</span>"&gt;Height = 100%&lt;/<span class="delete-text">div</span>&gt;</pre>
     </p>
 
     <h5>1.2 / Min-Height</h5>
 
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de hauteurs minimales</strong> sont disponibles :
-      <ul class="gmb-sm gmr-auto gml-auto height">
-        <li class="min-hauto  solid cancel in-block">.min-hauto</li>
-        <li class="min-h25    solid cancel in-block">.min-h25</li>
-        <li class="min-h33    solid cancel in-block">.min-h33</li>
-        <li class="min-h50    solid cancel in-block">.min-h50</li>
-        <li class="min-h66    solid cancel in-block">.min-h66</li>
-        <li class="min-h75    solid cancel in-block">.min-h75</li>
-        <li class="min-h100   solid cancel in-block">.min-h100</li>
-      </ul>
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de hauteurs minimales</strong> sont disponibles (<i>+ 6 classes globales de hauteurs minimales</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-h25</span>"&gt;Min-height = 25%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-h33</span>"&gt;Min-height = 33%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-h50</span>"&gt;Min-height = 50%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-h66</span>"&gt;Min-height = 66%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-h75</span>"&gt;Min-height = 75%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-h100</span>"&gt;Min-height = 100%&lt;/<span class="delete-text">div</span>&gt;</pre>
     </p>
 
     <h5>1.3 / Max-Height</h5>
 
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de hauteurs maximales</strong> sont disponibles :
-      <ul class="gmb-sm gmr-auto gml-auto height">
-        <li class="max-hauto  solid cancel in-block">.max-hauto</li>
-        <li class="max-h25    solid cancel in-block">.max-h25</li>
-        <li class="max-h33    solid cancel in-block">.max-h33</li>
-        <li class="max-h50    solid cancel in-block">.max-h50</li>
-        <li class="max-h66    solid cancel in-block">.max-h66</li>
-        <li class="max-h75    solid cancel in-block">.max-h75</li>
-        <li class="max-h100   solid cancel in-block">.max-h100</li>
-      </ul>
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de hauteurs maximales</strong> sont disponibles (<i>+ 6 classes globales de hauteurs maximales</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-h25</span>"&gt;Max-height = 25%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-h33</span>"&gt;Max-height = 33%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-h50</span>"&gt;Max-height = 50%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-h66</span>"&gt;Max-height = 66%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-h75</span>"&gt;Max-height = 75%&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-h100</span>"&gt;Max-height = 100%&lt;/<span class="delete-text">div</span>&gt;</pre>
     </p>
   </section>
 
 
-  <!-- Margin Section -->
+  <!-- ************************** -->
+  <!-- ***** Margin Section ***** -->
   <section>
     <h4 class="secondary-sea solid-rounder-sm">3 / Margin</h4>
 
-    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> </p>
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Margin</strong> gèrent <em>5 propriétés CSS</em> :
+
+      <pre class="info-text">margin</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge extérieure d'un élément
+
+      <pre class="info-text">margin-top</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge extérieure au-dessus d'un élément
+
+      <pre class="info-text">margin-right</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge extérieure à droite d'un élément
+
+      <pre class="info-text">margin-bottom</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge extérieure en-dessous d'un élément
+
+      <pre class="info-text">margin-left</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge extérieure à gauche d'un élément
+    </p>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Ces classes peuvent affecter :
+      <ol>
+        <li>soit l'élément lui-même lorsque l'on appelle une classe dont le préfixe est :
+          <pre class="valid-text">.m-</pre>
+          <pre class="valid-text">.mt-</pre>
+          <pre class="valid-text">.mr-</pre>
+          <pre class="valid-text">.mb-</pre>
+          <pre class="valid-text">.ml-</pre>
+        </li>
+        <li>soit les éléments enfants du parent lorsque l'on appelle une classe dont le préfixe est :
+          <pre class="valid-text">.gm-</pre>
+          <pre class="valid-text">.gmt-</pre>
+          <pre class="valid-text">.gmr-</pre>
+          <pre class="valid-text">.gmb-</pre>
+          <pre class="valid-text">.gml-</pre>
+        </li>
+      </ol>
+    </p>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> L'appel d'une <strong>classe margin</strong> se fait en concaténant l'<em>un des préfixes précédents avec en suffixe la valeur nécessaire</em>.</p>
+
+    <h5>1.1 / Margin</h5>
+
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de marges extérieures</strong> sont disponibles (<i>+ 7 classes globales de marges extérieures</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">m-auto</span>"&gt;Margin = auto&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">m-0</span>"&gt;Margin = 0&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">m-tn</span>"&gt;Margin = .5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">m-sm</span>"&gt;Margin = 1rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">m-md</span>"&gt;Margin = 2rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">m-lg</span>"&gt;Margin = 5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">m-wd</span>"&gt;Margin = 10rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+    </p>
+
+    <h5>1.2 / Margin-Top</h5>
+
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de marges extérieures hautes</strong> sont disponibles (<i>+ 7 classes globales de marges extérieures hautes</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mt-auto</span>"&gt;Margin-top = auto&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mt-0</span>"&gt;Margin-top = 0&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mt-tn</span>"&gt;Margin-top = .5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mt-sm</span>"&gt;Margin-top = 1rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mt-md</span>"&gt;Margin-top = 2rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mt-lg</span>"&gt;Margin-top = 5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mt-wd</span>"&gt;Margin-top = 10rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+    </p>
+
+    <h5>1.3 / Margin-Right</h5>
+
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de marges extérieures droites</strong> sont disponibles (<i>+ 7 classes globales de marges extérieures droites</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mr-auto</span>"&gt;Margin-right = auto&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mr-0</span>"&gt;Margin-right = 0&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mr-tn</span>"&gt;Margin-right = .5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mr-sm</span>"&gt;Margin-right = 1rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mr-md</span>"&gt;Margin-right = 2rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mr-lg</span>"&gt;Margin-right = 5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mr-wd</span>"&gt;Margin-right = 10rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+    </p>
+
+    <h5>1.4 / Margin-Bottom</h5>
+
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de marges extérieures basses</strong> sont disponibles (<i>+ 7 classes globales de marges extérieures basses</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mb-auto</span>"&gt;Margin-bottom = auto&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mb-0</span>"&gt;Margin-bottom = 0&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mb-tn</span>"&gt;Margin-bottom = .5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mb-sm</span>"&gt;Margin-bottom = 1rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mb-md</span>"&gt;Margin-bottom = 2rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mb-lg</span>"&gt;Margin-bottom = 5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">mb-wd</span>"&gt;Margin-bottom = 10rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+    </p>
+
+    <h5>1.5 / Margin-Left</h5>
+
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de marges extérieures gauches</strong> sont disponibles (<i>+ 7 classes globales de marges extérieures gauches</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">ml-auto</span>"&gt;Margin-left = auto&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">ml-0</span>"&gt;Margin-left = 0&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">ml-tn</span>"&gt;Margin-left = .5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">ml-sm</span>"&gt;Margin-left = 1rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">ml-md</span>"&gt;Margin-left = 2rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">ml-lg</span>"&gt;Margin-left = 5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">ml-wd</span>"&gt;Margin-left = 10rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+    </p>
   </section>
 
 
-  <!-- Padding Section -->
+  <!-- *************************** -->
+  <!-- ***** Padding Section ***** -->
   <section>
     <h4 class="secondary-sea solid-rounder-sm">4 / Padding</h4>
 
-    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> </p>
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Padding</strong> gèrent <em>5 propriétés CSS</em> :
+
+      <pre class="info-text">padding</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge intérieure d'un élément
+
+      <pre class="info-text">padding-top</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge intérieure au-dessus d'un élément
+
+      <pre class="info-text">padding-right</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge intérieure à droite d'un élément
+
+      <pre class="info-text">padding-bottom</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge intérieure en-dessous d'un élément
+
+      <pre class="info-text">padding-left</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge intérieure à gauche d'un élément
+    </p>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Ces classes peuvent affecter :
+      <ol>
+        <li>soit l'élément lui-même lorsque l'on appelle une classe dont le préfixe est :
+          <pre class="valid-text">.p-</pre>
+          <pre class="valid-text">.pt-</pre>
+          <pre class="valid-text">.pr-</pre>
+          <pre class="valid-text">.pb-</pre>
+          <pre class="valid-text">.pl-</pre>
+        </li>
+        <li>soit les éléments enfants du parent lorsque l'on appelle une classe dont le préfixe est :
+          <pre class="valid-text">.gp-</pre>
+          <pre class="valid-text">.gpt-</pre>
+          <pre class="valid-text">.gpr-</pre>
+          <pre class="valid-text">.gpb-</pre>
+          <pre class="valid-text">.gpl-</pre>
+        </li>
+      </ol>
+    </p>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> L'appel d'une <strong>classe padding</strong> se fait en concaténant l'<em>un des préfixes précédents avec en suffixe la valeur nécessaire</em>.</p>
+
+    <h5>1.1 / Padding</h5>
+
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de marges intérieures</strong> sont disponibles (<i>+ 7 classes globales de marges intérieures</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">p-auto</span>"&gt;Padding = auto&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">p-0</span>"&gt;Padding = 0&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">p-tn</span>"&gt;Padding = .5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">p-sm</span>"&gt;Padding = 1rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">p-md</span>"&gt;Padding = 2rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">p-lg</span>"&gt;Padding = 5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">p-wd</span>"&gt;Padding = 10rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+    </p>
+
+    <h5>1.2 / Padding-Top</h5>
+
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de marges intérieures hautes</strong> sont disponibles (<i>+ 7 classes globales de marges intérieures hautes</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pt-auto</span>"&gt;Padding-top = auto&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pt-0</span>"&gt;Padding-top = 0&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pt-tn</span>"&gt;Padding-top = .5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pt-sm</span>"&gt;Padding-top = 1rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pt-md</span>"&gt;Padding-top = 2rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pt-lg</span>"&gt;Padding-top = 5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pt-wd</span>"&gt;Padding-top = 10rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+    </p>
+
+    <h5>1.3 / Padding-Right</h5>
+
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de marges intérieures droites</strong> sont disponibles (<i>+ 7 classes globales de marges intérieures droites</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pr-auto</span>"&gt;Padding-right = auto&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pr-0</span>"&gt;Padding-right = 0&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pr-tn</span>"&gt;Padding-right = .5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pr-sm</span>"&gt;Padding-right = 1rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pr-md</span>"&gt;Padding-right = 2rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pr-lg</span>"&gt;Padding-right = 5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pr-wd</span>"&gt;Padding-right = 10rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+    </p>
+
+    <h5>1.4 / Padding-Bottom</h5>
+
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de marges intérieures basses</strong> sont disponibles (<i>+ 7 classes globales de marges intérieures basses</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pb-auto</span>"&gt;Padding-bottom = auto&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pb-0</span>"&gt;Padding-bottom = 0&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pb-tn</span>"&gt;Padding-bottom = .5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pb-sm</span>"&gt;Padding-bottom = 1rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pb-md</span>"&gt;Padding-bottom = 2rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pb-lg</span>"&gt;Padding-bottom = 5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pb-wd</span>"&gt;Padding-bottom = 10rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+    </p>
+
+    <h5>1.5 / Padding-Left</h5>
+
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de marges intérieures gauches</strong> sont disponibles (<i>+ 7 classes globales de marges intérieures gauches</i>) :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pl-auto</span>"&gt;Padding-left = auto&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pl-0</span>"&gt;Padding-left = 0&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pl-tn</span>"&gt;Padding-left = .5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pl-sm</span>"&gt;Padding-left = 1rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pl-md</span>"&gt;Padding-left = 2rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pl-lg</span>"&gt;Padding-left = 5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">pl-wd</span>"&gt;Padding-left = 10rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+    </p>
   </section>
 
 
-  <!-- Text Align Section -->
+  <!-- ****************************** -->
+  <!-- ***** Text Align Section ***** -->
   <section>
     <h4 class="secondary-sea solid-rounder-sm">5 / Text Align</h4>
 
-    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> </p>
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Text Align</strong> gèrent <em>une seule propriété CSS</em> :
+      <pre class="info-text">text-align</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier l'alignement horizontal d'un texte
+    </p>
+
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>4 classes d'alignement horizontal de texte</strong> sont disponibles :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">center</span>"&gt;Text-align = center&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">justify</span>"&gt;Text-align = justify&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">right</span>"&gt;Text-align = right&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">left</span>"&gt;Text-align = left&lt;/<span class="delete-text">div</span>&gt;</pre>
+    </p>
+
   </section>
 
 
-  <!-- Font Section -->
+  <!-- ************************ -->
+  <!-- ***** Font Section ***** -->
   <section>
     <h4 class="secondary-sea solid-rounder-sm">6 / Font</h4>
 
-    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> </p>
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Font</strong> gèrent <em>2 propriétés CSS</em> :
+      <pre class="info-text">font-style</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier le style de la police de caractère
+      <pre class="info-text">font-weight</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la graisse de la police de caractère
+    </p>
+
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>3 classes de modification des polices de caractère</strong> sont disponibles :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">normal</span>"&gt;Font-style = normal & Font-weight = normal&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">italic</span>"&gt;Font-style = italic&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">bold</span>"&gt;Font-weight = bold&lt;/<span class="delete-text">div</span>&gt;</pre>
+    </p>
   </section>
 
 
-  <!-- Text Decoration Section -->
+  <!-- *********************************** -->
+  <!-- ***** Text Decoration Section ***** -->
   <section>
     <h4 class="secondary-sea solid-rounder-sm">7 / Text Decoration</h4>
 
-    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> </p>
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Text-decoration</strong> se composent de 2 parties :
+
+      <pre class="valid-text">line-style</pre>
+    </p>
+
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Ces 2 parties gèrent <em>2 propriétés CSS</em> :
+      <pre class="info-text">text-decoration-line</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier le positionnement de la décoration d'un texte
+      <pre class="info-text">text-decoration-style</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier le style de décoration d'un texte
+    </p>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Mais seul <strong>line est obligatoire</strong> ; par défaut, la valeur de <em>style est solid</em>.</p>
+
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> On peut donc écrire une classe <strong>text-decoration</strong> de 2 manières :
+      <pre class="valid-text">.line</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> le style vaudra alors solid (3 classes)
+      <pre class="valid-text">.line-style</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> chaque valeur est précisée (12 classes)
+    </p>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Une classe supplémentaire est disponible : <strong class="valid-text">no-deco</strong>, dont la valeur de <em class="info-text">text-decoration</em> est <em class="delete-text">none</em></p>
+
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Exemples :
+
+      <pre class="valid-text">.under</pre>
+      <pre class="valid-text">.over-dashed</pre>
+      <pre class="valid-text">.throught-wavy</pre>
+      <pre class="valid-text">.no-deco</pre>
+    </p>
+
+    <h5>1.1 / Text Decoration Line</h5>
+
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>3 préfixes</strong> sont disponibles :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">under</span>"&gt;Text-decoration-line = underline&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">over</span>"&gt;Text-decoration-line = overline&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">throught</span>"&gt;Text-decoration-line = line-throught&lt;/<span class="delete-text">div</span>&gt;</pre>
+    </p>
+
+    <h5>1.2 / Text Decoration Style</h5>
+
+    <!-- Examples -->
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>5 suffixes</strong> sont disponibles :
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">solid</span>"&gt;Text-decoration-style = solid&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">double</span>"&gt;Text-decoration-style = double&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">dotted</span>"&gt;Text-decoration-style = dotted&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">dashed</span>"&gt;Text-decoration-style = dashed&lt;/<span class="delete-text">div</span>&gt;</pre>
+      <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">wavy</span>"&gt;Text-decoration-style = wavy&lt;/<span class="delete-text">div</span>&gt;</pre>
+    </p>
   </section>
 
 
-  <!-- Cursor Section -->
+  <!-- ************************** -->
+  <!-- ***** Cursor Section ***** -->
   <section>
     <h4 class="secondary-sea solid-rounder-sm">8 / Cursor</h4>
 
-    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> </p>
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Cursor</strong> peuvent affecter <em>une seule propriété CSS</em> :
+      <pre class="info-text">cursor</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier le curseur de la souris
+    </p>
+
+    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Ces classes affectent <em>l'élément lui-même, tous ses enfants directs, ainsi que tous les enfants directs de ces derniers</em>.</p>
+
+    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>7 classes de pointeurs</strong> sont disponibles (<i>survolez pour voir le curseur changer</i>) :
+      <ul class="gw50 gmt-md gmb-md gmr-auto gml-auto">
+        <li class="secondary solid-sm cell">.cell</li>
+        <li class="secondary solid-sm crosshair">.crosshair</li>
+        <li class="secondary solid-sm help">.help</li>
+        <li class="secondary solid-sm move">.move</li>
+        <li class="secondary solid-sm forbidden">.forbidden</li>
+        <li class="secondary solid-sm pointer">.pointer</li>
+        <li class="secondary solid-sm text">.text</li>
+      </ul>
+    </p>
   </section>
 
 </section>
