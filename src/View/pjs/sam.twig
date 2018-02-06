@@ -9,11 +9,9 @@
 
 {% block description %}Documentation de Sam, Scss Animated Microframework - sam.scss{% endblock %}
 
-
 {% block main %}
 
 <main id="sam" class="center">
-
 
   <p class="intro warning-sea solid-rounded">
     <i class="fa fa-ban fa-lg fa-fw delete-text" aria-hidden="true"></i>
@@ -23,14 +21,15 @@
 
   <article class="container">
 
-    <h2 class="info-sea solid-slight p-md">Documentation</h2>
+    <h2 class="info solid p-md">Documentation</h2>
 
-    <figure class="mr-auto ml-auto">
+    <figure class="m-auto">
       {{ include('svg/sam.svg.twig') }}
-      <figcaption>SAM</figcaption>
+      <figcaption class="special-text bold">SAM</figcaption>
     </figure>
 
     <div class="btn-group m-md">
+
       <!-- Facebook buttons -->
       <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fphilippebeck.net%2Findex.php%3Faccess%3Dpjs!sam&layout=button_count&size=small&mobile_iframe=true&appId=1316979581722641&width=82&height=20" width="82" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
@@ -62,12 +61,15 @@
     <p>Et fournit 3 éléments de base en plus, la barre de navigation, les boutons & les formulaires.</p>
 
     <div class="btn-group">
+
       <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir le repository GitHub">
         <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
       </a>
+
       <a class="btn npm-outline solid-rounder inset-spread" href="https://www.npmjs.com/package/sam.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir le package npm">
         <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
       </a>
+
       <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss/archive/master.zip" title="Télécharger Sam">
         <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
       </a>
@@ -107,24 +109,28 @@
     <!-- ******************************** -->
     <!-- ***** Installation section ***** -->
     <section id="install">
-      <h3 class="primary-sea solid-rounded mt-wd mb-lg">I - Installation</h3>
+      <h3 class="primary solid-slight m-lg">I - Installation</h3>
 
       <ol>
-        <li>Ouvrez un terminal, placez-vous dans <i>votre dossier web</i>, puis tapez  <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i>
+        <li>
+          Ouvrez un terminal, placez-vous dans <i>votre dossier web</i>, puis tapez  <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i>
           <pre class="classic-text">npm install sam.scss</pre>
         </li>
+
         <li>Appelez depuis votre layout :
           <ul>
-            <li><strong class="valid-text">sam.css</strong> pour la version dev <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i>
+            <li>
+              <strong class="valid-text">sam.css</strong> pour la version dev <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i>
               <pre>&lt;<span class="delete-text">link</span> <span class="info-text">rel</span>=<span class="warning-text">"stylesheet"</span> <span class="info-text">href</span>=<span class="warning-text">"node_modules/sam.scss/dist/sam.css"</span>&gt;</pre>
             </li>
-            <li><strong class="valid-text">sam.min.css</strong> pour la version prod <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i>
+
+            <li>
+              <strong class="valid-text">sam.min.css</strong> pour la version prod <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i>
               <pre>&lt;<span class="delete-text">link</span> <span class="info-text">rel</span>=<span class="warning-text">"stylesheet"</span> <span class="info-text">href</span>=<span class="warning-text">"node_modules/sam.scss/dist/sam.min.css"</span>&gt;</pre>(attention toutefois, il s'agit d'un pre-release pour le moment)
             </li>
           </ul>
         </li>
       </ol>
-
     </section>
 
 
@@ -138,11 +144,9 @@
     {{ include('pjs/sam/button.twig') }}
 
 
-
     <!-- ************************ -->
     <!-- ***** Form section ***** -->
     {{ include('pjs/sam/form.twig') }}
-
 
 
     <!-- *************************** -->
@@ -160,7 +164,6 @@
     {{ include('pjs/sam/shadow.twig') }}
 
 
-
     <!-- ************************* -->
     <!-- ***** Color section ***** -->
     {{ include('pjs/sam/color.twig') }}
@@ -170,10 +173,10 @@
     <!-- ***** Animate section ***** -->
     {{ include('pjs/sam/animate.twig') }}
 
+
     <!-- ************************** -->
     <!-- ***** Helper section ***** -->
     {{ include('pjs/sam/helper.twig') }}
-
 
   </article>
 </main>

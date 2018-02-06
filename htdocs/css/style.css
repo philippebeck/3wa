@@ -479,7 +479,8 @@ main {
 #jim h3,
 #sam h2,
 #sam h3,
-#sam h4 {
+#sam h4,
+#sam h5 {
   display: inline-block;
   max-width: 95%;
 }
