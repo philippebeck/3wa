@@ -6,7 +6,35 @@
 <section>
   <h3 class="primary-sea solid-rounded mt-wd mb-lg">VIII - Color</h3>
 
-  <p class="container">La partie Couleur se composent de 3 familles de couleurs : les basiques, les personnalisées & celles de marques. Chaque couleur possède 10 variations au total, dont certaines sont simples, n'affectant q'une partie de l'élément, & d'autres multiples, affectant le fond, la bordure et le texte.</p>
+  <p>
+    <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les classes <strong>color</strong> se composent de 2 parties :
+    <pre class="valid-text">color-type</pre>
+  </p>
+
+  <p>
+    <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Mais seul <strong>color est obligatoire</strong> ; par défaut, la valeur de <em>type est nulle</em>.
+  </p>
+
+  <p>
+    <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> On peut donc écrire une classe <strong>color</strong> de 2 manières :
+
+    <pre class="valid-text">.color</pre>
+    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> le type est celui par default dont la valeur est nulle
+    <pre class="valid-text">.color-type</pre>
+    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> chaque valeur est précisée
+  </p>
+
+  <p>
+    <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Exemples :
+    <pre class="valid-text">.info</pre>
+    <pre class="valid-text">.valid-btn</pre>
+    <pre class="valid-text">.delete-outline</pre>
+    <pre class="valid-text">.new-border</pre>
+  </p>
+
+  <p>
+    <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les <strong>sources</strong> sont disponibles ci-dessous...
+  </p>
 
   <div class="btn-group">
     <a class="btn delete-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/variables/_color.var.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir les variables Color">Variables</a>
@@ -19,9 +47,13 @@
   </div>
 
   <section>
-    <h4 class="secondary-sea solid-rounder-sm">1 / Les couleurs</h4>
+    <h4 class="secondary-sea solid-rounder-sm">1 / Color</h4>
 
-    <h5>1.1 / Les couleurs basiques</h5>
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong>Color</strong> correspond à l'une des <em>10 couleurs basiques</em>, ou à l'une des <em>2 couleurs personnalisées</em>, ou encore, à l'une des <em>9 couleurs de marques</em>.
+    </p>
+
+    <h5>1.1 / Les basiques</h5>
 
     <ul class="row content-center gm-md content-center gp-md">
       <li class="default  solid-rounder">default</li>
@@ -36,14 +68,14 @@
       <li class="new      solid-rounder">new</li>
     </ul>
 
-    <h5>1.2 / Les couleurs personnalisées</h5>
+    <h5>1.2 / Les personnalisées</h5>
 
     <ul class="row content-center gm-md content-center gp-md">
       <li class="primary    solid-rounder">.primary</li>
       <li class="secondary  solid-rounder">.secondary</li>
     </ul>
 
-    <h5>1.3 / Les couleurs de marques</h5>
+    <h5>1.3 / Les marques</h5>
 
     <ul class="row content-center gm-md content-center gp-md">
       <li class="facebook       solid-rounder">facebook</li>
@@ -59,131 +91,237 @@
   </section>
 
   <section>
-    <h4 class="secondary-sea solid-rounder-sm">2 / Les variations de couleurs "mono-state"</h4>
+    <h4 class="secondary-sea solid-rounder-sm">2 / Type</h4>
 
-    <h5>2.1 / Color</h5>
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>Type</strong> correspond à l'une des <em>10 variations de couleurs</em> ; ces variations se découpent en 3 groupes :
+      <ul>
+        <li>"mono-color" (2 types)</li>
+        <li>"mono-state" (3 types)</li>
+        <li>"poly-state" (5 types)</li>
+      </ul>
+    </p>
 
-    <ul class="row content-center gm-md content-center gp-md">
-      <li class="default  solid-rounder">.default</li>
-      <li class="info     solid-rounder">.info</li>
-      <li class="classic  solid-rounder">.classic</li>
-      <li class="cancel   solid-rounder">.cancel</li>
-      <li class="valid    solid-rounder">.valid</li>
-      <li class="warning  solid-rounder">.warning</li>
-      <li class="delete   solid-rounder">.delete</li>
-      <li class="special  solid-rounder">.special</li>
-      <li class="base     solid-rounder">.base</li>
-      <li class="new      solid-rounder">.new</li>
-    </ul>
+    <section>
+      <h5>2.1 / Type "mono-color"</h5>
 
-    <h5>2.2 / Color Glass</h5>
+      <p>
+        <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les <strong>types "mono-color"</strong> sont des <em>types n'attribuant qu'une couleur sur une seule partie de l'élément</em>.
+      </p>
 
-    <ul class="row content-center gm-md content-center gp-md">
-      <li class="default-glass  solid-rounder">.default-glass</li>
-      <li class="info-glass     solid-rounder">.info-glass</li>
-      <li class="classic-glass  solid-rounder">.classic-glass</li>
-      <li class="cancel-glass   solid-rounder">.cancel-glass</li>
-      <li class="valid-glass    solid-rounder">.valid-glass</li>
-      <li class="warning-glass  solid-rounder">.warning-glass</li>
-      <li class="delete-glass   solid-rounder">.delete-glass</li>
-      <li class="special-glass  solid-rounder">.special-glass</li>
-      <li class="base-glass     solid-rounder">.base-glass</li>
-      <li class="new-glass      solid-rounder">.new-glass</li>
-    </ul>
+      <h6>2.11 / Color Border</h6>
 
-    <h5>2.3 / Color Sea</h5>
+      <p>
+        <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong>Color Border</strong> est un type avec <em>uniquement une couleur de bordure</em>.
+      </p>
 
-    <ul class="row content-center gm-md content-center gp-md">
-      <li class="default-sea  solid-rounder">.default-sea</li>
-      <li class="info-sea     solid-rounder">.info-sea</li>
-      <li class="classic-sea  solid-rounder">.classic-sea</li>
-      <li class="cancel-sea   solid-rounder">.cancel-sea</li>
-      <li class="valid-sea    solid-rounder">.valid-sea</li>
-      <li class="warning-sea  solid-rounder">.warning-sea</li>
-      <li class="delete-sea   solid-rounder">.delete-sea</li>
-      <li class="special-sea  solid-rounder">.special-sea</li>
-      <li class="base-sea     solid-rounder">.base-sea</li>
-      <li class="new-sea      solid-rounder">.new-sea</li>
-    </ul>
-  </section>
+      <ul class="row content-center gm-md content-center gp-md">
+        <li class="default-border  solid-rounder">.default-border</li>
+        <li class="info-border     solid-rounder">.info-border</li>
+        <li class="classic-border  solid-rounder">.classic-border</li>
+        <li class="cancel-border   solid-rounder">.cancel-border</li>
+        <li class="valid-border    solid-rounder">.valid-border</li>
+        <li class="warning-border  solid-rounder">.warning-border</li>
+        <li class="delete-border   solid-rounder">.delete-border</li>
+        <li class="special-border  solid-rounder">.special-border</li>
+        <li class="base-border     solid-rounder">.base-border</li>
+        <li class="new-border      solid-rounder">.new-border</li>
+      </ul>
+
+      <h6>2.12 / Color Text</h6>
+
+      <p>
+        <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong>Color Text</strong> est un type avec <em>uniquement une couleur de texte</em>.
+      </p>
+
+      <p>
+        Attention toutefois, le comportement par défaut de la propriété CSS <strong class="info-text">color</strong> peut aussi <em>se propager à la bordure</em>, si celle-ci est présente sans attribution de couleur.
+      </p>
+
+      <ul class="row content-center gm-md content-center gp-md">
+        <li class="default-text  under">.default-text</li>
+        <li class="info-text     under">.info-text</li>
+        <li class="classic-text  under">.classic-text</li>
+        <li class="cancel-text   under">.cancel-text</li>
+        <li class="valid-text    under">.valid-text</li>
+        <li class="warning-text  under">.warning-text</li>
+        <li class="delete-text   under">.delete-text</li>
+        <li class="special-text  under">.special-text</li>
+        <li class="base-text     under">.base-text</li>
+        <li class="new-text      under">.new-text</li>
+      </ul>
+
+    </section>
 
 
-  <section>
-    <h4 class="secondary-sea solid-rounder-sm">3 / Les variations de couleurs "poly-state"</h4>
+    <section>
+      <h5>2.2 / Type "mono-state"</h5>
 
-    <h5>3.1 / Color Outline</h5>
+      <p>
+        <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les <strong>types "mono-state"</strong> sont des <em>types ne réagissant pas au changement d'état</em> & sont donc particulièrement adaptés pour <em>des fonds, des barres de navigation, ou tout autre élément ne permettant pas une action directement sur lui-même</em>.
+      </p>
 
-    <ul class="row content-center gm-md content-center gp-md">
-      <li class="default-outline  solid-rounder">.default-outline</li>
-      <li class="info-outline     solid-rounder">.info-outline</li>
-      <li class="classic-outline  solid-rounder">.classic-outline</li>
-      <li class="cancel-outline   solid-rounder">.cancel-outline</li>
-      <li class="valid-outline    solid-rounder">.valid-outline</li>
-      <li class="warning-outline  solid-rounder">.warning-outline</li>
-      <li class="delete-outline   solid-rounder">.delete-outline</li>
-      <li class="special-outline  solid-rounder">.special-outline</li>
-      <li class="base-outline     solid-rounder">.base-outline</li>
-      <li class="new-outline      solid-rounder">.new-outline</li>
-    </ul>
+      <h6>2.21 / Color</h6>
 
-    <h5>3.2 / Color Light</h5>
+      <p>
+        <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong>Color</strong> est le type par <em>default</em>, usant des couleurs normales pour le fond (sans variations).
+      </p>
 
-    <ul class="row content-center gm-md content-center gp-md">
-      <li class="default-light  solid-rounder">.default-light</li>
-      <li class="info-light     solid-rounder">.info-light</li>
-      <li class="classic-light  solid-rounder">.classic-light</li>
-      <li class="cancel-light   solid-rounder">.cancel-light</li>
-      <li class="valid-light    solid-rounder">.valid-light</li>
-      <li class="warning-light  solid-rounder">.warning-light</li>
-      <li class="delete-light   solid-rounder">.delete-light</li>
-      <li class="special-light  solid-rounder">.special-light</li>
-      <li class="base-light     solid-rounder">.base-light</li>
-      <li class="new-light      solid-rounder">.new-light</li>
-    </ul>
+      <ul class="row content-center gm-md content-center gp-md">
+        <li class="default  solid-rounder">.default</li>
+        <li class="info     solid-rounder">.info</li>
+        <li class="classic  solid-rounder">.classic</li>
+        <li class="cancel   solid-rounder">.cancel</li>
+        <li class="valid    solid-rounder">.valid</li>
+        <li class="warning  solid-rounder">.warning</li>
+        <li class="delete   solid-rounder">.delete</li>
+        <li class="special  solid-rounder">.special</li>
+        <li class="base     solid-rounder">.base</li>
+        <li class="new      solid-rounder">.new</li>
+      </ul>
 
-    <h5>3.3 / Color Trans</h5>
+      <h6>2.22 / Color Glass</h6>
 
-    <ul class="row content-center gm-md content-center gp-md">
-      <li class="default-trans  solid-rounder">.default-trans</li>
-      <li class="info-trans     solid-rounder">.info-trans</li>
-      <li class="classic-trans  solid-rounder">.classic-trans</li>
-      <li class="cancel-trans   solid-rounder">.cancel-trans</li>
-      <li class="valid-trans    solid-rounder">.valid-trans</li>
-      <li class="warning-trans  solid-rounder">.warning-trans</li>
-      <li class="delete-trans   solid-rounder">.delete-trans</li>
-      <li class="special-trans  solid-rounder">.special-trans</li>
-      <li class="base-trans     solid-rounder">.base-trans</li>
-      <li class="new-trans      solid-rounder">.new-trans</li>
-    </ul>
+      <p>
+        <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong>Color Glass</strong> est un type avec une <em>forte transparence</em>.
+      </p>
 
-    <h5>3.4 / Color Btn</h5>
+      <ul class="row content-center gm-md content-center gp-md">
+        <li class="default-glass  solid-rounder">.default-glass</li>
+        <li class="info-glass     solid-rounder">.info-glass</li>
+        <li class="classic-glass  solid-rounder">.classic-glass</li>
+        <li class="cancel-glass   solid-rounder">.cancel-glass</li>
+        <li class="valid-glass    solid-rounder">.valid-glass</li>
+        <li class="warning-glass  solid-rounder">.warning-glass</li>
+        <li class="delete-glass   solid-rounder">.delete-glass</li>
+        <li class="special-glass  solid-rounder">.special-glass</li>
+        <li class="base-glass     solid-rounder">.base-glass</li>
+        <li class="new-glass      solid-rounder">.new-glass</li>
+      </ul>
 
-    <ul class="row content-center gm-md content-center gp-md">
-      <li class="default-btn  solid-rounder">.default-btn</li>
-      <li class="info-btn     solid-rounder">.info-btn</li>
-      <li class="classic-btn  solid-rounder">.classic-btn</li>
-      <li class="cancel-btn   solid-rounder">.cancel-btn</li>
-      <li class="valid-btn    solid-rounder">.valid-btn</li>
-      <li class="warning-btn  solid-rounder">.warning-btn</li>
-      <li class="delete-btn   solid-rounder">.delete-btn</li>
-      <li class="special-btn  solid-rounder">.special-btn</li>
-      <li class="base-btn     solid-rounder">.base-btn</li>
-      <li class="new-btn      solid-rounder">.new-btn</li>
-    </ul>
+      <h6>2.23 / Color Sea</h6>
 
-    <h5>3.5 / Color Dark</h5>
+      <p>
+        <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong>Color Sea</strong> est un type avec une <em>faible transparence</em>.
+      </p>
 
-    <ul class="row content-center gm-md content-center gp-md">
-      <li class="default-dark  solid-rounder">.default-dark</li>
-      <li class="info-dark     solid-rounder">.info-dark</li>
-      <li class="classic-dark  solid-rounder">.classic-dark</li>
-      <li class="cancel-dark   solid-rounder">.cancel-dark</li>
-      <li class="valid-dark    solid-rounder">.valid-dark</li>
-      <li class="warning-dark  solid-rounder">.warning-dark</li>
-      <li class="delete-dark   solid-rounder">.delete-dark</li>
-      <li class="special-dark  solid-rounder">.special-dark</li>
-      <li class="base-dark     solid-rounder">.base-dark</li>
-      <li class="new-dark      solid-rounder">.new-dark</li>
-    </ul>
+      <ul class="row content-center gm-md content-center gp-md">
+        <li class="default-sea  solid-rounder">.default-sea</li>
+        <li class="info-sea     solid-rounder">.info-sea</li>
+        <li class="classic-sea  solid-rounder">.classic-sea</li>
+        <li class="cancel-sea   solid-rounder">.cancel-sea</li>
+        <li class="valid-sea    solid-rounder">.valid-sea</li>
+        <li class="warning-sea  solid-rounder">.warning-sea</li>
+        <li class="delete-sea   solid-rounder">.delete-sea</li>
+        <li class="special-sea  solid-rounder">.special-sea</li>
+        <li class="base-sea     solid-rounder">.base-sea</li>
+        <li class="new-sea      solid-rounder">.new-sea</li>
+      </ul>
+    </section>
+
+
+    <section>
+      <h5>2.3 / Type "poly-state"</h5>
+
+      <p>
+        <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les <strong>types "poly-state"</strong> sont des <em>types réagissant au changement d'état</em> & sont donc particulièrement adaptés pour <em>des boutons, des liens, ou tout autre élément permettant une action directement sur lui-même</em>.
+      </p>
+
+      <h6>2.31 / Color Outline</h6>
+
+      <p>
+        <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong>Color Outline</strong> est un type avec un <em>fond particulièrement lumineux par default</em> & une <em>couleur normale lors de changement d'état</em>.
+      </p>
+
+      <ul class="row content-center gm-md content-center gp-md">
+        <li class="default-outline  solid-rounder">.default-outline</li>
+        <li class="info-outline     solid-rounder">.info-outline</li>
+        <li class="classic-outline  solid-rounder">.classic-outline</li>
+        <li class="cancel-outline   solid-rounder">.cancel-outline</li>
+        <li class="valid-outline    solid-rounder">.valid-outline</li>
+        <li class="warning-outline  solid-rounder">.warning-outline</li>
+        <li class="delete-outline   solid-rounder">.delete-outline</li>
+        <li class="special-outline  solid-rounder">.special-outline</li>
+        <li class="base-outline     solid-rounder">.base-outline</li>
+        <li class="new-outline      solid-rounder">.new-outline</li>
+      </ul>
+
+      <h6>2.32 / Color Light</h6>
+
+      <p>
+        <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong>Color Light</strong> est un type avec un <em>fond clair par default</em> & un <em>fond foncé lors de changement d'état</em>.
+      </p>
+
+      <ul class="row content-center gm-md content-center gp-md">
+        <li class="default-light  solid-rounder">.default-light</li>
+        <li class="info-light     solid-rounder">.info-light</li>
+        <li class="classic-light  solid-rounder">.classic-light</li>
+        <li class="cancel-light   solid-rounder">.cancel-light</li>
+        <li class="valid-light    solid-rounder">.valid-light</li>
+        <li class="warning-light  solid-rounder">.warning-light</li>
+        <li class="delete-light   solid-rounder">.delete-light</li>
+        <li class="special-light  solid-rounder">.special-light</li>
+        <li class="base-light     solid-rounder">.base-light</li>
+        <li class="new-light      solid-rounder">.new-light</li>
+      </ul>
+
+      <h6>2.33 / Color Trans</h6>
+
+      <p>
+        <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong>Color Trans</strong> est un type avec une <em>faible transparence par default</em> & une <em>forte transparence lors de changement d'état</em>.
+      </p>
+
+      <ul class="row content-center gm-md content-center gp-md">
+        <li class="default-trans  solid-rounder">.default-trans</li>
+        <li class="info-trans     solid-rounder">.info-trans</li>
+        <li class="classic-trans  solid-rounder">.classic-trans</li>
+        <li class="cancel-trans   solid-rounder">.cancel-trans</li>
+        <li class="valid-trans    solid-rounder">.valid-trans</li>
+        <li class="warning-trans  solid-rounder">.warning-trans</li>
+        <li class="delete-trans   solid-rounder">.delete-trans</li>
+        <li class="special-trans  solid-rounder">.special-trans</li>
+        <li class="base-trans     solid-rounder">.base-trans</li>
+        <li class="new-trans      solid-rounder">.new-trans</li>
+      </ul>
+
+      <h6>2.34 / Color Btn</h6>
+
+      <p>
+        <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong>Color Btn</strong> est un type avec un <em>fond de couleur normale par default</em> & un <em>fond particulièrement lumineux lors de changement d'état</em>.
+      </p>
+
+      <ul class="row content-center gm-md content-center gp-md">
+        <li class="default-btn  solid-rounder">.default-btn</li>
+        <li class="info-btn     solid-rounder">.info-btn</li>
+        <li class="classic-btn  solid-rounder">.classic-btn</li>
+        <li class="cancel-btn   solid-rounder">.cancel-btn</li>
+        <li class="valid-btn    solid-rounder">.valid-btn</li>
+        <li class="warning-btn  solid-rounder">.warning-btn</li>
+        <li class="delete-btn   solid-rounder">.delete-btn</li>
+        <li class="special-btn  solid-rounder">.special-btn</li>
+        <li class="base-btn     solid-rounder">.base-btn</li>
+        <li class="new-btn      solid-rounder">.new-btn</li>
+      </ul>
+
+      <h6>2.35 / Color Dark</h6>
+
+      <p>
+        <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong>Color Dark</strong> est un type avec un <em>fond foncé par default</em> & un <em>fond clair lors de changement d'état</em>.
+      </p>
+
+      <ul class="row content-center gm-md content-center gp-md">
+        <li class="default-dark  solid-rounder">.default-dark</li>
+        <li class="info-dark     solid-rounder">.info-dark</li>
+        <li class="classic-dark  solid-rounder">.classic-dark</li>
+        <li class="cancel-dark   solid-rounder">.cancel-dark</li>
+        <li class="valid-dark    solid-rounder">.valid-dark</li>
+        <li class="warning-dark  solid-rounder">.warning-dark</li>
+        <li class="delete-dark   solid-rounder">.delete-dark</li>
+        <li class="special-dark  solid-rounder">.special-dark</li>
+        <li class="base-dark     solid-rounder">.base-dark</li>
+        <li class="new-dark      solid-rounder">.new-dark</li>
+      </ul>
+
+    </section>
   </section>
 </section>
