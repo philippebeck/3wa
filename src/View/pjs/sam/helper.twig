@@ -4,9 +4,11 @@
 
 
 <section id="helper">
+
   <h3 class="primary-sea solid-rounded mt-wd mb-lg">X - Helper</h3>
 
-  <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les classes <strong>helper</strong> sont constituées de <strong>8 groupes</strong> :
+  <p>
+    <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les classes <strong>helper</strong> sont constituées de <strong>8 groupes</strong> :
 
     <pre class="special-text">Width</pre>
     <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la largeur d'un élément
@@ -33,7 +35,12 @@
     <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier le curseur de la souris
   </p>
 
+  <p>
+    <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les <strong>codes sources</strong> sont disponibles ci-dessous...
+  </p>
+
   <div class="btn-group m-lg gm-sm">
+
     <a class="btn delete-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/variables/_helper.var.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir les variables Helper">Variables</a>
 
     <a class="btn valid-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/mixins/_helper.mix.scss" rel="noopener" rel="noreferrer" target="_blank" title="Voir les mixins Helper">Mixins</a>
@@ -47,7 +54,8 @@
   <section>
     <h4 class="secondary-sea solid-rounder-sm">1 / Width</h4>
 
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Width</strong> gèrent <em>3 propriétés CSS</em> :
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Width</strong> gèrent <em>3 propriétés CSS</em> :
 
       <pre class="info-text">width</pre>
       <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la largeur d'un élément
@@ -59,14 +67,19 @@
       <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la largeur maximale d'un élément
     </p>
 
-    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Ces classes peuvent affecter :
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Ces classes peuvent affecter :
       <ol>
+
         <li>soit l'élément lui-même lorsque l'on appelle une classe dont le préfixe est :
+
           <pre class="valid-text">.w</pre>
           <pre class="valid-text">.min-w</pre>
           <pre class="valid-text">.max-w</pre>
         </li>
+
         <li>soit les éléments enfants du parent lorsque l'on appelle une classe dont le préfixe est :
+
           <pre class="valid-text">.gw</pre>
           <pre class="valid-text">.min-gw</pre>
           <pre class="valid-text">.max-gw</pre>
@@ -74,41 +87,70 @@
       </ol>
     </p>
 
-    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> L'appel d'une <strong>classe width</strong> se fait en concaténant l'<em>un des préfixes précédents avec en suffixe la valeur nécessaire</em>.</p>
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> L'appel d'une <strong>classe width</strong> se fait en concaténant l'<em>un des préfixes précédents avec en suffixe la valeur nécessaire</em>.
+    </p>
 
+
+    <!-- ***** Width Part ***** -->
     <h5>1.1 / Width</h5>
 
     <!-- Examples -->
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de largeurs</strong> sont disponibles (<i>+ 6 classes globales de largeurs</i>) :
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de largeurs</strong> sont disponibles (<i>+ 6 classes globales de largeurs</i>) :
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">w25</span>"&gt;Width = 25%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">w33</span>"&gt;Width = 33%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">w50</span>"&gt;Width = 50%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">w66</span>"&gt;Width = 66%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">w75</span>"&gt;Width = 75%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">w100</span>"&gt;Width = 100%&lt;/<span class="delete-text">div</span>&gt;</pre>
     </p>
 
+
+    <!-- ***** Min-Width Part ***** -->
     <h5>1.2 / Min-Width</h5>
 
     <!-- Examples -->
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de largeurs minimales</strong> sont disponibles (<i>+ 6 classes globales de largeurs minimales</i>) :
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de largeurs minimales</strong> sont disponibles (<i>+ 6 classes globales de largeurs minimales</i>) :
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-w25</span>"&gt;Min-width = 25%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-w33</span>"&gt;Min-width = 33%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-w50</span>"&gt;Min-width = 50%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-w66</span>"&gt;Min-width = 66%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-w75</span>"&gt;Min-width = 75%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-w100</span>"&gt;Min-width = 100%&lt;/<span class="delete-text">div</span>&gt;</pre>
     </p>
 
+
+    <!-- ***** Max-Width Part ***** -->
     <h5>1.3 / Max-Width</h5>
 
     <!-- Examples -->
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de largeurs maximales</strong> sont disponibles (<i>+ 6 classes globales de largeurs maximales</i>) :
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de largeurs maximales</strong> sont disponibles (<i>+ 6 classes globales de largeurs maximales</i>) :
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-w25</span>"&gt;Max-width = 25%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-w33</span>"&gt;Max-width = 33%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-w50</span>"&gt;Max-width = 50%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-w66</span>"&gt;Max-width = 66%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-w75</span>"&gt;Max-width = 75%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-w100</span>"&gt;Max-width = 100%&lt;/<span class="delete-text">div</span>&gt;</pre>
     </p>
   </section>
@@ -119,7 +161,8 @@
   <section>
     <h4 class="secondary-sea solid-rounder-sm">2 / Height</h4>
 
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Height</strong> gèrent <em>3 propriétés CSS</em> :
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Height</strong> gèrent <em>3 propriétés CSS</em> :
 
       <pre class="info-text">height</pre>
       <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la hauteur d'un élément
@@ -131,14 +174,19 @@
       <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la hauteur maximale d'un élément
     </p>
 
-    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Ces classes peuvent affecter :
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Ces classes peuvent affecter :
       <ol>
+
         <li>soit l'élément lui-même lorsque l'on appelle une classe dont le préfixe est :
+
           <pre class="valid-text">.h</pre>
           <pre class="valid-text">.min-h</pre>
           <pre class="valid-text">.max-h</pre>
         </li>
+
         <li>soit les éléments enfants du parent lorsque l'on appelle une classe dont le préfixe est :
+
           <pre class="valid-text">.gh</pre>
           <pre class="valid-text">.min-gh</pre>
           <pre class="valid-text">.max-gh</pre>
@@ -146,41 +194,70 @@
       </ol>
     </p>
 
-    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> L'appel d'une <strong>classe height</strong> se fait en concaténant l'<em>un des préfixes précédents avec en suffixe la valeur nécessaire</em>.</p>
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> L'appel d'une <strong>classe height</strong> se fait en concaténant l'<em>un des préfixes précédents avec en suffixe la valeur nécessaire</em>.
+    </p>
 
+
+    <!-- ***** Height Part ***** -->
     <h5>1.1 / Height</h5>
 
     <!-- Examples -->
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de hauteurs</strong> sont disponibles (<i>+ 6 classes globales de hauteurs</i>) :
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de hauteurs</strong> sont disponibles (<i>+ 6 classes globales de hauteurs</i>) :
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">h25</span>"&gt;Height = 25%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">h33</span>"&gt;Height = 33%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">h50</span>"&gt;Height = 50%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">h66</span>"&gt;Height = 66%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">h75</span>"&gt;Height = 75%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">h100</span>"&gt;Height = 100%&lt;/<span class="delete-text">div</span>&gt;</pre>
     </p>
 
+
+    <!-- ***** Min-Height Part ***** -->
     <h5>1.2 / Min-Height</h5>
 
     <!-- Examples -->
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de hauteurs minimales</strong> sont disponibles (<i>+ 6 classes globales de hauteurs minimales</i>) :
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de hauteurs minimales</strong> sont disponibles (<i>+ 6 classes globales de hauteurs minimales</i>) :
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-h25</span>"&gt;Min-height = 25%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-h33</span>"&gt;Min-height = 33%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-h50</span>"&gt;Min-height = 50%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-h66</span>"&gt;Min-height = 66%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-h75</span>"&gt;Min-height = 75%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">min-h100</span>"&gt;Min-height = 100%&lt;/<span class="delete-text">div</span>&gt;</pre>
     </p>
 
+
+    <!-- ***** Max-Height Part ***** -->
     <h5>1.3 / Max-Height</h5>
 
     <!-- Examples -->
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de hauteurs maximales</strong> sont disponibles (<i>+ 6 classes globales de hauteurs maximales</i>) :
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>6 classes de hauteurs maximales</strong> sont disponibles (<i>+ 6 classes globales de hauteurs maximales</i>) :
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-h25</span>"&gt;Max-height = 25%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-h33</span>"&gt;Max-height = 33%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-h50</span>"&gt;Max-height = 50%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-h66</span>"&gt;Max-height = 66%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-h75</span>"&gt;Max-height = 75%&lt;/<span class="delete-text">div</span>&gt;</pre>
+
       <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">max-h100</span>"&gt;Max-height = 100%&lt;/<span class="delete-text">div</span>&gt;</pre>
     </p>
   </section>
@@ -191,7 +268,8 @@
   <section>
     <h4 class="secondary-sea solid-rounder-sm">3 / Margin</h4>
 
-    <p><i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Margin</strong> gèrent <em>5 propriétés CSS</em> :
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Margin</strong> gèrent <em>5 propriétés CSS</em> :
 
       <pre class="info-text">margin</pre>
       <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge extérieure d'un élément
@@ -209,9 +287,11 @@
       <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier la marge extérieure à gauche d'un élément
     </p>
 
-    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Ces classes peuvent affecter :
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Ces classes peuvent affecter :
       <ol>
         <li>soit l'élément lui-même lorsque l'on appelle une classe dont le préfixe est :
+
           <pre class="valid-text">.m-</pre>
           <pre class="valid-text">.mt-</pre>
           <pre class="valid-text">.mr-</pre>
@@ -219,6 +299,7 @@
           <pre class="valid-text">.ml-</pre>
         </li>
         <li>soit les éléments enfants du parent lorsque l'on appelle une classe dont le préfixe est :
+
           <pre class="valid-text">.gm-</pre>
           <pre class="valid-text">.gmt-</pre>
           <pre class="valid-text">.gmr-</pre>
@@ -228,7 +309,9 @@
       </ol>
     </p>
 
-    <p><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> L'appel d'une <strong>classe margin</strong> se fait en concaténant l'<em>un des préfixes précédents avec en suffixe la valeur nécessaire</em>.</p>
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> L'appel d'une <strong>classe margin</strong> se fait en concaténant l'<em>un des préfixes précédents avec en suffixe la valeur nécessaire</em>.
+    </p>
 
     <h5>1.1 / Margin</h5>
 
