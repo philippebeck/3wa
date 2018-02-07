@@ -199,6 +199,14 @@ h6 {
 }
 
 
+/* ***** Listes ***** */
+
+ul,
+ol {
+  margin-top: 0;
+}
+
+
 /* ***** Tables ***** */
 
 table,
@@ -228,6 +236,14 @@ figure {
 figure img,
 figcaption {
   padding: 1rem;
+}
+
+
+/* ***** Code ***** */
+
+pre {
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 
@@ -496,16 +512,11 @@ main {
 #pam p,
 #jim p,
 #sam p {
+  margin: 2rem auto 1rem;
   font-family: 'tuffy', sans-serif;
   text-align: center;
 }
 
-#pam p,
-#jim p,
-#sam p {
-  margin-right: auto;
-  margin-left: auto;
-}
 
 #pjs li {
   padding: 2rem;

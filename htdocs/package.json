@@ -24,6 +24,6 @@
   "dependencies": {
     "font-awesome": "^4.7.0",
     "jim-js": "^0.1.6",
-    "sam.scss": "^0.1.21"
+    "sam.scss": "^0.1.22"
   }
 }
