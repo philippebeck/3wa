@@ -19,7 +19,7 @@
 {% elseif photoObj.apg %}
 {{ photoObj.apg }}
 {% else %}
-{{ photoObj.pgc }}
+  {{ photoObj.pgc }}
 {% endif %}
 {% endblock %}
 
@@ -39,7 +39,7 @@
 
         <h2 class="info-glass solid-slight in-block">
           <i aria-hidden="true" class="fa fa-info-circle fa-fw fa-2x"></i>
-          <div>Informations</div>
+          <span class="block">Informations</span>
         </h2>
 
         <!-- Object Infos -->
@@ -179,7 +179,7 @@
 
         <h2 class="special-glass solid-slight in-block">
           <i aria-hidden="true" class="fa fa-database fa-fw fa-2x"></i>
-          <div>Bases de données</div>
+          <span class="block">Bases de données</span>
         </h2>
 
         <!-- Extragalactic Databases Buttons -->
@@ -240,7 +240,7 @@
 
         <h2 class="info-glass solid-slight in-block">
           <i aria-hidden="true" class="fa fa-picture-o fa-fw fa-2x"></i>
-          <div>Fonds d'écrans</div>
+          <span class="block">Fonds d'écrans</span>
         </h2>
 
         <h3>
@@ -327,7 +327,6 @@
     <p class="special-sea solid-slight p-sm">{{ photo.credit }}</p>
 
   </footer>
-</article>
 </main>
 
 {% endblock %}
