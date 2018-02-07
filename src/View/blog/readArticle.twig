@@ -47,7 +47,7 @@
     <h2><i class="fa fa-comments-o" aria-hidden="true"></i> Les Commentaires</h2>
 
     <!-- Add Comment Form -->
-    <form id="comment" method="post" action={{ url('comment!create', {'id': article.id}) }}>
+    <form id="comment" method="post" action="{{ url('comment!create', {'id': article.id}) }}">
 
       <fieldset>
         <legend><i class="fa fa-comment-o fa-lg" aria-hidden="true"></i> Ajouter un commentaire</legend>
