@@ -57,38 +57,38 @@
 
               {% if photoObj.messier %}
               <li>
-                <a class="help" href="https://fr.wikipedia.org/wiki/Catalogue_de_Messier" rel="noopener" rel="noreferrer" target="_blank" title="Catalogue de Messier">{{ photoObj.messier }}</a>
+                <a class="help" href="https://fr.wikipedia.org/wiki/Catalogue_de_Messier" title="Catalogue de Messier">{{ photoObj.messier }}</a>
               </li>
               {% endif %}
 
               {% if photoObj.ngc %}
               <li>
-                <a class="help" href="https://fr.wikipedia.org/wiki/New_General_Catalogue" rel="noopener" rel="noreferrer" target="_blank" title="New General Catalogue">{{ photoObj.ngc }}</a>
+                <a class="help" href="https://fr.wikipedia.org/wiki/New_General_Catalogue" title="New General Catalogue">{{ photoObj.ngc }}</a>
 
               </li>
               {% endif %}
 
               {% if photoObj.ugc %}
               <li>
-                <a class="help" href="https://fr.wikipedia.org/wiki/Uppsala_General_Catalogue" rel="noopener" rel="noreferrer" target="_blank" title="Uppsala General Catalogue">{{ photoObj.ugc }}</a>
+                <a class="help" href="https://fr.wikipedia.org/wiki/Uppsala_General_Catalogue" title="Uppsala General Catalogue">{{ photoObj.ugc }}</a>
               </li>
               {% endif %}
 
               {% if photoObj.eso %}
               <li>
-                <a class="help" href="https://fr.wikipedia.org/wiki/Observatoire_europ%C3%A9en_austral" rel="noopener" rel="noreferrer" target="_blank" title="European Southern Observatory">{{ photoObj.eso }}</a>
+                <a class="help" href="https://fr.wikipedia.org/wiki/Observatoire_europ%C3%A9en_austral" title="European Southern Observatory">{{ photoObj.eso }}</a>
               </li>
               {% endif %}
 
               {% if photoObj.apg %}
               <li>
-                <a class="help" href="https://fr.wikipedia.org/wiki/Atlas_of_Peculiar_Galaxies" rel="noopener" rel="noreferrer" target="_blank" title="Atlas of Peculiar Galaxies">{{ photoObj.apg }}</a>
+                <a class="help" href="https://fr.wikipedia.org/wiki/Atlas_of_Peculiar_Galaxies" title="Atlas of Peculiar Galaxies">{{ photoObj.apg }}</a>
               </li>
               {% endif %}
 
               {% if photoObj.pgc %}
               <li>
-                <a class="help" href="https://fr.wikipedia.org/wiki/Catalogue_of_Principal_Galaxies" rel="noopener" rel="noreferrer" target="_blank" title="Principal Galaxies Catalogue">{{ photoObj.pgc }}</a>
+                <a class="help" href="https://fr.wikipedia.org/wiki/Catalogue_of_Principal_Galaxies" title="Principal Galaxies Catalogue">{{ photoObj.pgc }}</a>
               </li>
               {% endif %}
 
@@ -96,25 +96,25 @@
           </li>
 
           <li>
-            <a class="btn info-outline solid-round spread m-md help" href="{{ photoObj.wiki }}" rel="noopener" rel="noreferrer" target="_blank" title="Wiki sur l'objet => {{ block('title') }}">
+            <a class="btn info-outline solid-round spread m-md help" href="{{ photoObj.wiki }}" title="Wiki sur l'objet => {{ block('title') }}">
               <i aria-hidden="true" class="fa fa-wikipedia-w fa-fw fa-2x"></i>
             </a>
           </li>
 
           <li>
-            Constellation : <a class="help" href="https://fr.wikipedia.org/wiki/{{ photoConst.wiki }}" rel="noopener" rel="noreferrer" target="_blank" title="{{ photoConst.surname }}">{{ photoConst.name }}</a>
+            Constellation : <a class="help" href="https://fr.wikipedia.org/wiki/{{ photoConst.wiki }}" title="{{ photoConst.surname }}">{{ photoConst.name }}</a>
           </li>
 
           <li>
-            Distance : {{ photoObj.distance }} <a class="help" href="https://fr.wikipedia.org/wiki/Ann%C3%A9e-lumi%C3%A8re" rel="noopener" rel="noreferrer" target="_blank" title="Année-lumière">ly</a>
+            Distance : {{ photoObj.distance }} <a class="help" href="https://fr.wikipedia.org/wiki/Ann%C3%A9e-lumi%C3%A8re" title="Année-lumière">ly</a>
           </li>
 
           <li>
-            <a class="help" href="https://fr.wikipedia.org/wiki/Ascension_droite" rel="noopener" rel="noreferrer" target="_blank" title="Ascension Droite">AD</a> : {{ photo.ra }}
+            <a class="help" href="https://fr.wikipedia.org/wiki/Ascension_droite" title="Ascension Droite">AD</a> : {{ photo.ra }}
           </li>
 
           <li>
-            <a class="help" href="https://fr.wikipedia.org/wiki/Déclinaison_(astronomie)" rel="noopener" rel="noreferrer" target="_blank" title="Déclinaison">Dec</a> : {{ photo.declination }}
+            <a class="help" href="https://fr.wikipedia.org/wiki/Déclinaison_(astronomie)" title="Déclinaison">Dec</a> : {{ photo.declination }}
           </li>
 
           <li>
@@ -122,11 +122,11 @@
           </li>
 
           <li>
-            Taille : {{ photo.size }} <a class="help" href="https://fr.wikipedia.org/wiki/Pixel" rel="noopener" rel="noreferrer" target="_blank" title="Pixels">px</a>
+            Taille : {{ photo.size }} <a class="help" href="https://fr.wikipedia.org/wiki/Pixel" title="Pixels">px</a>
           </li>
 
           <li>
-            Champ de vue : {{ photo.view_field }} <a class="help" href="https://fr.wikipedia.org/wiki/Sous-unit%C3%A9s_du_degr%C3%A9" rel="noopener" rel="noreferrer" target="_blank" title="Minutes d'Arc">arcmin</a>
+            Champ de vue : {{ photo.view_field }} <a class="help" href="https://fr.wikipedia.org/wiki/Sous-unit%C3%A9s_du_degr%C3%A9" title="Minutes d'Arc">arcmin</a>
           </li>
 
         </ul>
@@ -142,14 +142,14 @@
 
           <li>
             <!-- Source button -->
-            <a class="btn info-outline solid-round inset-spread" href="http://www.spacetelescope.org/images/{{ photo.image }}" rel="noopener" rel="noreferrer" target="_blank" title="Voir l'article consacré à l'image">
+            <a class="btn info-outline solid-round inset-spread" href="http://www.spacetelescope.org/images/{{ photo.image }}" title="Voir l'article consacré à l'image">
               <i aria-hidden="true" class="fa fa-server fa-fw fa-lg w100"></i> Hubble
             </a>
           </li>
 
           <li>
             <!-- WWT Button -->
-            <a class="btn info-outline solid-round inset-spread" href="http://www.worldwidetelescope.org/webclient/default.aspx?wtml=http%3a%2f%2fwww.worldwidetelescope.org%2fwwtweb%2fShowImage.aspx%3fscale%3d0.618677739391%26name%3dMessier%2b101%26imageurl%3dhttp%3a%252F%252Fwww.spacetelescope.org%252Fstatic%252Farchives%252Fimages%252Fscreen%252F{{ photo.image }}.jpg%26credits%3d%26creditsUrl%3dhttp%3a%252F%252Fwww.spacetelescope.org%252Fimages%252F{{ photo.image }}%252F%26ra%3d210.894624886%26y%3d232.631844562%26x%3d297.552359324%26rotation%3d183.54%26dec%3d54.3010132646%26thumb%3dhttp%3a%252F%252Fwww.spacetelescope.org%252Fstatic%252Farchives%252Fimages%252Fthumbs%252F{{ photo.image }}.jpg%26wtml%3dtrue" rel="noopener" rel="noreferrer" target="_blank" title="Voir l'image avec le World Wide Telescope">
+            <a class="btn info-outline solid-round inset-spread" href="http://www.worldwidetelescope.org/webclient/default.aspx?wtml=http%3a%2f%2fwww.worldwidetelescope.org%2fwwtweb%2fShowImage.aspx%3fscale%3d0.618677739391%26name%3dMessier%2b101%26imageurl%3dhttp%3a%252F%252Fwww.spacetelescope.org%252Fstatic%252Farchives%252Fimages%252Fscreen%252F{{ photo.image }}.jpg%26credits%3d%26creditsUrl%3dhttp%3a%252F%252Fwww.spacetelescope.org%252Fimages%252F{{ photo.image }}%252F%26ra%3d210.894624886%26y%3d232.631844562%26x%3d297.552359324%26rotation%3d183.54%26dec%3d54.3010132646%26thumb%3dhttp%3a%252F%252Fwww.spacetelescope.org%252Fstatic%252Farchives%252Fimages%252Fthumbs%252F{{ photo.image }}.jpg%26wtml%3dtrue" title="Voir l'image avec le World Wide Telescope">
               <i aria-hidden="true" class="fa fa-globe fa-fw fa-lg w100"></i> WWT
             </a>
           </li>
@@ -164,7 +164,7 @@
     <li>
       <!-- ***************** -->
       <!-- ***** Image ***** -->
-      <a class="btn special-light solid-rounded inset-spread block anime-shrinkS-sm" href="https://cdn.spacetelescope.org/archives/images/large/{{ photo.image }}.jpg" rel="noopener" rel="noreferrer" target="_blank" title="Voir l'image">
+      <a class="btn special-light solid-rounded inset-spread block anime-shrinkS-sm" href="https://cdn.spacetelescope.org/archives/images/large/{{ photo.image }}.jpg" title="Voir l'image">
         <figure>
           <img class="solid-slight-lg p-0" src="img/photo/300x240/{{ photo.image }}t.jpg" alt="Hubble {{ photo.image }}">
           <figcaption>
@@ -187,42 +187,42 @@
 
           <!-- LEDA -->
           <li>
-            <a class="btn special-outline solid-rounder inset-spread" href="http://leda.univ-lyon1.fr/ledacat.cgi?o={{ photoObj.leda }}" rel="noopener" rel="noreferrer" target="_blank" title="Base de données extragalactique de Lyon-Meudon">
+            <a class="btn special-outline solid-rounder inset-spread" href="http://leda.univ-lyon1.fr/ledacat.cgi?o={{ photoObj.leda }}" title="Base de données extragalactique de Lyon-Meudon">
               <i aria-hidden="true" class="fa fa-rocket fa-fw fa-lg w100"></i> LEDA
             </a>
           </li>
 
           <!-- CDS Portal Buttons -->
           <li>
-            <a class="btn special-outline solid-rounder inset-spread" href="http://cdsportal.u-strasbg.fr/?target={{ photoObj.cds }}" rel="noopener" rel="noreferrer" target="_blank" title="Centre de Données astronomiques de Strasbourg">
+            <a class="btn special-outline solid-rounder inset-spread" href="http://cdsportal.u-strasbg.fr/?target={{ photoObj.cds }}" title="Centre de Données astronomiques de Strasbourg">
               <i aria-hidden="true" class="fa fa-map-signs fa-fw fa-lg w100"></i> CDS
             </a>
           </li>
 
           <!-- NED -->
           <li>
-            <a class="btn special-outline solid-rounder inset-spread" href="https://ned.ipac.caltech.edu/cgi-bin/objsearch?extend=no&hconst=73&omegam=0.27&omegav=0.73&corr_z=1&out_csys=Equatorial&out_equinox=J2000.0&obj_sort=RA+or+Longitude&of=pre_text&zv_breaker=30000.0&list_limit=5&img_stamp=YES&objname={{ photoObj.ned }}" rel="noopener" rel="noreferrer" target="_blank" title="Base de données extragalactique de Nasa/ipac">
+            <a class="btn special-outline solid-rounder inset-spread" href="https://ned.ipac.caltech.edu/cgi-bin/objsearch?extend=no&hconst=73&omegam=0.27&omegav=0.73&corr_z=1&out_csys=Equatorial&out_equinox=J2000.0&obj_sort=RA+or+Longitude&of=pre_text&zv_breaker=30000.0&list_limit=5&img_stamp=YES&objname={{ photoObj.ned }}" title="Base de données extragalactique de Nasa/ipac">
               <i aria-hidden="true" class="fa fa-space-shuttle fa-fw fa-lg w100"></i> NED
             </a>
           </li>
 
           <!-- Simbad -->
           <li>
-            <a class="btn special-outline solid-rounder inset-spread" href="http://simbad.unistra.fr/simbad/sim-id?Ident={{ photoObj.cds }}" rel="noopener" rel="noreferrer" target="_blank" title="Base de données d'objets Simbad">
+            <a class="btn special-outline solid-rounder inset-spread" href="http://simbad.unistra.fr/simbad/sim-id?Ident={{ photoObj.cds }}" title="Base de données d'objets Simbad">
               <i aria-hidden="true" class="fa fa-bar-chart fa-fw fa-lg w100"></i> Simbad
             </a>
           </li>
 
           <!-- VizieR -->
           <li>
-            <a class="btn special-outline solid-rounder inset-spread" href="http://vizier.u-strasbg.fr/viz-bin/VizieR?-out.add=_r&-meta.form=1&-c.rs=10&-c={{ photoObj.cds }}" rel="noopener" rel="noreferrer" target="_blank" title="Base de données de catalogues VizieR">
+            <a class="btn special-outline solid-rounder inset-spread" href="http://vizier.u-strasbg.fr/viz-bin/VizieR?-out.add=_r&-meta.form=1&-c.rs=10&-c={{ photoObj.cds }}" title="Base de données de catalogues VizieR">
               <i aria-hidden="true" class="fa fa-book fa-fw fa-lg w100"></i> VizieR
             </a>
           </li>
 
           <!-- Aladin -->
           <li>
-            <a class="btn special-outline solid-rounder inset-spread" href="http://aladin.u-strasbg.fr/AladinLite/?target={{ photoObj.cds }}&-from=cdsHomepage&survey=P%2FDSS2%2Fcolor&fov=0.4" rel="noopener" rel="noreferrer" target="_blank" title="Atlas céleste interactif Aladin">
+            <a class="btn special-outline solid-rounder inset-spread" href="http://aladin.u-strasbg.fr/AladinLite/?target={{ photoObj.cds }}&-from=cdsHomepage&survey=P%2FDSS2%2Fcolor&fov=0.4" title="Atlas céleste interactif Aladin">
               <i aria-hidden="true" class="fa fa-map fa-fw fa-lg w100"></i> Aladin
             </a>
           </li>
@@ -250,7 +250,7 @@
         <ul class="crosshair">
 
           <li>
-            <a class="btn info-outline ridge-slight inset-blur" href="img/photo/768x1024/{{ photo.image }}.jpg" rel="noopener" rel="noreferrer" target="_blank" title="Tablette">768 x 1024</a>
+            <a class="btn info-outline ridge-slight inset-blur" href="img/photo/768x1024/{{ photo.image }}.jpg" title="Tablette">768 x 1024</a>
           </li>
 
         </ul>
@@ -262,15 +262,15 @@
         <ul class="grid-3tn gap-tn crosshair mb-md">
 
           <li>
-            <a class="btn info-outline ridge-slight inset-blur" href="https://cdn.spacetelescope.org/archives/images/wallpaper1/{{ photo.image }}.jpg" rel="noopener" rel="noreferrer" target="_blank" title="Laptop">1024 x 768</a>
+            <a class="btn info-outline ridge-slight inset-blur" href="https://cdn.spacetelescope.org/archives/images/wallpaper1/{{ photo.image }}.jpg" title="Laptop">1024 x 768</a>
           </li>
 
           <li>
-            <a class="btn info-outline ridge-slight inset-blur" href="img/photo/1280x800/{{ photo.image }}.jpg" rel="noopener" rel="noreferrer" target="_blank" title="Laptop">1280 x 800</a>
+            <a class="btn info-outline ridge-slight inset-blur" href="img/photo/1280x800/{{ photo.image }}.jpg" title="Laptop">1280 x 800</a>
           </li>
 
           <li>
-            <a class="btn info-outline ridge-slight inset-blur" href="img/photo/1366x768/{{ photo.image }}.jpg" rel="noopener" rel="noreferrer" target="_blank" title="Laptop">1366 x 768</a>
+            <a class="btn info-outline ridge-slight inset-blur" href="img/photo/1366x768/{{ photo.image }}.jpg" title="Laptop">1366 x 768</a>
           </li>
 
         </ul>
@@ -282,27 +282,27 @@
         <ul class="grid-3tn gap-tn crosshair mb-md">
 
           <li>
-            <a class="btn info-outline ridge-slight inset-blur" href="img/photo/1440x900/{{ photo.image }}.jpg" rel="noopener" rel="noreferrer" target="_blank" title="Desktop">1440 x 900</a>
+            <a class="btn info-outline ridge-slight inset-blur" href="img/photo/1440x900/{{ photo.image }}.jpg" title="Desktop">1440 x 900</a>
           </li>
 
           <li>
-            <a class="btn info-outline ridge-slight inset-blur" href="img/photo/1600x900/{{ photo.image }}.jpg" rel="noopener" rel="noreferrer" target="_blank" title="Desktop">1600 x 900</a>
+            <a class="btn info-outline ridge-slight inset-blur" href="img/photo/1600x900/{{ photo.image }}.jpg" title="Desktop">1600 x 900</a>
           </li>
 
           <li>
-            <a class="btn info-outline ridge-slight inset-blur" href="https://cdn.spacetelescope.org/archives/images/wallpaper3/{{ photo.image }}.jpg" rel="noopener" rel="noreferrer" target="_blank" title="Desktop">1600 x 1200</a>
+            <a class="btn info-outline ridge-slight inset-blur" href="https://cdn.spacetelescope.org/archives/images/wallpaper3/{{ photo.image }}.jpg" title="Desktop">1600 x 1200</a>
           </li>
 
           <li>
-            <a class="btn info-outline ridge-slight inset-blur" href="img/photo/1920x1080/{{ photo.image }}.jpg" rel="noopener" rel="noreferrer" target="_blank" title="Desktop">1920 x 1080</a>
+            <a class="btn info-outline ridge-slight inset-blur" href="img/photo/1920x1080/{{ photo.image }}.jpg" title="Desktop">1920 x 1080</a>
           </li>
 
           <li>
-            <a class="btn info-outline ridge-slight inset-blur" href="https://cdn.spacetelescope.org/archives/images/wallpaper4/{{ photo.image }}.jpg" rel="noopener" rel="noreferrer" target="_blank" title="Desktop">1920 x 1200</a>
+            <a class="btn info-outline ridge-slight inset-blur" href="https://cdn.spacetelescope.org/archives/images/wallpaper4/{{ photo.image }}.jpg" title="Desktop">1920 x 1200</a>
           </li>
 
           <li>
-            <a class="btn info-outline ridge-slight inset-blur" href="https://cdn.spacetelescope.org/archives/images/wallpaper5/{{ photo.image }}.jpg" rel="noopener" rel="noreferrer" target="_blank" title="Desktop">2048 x 1536</a>
+            <a class="btn info-outline ridge-slight inset-blur" href="https://cdn.spacetelescope.org/archives/images/wallpaper5/{{ photo.image }}.jpg" title="Desktop">2048 x 1536</a>
           </li>
 
         </ul>
@@ -317,7 +317,7 @@
 
     <!-- Credit Part -->
     <h4 class="special-outline solid-rounder blur help">
-      <a href="http://www.spacetelescope.org/copyright" rel="noopener" rel="noreferrer" target="_blank" title="Utilisation des images">
+      <a href="http://www.spacetelescope.org/copyright" title="Utilisation des images">
         <i aria-hidden="true" class="fa fa-copyright w100"></i>
         Crédit
       </a>

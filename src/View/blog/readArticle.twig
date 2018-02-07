@@ -33,7 +33,7 @@
     <p class="italic">Posté le {{ date(article.created_date)|date('d M Y') }} à {{ date(article.created_date)|date('H:i') }}</p>
 
     <!-- Article Image -->
-    <a class="btn warning-light solid-rounded inset-blur" href="{{ article.link }}" rel="noopener" rel="noreferrer" target="_blank" title="Voir la source">
+    <a class="btn warning-light solid-rounded inset-blur" href="{{ article.link }}" title="Voir la source">
       <img src="img/blog/{{ article.image }}" alt="{{ article.image }}">
     </a>
 

@@ -38,7 +38,7 @@
       <li>
 
         <!-- Project link to GitHub -->
-        <a href="{{ project.link }}" rel="noopener" rel="noreferrer" target="_blank" title="Voir le projet sur GitHub">
+        <a href="{{ project.link }}" title="Voir le projet sur GitHub">
 
           <figure class="btn primary-outline solid-rounder-lg inset-spread-lg anime-grow-sm">
 
@@ -85,12 +85,12 @@
         <h3>{{ pen.name }}</h3>
 
         <!-- The pen objective link -->
-        <a class="btn freecodecamp-btn solid-round-sm blur mr-sm" href="{{ pen.description}}" rel="noopener" rel="noreferrer" target="_blank" title="Voir les objectifs">
+        <a class="btn freecodecamp-btn solid-round-sm blur mr-sm" href="{{ pen.description}}" title="Voir les objectifs">
           <i class="fa fa-free-code-camp fa-lg fa-fw" aria-hidden="true"></i>
         </a>
 
         <!-- The pen -->
-        <a class="btn default-btn solid-round-sm blur" href="{{ pen.link }}" rel="noopener" rel="noreferrer" target="_blank" title="Voir le pen">
+        <a class="btn default-btn solid-round-sm blur" href="{{ pen.link }}" title="Voir le pen">
           <i class="fa fa-codepen fa-lg fa-fw" aria-hidden="true"></i>
         </a>
 
@@ -112,7 +112,7 @@
     <ul class="gmt-sm">
       <li>
         <!-- Access to the school -->
-        <a href="https://3wa.fr" rel="noopener" rel="noreferrer" target="_blank" title="Voir l'école">
+        <a href="https://3wa.fr" title="Voir l'école">
 
           <figure class="btn secondary-trans solid-rounder-lg inset-spread max-w75">
 
@@ -128,7 +128,7 @@
 
       <li>
         <!-- Access to the formation resume -->
-        <a href="https://3wa.fr/la-formation-developpeur-php" rel="noopener" rel="noreferrer" target="_blank" title="Voir le résumé de la formation">
+        <a href="https://3wa.fr/la-formation-developpeur-php" title="Voir le résumé de la formation">
           <figure class="btn secondary-trans solid-rounder-lg inset-spread max-w66">
 
             <!-- Technologies logos -->
@@ -146,7 +146,7 @@
 
       <li>
         <!-- Access to the government certification -->
-        <a href="http://www.rncp.cncp.gouv.fr/grand-public/visualisationFiche?format=fr&fiche=25468" rel="noopener" rel="noreferrer" target="_blank" title="Voir la fiche RNCP">
+        <a href="http://www.rncp.cncp.gouv.fr/grand-public/visualisationFiche?format=fr&fiche=25468" title="Voir la fiche RNCP">
           <figure class="btn secondary-trans solid-rounder-lg inset-spread max-w50">
 
             <!-- Cncp Logos -->
@@ -190,7 +190,7 @@
 
           <!-- Route certificate & link -->
           <td>
-            <a class="btn valid-outline solid-rounder inset-blur" href="{{ route.certif_link }}" rel="noopener" rel="noreferrer" target="_blank" title="Voir le certificat n° {{ route.certif_id }}">
+            <a class="btn valid-outline solid-rounder inset-blur" href="{{ route.certif_link }}" title="Voir le certificat n° {{ route.certif_id }}">
               {{ date(route.certif_date)|date('d/m/y') }}
             </a>
           </td>
@@ -229,14 +229,14 @@
 
           <!-- Course name & link -->
           <td>
-            <a class="btn info-outline solid-rounder inset-spread-sm" href="{{ course.link }}" rel="noopener" rel="noreferrer" target="_blank" title="Accéder au cours">
+            <a class="btn info-outline solid-rounder inset-spread-sm" href="{{ course.link }}" title="Accéder au cours">
               {{ course.name }}
             </a>
           </td>
 
           <!-- Course certificate & link -->
           <td>
-            <a class="btn valid-outline solid-rounder inset-blur" href="{{ course.certif_link }}" rel="noopener" rel="noreferrer" target="_blank" title="Voir le certificat n° {{ course.certif_id }}">
+            <a class="btn valid-outline solid-rounder inset-blur" href="{{ course.certif_link }}" title="Voir le certificat n° {{ course.certif_id }}">
               {{ date(course.certif_date)|date('d/m/y') }}
             </a>
           </td>
