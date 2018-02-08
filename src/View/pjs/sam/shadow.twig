@@ -9,9 +9,9 @@
 
   <p>
     <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les classes <strong>shadow</strong> se composent de 3 parties :
-
-    <pre class="valid-text">type-direction-width</pre>
   </p>
+
+  <pre class="valid-text">type-direction-width</pre>
 
   <p>
     <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Mais <em>seul le type est obligatoire</em>, la valeur de direction par défaut est <strong>multiple</strong> & celle de width est <strong>md</strong>.
@@ -19,19 +19,26 @@
 
   <p>
     <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> On peut donc écrire une classe de <strong>Shadow</strong> de 4 manières :
-
-    <pre class="valid-text">.type</pre>
-    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> la direction est alors multiple & la width vaudra la valeur md (5 classes)
-
-    <pre class="valid-text">.type-width</pre>
-    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> la direction est alors multiple (10 classes)
-
-    <pre class="valid-text">.type-direction</pre>
-    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> la width vaudra alors md (32 classes)
-
-    <pre class="valid-text">.type-direction-width</pre>
-    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> chaque valeur est précisée (64 classes)
   </p>
+
+  <ul>
+    <li>
+      <pre class="valid-text">.type</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> la direction est alors multiple & la width vaudra la valeur md (5 classes)
+    </li>
+    <li>
+      <pre class="valid-text">.type-width</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> la direction est alors multiple (10 classes)
+    </li>
+    <li>
+      <pre class="valid-text">.type-direction</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> la width vaudra alors md (32 classes)
+    </li>
+    <li>
+      <pre class="valid-text">.type-direction-width</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> chaque valeur est précisée (64 classes)
+    </li>
+  </ul>
 
   <p>
     <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Ce qui donne <strong>111 combinaisons/classes d'ombres</strong> !
@@ -39,25 +46,38 @@
 
   <p>
     <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Exemples :
-
-    <pre class="valid-text">.inset-spread</pre>
-    <pre class="valid-text">.shadow-br</pre>
-    <pre class="valid-text">.inset-blur-lg</pre>
-    <pre class="valid-text">.spread-br-sm</pre>
   </p>
+
+  <ul>
+    <li>
+      <pre class="valid-text">.inset-spread</pre>
+    </li>
+    <li>
+      <pre class="valid-text">.shadow-br</pre>
+    </li>
+    <li>
+      <pre class="valid-text">.inset-blur-lg</pre>
+    </li>
+    <li>
+      <pre class="valid-text">.spread-br-sm</pre>
+    </li>
+  </ul>
 
   <p>
     <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les <strong>codes sources</strong> sont disponibles ci-dessous...
   </p>
 
-  <div class="btn-group">
-
-    <a class="btn delete-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/variables/_shadow.var.scss" title="Voir les variables Shadow">Variables</a>
-
-    <a class="btn valid-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/mixins/_shadow.mix.scss" title="Voir les mixins Shadow">Mixins</a>
-
-    <a class="btn info-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/main/_shadow.scss" title="Voir les classes Shadow">Classes</a>
-  </div>
+  <ul class="btn-group">
+    <li>
+      <a class="btn delete-outline solid-rounder inset-blur"  href="https://github.com/philippebeck/sam.scss/blob/master/scss/variables/_shadow.var.scss" title="Voir les variables Shadow">Variables</a>
+    </li>
+    <li>
+      <a class="btn valid-outline solid-rounder inset-blur"   href="https://github.com/philippebeck/sam.scss/blob/master/scss/mixins/_shadow.mix.scss"    title="Voir les mixins Shadow">Mixins</a>
+    </li>
+    <li>
+      <a class="btn info-outline solid-rounder inset-blur"    href="https://github.com/philippebeck/sam.scss/blob/master/scss/main/_shadow.scss"          title="Voir les classes Shadow">Classes</a>
+    </li>
+  </ul>
 
   <p>
     <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> De plus, les classes <strong>shadow</strong> peuvent être <em>affectées aux parents des balises th & td</em>...
@@ -76,28 +96,26 @@
 
     <p>
       <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> 6 types d'ombres de <strong>boites</strong> sont disponibles :
-
-      <ul class="row cancel solid-rounder content-center gm-md gp-md">
-
-        <li class="info solid shadow-br"  title="Des ombres normales sur des éléments block">shadow</li>
-        <li class="info solid blur"       title="Des ombres diffuses sur des éléments block">blur</li>
-        <li class="info solid spread"     title="Des ombres diffuses étalées sur des éléments block">spread</li>
-
-        <li class="info solid inset-shadow-br"  title="Des ombres normales à l'intérieur des éléments block">inset-shadow</li>
-        <li class="info solid inset-blur"       title="Des ombres diffuses à l'intérieur des éléments block">inset-blur</li>
-        <li class="info solid inset-spread"     title="Des ombres diffuses étalées à l'intérieur des éléments block">inset-spread</li>
-      </ul>
     </p>
+
+    <ul class="row cancel solid-rounder content-center gm-md gp-md">
+      <li class="info solid shadow-br"        title="Des ombres normales sur des éléments block">shadow</li>
+      <li class="info solid blur"             title="Des ombres diffuses sur des éléments block">blur</li>
+      <li class="info solid spread"           title="Des ombres diffuses étalées sur des éléments block">spread</li>
+      <li class="info solid inset-shadow-br"  title="Des ombres normales à l'intérieur des éléments block">inset-shadow</li>
+      <li class="info solid inset-blur"       title="Des ombres diffuses à l'intérieur des éléments block">inset-blur</li>
+      <li class="info solid inset-spread"     title="Des ombres diffuses étalées à l'intérieur des éléments block">inset-spread</li>
+    </ul>
 
     <p>
       <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> 2 types d'ombres de <strong>texte</strong> sont disponibles :
-
-      <ul class="row cancel solid-rounder content-center gm-md gp-md">
-
-        <li class="text-shadow-br"  title="Des ombres normales sur du texte">text-shadow</li>
-        <li class="text-blur-br"    title="Des ombres diffuses sur du texte">text-blur</li>
-      </ul>
     </p>
+
+    <ul class="row cancel solid-rounder content-center gm-md gp-md">
+      <li class="text-shadow-br"  title="Des ombres normales sur du texte">text-shadow</li>
+      <li class="text-blur-br"    title="Des ombres diffuses sur du texte">text-blur</li>
+    </ul>
+
   </section>
 
 
@@ -109,15 +127,14 @@
 
     <p>
       <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>4 directions</strong> d'ombres sont disponibles :
-
-      <ul class="row cancel solid-rounder content-center gm-md gp-md">
-
-        <li class="info solid shadow-tr" title="Les ombres en haut à droite">tr</li>
-        <li class="info solid shadow-br" title="Les ombres en bas à droite">br</li>
-        <li class="info solid shadow-bl" title="Les ombres en bas à gauche">bl</li>
-        <li class="info solid shadow-tl" title="Les ombres en haut à gauche">tl</li>
-      </ul>
     </p>
+
+    <ul class="row cancel solid-rounder content-center gm-md gp-md">
+      <li class="info solid shadow-tr" title="Les ombres en haut à droite">tr</li>
+      <li class="info solid shadow-br" title="Les ombres en bas à droite">br</li>
+      <li class="info solid shadow-bl" title="Les ombres en bas à gauche">bl</li>
+      <li class="info solid shadow-tl" title="Les ombres en haut à gauche">tl</li>
+    </ul>
 
     <p>
       <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Une <strong>5e direction</strong> est disponible, lorsque l'ombre est portée dans <em>toutes les directions</em>.
@@ -126,6 +143,7 @@
     <p>
       <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Mais cela ne fonctionne <em>que pour les classes blur & spread</em> : pour cela, il suffit d'omettre la direction.
     </p>
+
   </section>
 
 
@@ -137,18 +155,17 @@
 
     <p>
       <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>3 widths</strong> d'ombres sont disponibles :
-
-      <ul class="row cancel solid-rounder content-center gm-md gp-md">
-
-        <li class="info solid shadow-br-sm" title="Les ombres de petites tailles">sm</li>
-        <li class="info solid shadow-br"    title="Les ombres de tailles moyennes">(md)</li>
-        <li class="info solid shadow-br-lg" title="Les ombres de grandes tailles">lg</li>
-      </ul>
     </p>
+
+    <ul class="row cancel solid-rounder content-center gm-md gp-md">
+      <li class="info solid shadow-br-sm" title="Les ombres de petites tailles">sm</li>
+      <li class="info solid shadow-br"    title="Les ombres de tailles moyennes">(md)</li>
+      <li class="info solid shadow-br-lg" title="Les ombres de grandes tailles">lg</li>
+    </ul>
 
     <p>
       <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong>md</strong> est la valeur des classes Shadow ne spécifiant pas le width, elle est donc la valeur par défaut & <em>n'est disponible qu'en omettant le width</em>.
     </p>
-  </section>
 
+  </section>
 </section>

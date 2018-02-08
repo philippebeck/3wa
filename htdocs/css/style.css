@@ -512,10 +512,11 @@ main {
 #pam p,
 #jim p,
 #sam p {
-  margin: 2rem auto 1rem;
+  margin: 1rem auto 2rem;
   font-family: 'tuffy', sans-serif;
   text-align: center;
 }
+
 
 
 #pjs li {
