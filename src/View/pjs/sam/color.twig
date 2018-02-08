@@ -9,8 +9,8 @@
 
   <p>
     <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les classes <strong>color</strong> se composent de 2 parties :
-    <pre class="valid-text">color-type</pre>
   </p>
+  <pre class="valid-text">color-type</pre>
 
   <p>
     <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Mais seul <strong>color est obligatoire</strong> ; par défaut, la valeur de <em>type est nulle</em>.
@@ -18,37 +18,56 @@
 
   <p>
     <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> On peut donc écrire une classe <strong>color</strong> de 2 manières :
-
-    <pre class="valid-text">.color</pre>
-    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> le type est celui par default dont la valeur est nulle
-
-    <pre class="valid-text">.color-type</pre>
-    <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> chaque valeur est précisée
   </p>
+
+  <ul>
+    <li>
+      <pre class="valid-text">.color</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> le type est celui par default dont la valeur est nulle
+    </li>
+    <li>
+      <pre class="valid-text">.color-type</pre>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> chaque valeur est précisée
+    </li>
+  </ul>
 
   <p>
     <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Exemples :
-
-    <pre class="valid-text">.info</pre>
-    <pre class="valid-text">.valid-btn</pre>
-    <pre class="valid-text">.delete-outline</pre>
-    <pre class="valid-text">.new-border</pre>
   </p>
+
+  <ul>
+    <li>
+      <pre class="valid-text">.info</pre>
+    </li>
+    <li>
+      <pre class="valid-text">.valid-btn</pre>
+    </li>
+    <li>
+      <pre class="valid-text">.delete-outline</pre>
+    </li>
+    <li>
+      <pre class="valid-text">.new-border</pre>
+    </li>
+  </ul>
 
   <p>
     <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les <strong>codes sources</strong> sont disponibles ci-dessous...
   </p>
 
-  <div class="btn-group">
-
-    <a class="btn delete-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/variables/_color.var.scss" title="Voir les variables Color">Variables</a>
-
-    <a class="btn new-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/functions/_color.fun.scss" title="Voir les fonctions Color">Fonctions</a>
-
-    <a class="btn valid-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/mixins/_color.mix.scss" title="Voir les mixins Color">Mixins</a>
-
-    <a class="btn info-outline solid-rounder inset-blur" href="https://github.com/philippebeck/sam.scss/blob/master/scss/main/_color.scss" title="Voir les classes Color">Classes</a>
-  </div>
+  <ul class="btn-group">
+    <li>
+      <a class="btn delete-outline solid-rounder inset-blur"  href="https://github.com/philippebeck/sam.scss/blob/master/scss/variables/_color.var.scss"  title="Voir les variables Color">Variables</a>
+    </li>
+    <li>
+      <a class="btn new-outline solid-rounder inset-blur"     href="https://github.com/philippebeck/sam.scss/blob/master/scss/functions/_color.fun.scss"  title="Voir les fonctions Color">Fonctions</a>
+    </li>
+    <li>
+      <a class="btn valid-outline solid-rounder inset-blur"   href="https://github.com/philippebeck/sam.scss/blob/master/scss/mixins/_color.mix.scss"     title="Voir les mixins Color">Mixins</a>
+    </li>
+    <li>
+      <a class="btn info-outline solid-rounder inset-blur"    href="https://github.com/philippebeck/sam.scss/blob/master/scss/main/_color.scss"           title="Voir les classes Color">Classes</a>
+    </li>
+  </ul>
 
 
   <!-- ************************* -->
@@ -65,7 +84,6 @@
     <h5 class="special solid-rounder m-md">1.1 / Les basiques</h5>
 
     <ul class="row content-center gm-md content-center gp-md">
-
       <li class="default  solid-rounder">default</li>
       <li class="info     solid-rounder">info</li>
       <li class="classic  solid-rounder">classic</li>
@@ -83,7 +101,6 @@
     <h5 class="special solid-rounder m-md">1.2 / Les personnalisées</h5>
 
     <ul class="row content-center gm-md content-center gp-md">
-
       <li class="primary    solid-rounder">.primary</li>
       <li class="secondary  solid-rounder">.secondary</li>
     </ul>
@@ -93,7 +110,6 @@
     <h5 class="special solid-rounder m-md">1.3 / Les marques</h5>
 
     <ul class="row content-center gm-md content-center gp-md">
-
       <li class="facebook       solid-rounder">facebook</li>
       <li class="freecodecamp   solid-rounder">freecodecamp</li>
       <li class="github         solid-rounder">github</li>
@@ -104,6 +120,7 @@
       <li class="stackoverflow  solid-rounder">stackoverflow</li>
       <li class="twitter        solid-rounder">twitter</li>
     </ul>
+
   </section>
 
 
@@ -114,12 +131,13 @@
 
     <p>
       <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>Type</strong> correspond à l'une des <em>10 variations de couleurs</em> ; ces variations se découpent en 3 groupes :
-      <ul>
-        <li>"mono-color" (2 types)</li>
-        <li>"mono-state" (3 types)</li>
-        <li>"poly-state" (5 types)</li>
-      </ul>
     </p>
+
+    <ul>
+      <li>"mono-color" (2 types)</li>
+      <li>"mono-state" (3 types)</li>
+      <li>"poly-state" (5 types)</li>
+    </ul>
 
 
     <!-- ***** Mono-Color Section ***** -->
@@ -139,7 +157,6 @@
       </p>
 
       <ul class="row content-center gm-md content-center gp-md">
-
         <li class="default-border  solid-rounder">.default-border</li>
         <li class="info-border     solid-rounder">.info-border</li>
         <li class="classic-border  solid-rounder">.classic-border</li>
@@ -165,7 +182,6 @@
       </p>
 
       <ul class="row content-center gm-md content-center gp-md">
-
         <li class="default-text  under-wavy">.default-text</li>
         <li class="info-text     under-wavy">.info-text</li>
         <li class="classic-text  under-wavy">.classic-text</li>
@@ -198,7 +214,6 @@
       </p>
 
       <ul class="row content-center gm-md content-center gp-md">
-
         <li class="default  solid-rounder">.default</li>
         <li class="info     solid-rounder">.info</li>
         <li class="classic  solid-rounder">.classic</li>
@@ -220,7 +235,6 @@
       </p>
 
       <ul class="row content-center gm-md content-center gp-md">
-
         <li class="default-glass  solid-rounder">.default-glass</li>
         <li class="info-glass     solid-rounder">.info-glass</li>
         <li class="classic-glass  solid-rounder">.classic-glass</li>
@@ -242,7 +256,6 @@
       </p>
 
       <ul class="row content-center gm-md content-center gp-md">
-
         <li class="default-sea  solid-rounder">.default-sea</li>
         <li class="info-sea     solid-rounder">.info-sea</li>
         <li class="classic-sea  solid-rounder">.classic-sea</li>
@@ -274,7 +287,6 @@
       </p>
 
       <ul class="row content-center gm-md content-center gp-md">
-
         <li class="default-outline  solid-rounder">.default-outline</li>
         <li class="info-outline     solid-rounder">.info-outline</li>
         <li class="classic-outline  solid-rounder">.classic-outline</li>
@@ -296,7 +308,6 @@
       </p>
 
       <ul class="row content-center gm-md content-center gp-md">
-
         <li class="default-light  solid-rounder">.default-light</li>
         <li class="info-light     solid-rounder">.info-light</li>
         <li class="classic-light  solid-rounder">.classic-light</li>
@@ -318,7 +329,6 @@
       </p>
 
       <ul class="row content-center gm-md content-center gp-md">
-
         <li class="default-trans  solid-rounder">.default-trans</li>
         <li class="info-trans     solid-rounder">.info-trans</li>
         <li class="classic-trans  solid-rounder">.classic-trans</li>
@@ -340,7 +350,6 @@
       </p>
 
       <ul class="row content-center gm-md content-center gp-md">
-
         <li class="default-btn  solid-rounder">.default-btn</li>
         <li class="info-btn     solid-rounder">.info-btn</li>
         <li class="classic-btn  solid-rounder">.classic-btn</li>
@@ -362,7 +371,6 @@
       </p>
 
       <ul class="row content-center gm-md content-center gp-md">
-
         <li class="default-dark  solid-rounder">.default-dark</li>
         <li class="info-dark     solid-rounder">.info-dark</li>
         <li class="classic-dark  solid-rounder">.classic-dark</li>
