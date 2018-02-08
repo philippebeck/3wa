@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5ab1a2448653683381be4331cf74392f",
-    "content-hash": "1b0b7f3b7f04b35104684d5bcff27fc8",
+    "hash": "35bcea1f099f99d1456086d8d33efaa5",
+    "content-hash": "c5aa9bc95a36d81969553e8168158b38",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -860,21 +860,21 @@
         },
         {
             "name": "pjs/pjs",
-            "version": "0.1.5",
+            "version": "0.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/philippebeck/pjs.git",
-                "reference": "af6fbe465e3fd1e98c12b1f18f5c61831aebf601"
+                "reference": "5c02ff5995d85bd520241fa2c6d6ae2cf2e9866f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/philippebeck/pjs/zipball/af6fbe465e3fd1e98c12b1f18f5c61831aebf601",
-                "reference": "af6fbe465e3fd1e98c12b1f18f5c61831aebf601",
+                "url": "https://api.github.com/repos/philippebeck/pjs/zipball/5c02ff5995d85bd520241fa2c6d6ae2cf2e9866f",
+                "reference": "5c02ff5995d85bd520241fa2c6d6ae2cf2e9866f",
                 "shasum": ""
             },
             "require": {
                 "phpunit/phpunit": "^6.4",
-                "pjs/pam": "^0.1.2",
+                "pjs/pam": "^0.1.12",
                 "twig/twig": "^2.0"
             },
             "type": "cms",
@@ -907,7 +907,7 @@
                 "php",
                 "scss"
             ],
-            "time": "2018-02-01 08:24:33"
+            "time": "2018-02-06 22:54:22"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
