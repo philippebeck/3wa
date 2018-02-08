@@ -77,22 +77,21 @@
         <li>
           <label for="pass">Mot de passe</label>
           <input id="pass" name="pass" type="password" placeholder="8 caractères minimum" maxlength="50" minlength="8" required>
-        </label>
-      </li>
+        </li>
 
-    </ul>
-  </fieldset>
+        <!-- Boutons de contrôle -->
+        <li class="btn-group">
+          <a class="btn delete-btn outset-slight inset-blur" href="./">Annulation</a>
+          <input class="btn cancel-btn outset-slight inset-blur" type="reset" value="Correction">
+          <input class="btn valid-btn outset-slight inset-blur" type="submit" value="Création">
+        </li>
+        
+      </ul>
+    </fieldset>
 
-  <!-- User date field -->
-  <input name="date" type="hidden" value="{{ date()|date('Y-m-d H:i:s') }}">
+    <!-- User date field -->
+    <input name="date" type="hidden" value="{{ date()|date('Y-m-d H:i:s') }}">
 
-  <!-- Boutons de contrôle -->
-  <div class="btn-group">
-    <a class="btn delete-btn outset-slight inset-blur" href="./">Annulation</a>
-    <input class="btn cancel-btn outset-slight inset-blur" type="reset" value="Correction">
-    <input class="btn valid-btn outset-slight inset-blur" type="submit" value="Création">
-  </div>
-
-</form>
+  </form>
 </main>
 {% endblock %}

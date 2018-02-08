@@ -14,18 +14,20 @@
 
 <main id="pjs" class="center">
 
-  <p class="intro secondary-sea double-slight-lg inset-spread-sm anime-growY-sm">
-    Cliquer sur un <b>bouton noir
-      <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
-    </b> ouvre le <strong>repository sur GitHub</strong><br>
-    Cliquer sur un <b>bouton jaune ou rouge
-      <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
-    </b> ouvre la <strong>page du package manager Packagist ou npm</strong><br>
-    Cliquer sur un <b>bouton bleu
-      <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
-    </b> télécharge le <strong>zip du projet depuis GitHub</strong><br>
-    Cliquer sur un <b>bouton blanc "Documentation"</b> donne accès à la <strong>documentation de l'outil</strong>.
-  </p>
+  <ul class="intro secondary-sea double-slight-lg inset-spread-sm anime-growY-sm">
+    <li>
+      Cliquer sur un <b>bouton noir <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i></b> ouvre le <strong>repository sur GitHub</strong>
+    </li>
+    <li>
+      Cliquer sur un <b>bouton jaune ou rouge <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i></b> ouvre la <strong>page du package manager Packagist ou npm</strong>
+    </li>
+    <li>
+      Cliquer sur un <b>bouton bleu <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i></b> télécharge le <strong>zip du projet depuis GitHub</strong>
+    </li>
+    <li>
+      Cliquer sur un <b>bouton blanc "Documentation"</b> donne accès à la <strong>documentation de l'outil</strong>.
+    </li>
+  </ul>
 
 
   <!-- *********************** -->
@@ -47,18 +49,25 @@
             <figcaption class="anime-slipT-tn">Le microCMS pour coder en pyjamas</figcaption>
           </figure>
 
-          <div class="btn-group m-md">
+          <ul class="btn-group">
+
             <!-- Facebook buttons -->
-            <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fphilippebeck.net%2Findex.php%3Faccess%3Dpjs&layout=button_count&size=small&mobile_iframe=true&appId=1316979581722641&width=82&height=20" width="82" height="20" style="border:none;overflow:hidden"></iframe>
+            <li>
+              <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fphilippebeck.net%2Findex.php%3Faccess%3Dpjs&layout=button_count&size=small&mobile_iframe=true&appId=1316979581722641&width=82&height=20" width="82" height="20" style="border:none;overflow:hidden"></iframe>
+            </li>
 
             <!-- Tweet button -->
-            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <li>
+              <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </li>
 
             <!-- linkedIn button -->
-            <script src="//platform.linkedin.com/in.js"> lang: fr_FR</script>
-            <script type="IN/Share" data-url="https://philippebeck.net/index.php?access=pjs" data-counter="right"></script>
-          </div>
+            <li>
+              <script src="//platform.linkedin.com/in.js"> lang: fr_FR</script>
+              <script type="IN/Share" data-url="https://philippebeck.net/index.php?access=pjs" data-counter="right"></script>
+            </li>
+          </ul>
 
           <p>Pjs est un outil simple & efficace, combinant Pam, Jim & Sam, afin de créer des applications originales.</p>
 
@@ -75,21 +84,24 @@
           <strong><i class="fa fa-code-fork fa-lg fa-fw" aria-hidden="true"></i> composer require pjs/pjs</strong>
         </p>
 
-        <div class="btn-group m-md">
+        <ul class="btn-group m-md">
+          <li>
+            <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pjs" title="Voir le repository GitHub">
+              <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="btn packagist-outline solid-rounder inset-spread" href="https://packagist.org/packages/pjs/pjs" title="Voir le package Packagist">
+              <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pjs/archive/master.zip" title="Télécharger Pjs">
+              <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
 
-          <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pjs" title="Voir le repository GitHub">
-            <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
-          </a>
-
-          <a class="btn packagist-outline solid-rounder inset-spread" href="https://packagist.org/packages/pjs/pjs" title="Voir le package Packagist">
-            <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
-          </a>
-
-          <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pjs/archive/master.zip" title="Télécharger Pjs">
-            <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
-          </a>
-
-        </div>
       </li>
     </ul>
   </section>
@@ -99,7 +111,9 @@
   <!-- ***** Dependancies section ***** -->
 
   <section>
+
     <h2 class="secondary solid-slight mt-wd mb-lg">Ses dépendances maisons "on scratch"</h2>
+
     <ul class="grid-3lg gap-lg">
 
       <!-- ******************** -->
@@ -121,21 +135,24 @@
           <strong><i class="fa fa-code-fork fa-lg fa-fw" aria-hidden="true"></i> composer require pjs/pam</strong>
         </p>
 
-        <div class="btn-group">
+        <ul class="btn-group">
+          <li>
+            <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pam" title="Voir le repository GitHub">
+              <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="btn packagist-outline solid-rounder inset-spread" href="https://packagist.org/packages/pjs/pam" title="Voir le package Packagist">
+              <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pam/archive/master.zip" title="Télécharger Pam">
+              <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
 
-          <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pam" title="Voir le repository GitHub">
-            <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
-          </a>
-
-          <a class="btn packagist-outline solid-rounder inset-spread" href="https://packagist.org/packages/pjs/pam" title="Voir le package Packagist">
-            <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
-          </a>
-
-          <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pam/archive/master.zip" title="Télécharger Pam">
-            <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
-          </a>
-
-        </div>
       </li>
 
 
@@ -162,22 +179,24 @@
           <strong><i class="fa fa-code-fork fa-lg fa-fw" aria-hidden="true"></i> bower install jim-js --save</strong>
         </p>
 
+        <ul class="btn-group">
+          <li>
+            <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/jim-js" title="Voir le repository GitHub">
+              <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="btn npm-outline solid-rounder inset-spread" href="https://www.npmjs.com/package/jim-js" title="Voir le package npm">
+              <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/jim-js/archive/master.zip" title="Télécharger Jim">
+              <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
 
-        <div class="btn-group">
-
-          <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/jim-js" title="Voir le repository GitHub">
-            <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
-          </a>
-
-          <a class="btn npm-outline solid-rounder inset-spread" href="https://www.npmjs.com/package/jim-js" title="Voir le package npm">
-            <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
-          </a>
-
-          <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/jim-js/archive/master.zip" title="Télécharger Jim">
-            <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
-          </a>
-
-        </div>
       </li>
 
 
@@ -204,21 +223,24 @@
           <strong><i class="fa fa-code-fork fa-lg fa-fw" aria-hidden="true"></i> bower install sam.scss --save</strong>
         </p>
 
-        <div class="btn-group">
-
-          <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss" title="Voir le repository GitHub">
-            <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
-          </a>
-
-          <a class="btn npm-outline solid-rounder inset-spread" href="https://www.npmjs.com/package/sam.scss" title="Voir le package npm">
-            <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
-          </a>
-
-          <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss/archive/master.zip" title="Télécharger Sam">
-            <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
-          </a>
-
-        </div>
+        <ul class="btn-group">
+          <li>
+            <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss" title="Voir le repository GitHub">
+              <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="btn npm-outline solid-rounder inset-spread" href="https://www.npmjs.com/package/sam.scss" title="Voir le package npm">
+              <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss/archive/master.zip" title="Télécharger Sam">
+              <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+        
       </li>
     </ul>
   </section>
