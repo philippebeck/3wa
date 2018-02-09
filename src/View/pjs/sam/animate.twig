@@ -7,303 +7,313 @@
 
   <h3 class="primary solid-slight m-lg">IX - Animate</h3>
 
-    <p class="intro warning-sea solid-rounded">
-      <i class="fa fa-ban fa-lg fa-fw delete-text" aria-hidden="true"></i>
-      En construction !
-      <i class="fa fa-ban fa-lg fa-fw delete-text" aria-hidden="true"></i><br>
-    </p>
+  <p>
+    <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les classes <strong>Animate</strong> se composent de 3 parties au minimum :
+  </p>
+  <pre class="valid-text">type-name-duration</pre>
 
-  <!-- ***** Construction of a simple animation ***** -->
+
+  <!-- ************************ -->
+  <!-- ***** Animate Type ***** -->
   <section>
-    <h4 class="secondary solid-rounded m-md">1 / La construction d'une animation simple</h4>
+    <h4 class="secondary solid-rounded m-md">1 / Animate Type</h4>
 
-    <p>Toutes les animations s'implémentent à l'aide d'une classe composées de 3 parties : son type, son nom & sa durée, séparées par un tiret.</p>
-    <p>La syntaxe formelle est donc la suivante : "type"-"nom"-"durée".</p>
-    <p>Exemples : "anime-grow-md" ou "hover-full-lg".</p>
+    <p>Il y a <strong>4 types d'animations</strong> :</p>
 
-  </section>
-
-
-  <!-- ***** Types of animations ***** -->
-  <section>
-    <h4 class="secondary solid-rounded m-md">2 / Les types d'animations</h4>
-
-    <p>Il y a 4 types d'animations :</p>
-
-    <ul>
-      <li>Anime</li>
-      <li>Child</li>
-      <li>Active</li>
-      <li>Hover</li>
+    <ul class="valid-text">
+      <li>.anime</li>
+      <li>.child</li>
+      <li>.active</li>
+      <li>.hover</li>
     </ul>
 
-    <!-- Anime -->
-    <h5 class="special solid-rounder m-md">2.1 / Animate "Anime"</h5>
 
-    <p>Les "anime" sont des animations qui s'activent sur l'élément ciblé, dès que le chargement de la page est effectuée.</p>
+    <!-- Anime -->
+    <h5 class="special solid-rounder m-md">1.1 / Animate Anime</h5>
+
+    <p>Les classes <strong class="valid-text">anime</strong> sont des animations qui <em>s'activent sur l'élément ciblé, dès que le chargement de la page est effectuée</em>.</p>
+
 
     <!-- Child -->
-    <h5 class="special solid-rounder m-md">2.2 / Animate "Child"</h5>
+    <h5 class="special solid-rounder m-md">1.2 / Animate Child</h5>
 
-    <p>Les "child" sont des animations qui s'activent sur le ou les enfants de l'élément ciblé, dès que le chargement de la page est effectuée.</p>
+    <p>Les classes <strong class="valid-text">child</strong> sont des animations qui <em>s'activent sur le ou les enfants de l'élément ciblé, dès que le chargement de la page est effectuée</em>.</p>
+
 
     <!-- Active -->
-    <h5 class="special solid-rounder m-md">2.3 / Animate "Active"</h5>
+    <h5 class="special solid-rounder m-md">1.3 / Animate Active</h5>
 
-    <p>Les "active" sont des animations qui s'activent sur l'élément ciblé dès que l'utilisateur rend l'élément "actif", tel que les exemples d'animations dans la section suivantes, c'est-à-dire au clic sans relâchement, ou lors de l'activation d'un élément sélectionné.</p>
+    <p>Les classes <strong class="valid-text">active</strong> sont des animations qui <em>s'activent sur l'élément ciblé dès que l'utilisateur rend l'élément actif</em>, tel que les exemples d'animations dans la section suivantes, c'est-à-dire au clic sans relâchement, ou lors de l'activation d'un élément sélectionné.</p>
+
 
     <!-- Hover -->
-    <h5 class="special solid-rounder m-md">2.4 / Animate "Hover"</h5>
+    <h5 class="special solid-rounder m-md">1.4 / Animate Hover</h5>
 
-    <p>Les "hover" sont des animations qui s'activent sur l'élément ciblé dès que l'utilisateur survole l'élément.</p>
+    <p>Les classes <strong class="valid-text">hover</strong> sont des animations qui <em>s'activent sur l'élément ciblé dès que l'utilisateur survole l'élément</em>.</p>
 
   </section>
 
 
-  <!-- ***** Names of animations ***** -->
+  <!-- ************************ -->
+  <!-- ***** Animate Name ***** -->
   <section class="syntax">
 
-    <h4 class="secondary solid-rounded m-md">3 / Les noms des animations</h4>
+    <h4 class="secondary solid-rounded m-md">2 / Animate Name</h4>
 
     <p class="intro valid-sea solid-rounded inset-blur"><b>Cliquez</b> sur l'<strong>animation</strong> de votre choix <b>sans relâcher</b> pour voir son effet</p>
 
 
     <!-- Quarter animations exemples -->
-    <h5 class="special solid-rounder m-md">3.1 / Animate "Quarter"</h5>
+    <h5 class="special solid-rounder m-md">2.1 / Animate Quarter</h5>
 
     <ul class="row content-center gm-md content-center gp-md">
-      <li class="delete solid-rounder active-quarter-sm visible">quarter</li>
-      <li class="delete solid-rounder active-quarterX-sm visible">quarterX</li>
-      <li class="delete solid-rounder active-quarterY-sm visible">quarterY</li>
+      <li class="delete solid-rounder active-quarter-sm   visible" title="Cliquez sans relâcher">quarter</li>
+      <li class="delete solid-rounder active-quarterX-sm  visible" title="Cliquez sans relâcher">quarterX</li>
+      <li class="delete solid-rounder active-quarterY-sm  visible" title="Cliquez sans relâcher">quarterY</li>
     </ul>
 
 
     <!-- Half animations exemples -->
-    <h5 class="special solid-rounder m-md">3.2 / Animate "Half"</h5>
+    <h5 class="special solid-rounder m-md">2.2 / Animate Half</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-half-sm visible">half</li>
-      <li class="delete solid-rounder active-halfX-sm visible">halfX</li>
-      <li class="delete solid-rounder active-halfY-sm visible">halfY</li>
+      <li class="delete solid-rounder active-half-sm  visible" title="Cliquez sans relâcher">half</li>
+      <li class="delete solid-rounder active-halfX-sm visible" title="Cliquez sans relâcher">halfX</li>
+      <li class="delete solid-rounder active-halfY-sm visible" title="Cliquez sans relâcher">halfY</li>
     </ul>
 
 
     <!-- Full animations exemples -->
-    <h5 class="special solid-rounder m-md">3.3 / Animate "Full"</h5>
+    <h5 class="special solid-rounder m-md">2.3 / Animate Full</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-full-sm visible">full</li>
-      <li class="delete solid-rounder active-fullX-sm visible">fullX</li>
-      <li class="delete solid-rounder active-fullY-sm visible">fullY</li>
+      <li class="delete solid-rounder active-full-sm  visible" title="Cliquez sans relâcher">full</li>
+      <li class="delete solid-rounder active-fullX-sm visible" title="Cliquez sans relâcher">fullX</li>
+      <li class="delete solid-rounder active-fullY-sm visible" title="Cliquez sans relâcher">fullY</li>
     </ul>
 
 
     <!-- Quarter 3d animations exemples -->
-    <h5 class="special solid-rounder m-md">3.4 / Animate "Quarter 3d"</h5>
+    <h5 class="special solid-rounder m-md">2.4 / Animate Quarter 3d</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-quarter3d-sm visible">quarter3d</li>
-      <li class="delete solid-rounder active-quarterX3d-sm visible">quarterX3d</li>
-      <li class="delete solid-rounder active-quarterY3d-sm visible">quarterY3d</li>
-      <li class="delete solid-rounder active-quarterZ3d-sm visible">quarterZ3d</li>
+      <li class="delete solid-rounder active-quarter3d-sm   visible" title="Cliquez sans relâcher">quarter3d</li>
+      <li class="delete solid-rounder active-quarterX3d-sm  visible" title="Cliquez sans relâcher">quarterX3d</li>
+      <li class="delete solid-rounder active-quarterY3d-sm  visible" title="Cliquez sans relâcher">quarterY3d</li>
+      <li class="delete solid-rounder active-quarterZ3d-sm  visible" title="Cliquez sans relâcher">quarterZ3d</li>
     </ul>
 
 
     <!-- Half 3d animations exemples -->
-    <h5 class="special solid-rounder m-md">3.5 / Animate "Half 3d"</h5>
+    <h5 class="special solid-rounder m-md">2.5 / Animate Half 3d</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-half3d-sm visible">half3d</li>
-      <li class="delete solid-rounder active-halfX3d-sm visible">halfX3d</li>
-      <li class="delete solid-rounder active-halfY3d-sm visible">halfY3d</li>
-      <li class="delete solid-rounder active-halfZ3d-sm visible">halfZ3d</li>
+      <li class="delete solid-rounder active-half3d-sm  visible" title="Cliquez sans relâcher">half3d</li>
+      <li class="delete solid-rounder active-halfX3d-sm visible" title="Cliquez sans relâcher">halfX3d</li>
+      <li class="delete solid-rounder active-halfY3d-sm visible" title="Cliquez sans relâcher">halfY3d</li>
+      <li class="delete solid-rounder active-halfZ3d-sm visible" title="Cliquez sans relâcher">halfZ3d</li>
     </ul>
 
 
     <!-- Full 3d animations exemples -->
-    <h5 class="special solid-rounder m-md">3.6 / Animate "Full 3d"</h5>
+    <h5 class="special solid-rounder m-md">2.6 / Animate Full 3d</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-full3d-sm visible">full3d</li>
-      <li class="delete solid-rounder active-fullX3d-sm visible">fullX3d</li>
-      <li class="delete solid-rounder active-fullY3d-sm visible">fullY3d</li>
-      <li class="delete solid-rounder active-fullZ3d-sm visible">fullZ3d</li>
+      <li class="delete solid-rounder active-full3d-sm  visible" title="Cliquez sans relâcher">full3d</li>
+      <li class="delete solid-rounder active-fullX3d-sm visible" title="Cliquez sans relâcher">fullX3d</li>
+      <li class="delete solid-rounder active-fullY3d-sm visible" title="Cliquez sans relâcher">fullY3d</li>
+      <li class="delete solid-rounder active-fullZ3d-sm visible" title="Cliquez sans relâcher">fullZ3d</li>
     </ul>
 
 
     <!-- Flip animations exemples -->
-    <h5 class="special solid-rounder m-md">3.7 / Animate "Flip"</h5>
+    <h5 class="special solid-rounder m-md">2.7 / Animate Flip</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-flipX-sm visible">flipX</li>
-      <li class="delete solid-rounder active-flipY-sm visible">flipY</li>
+      <li class="delete solid-rounder active-flipX-sm visible" title="Cliquez sans relâcher">flipX</li>
+      <li class="delete solid-rounder active-flipY-sm visible" title="Cliquez sans relâcher">flipY</li>
     </ul>
 
 
     <!-- Grow animations exemples -->
-    <h5 class="special solid-rounder m-md">3.8 / Animate "Grow"</h5>
+    <h5 class="special solid-rounder m-md">2.8 / Animate Grow</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-grow-sm visible">grow</li>
-      <li class="delete solid-rounder active-growX-sm visible">growX</li>
-      <li class="delete solid-rounder active-growY-sm visible">growY</li>
+      <li class="delete solid-rounder active-grow-sm  visible" title="Cliquez sans relâcher">grow</li>
+      <li class="delete solid-rounder active-growX-sm visible" title="Cliquez sans relâcher">growX</li>
+      <li class="delete solid-rounder active-growY-sm visible" title="Cliquez sans relâcher">growY</li>
     </ul>
 
 
     <!-- Shrink animations exemples -->
-    <h5 class="special solid-rounder m-md">3.9 / Animate "Shrink"</h5>
+    <h5 class="special solid-rounder m-md">2.9 / Animate Shrink</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-shrinkX-sm visible">shrinkX</li>
-      <li class="delete solid-rounder active-shrinkY-sm visible">shrinkY</li>
-      <li class="delete solid-rounder active-shrinkS-sm visible">shrinkS</li>
-      <li class="delete solid-rounder active-shrinkM-sm visible">shrinkM</li>
-      <li class="delete solid-rounder active-shrinkL-sm visible">shrinkL</li>
+      <li class="delete solid-rounder active-shrinkX-sm visible" title="Cliquez sans relâcher">shrinkX</li>
+      <li class="delete solid-rounder active-shrinkY-sm visible" title="Cliquez sans relâcher">shrinkY</li>
+      <li class="delete solid-rounder active-shrinkS-sm visible" title="Cliquez sans relâcher">shrinkS</li>
+      <li class="delete solid-rounder active-shrinkM-sm visible" title="Cliquez sans relâcher">shrinkM</li>
+      <li class="delete solid-rounder active-shrinkL-sm visible" title="Cliquez sans relâcher">shrinkL</li>
     </ul>
 
 
     <!-- Bounce animations exemples -->
-    <h5 class="special solid-rounder m-md">3.10 / Animate "Bounce"</h5>
+    <h5 class="special solid-rounder m-md">2.10 / Animate Bounce</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-bounceS-sm visible">bounceS</li>
-      <li class="delete solid-rounder active-bounceM-sm visible">bounceM</li>
-      <li class="delete solid-rounder active-bounceL-sm visible">bounceL</li>
+      <li class="delete solid-rounder active-bounceS-sm visible" title="Cliquez sans relâcher">bounceS</li>
+      <li class="delete solid-rounder active-bounceM-sm visible" title="Cliquez sans relâcher">bounceM</li>
+      <li class="delete solid-rounder active-bounceL-sm visible" title="Cliquez sans relâcher">bounceL</li>
     </ul>
 
 
     <!-- Fall animations exemples -->
-    <h5 class="special solid-rounder m-md">3.11 / Animate "Fall"</h5>
+    <h5 class="special solid-rounder m-md">2.11 / Animate Fall</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-fallXS-sm visible">fallXS</li>
-      <li class="delete solid-rounder active-fallXM-sm visible">fallXM</li>
-      <li class="delete solid-rounder active-fallXL-sm visible">fallXL</li>
-      <li class="delete solid-rounder active-fallYS-sm visible">fallYS</li>
-      <li class="delete solid-rounder active-fallYM-sm visible">fallYM</li>
-      <li class="delete solid-rounder active-fallYL-sm visible">fallYL</li>
+      <li class="delete solid-rounder active-fallXS-sm visible" title="Cliquez sans relâcher">fallXS</li>
+      <li class="delete solid-rounder active-fallXM-sm visible" title="Cliquez sans relâcher">fallXM</li>
+      <li class="delete solid-rounder active-fallXL-sm visible" title="Cliquez sans relâcher">fallXL</li>
+      <li class="delete solid-rounder active-fallYS-sm visible" title="Cliquez sans relâcher">fallYS</li>
+      <li class="delete solid-rounder active-fallYM-sm visible" title="Cliquez sans relâcher">fallYM</li>
+      <li class="delete solid-rounder active-fallYL-sm visible" title="Cliquez sans relâcher">fallYL</li>
     </ul>
 
 
     <!-- Flipper animations exemples -->
-    <h5 class="special solid-rounder m-md">3.12 / Animate "Flipper"</h5>
+    <h5 class="special solid-rounder m-md">2.12 / Animate Flipper</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-flipperXS-sm visible">flipperXS</li>
-      <li class="delete solid-rounder active-flipperXM-sm visible">flipperXM</li>
-      <li class="delete solid-rounder active-flipperXL-sm visible">flipperXL</li>
-      <li class="delete solid-rounder active-flipperYS-sm visible">flipperYS</li>
-      <li class="delete solid-rounder active-flipperYM-sm visible">flipperYM</li>
-      <li class="delete solid-rounder active-flipperYL-sm visible">flipperYL</li>
+      <li class="delete solid-rounder active-flipperXS-sm visible" title="Cliquez sans relâcher">flipperXS</li>
+      <li class="delete solid-rounder active-flipperXM-sm visible" title="Cliquez sans relâcher">flipperXM</li>
+      <li class="delete solid-rounder active-flipperXL-sm visible" title="Cliquez sans relâcher">flipperXL</li>
+      <li class="delete solid-rounder active-flipperYS-sm visible" title="Cliquez sans relâcher">flipperYS</li>
+      <li class="delete solid-rounder active-flipperYM-sm visible" title="Cliquez sans relâcher">flipperYM</li>
+      <li class="delete solid-rounder active-flipperYL-sm visible" title="Cliquez sans relâcher">flipperYL</li>
     </ul>
 
 
     <!-- Open animations exemples -->
-    <h5 class="special solid-rounder m-md">3.13 / Animate "Open"</h5>
+    <h5 class="special solid-rounder m-md">2.13 / Animate Open</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-openXS-sm visible">openXS</li>
-      <li class="delete solid-rounder active-openXM-sm visible">openXM</li>
-      <li class="delete solid-rounder active-openXL-sm visible">openXL</li>
-      <li class="delete solid-rounder active-openYS-sm visible">openYS</li>
-      <li class="delete solid-rounder active-openYM-sm visible">openYM</li>
-      <li class="delete solid-rounder active-openYL-sm visible">openYL</li>
+      <li class="delete solid-rounder active-openXS-sm visible" title="Cliquez sans relâcher">openXS</li>
+      <li class="delete solid-rounder active-openXM-sm visible" title="Cliquez sans relâcher">openXM</li>
+      <li class="delete solid-rounder active-openXL-sm visible" title="Cliquez sans relâcher">openXL</li>
+      <li class="delete solid-rounder active-openYS-sm visible" title="Cliquez sans relâcher">openYS</li>
+      <li class="delete solid-rounder active-openYM-sm visible" title="Cliquez sans relâcher">openYM</li>
+      <li class="delete solid-rounder active-openYL-sm visible" title="Cliquez sans relâcher">openYL</li>
     </ul>
 
 
     <!-- Twist animations exemples -->
-    <h5 class="special solid-rounder m-md">3.14 / Animate "Twist"</h5>
+    <h5 class="special solid-rounder m-md">2.14 / Animate Twist</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-twistT-sm visible">twistT</li>
-      <li class="delete solid-rounder active-twistR-sm visible">twistR</li>
-      <li class="delete solid-rounder active-twistB-sm visible">twistB</li>
-      <li class="delete solid-rounder active-twistL-sm visible">twistL</li>
+      <li class="delete solid-rounder active-twistT-sm visible" title="Cliquez sans relâcher">twistT</li>
+      <li class="delete solid-rounder active-twistR-sm visible" title="Cliquez sans relâcher">twistR</li>
+      <li class="delete solid-rounder active-twistB-sm visible" title="Cliquez sans relâcher">twistB</li>
+      <li class="delete solid-rounder active-twistL-sm visible" title="Cliquez sans relâcher">twistL</li>
     </ul>
 
 
     <!-- Torsion animations exemples -->
-    <h5 class="special solid-rounder m-md">3.15 / Animate "Torsion"</h5>
+    <h5 class="special solid-rounder m-md">2.15 / Animate Torsion</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-torsionT-sm visible">torsionT</li>
-      <li class="delete solid-rounder active-torsionR-sm visible">torsionR</li>
-      <li class="delete solid-rounder active-torsionB-sm visible">torsionB</li>
-      <li class="delete solid-rounder active-torsionL-sm visible">torsionL</li>
+      <li class="delete solid-rounder active-torsionT-sm visible" title="Cliquez sans relâcher">torsionT</li>
+      <li class="delete solid-rounder active-torsionR-sm visible" title="Cliquez sans relâcher">torsionR</li>
+      <li class="delete solid-rounder active-torsionB-sm visible" title="Cliquez sans relâcher">torsionB</li>
+      <li class="delete solid-rounder active-torsionL-sm visible" title="Cliquez sans relâcher">torsionL</li>
     </ul>
 
 
     <!-- Twister animations exemples -->
-    <h5 class="special solid-rounder m-md">3.16 / Animate "Twister"</h5>
+    <h5 class="special solid-rounder m-md">2.16 / Animate Twister</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-twisterT-sm visible">twisterT</li>
-      <li class="delete solid-rounder active-twisterR-sm visible">twisterR</li>
-      <li class="delete solid-rounder active-twisterB-sm visible">twisterB</li>
-      <li class="delete solid-rounder active-twisterL-sm visible">twisterL</li>
+      <li class="delete solid-rounder active-twisterT-sm visible" title="Cliquez sans relâcher">twisterT</li>
+      <li class="delete solid-rounder active-twisterR-sm visible" title="Cliquez sans relâcher">twisterR</li>
+      <li class="delete solid-rounder active-twisterB-sm visible" title="Cliquez sans relâcher">twisterB</li>
+      <li class="delete solid-rounder active-twisterL-sm visible" title="Cliquez sans relâcher">twisterL</li>
     </ul>
 
 
     <!-- Cyclone animations exemples -->
-    <h5 class="special solid-rounder m-md">3.17 / Animate "Cyclone"</h5>
+    <h5 class="special solid-rounder m-md">2.17 / Animate Cyclone</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-cycloneT-sm visible">cycloneT</li>
-      <li class="delete solid-rounder active-cycloneR-sm visible">cycloneR</li>
-      <li class="delete solid-rounder active-cycloneB-sm visible">cycloneB</li>
-      <li class="delete solid-rounder active-cycloneL-sm visible">cycloneL</li>
+      <li class="delete solid-rounder active-cycloneT-sm visible" title="Cliquez sans relâcher">cycloneT</li>
+      <li class="delete solid-rounder active-cycloneR-sm visible" title="Cliquez sans relâcher">cycloneR</li>
+      <li class="delete solid-rounder active-cycloneB-sm visible" title="Cliquez sans relâcher">cycloneB</li>
+      <li class="delete solid-rounder active-cycloneL-sm visible" title="Cliquez sans relâcher">cycloneL</li>
     </ul>
 
 
     <!-- Slip animations exemples -->
-    <h5 class="special solid-rounder m-md">3.18 / Animate "Slip"</h5>
+    <h5 class="special solid-rounder m-md">2.18 / Animate Slip</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-slipT-sm visible">slipT</li>
-      <li class="delete solid-rounder active-slipR-sm visible">slipR</li>
-      <li class="delete solid-rounder active-slipB-sm visible">slipB</li>
-      <li class="delete solid-rounder active-slipL-sm visible">slipL</li>
-      <li class="delete solid-rounder active-slipTR-sm visible">slipTR</li>
-      <li class="delete solid-rounder active-slipBR-sm visible">slipBR</li>
-      <li class="delete solid-rounder active-slipTL-sm visible">slipTL</li>
-      <li class="delete solid-rounder active-slipBL-sm visible">slipBL</li>
+      <li class="delete solid-rounder active-slipT-sm   visible" title="Cliquez sans relâcher">slipT</li>
+      <li class="delete solid-rounder active-slipR-sm   visible" title="Cliquez sans relâcher">slipR</li>
+      <li class="delete solid-rounder active-slipB-sm   visible" title="Cliquez sans relâcher">slipB</li>
+      <li class="delete solid-rounder active-slipL-sm   visible" title="Cliquez sans relâcher">slipL</li>
+      <li class="delete solid-rounder active-slipTR-sm  visible" title="Cliquez sans relâcher">slipTR</li>
+      <li class="delete solid-rounder active-slipBR-sm  visible" title="Cliquez sans relâcher">slipBR</li>
+      <li class="delete solid-rounder active-slipTL-sm  visible" title="Cliquez sans relâcher">slipTL</li>
+      <li class="delete solid-rounder active-slipBL-sm  visible" title="Cliquez sans relâcher">slipBL</li>
     </ul>
 
 
     <!-- Slide animations exemples -->
-    <h5 class="special solid-rounder m-md">3.19 / Animate "Slide"</h5>
+    <h5 class="special solid-rounder m-md">2.19 / Animate Slide</h5>
 
     <ul class="row content-center gm-md gp-md">
-      <li class="delete solid-rounder active-slideT-sm visible">slideT</li>
-      <li class="delete solid-rounder active-slideR-sm visible">slideR</li>
-      <li class="delete solid-rounder active-slideB-sm visible">slideB</li>
-      <li class="delete solid-rounder active-slideL-sm visible">slideL</li>
-      <li class="delete solid-rounder active-slideTR-sm visible">slideTR</li>
-      <li class="delete solid-rounder active-slideBR-sm visible">slideBR</li>
-      <li class="delete solid-rounder active-slideTL-sm visible">slideTL</li>
-      <li class="delete solid-rounder active-slideBL-sm visible">slideBL</li>
+      <li class="delete solid-rounder active-slideT-sm  visible" title="Cliquez sans relâcher">slideT</li>
+      <li class="delete solid-rounder active-slideR-sm  visible" title="Cliquez sans relâcher">slideR</li>
+      <li class="delete solid-rounder active-slideB-sm  visible" title="Cliquez sans relâcher">slideB</li>
+      <li class="delete solid-rounder active-slideL-sm  visible" title="Cliquez sans relâcher">slideL</li>
+      <li class="delete solid-rounder active-slideTR-sm visible" title="Cliquez sans relâcher">slideTR</li>
+      <li class="delete solid-rounder active-slideBR-sm visible" title="Cliquez sans relâcher">slideBR</li>
+      <li class="delete solid-rounder active-slideTL-sm visible" title="Cliquez sans relâcher">slideTL</li>
+      <li class="delete solid-rounder active-slideBL-sm visible" title="Cliquez sans relâcher">slideBL</li>
     </ul>
 
   </section>
 
 
-  <!-- ***** Durations of animations ***** -->
+  <!-- **************************** -->
+  <!-- ***** Animate Duration ***** -->
   <section>
 
-    <h4 class="secondary solid-rounded m-md">4 / Les durées d'animations</h4>
+    <h4 class="secondary solid-rounded m-md">3 / Animate Duration</h4>
 
     <p>
-      La durée de l'animation correspond à l'attribut <a href="https://developer.mozilla.org/fr/docs/Web/CSS/animation-duration" title="Voir la documentation sur MDN">animation-duration</a>.
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> La <strong>duration</strong> de l'animation correspond à la propriété :
     </p>
 
-    <p>Il y a 5 durée d'animations :</p>
+    <a class="btn info-dark outset-slight inset-blur-lg" href="https://developer.mozilla.org/fr/docs/Web/CSS/animation-duration" title="Voir la documentation sur MDN">animation-duration</a>
 
-    <ul>
-      <li>tn  => 1s</li>
-      <li>sm  => 2s</li>
-      <li>md  => 5s</li>
-      <li>lg  => 10s</li>
-      <li>wd  => 60s</li>
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>5 durations</strong> d'animations sont disponibles :
+    </p>
+
+    <ul class="valid-text">
+      <li>
+        <pre>tn => 1s</pre>
+      </li>
+      <li>
+        <pre>sm => 2s</pre>
+      </li>
+      <li>
+        <pre>md => 5s</pre>
+      </li>
+      <li>
+        <pre>lg => 10s</pre>
+      </li>
+      <li>
+        <pre>wd => 60s</pre>
+      </li>
     </ul>
 
   </section>
@@ -312,9 +322,9 @@
   <!-- ***** Construction of a complex animation ***** -->
   <section>
 
-    <h4 class="secondary solid-rounded m-md">5 / La construction d'une animation complexe</h4>
+    <h4 class="secondary solid-rounded m-md">4 / Les options concatenables des animations</h4>
 
-    <p>Toutes les animations peuvent aussi s'implémenter à l'aide d'une classe composées de plus de 3 parties, on peut y adjoindre jusqu'à 6 options en les concatenants à l'aide du tiret.</p>
+    <p><strong>Toutes les animations</strong> peuvent aussi s'implémenter à l'aide d'une classe composées de plus de 3 parties, on peut y <em>adjoindre jusqu'à 6 options en les concatenants à l'aide du tiret</em>.</p>
 
     <p>Il est possible de concatener le nombre d'options que l'on souhaite, l'ordre n'ayant aucune importance, du moins concernant ces options.</p>
 
@@ -322,19 +332,12 @@
 
     <p>Exemples : "anime-grow-md-loop" ou "hover-full-lg-double-alt" ou "child-cycloneT-sm-linear-inv-large".</p>
 
-  </section>
-
-
-  <!-- ***** Concatenable options of animations ***** -->
-  <section>
-
-    <h4 class="secondary solid-rounded m-md">6 / Les options concatenables des animations</h4>
 
     <p>Les options concatenables sont les suivantes : "timing-function", "delay", "iteration-count", "direction", "fill-mode" & "origin".</p>
 
 
     <!-- Animation Timing function -->
-    <h5 class="special solid-rounder m-md">6.1 / Option "Animation Timing Function"</h5>
+    <h5 class="special solid-rounder m-md">6.1 / Option Animation Timing Function</h5>
 
     <p>
       L'option <a href="https://developer.mozilla.org/fr/docs/Web/CSS/animation-timing-function" title="Voir la documentation sur MDN">animation-timing-function</a> permet de définir la courbe de progression de l'animation.
@@ -357,7 +360,7 @@
 
 
     <!-- Animation Delay -->
-    <h5 class="special solid-rounder m-md">6.2 / Option "Animation Delay"</h5>
+    <h5 class="special solid-rounder m-md">6.2 / Option Animation Delay</h5>
 
     <p>
       L'option <a href="https://developer.mozilla.org/fr/docs/Web/CSS/animation-delay" title="Voir la documentation sur MDN">animation-delay</a> permet de définit le délai avant que l'animation ne s'active.

@@ -523,6 +523,9 @@ main {
   #cms {
     width: 50%;
   }
+  #sam p {
+    width: 60%;
+  }
 }
 
 
