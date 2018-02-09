@@ -398,7 +398,7 @@ main {
   /* Needs to set this position for working on smartphones */
   background-position: 15% 50%;
 }
-}
+
 
 /* Needs to set the position again for working on tablets */
 @media (min-width: 576px) and (max-width: 1023px)
@@ -427,7 +427,7 @@ main {
   /* Needs to set this position for working on smartphones */
   background-position: 15% 50%;
 }
-}
+
 
 /* Needs to set the position again for working on tablets */
 @media (min-width: 576px) and (max-width: 1023px)

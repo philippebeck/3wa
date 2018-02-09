@@ -247,14 +247,14 @@
       <p>
         <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les classes <strong>flex</strong> se composent de 2 parties :
       </p>
-      <pre class="valid-text">flex-config</pre>
+      <pre class="valid-text">flex-grilles</pre>
 
       <p>
         <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Mais seul <strong>flex est obligatoire</strong> ; dans ce cas uniquement, son comportement ne sera pas lié aux tailles d'écrans ni au nombre de colonnes.
       </p>
 
       <p>
-        <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Dans tous les autres cas, ces <strong>configs</strong> s'écrivent en concaténant :
+        <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Dans tous les autres cas, ces <strong>grilles</strong>, qui définissent <em>le nombre de colonnes sur tel type d'écran</em>, s'écrivent en concaténant :
       </p>
 
       <ol>
@@ -286,7 +286,7 @@
       </ul>
 
       <p>
-        <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Il est aussi possible de concaténer plusieurs options afin de définir tous les comportements attendus (sur chaque type d'écran) :
+        <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Il est aussi possible de concaténer plusieurs grilles afin de définir tous les comportements attendus (sur chaque type d'écran) :
       </p>
 
       <ul>
@@ -319,12 +319,12 @@
       </ul>
 
       <p>
-        <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> De plus, <strong>un type d'options</strong> est disponible :
+        <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> De plus, <strong>un type d'option spécifique au flex layout</strong> est disponible :
       </p>
 
       <pre class="valid-text">flexible</pre>
       <p>
-        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour modifier les dimensions d'un élément
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> se définit sur un élément enfant pour modifier ses dimensions
       </p>
 
       <p>
@@ -371,11 +371,369 @@
 
     <h4 class="secondary solid-rounded m-md">4 / Grid</h4>
 
-    <p class="intro warning-sea solid-rounded">
-      <i class="fa fa-ban fa-lg fa-fw delete-text" aria-hidden="true"></i>
-      En construction !
-      <i class="fa fa-ban fa-lg fa-fw delete-text" aria-hidden="true"></i><br>
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Grid</strong> s'adaptent aux différentes tailles d'écrans ainsi qu'aux nombres de colonnes que l'on désire.
     </p>
+
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les classes du groupe <strong>Grid</strong> sont de 2 types :
+    </p>
+
+    <ul>
+      <li>
+        <pre class="valid-text">.grid</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour avoir une <em>grille contenue dans 80% de la largeur & centrée</em>
+      </li>
+      <li>
+        <pre class="valid-text">.fluid</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> pour avoir une <em>grille prenant toute la largeur disponible</em>
+      </li>
+    </ul>
+
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Les classes <strong>grid & fluid</strong> se composent de 2 parties :
+    </p>
+    <pre class="valid-text">grid-grilles</pre>
+
+
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> Mais seul <strong>grid est obligatoire</strong> ; dans ce cas uniquement, son comportement ne sera pas lié aux tailles d'écrans ni au nombre de colonnes.
+    </p>
+
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Dans tous les autres cas, ces <strong>grilles</strong>, qui définissent <em>le nombre de colonnes sur tel type d'écran</em>, s'écrivent en concaténant :
+    </p>
+
+    <ol>
+      <li>le nombre de colonnes désirées, de <strong>2 à 12</strong></li>
+      <li>avec le type d'écran, c'est-à-dire <strong>tn, sm, md, lg, wd</strong>.</li>
+    </ol>
+
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Exemples :
+    </p>
+
+    <ul>
+      <li>
+        <pre class="valid-text">.grid-2tn</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> <strong>2 colonnes</strong> pour une résolution comprise <em>entre 480px & 576px</em> sur 80% de la largeur
+      </li>
+      <li>
+        <pre class="valid-text">.fluid-5sm</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> <strong>5 colonnes</strong> pour une résolution comprise <em>entre 576px & 768px</em> en pleine largeur
+      </li>
+      <li>
+        <pre class="valid-text">.grid-7md</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> <strong>7 colonnes</strong> pour une résolution comprise <em>entre 768px & 1024px</em> sur 80% de la largeur
+      </li>
+      <li>
+        <pre class="valid-text">.fluid-10wd</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> <strong>10 colonnes</strong> pour une résolution <em>supérieure à 1366px</em> en pleine largeur
+      </li>
+    </ul>
+
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> Il est aussi possible de concaténer plusieurs grilles afin de définir tous les comportements attendus (sur chaque type d'écran) :
+    </p>
+
+    <ul>
+      <li>
+        <pre class="valid-text">.grid-5sm-10lg</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> <strong>5 colonnes</strong> pour une résolution comprise <em>entre 576px & 1024px</em>,
+        <br>puis <em>au-delà de 1024px</em>, <strong>10 colonnes</strong>,
+        <br>le tout dans 80% de la largeur
+      </li>
+      <li>
+        <pre class="valid-text">.fluid-4tn-8md-12wd</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> <strong>4 colonnes</strong> pour une résolution comprise <em>entre 480px & 768px</em>,
+        <br>puis <strong>8 colonnes</strong> pour une résolution <em>entre 768px & 1366px</em>,
+        <br>enfin <strong>12 colonnes</strong> <em>au-delà de 1366px</em>
+        <br>le tout dans la totalité de la largeur
+      </li>
+      <li>
+        <pre class="valid-text">.grid-3sm-6md-9lg-12wd</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> <strong>3 colonnes</strong> pour une résolution comprise entre <em>576px & 768px</em>,
+        <br>puis <strong>6 colonnes</strong> pour une résolution <em>entre 768px & 1024px</em>,
+        <br>ensuite <strong>9 colonnes</strong> <em>entreMargin-Top 1024px & 1366px</em>,
+        <br>enfin <strong>12 colonnes</strong> <em>au-delà de 1366px</em>
+        <br>le tout dans 80% de la largeur
+      </li>
+      <li>
+        <pre class="valid-text">.fluid-2tn-4sm-6md-8lg-10wd</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> <strong>2 colonnes</strong> pour une résolution comprise <em>entre 480px & 576px</em>,
+        <br>puis <strong>4 colonnes</strong> pour une résolution <em>entre 576px & 768px</em>,
+        <br>ensuite <strong>6 colonnes</strong> <em>entre 768px & 1024px</em>,
+        <br>après <strong>8 colonnes</strong> <em>entre 1024px & 1366px</em>,
+        <br>et enfin <strong>10 colonnes</strong> <em>au-delà de 1366px</em>
+        <br>le tout dans la totalité de la largeur
+      </li>
+    </ul>
+
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> De plus, <strong>un type d'option spécifique au grid layout</strong> est disponible :
+    </p>
+
+    <pre class="valid-text">.gap</pre>
+    <p>
+      <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> se définit sur l'élément parent pour insérer des gouttières entre les colonnes
+    </p>
+
+
+    <!-- ***** Grid Gap Part ***** -->
+    <h5 class="special solid-rounder m-md">4.1 / Grid Gap</h5>
+
+
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>5 classes de gouttières</strong> sont disponibles :
+    </p>
+
+    <ul>
+      <li>
+        <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">gap-tn</span>"&gt;Grid-gap = .5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      </li>
+      <li>
+        <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">gap-sm</span>"&gt;Grid-gap = 1rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      </li>
+      <li>
+        <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">gap-md</span>"&gt;Grid-gap = 2rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      </li>
+      <li>
+        <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">gap-lg</span>"&gt;Grid-gap = 5rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      </li>
+      <li>
+        <pre>&lt;<span class="delete-text">div</span> <span class="info-text">class</span>="<span class="valid-text">gap-wd</span>"&gt;Grid-gap = 10rem&lt;/<span class="delete-text">div</span>&gt;</pre>
+      </li>
+    </ul>
+
+  </section>
+
+
+
+    <!-- *************************************** -->
+    <!-- ***** Grid & Flex Options Section ***** -->
+    <section>
+
+      <h4 class="secondary solid-rounded m-md">5 / Grid & Flex Options</h4>
+
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> De plus, <strong>3 types d'options communes à Grid & Flex</strong> sont disponibles :
+    </p>
+
+    <ul>
+      <li>
+        <pre class="valid-text">.items</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> se définit sur l'élément parent pour modifier les alignements des éléments enfants
+      </li>
+      <li>
+        <pre class="valid-text">.content</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> se définit sur l'élément parent pour modifier les alignements du contenu
+      </li>
+      <li>
+        <pre class="valid-text">.self</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> se définit sur les éléments enfants pour modifier leurs alignements indépendamment
+      </li>
+    </ul>
+
+
+    <!-- ***** Grid Items Part ***** -->
+    <h5 class="special solid-rounder m-md">5.1 / Grid Items</h5>
+
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong>7 valeurs d'alignements</strong> sont disponibles :
+    </p>
+
+    <ul>
+      <li>
+        <pre class="valid-text">stretch</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont étirés
+      </li>
+      <li>
+        <pre class="valid-text">base</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont alignés sur leur base
+      </li>
+      <li>
+        <pre class="valid-text">center</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont centrés
+      </li>
+      <li>
+        <pre class="valid-text">start</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont alignés au début du conteneur
+      </li>
+      <li>
+        <pre class="valid-text">end</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont alignés à la fin du conteneur
+      </li>
+      <li>
+        <pre class="valid-text">right</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont alignés à droite
+      </li>
+      <li>
+        <pre class="valid-text">left</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont alignés à gauche
+      </li>
+    </ul>
+
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>Ces valeurs d'alignements</strong> sont disponibles pour chacune de 2 directions, ce qui donne 49 classes, exemples :
+    </p>
+
+    <ul>
+      <li>
+        <pre class="valid-text">.items-stretch-base</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont étirés dans l'axe principal & alignés sur leur base dans l'axe secondaire
+      </li>
+      <li>
+        <pre class="valid-text">.items-center-start</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont centrés dans l'axe principal & alignés au début du conteneur dans l'axe secondaire
+      </li>
+      <li>
+        <pre class="valid-text">.items-right-end</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont alignés à droite dans l'axe principal & alignés à la fin du conteneur dans l'axe secondaire
+      </li>
+    </ul>
+
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <em>Lorsque les 2 valeurs sont identiques</em>, une seule est indiquée, par exemple  :
+    </p>
+    <pre>.items-center</pre>
+
+
+    <!-- ***** Grid Content Part ***** -->
+    <h5 class="special solid-rounder m-md">5.2 / Grid Content</h5>
+
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong>10 valeurs d'alignements</strong> sont disponibles :
+    </p>
+
+    <ul>
+      <li>
+        <pre class="valid-text">stretch</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> le contenu est étiré
+      </li>
+      <li>
+        <pre class="valid-text">base</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> le contenu est aligné sur sa base
+      </li>
+      <li>
+        <pre class="valid-text">center</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> le contenu est centré
+      </li>
+      <li>
+        <pre class="valid-text">start</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> le contenu est aligné au début du conteneur
+      </li>
+      <li>
+        <pre class="valid-text">end</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> le contenu est aligné à la fin du conteneur
+      </li>
+      <li>
+        <pre class="valid-text">right</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> le contenu est aligné à droite
+      </li>
+      <li>
+        <pre class="valid-text">left</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> le contenu est aligné à gauche
+      </li>
+      <li>
+        <pre class="valid-text">around</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> le contenu est aligné d'un bord à l'autre du conteneur en laissant des espaces réguliers entre chaque élément, avec la moitié d'un espace régulier au niveau des bords
+      </li>
+      <li>
+        <pre class="valid-text">between</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> le contenu est aligné d'un bord à l'autre du conteneur en laissant des espaces réguliers entre chaque élément, sans espace au niveau des bords
+      </li>
+      <li>
+        <pre class="valid-text">evenly</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> le contenu est aligné d'un bord à l'autre du conteneur en laissant des espaces réguliers entre chaque élément, avec le même espace régulier au niveau des bords
+      </li>
+    </ul>
+
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>Ces valeurs d'alignements</strong> sont disponibles pour chacune de 2 directions, ce qui donne 100 classes, exemples :
+    </p>
+
+    <ul>
+      <li>
+        <pre class="valid-text">.content-stretch-base</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont étirés dans l'axe principal & alignés sur leur base dans l'axe secondaire
+      </li>
+      <li>
+        <pre class="valid-text">.content-center-start</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont centrés dans l'axe principal & alignés au début du conteneur dans l'axe secondaire
+      </li>
+      <li>
+        <pre class="valid-text">.content-right-end</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont alignés à droite dans l'axe principal & alignés à la fin du conteneur dans l'axe secondaire
+      </li>
+    </ul>
+
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <em>Lorsque les 2 valeurs sont identiques</em>, une seule est indiquée, par exemple  :
+    </p>
+    <pre>.content-evenly</pre>
+
+
+    <!-- ***** Grid Self Part ***** -->
+    <h5 class="special solid-rounder m-md">5.3 / Grid Self</h5>
+
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <strong>7 valeurs d'alignements</strong> sont disponibles :
+    </p>
+
+    <ul>
+      <li>
+        <pre class="valid-text">stretch</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont étirés
+      </li>
+      <li>
+        <pre class="valid-text">base</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont alignés sur leur base
+      </li>
+      <li>
+        <pre class="valid-text">center</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont centrés
+      </li>
+      <li>
+        <pre class="valid-text">start</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont alignés au début du conteneur
+      </li>
+      <li>
+        <pre class="valid-text">end</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont alignés à la fin du conteneur
+      </li>
+      <li>
+        <pre class="valid-text">right</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont alignés à droite
+      </li>
+      <li>
+        <pre class="valid-text">left</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> les éléments sont alignés à gauche
+      </li>
+    </ul>
+
+    <p>
+      <i class="fa fa-caret-down fa-fw" aria-hidden="true"></i> <strong>Ces valeurs d'alignements</strong> sont disponibles pour chacune de 2 directions, ce qui donne 49 classes, exemples :
+    </p>
+
+    <ul>
+      <li>
+        <pre class="valid-text">.self-stretch-base</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> l'élément est étiré dans l'axe principal & aligné sur sa base dans l'axe secondaire
+      </li>
+      <li>
+        <pre class="valid-text">.self-center-start</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> l'éléments est centré dans l'axe principal & aligné au début du conteneur dans l'axe secondaire
+      </li>
+      <li>
+        <pre class="valid-text">.self-right-end</pre>
+        <i class="fa fa-caret-up fa-fw" aria-hidden="true"></i> l'élément est aligné à droite dans l'axe principal & aligné à la fin du conteneur dans l'axe secondaire
+      </li>
+    </ul>
+
+    <p>
+      <i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <em>Lorsque les 2 valeurs sont identiques</em>, une seule est indiquée, par exemple  :
+    </p>
+    <pre>.self-center</pre>
 
   </section>
 </section>
