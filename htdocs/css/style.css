@@ -242,7 +242,7 @@ figcaption {
 /* ***** Code ***** */
 
 pre {
-  margin-top: 1rem;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -484,6 +484,8 @@ main {
   height: 50rem;
 }
 
+#pam,
+#jim,
 #sam {
   background-color: LightSkyBlue;
 }
@@ -512,9 +514,13 @@ main {
 #pam p,
 #jim p,
 #sam p {
-  margin: 1rem auto 2rem;
+  margin: 2rem auto 0;
   font-family: 'tuffy', sans-serif;
   text-align: center;
+}
+
+#sam li {
+  margin-bottom: 1rem;
 }
 
 
