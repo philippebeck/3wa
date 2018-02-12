@@ -669,3 +669,23 @@ main {
 #admin td:last-of-type {
   width: 7rem;
 }
+
+
+/* ***** Owner ***** */
+
+#owner {
+  background-color: Lavender;
+}
+
+#owner h2,
+#owner h3 {
+  text-align: center;
+}
+
+
+@media (min-width: 1024px)
+{
+  #owner article {
+    width: 50%;
+  }
+}
