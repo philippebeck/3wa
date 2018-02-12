@@ -14,7 +14,7 @@
 
 <main id="blog">
 
-  <p class="intro info double-slight-lg inset-spread-sm anime-twistL-sm">
+  <p class="intro info double-slight-lg inset-spread-sm anime-fallXL-sm">
     Mon <strong>blog</strong> est axé sur le domaine de la <em>programmation</em>.<br>Cliquer sur l'<b>image</b> ou le <b>bouton bleu
     <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </b> permet d'accéder à l'<strong>article</strong> concerné.
@@ -31,7 +31,7 @@
       <h2>{{ article.title }}</h2>
 
       <!-- Article image -->
-      <a class="btn warning-light solid-rounded inset-blur anime-twistR-sm" href="{{ url('article!read', {'id': article.id}) }}" title="Lire l'article">
+      <a class="btn warning-light solid-rounded inset-blur anime-slideT-sm" href="{{ url('article!read', {'id': article.id}) }}" title="Lire l'article">
         <img src="img/blog/{{ article.image }}" alt="{{ article.image }}">
       </a>
 

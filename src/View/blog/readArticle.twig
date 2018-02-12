@@ -7,7 +7,7 @@
 
 {% block title %}{{ article.title }}{% endblock %}
 
-{% block description %}Développement Web - Lecture de l'article : {{ article.title }}{% endblock %}
+{% block description %}Développement Web - {{ article.title }} - {{ article.content }}{% endblock %}
 
 
 {% block main %}
@@ -19,7 +19,7 @@
     <h2><i class="fa fa-newspaper-o" aria-hidden="true"></i> L'article</h2>
 
     <!-- Facebook buttons -->
-    <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fphilippebeck.net%2Findex.php%3Faccess%3Darticle&layout=button_count&size=small&mobile_iframe=true&appId=1316979581722641&width=82&height=20" width="82" height="20" style="border:none;overflow:hidden"></iframe>
+    <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fphilippebeck.net%2Findex.php%3Fid%3D{{ article.id }}%26access%3Darticle&layout=button_count&size=small&mobile_iframe=true&appId=1316979581722641&width=82&height=20" width="82" height="20" style="border:none;overflow:hidden"></iframe>
 
     <!-- Tweet button -->
     <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
@@ -27,7 +27,7 @@
 
     <!-- linkedIn button -->
     <script src="//platform.linkedin.com/in.js"> lang: fr_FR</script>
-    <script type="IN/Share" data-url="https://philippebeck.net/index.php?access=article" data-counter="right"></script>
+    <script type="IN/Share" data-url="https://philippebeck.net/index.php?id={{ article.id }}&access=article" data-counter="right"></script>
 
     <!-- Article Infos -->
     <p class="italic">Posté le {{ date(article.created_date)|date('d M Y') }} à {{ date(article.created_date)|date('H:i') }}</p>
