@@ -1,6 +1,6 @@
 {
   "name": "philippebeck",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/philippebeck/philippebeck"
@@ -17,7 +17,7 @@
   "require": {
     "twig/twig": "^2.0",
     "phpunit/phpunit": "^6.4",
-    "pjs/pam": "^0.2.1"
+    "pjs/pam": "^0.2.2"
   },
   "config": {
     "platform": {
