@@ -259,7 +259,7 @@ pre {
   border-left: none;
   font-size: 1.8rem;
   font-weight: bold;
-  animation: alert 10s;
+  animation: alert 20s ease-in -5s;
 }
 
 #jim-help {
