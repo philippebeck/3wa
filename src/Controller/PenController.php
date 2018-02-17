@@ -30,7 +30,7 @@ class PenController extends Controller
       ModelFactory::get('Pen')->create($_POST);
 
       // Creates a valid message to confirm the creation of a new
-      Session::createAlert('Nouveau pen créé avec succès !', 'valid');
+      htmlspecialchars(Session::createAlert('Nouveau pen créé avec succès !', 'valid'));
 
       // Redirects to the view admin
       $this->redirect('admin');
@@ -58,7 +58,7 @@ class PenController extends Controller
       ModelFactory::get('Pen')->update($id, $_POST);
 
       // Creates an info message to confirm the update of the selected pen
-      Session::createAlert('Modification réussie du pen sélectionné !', 'info');
+      htmlspecialchars(Session::createAlert('Modification réussie du pen sélectionné !', 'info'));
 
       // Redirects to the view admin
       $this->redirect('admin');
@@ -83,7 +83,7 @@ class PenController extends Controller
     ModelFactory::get('Pen')->delete($id);
 
     // Creates a delete message to confirm the removal of the selected pen
-    Session::createAlert('Pen réellement supprimé !', 'delete');
+    htmlspecialchars(Session::createAlert('Pen réellement supprimé !', 'delete'));
 
     // Redirects to the view admin
     $this->redirect('admin');

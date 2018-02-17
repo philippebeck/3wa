@@ -42,14 +42,14 @@ class UserController extends Controller
           $user['email']
         );
         // Creates a custom message to welcome the user
-        Session::createAlert('Authentification réussie, bienvenue ' . $user['first_name'] .' !', 'special');
+        htmlspecialchars(Session::createAlert('Authentification réussie, bienvenue ' . $user['first_name'] .' !', 'special'));
 
         // Redirects to the view home
         $this->redirect('home');
       }
       else {
         // Creates an authentification fail message
-        Session::createAlert('Authentification échouée !', 'cancel');
+        htmlspecialchars(Session::createAlert('Authentification échouée !', 'cancel'));
       }
     }
     // Returns the rendering of the view loginUser
@@ -86,7 +86,7 @@ class UserController extends Controller
       if (empty($user) == false)
       {
         // Creates a fail message to inform that an existing account uses this email address
-        Session::createAlert('Il existe déjà un compte utilisateur avec cette adresse e-mail');
+        htmlspecialchars(Session::createAlert('Il existe déjà un compte utilisateur avec cette adresse e-mail'));
       }
       // Uploads the image & gets back the file name
       $data['image'] = $this->upload('img/user');
@@ -107,7 +107,7 @@ class UserController extends Controller
       ModelFactory::get('User')->create($data);
 
       // Creates a valid message to confirm the creation of a new user
-      Session::createAlert('Nouvel utilisateur créé avec succès !', 'valid');
+      htmlspecialchars(Session::createAlert('Nouvel utilisateur créé avec succès !', 'valid'));
 
       // Redirects to the view home
       $this->redirect('home');
@@ -152,7 +152,7 @@ class UserController extends Controller
       ModelFactory::get('User')->update($id, $data);
 
       // Creates an info message to confirm the update of the selected user
-      Session::createAlert('Modification réussie de l\'utilisateur sélectionné !', 'info');
+      htmlspecialchars(Session::createAlert('Modification réussie de l\'utilisateur sélectionné !', 'info'));
 
       // Redirects to the view home
       $this->redirect('home');
@@ -177,7 +177,7 @@ class UserController extends Controller
     ModelFactory::get('User')->delete($id);
 
     // Creates a delete message to confirm the removal of the selected user
-    Session::createAlert('Utilisateur définitivement supprimé !');
+    htmlspecialchars(Session::createAlert('Utilisateur définitivement supprimé !'));
 
     // Redirects to the view home
     $this->redirect('home');

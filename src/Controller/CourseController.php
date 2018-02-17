@@ -30,7 +30,7 @@ class CourseController extends Controller
       ModelFactory::get('Course')->create($_POST);
 
       // Creates a valid message to confirm the creation of a new course
-      Session::createAlert('Nouveau cours créé avec succès !', 'valid');
+      htmlspecialchars(Session::createAlert('Nouveau cours créé avec succès !', 'valid'));
 
       // Redirects to the view admin
       $this->redirect('admin');
@@ -58,7 +58,7 @@ class CourseController extends Controller
       ModelFactory::get('Course')->update($id, $_POST);
 
       // Creates an info message to confirm the update of the selected course
-      Session::createAlert('Modification réussie du cours sélectionné !', 'info');
+      htmlspecialchars(Session::createAlert('Modification réussie du cours sélectionné !', 'info'));
 
       // Redirects to the view admin
       $this->redirect('admin');
@@ -83,7 +83,7 @@ class CourseController extends Controller
     ModelFactory::get('Course')->delete($id);
 
     // Creates a delete message to confirm the removal of the selected course
-    Session::createAlert('Cours définitivement supprimé !', 'delete');
+    htmlspecialchars(Session::createAlert('Cours définitivement supprimé !', 'delete'));
 
     // Redirects to the view admin
     $this->redirect('admin');

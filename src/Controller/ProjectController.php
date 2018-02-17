@@ -39,7 +39,7 @@ class ProjectController extends Controller
       ModelFactory::get('Project')->create($data);
 
       // Creates a valid message to confirm the creation of a new project
-      Session::createAlert('Nouveau projet créé avec succès !', 'valid');
+      htmlspecialchars(Session::createAlert('Nouveau projet créé avec succès !', 'valid'));
 
       // Redirects to the view admin
       $this->redirect('admin');
@@ -80,7 +80,7 @@ class ProjectController extends Controller
       ModelFactory::get('Project')->update($id, $data);
 
       // Creates an info message to confirm the update of the selected project
-      Session::createAlert('Modification réussie du projet sélectionné !', 'info');
+      htmlspecialchars(Session::createAlert('Modification réussie du projet sélectionné !', 'info'));
 
       // Redirects to the view admin
       $this->redirect('admin');
@@ -105,7 +105,7 @@ class ProjectController extends Controller
     ModelFactory::get('Project')->delete($id);
 
     // Creates a delete message to confirm the removal of the selected project
-    Session::createAlert('Projet réellement supprimé !', 'delete');
+    htmlspecialchars(Session::createAlert('Projet réellement supprimé !', 'delete'));
 
     // Redirects to the view admin
     $this->redirect('admin');

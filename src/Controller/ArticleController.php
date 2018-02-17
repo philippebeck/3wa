@@ -54,7 +54,7 @@ class ArticleController extends Controller
       ModelFactory::get('Article')->create($data);
 
       // Creates a valid message to confirm the creation of a new article
-      Session::createAlert('Nouvel article créé avec succès !', 'valid');
+      htmlspecialchars(Session::createAlert('Nouvel article créé avec succès !', 'valid'));
 
       // Redirects to the admin
       $this->redirect('admin');
@@ -97,7 +97,7 @@ class ArticleController extends Controller
     }
     else {
       // Creates an info message to propose to comment the selected article
-      Session::createAlert('Soyez le premier à commenter cet article !', 'info');
+      htmlspecialchars(Session::createAlert('Soyez le premier à commenter cet article !', 'info'));
     }
 
     // Returns the rendering of the view readArticle with the article & his comments
@@ -136,7 +136,7 @@ class ArticleController extends Controller
       ModelFactory::get('Article')->update($id, $data);
 
       // Creates an info message to confirm the update of the selected article
-      Session::createAlert('Modification réussie de l\'article sélectionné !', 'info');
+      htmlspecialchars(Session::createAlert('Modification réussie de l\'article sélectionné !', 'info'));
 
       // Redirects to the admin
       $this->redirect('admin');
@@ -161,7 +161,7 @@ class ArticleController extends Controller
     ModelFactory::get('Article')->delete($id);
 
     // Creates a delete message to confirm the removal of the selected article
-    Session::createAlert('Article définitivement supprimé !', 'delete');
+    htmlspecialchars(Session::createAlert('Article définitivement supprimé !', 'delete'));
 
     // Redirects to the admin
     $this->redirect('admin');

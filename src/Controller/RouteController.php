@@ -30,7 +30,7 @@ class RouteController extends Controller
       ModelFactory::get('Route')->create($_POST);
 
       // Creates a valid message to confirm the creation of a new route
-      Session::createAlert('Nouveau parcours créé avec succès !', 'valid');
+      htmlspecialchars(Session::createAlert('Nouveau parcours créé avec succès !', 'valid'));
 
       // Redirects to the view admin
       $this->redirect('admin');
@@ -58,7 +58,7 @@ class RouteController extends Controller
       ModelFactory::get('Route')->update($id, $_POST);
 
       // Creates an info message to confirm the update of the selected route
-      Session::createAlert('Modification réussie du parcours sélectionné !', 'info');
+      htmlspecialchars(Session::createAlert('Modification réussie du parcours sélectionné !', 'info'));
 
       // Redirects to the view admin
       $this->redirect('admin');
@@ -83,7 +83,7 @@ class RouteController extends Controller
     ModelFactory::get('Route')->delete($id);
 
     // Creates a delete message to confirm the removal of the selected route
-    Session::createAlert('Parcours définitivement supprimé !', 'delete');
+    htmlspecialchars(Session::createAlert('Parcours définitivement supprimé !', 'delete'));
 
     // Redirects to the view admin
     $this->redirect('admin');

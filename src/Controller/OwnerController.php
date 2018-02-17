@@ -32,14 +32,14 @@ class OwnerController extends Controller
       if (Session::userEmail() == User::ownerEmail() || Session::userEmail() == User::adminEmail())
       {
         // Creates a special message to welcome the 3W Academy jury
-        Session::createAlert('Cette section cachée vous est réservée afin de vous y présenter l\'ensemble des projets...', 'special');
+        htmlspecialchars(Session::createAlert('Cette section cachée vous est réservée afin de vous y présenter l\'ensemble des projets...', 'special'));
 
         // Returns the rendering of the view owner
         return $this->render('owner/owner.twig');
       }
       else {
         // Creates a warning message to inform that only the owner & the admin can access to this page
-        Session::createAlert('Accès réservé au propriétaire et à l\'administrateur du site', 'warning');
+        htmlspecialchars(Session::createAlert('Accès réservé au propriétaire et à l\'administrateur du site', 'warning'));
 
         // Redirects to the view home
         $this->redirect('home');
@@ -47,7 +47,7 @@ class OwnerController extends Controller
     }
     else {
       // Creates a cancel message to ask to be connected
-      Session::createAlert('Vous devez être connecté pour accéder à la section cachée', 'cancel');
+      htmlspecialchars(Session::createAlert('Vous devez être connecté pour accéder à la section cachée', 'cancel'));
 
       // Redirects to the view loginUser
       $this->redirect('user!login');
