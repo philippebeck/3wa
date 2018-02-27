@@ -14,13 +14,13 @@
 
 <main id="pam" class="center">
 
-  <article classs="container">
+  <article classs="container" itemscope itemtype="http://schema.org/SoftwareApplication">
 
     <h2 class="info solid p-md">Documentation</h2>
 
     <figure class="mr-auto ml-auto">
       {{ include('svg/pam.svg.twig') }}
-      <figcaption>PAM</figcaption>
+      <figcaption itemprop="name">PAM</figcaption>
     </figure>
 
     <ul class="btn-group m-md">
@@ -61,17 +61,17 @@
 
     <ul class="btn-group">
       <li>
-        <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pam" title="Voir le repository GitHub">
+        <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pam" title="Voir le repository GitHub" itemprop="url">
           <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
         </a>
       </li>
       <li>
-        <a class="btn packagist-outline solid-rounder inset-spread" href="https://packagist.org/packages/pjs/pam" title="Voir le package Packagist">
+        <a class="btn packagist-outline solid-rounder inset-spread" href="https://packagist.org/packages/pjs/pam" title="Voir le package Packagist" itemprop="installUrl">
           <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
         </a>
       </li>
       <li>
-        <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pam/archive/master.zip" title="Télécharger Pam">
+        <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/pam/archive/master.zip" title="Télécharger Pam" itemprop="downloadUrl">
           <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
         </a>
       </li>

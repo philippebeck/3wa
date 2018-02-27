@@ -14,13 +14,13 @@
 
 <main id="jim" class="center">
 
-  <article class="container">
+  <article class="container" itemscope itemtype="http://schema.org/SoftwareApplication">
 
     <h2 class="info solid p-md">Documentation</h2>
 
     <figure class="ml-auto mr-auto">
       {{ include('svg/jim.svg.twig') }}
-      <figcaption>JIM</figcaption>
+      <figcaption itemprop="name">JIM</figcaption>
     </figure>
 
     <ul class="btn-group m-md">
@@ -60,17 +60,17 @@
 
     <ul class="btn-group">
       <li>
-        <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/jim-js" title="Voir le repository GitHub">
+        <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/jim-js" title="Voir le repository GitHub" itemprop="url">
           <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
         </a>
       </li>
       <li>
-        <a class="btn npm-outline solid-rounder inset-spread" href="https://www.npmjs.com/package/jim-js" title="Voir le package npm">
+        <a class="btn npm-outline solid-rounder inset-spread" href="https://www.npmjs.com/package/jim-js" title="Voir le package npm" itemprop="installUrl">
           <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
         </a>
       </li>
       <li>
-        <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/jim-js/archive/master.zip" title="Télécharger Jim">
+        <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/jim-js/archive/master.zip" title="Télécharger Jim" itemprop="downloadUrl">
           <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
         </a>
       </li>

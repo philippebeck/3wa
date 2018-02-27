@@ -13,13 +13,13 @@
 
 <main id="sam" class="center">
 
-  <article class="container">
+  <article class="container" itemscope itemtype="http://schema.org/SoftwareApplication">
 
     <h2 class="info solid p-md">Documentation</h2>
 
     <figure class="m-auto">
       {{ include('svg/sam.svg.twig') }}
-      <figcaption class="special-text bold">SAM</figcaption>
+      <figcaption class="special-text bold" itemprop="name">SAM</figcaption>
     </figure>
 
     <ul class="btn-group m-md">
@@ -63,17 +63,17 @@
 
     <ul class="btn-group">
       <li>
-        <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss" title="Voir le repository GitHub">
+        <a class="btn github-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss" title="Voir le repository GitHub" itemprop="url">
           <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
         </a>
       </li>
       <li>
-        <a class="btn npm-outline solid-rounder inset-spread" href="https://www.npmjs.com/package/sam.scss" title="Voir le package npm">
+        <a class="btn npm-outline solid-rounder inset-spread" href="https://www.npmjs.com/package/sam.scss" title="Voir le package npm" itemprop="installUrl">
           <i class="fa fa-archive fa-lg fa-fw" aria-hidden="true"></i>
         </a>
       </li>
       <li>
-        <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss/archive/master.zip" title="Télécharger Sam">
+        <a class="btn primary-outline solid-rounder inset-spread" href="https://github.com/philippebeck/sam.scss/archive/master.zip" title="Télécharger Sam" itemprop="downloadUrl">
           <i class="fa fa-download fa-lg fa-fw" aria-hidden="true"></i>
         </a>
       </li>
