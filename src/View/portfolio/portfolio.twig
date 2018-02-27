@@ -17,13 +17,13 @@
 
   <!-- *************** -->
   <!-- Project Section -->
-  <section id="project">
+  <section id="project" itemscope itemtype="http://schema.org/CreativeWork">
 
     <h2 class="primary-sea solid-slight">
       <i class="fa fa-github" aria-hidden="true"></i> Projets
     </h2>
 
-    <p class="intro primary-sea double-slight-lg inset-spread-sm anime-shrinkS-sm">Mes <strong>projets</strong> touchent diverses <em>technologies</em> :<br><strong>HTML5, Twig, Pug, CSS3, Sass, Stylus, JavaScript, jQuery, Nodejs, PHP7, Symfony3, MySQL</strong></p>
+    <p class="intro primary-sea double-slight-lg inset-spread-sm anime-shrinkS-sm">Mes <strong>projets</strong> touchent diverses <em>technologies</em> :<br><strong>HTML, Twig, Pug, CSS, Sass, Stylus, Bootstrap, JavaScript, jQuery, Node, PHP, Symfony, SQL</strong></p>
 
 
     <!-- Follow button -->
@@ -38,20 +38,22 @@
       <li>
 
         <!-- Project link to GitHub -->
-        <a href="{{ project.link }}" title="Voir le projet sur GitHub">
+        <a itemprop="url" href="{{ project.link }}" title="Voir le projet sur GitHub">
 
           <figure class="btn primary-outline solid-rounder-lg inset-spread-lg anime-grow-md">
 
             <!-- Project screenshot -->
-            <img class="visible hover-full-tn-loop-alt" src="img/portfolio/{{ project.image }}" alt="Screenshot du projet {{ project.name }}">
+            <img class="visible hover-full-tn-loop-alt" src="img/portfolio/{{ project.image }}" alt="Screenshot du projet {{ project.name }}" itemprop="thumbnailUrl">
 
             <figcaption class="visible anime-halfX-md-springL">
 
               <!-- Project name & starting year -->
-              <h3>{{ project.name }}</h3>
+              <h3 itemprop="name">{{ project.name }}</h3>
 
               <!-- Project description -->
-              <p>{{ project.description }} <span class="block">{{ project.year }}</span></p>
+              <p itemprop="description">{{ project.description }}</p>
+
+              <p itemprop="dateCreated">{{ project.year }}</p>
 
             </figcaption>
           </figure>
@@ -68,7 +70,7 @@
 
   <!-- *********** -->
   <!-- Pen Section -->
-  <section id="pen">
+  <section id="pen" itemscope itemtype="http://schema.org/CreativeWork">
     <h2 class="primary-glass solid-slight"><i class="fa fa-codepen" aria-hidden="true"></i> Pens</h2>
 
     <p class="intro primary-glass double-slight-lg inset-spread-sm">Mes <strong>pens</strong> font partie du cursus de <em>Free Code Camp</em> pour la certification de <strong>développement front-end</strong>...</p>
@@ -82,7 +84,7 @@
       <li>
 
         <!-- The pen name -->
-        <h3>{{ pen.name }}</h3>
+        <h3 itemprop="name">{{ pen.name }}</h3>
 
         <!-- The pen objective link -->
         <a class="btn freecodecamp-btn solid-round-sm blur mr-sm" href="{{ pen.description}}" title="Voir les objectifs">
