@@ -15,21 +15,21 @@
 <main id="read-atlas">
 
   <!-- Map list -->
-  <ul class="grid-2sm-3md-4lg-5wd gap-lg items-end">
+  <ul class="grid-2sm-3md-4lg-5wd gap-lg items-end" itemscope itemtype="http://schema.org/CreativeWork">
 
     <!-- Map foreach -->
     {% for key, map in atlasMaps %}
     <li>
 
       <!-- Map link to the picture -->
-      <a href="img/atlas/img/{{ map.name}}.jpg" title="Cliquer pour agrandir">
+      <a href="img/atlas/img/{{ map.name}}.jpg" title="Cliquer pour agrandir" itemprop="image">
         <figure class="btn classic-light solid-rounded-lg spread">
 
           <!-- Map thumbnail  -->
-          <img src="img/atlas/thumb/{{ map.name }}t.jpg" alt="{{ atlas.name }} planche n°{{ key + 1 }}">
+          <img src="img/atlas/thumb/{{ map.name }}t.jpg" alt="{{ atlas.name }} planche n°{{ key + 1 }}" itemprop="thumbnailUrl">
 
           <!-- Map description -->
-          <figcaption>{{ map.description }}</figcaption>
+          <figcaption itemprop="description">{{ map.description }}</figcaption>
 
         </figure>
       </a>

@@ -38,24 +38,24 @@
 
       <!-- Loop on all atlas -->
       {% for atlas in allAtlas %}
-      <tr>
+      <tr itemscope itemtype="http://schema.org/CreativeWork">
 
         <!-- Atlas name -->
         <td>
           {% if atlas.wiki %}
-          <a class="btn primary-light solid-rounder help anime-flipY-md" href="{{ atlas.wiki }}" title="Wiki sur l'atlas">
-            {{ atlas.name }}
+          <a class="btn primary-light solid-rounder help anime-flipY-md" href="{{ atlas.wiki }}" title="Wiki sur l'atlas" itemprop="about">
+            <span itemprop="name">{{ atlas.name }}</span>
           </a>
           {% else %}
-          {{ atlas.name }}
+          <span itemprop="name">{{ atlas.name }}</span>
           {% endif %}
         </td>
 
         <!-- Read atlas button -->
         <td>
-          <a class="btn valid-btn solid-round blur crosshair anime-flipX-md" href="{{ url('atlas!read', {'id': atlas.id}) }}" title="Voir l'atlas">
+          <a class="btn valid-btn solid-round blur crosshair anime-flipX-md" href="{{ url('atlas!read', {'id': atlas.id}) }}" title="Voir l'atlas" itemprop="url">
             <i class="fa fa-map-o fa-lg" aria-hidden="true"></i>
-            <span class="block">{{ atlas.year }}</span>
+            <div itemprop="copyrightYear">{{ atlas.year }}</div>
           </a>
         </td>
 
@@ -63,10 +63,10 @@
         <td>
           {% if atlas.author_wiki %}
           <a class="btn secondary-light solid-rounder help anime-flipY-md" href="{{ atlas.author_wiki }}" title="Wiki sur l'auteur">
-            {{ atlas.author_name }}
+            <span itemprop="author">{{ atlas.author_name }}</span>
           </a>
           {% else %}
-          {{ atlas.author_name }}
+          <span itemprop="author">{{ atlas.author_name }}</span>
           {% endif %}
         </td>
       </tr>
