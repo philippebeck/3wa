@@ -17,7 +17,7 @@
 
   <!-- *************** -->
   <!-- Project Section -->
-  <section id="project" itemscope itemtype="http://schema.org/CreativeWork">
+  <section id="project">
 
     <h2 class="primary-sea solid-slight">
       <i class="fa fa-github" aria-hidden="true"></i> Projets
@@ -35,7 +35,7 @@
       <!-- Loop on all projects -->
       {% for project in allProjects %}
 
-      <li>
+      <li itemscope itemtype="http://schema.org/CreativeWork">
 
         <!-- Project link to GitHub -->
         <a itemprop="url" href="{{ project.link }}" title="Voir le projet sur GitHub">
@@ -47,12 +47,13 @@
 
             <figcaption class="visible anime-halfX-md-springL">
 
-              <!-- Project name & starting year -->
+              <!-- Project name -->
               <h3 itemprop="name">{{ project.name }}</h3>
 
               <!-- Project description -->
               <p itemprop="description">{{ project.description }}</p>
 
+              <!-- Project year creation -->
               <p itemprop="dateCreated">{{ project.year }}</p>
 
             </figcaption>
@@ -70,7 +71,7 @@
 
   <!-- *********** -->
   <!-- Pen Section -->
-  <section id="pen" itemscope itemtype="http://schema.org/CreativeWork">
+  <section id="pen">
     <h2 class="primary-glass solid-slight"><i class="fa fa-codepen" aria-hidden="true"></i> Pens</h2>
 
     <p class="intro primary-glass double-slight-lg inset-spread-sm">Mes <strong>pens</strong> font partie du cursus de <em>Free Code Camp</em> pour la certification de <strong>développement front-end</strong>...</p>
@@ -81,18 +82,18 @@
       <!-- Loop on all pens -->
       {% for pen in allPens %}
 
-      <li>
+      <li itemscope itemtype="http://schema.org/CreativeWork">
 
         <!-- The pen name -->
         <h3 itemprop="name">{{ pen.name }}</h3>
 
         <!-- The pen objective link -->
-        <a class="btn freecodecamp-btn solid-round-sm blur mr-sm" href="{{ pen.description}}" title="Voir les objectifs">
+        <a class="btn freecodecamp-btn solid-round-sm blur mr-sm" href="{{ pen.description}}" title="Voir les objectifs" itemprop="description">
           <i class="fa fa-free-code-camp fa-lg fa-fw" aria-hidden="true"></i>
         </a>
 
         <!-- The pen -->
-        <a class="btn default-btn solid-round-sm blur" href="{{ pen.link }}" title="Voir le pen">
+        <a class="btn default-btn solid-round-sm blur" href="{{ pen.link }}" title="Voir le pen" itemprop="url">
           <i class="fa fa-codepen fa-lg fa-fw" aria-hidden="true"></i>
         </a>
 
@@ -141,7 +142,7 @@
             {{ include('svg/sql.svg.twig') }}
 
             <!-- Technologies informations -->
-            <figcaption><em>Formation intensive sur 5 technologies</em></figcaption>
+            <figcaption>Formation intensive sur 5 technologies</figcaption>
           </figure>
         </a>
       </li>
@@ -227,18 +228,18 @@
 
         <!-- Loop on all courses -->
         {% for course in allCourses %}
-        <tr>
+        <tr itemscope itemtype="http://schema.org/Course">
 
           <!-- Course name & link -->
           <td>
-            <a class="btn info-outline solid-rounder inset-spread-sm" href="{{ course.link }}" title="Accéder au cours">
-              {{ course.name }}
+            <a class="btn info-outline solid-rounder inset-spread-sm" href="{{ course.link }}" title="Accéder au cours" itemprop="url">
+              <span itemprop="name">{{ course.name }}</span>
             </a>
           </td>
 
           <!-- Course certificate & link -->
           <td>
-            <a class="btn valid-outline solid-rounder inset-blur" href="{{ course.certif_link }}" title="Voir le certificat n° {{ course.certif_id }}">
+            <a class="btn valid-outline solid-rounder inset-blur" href="{{ course.certif_link }}" title="Voir le certificat n° {{ course.certif_id }}" itemprop="educationalCredentialAwarded">
               {{ date(course.certif_date)|date('d/m/y') }}
             </a>
           </td>
