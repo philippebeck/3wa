@@ -70,425 +70,425 @@
             <!-- Article create date -->
             <td>{{ date(article.created_date)|date('d M Y') }} à {{ date(article.created_date)|date('H:i:s') }}<hr>{{ date(article.updated_date)|date('d M Y') }} à {{ date(article.updated_date)|date('H:i:s') }}</td>
 
-              <!-- Update article button -->
-              <td>
-                <a class="btn info-btn solid-round-sm blur mb-sm" href="{{ url('article!update', {'id': article.id}) }}" title="Modifier l'article">
-                  <i class="fa fa-pencil-square-o fa-fw fa-lg" aria-hidden="true"></i>
-                </a>
-
-                <!-- Delete Article Button -->
-                <a class="btn delete-btn solid-round-sm blur" href="{{ url('article!delete', {'id': article.id}) }}" title="Supprimer l'article">
-                  <i class="fa fa-times-circle-o fa-fw fa-lg" aria-hidden="true"></i>
-                </a>
-              </td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </section>
-
-
-      <!-- ************ -->
-      <!-- User Section -->
-      <section>
-        <h3>
-          <i class="fa fa-users" aria-hidden="true"></i> Utilisateurs
-        </h3>
-
-        <!-- Create user button -->
-        <a class="btn valid-outline double-rounder spread" href="{{ url('user!create') }}">
-          Créer un nouvel utilisateur <i class="fa fa-user" aria-hidden="true"></i>
-        </a>
-
-        <!-- User table -->
-        <table class="cancel-glass ridge-lg inset-blur">
-
-          <!-- Table header -->
-          <thead>
-            <tr>
-              <th>Id<br>Nom</th>
-              <th>Photo</th>
-              <th>Email<br>Résidence</th>
-              <th>Création<br>Édition</th>
-              <th>Modifier Supprimer</th>
-            </tr>
-          </thead>
-
-          <tbody>
-
-            <!-- Loop on all users -->
-            {% for user in allUsers %}
-            <tr>
-
-              <!-- User name -->
-              <td>{{ user.id }}<br>{{ user.first_name }} {{ user.last_name }}</td>
-
-              <!-- User photo -->
-              <td>
-                <img class="solid-rounded-sm" src="img/user/{{ user.image }}" alt="Photo de profil" width="50px">
-              </td>
-
-              <!-- User email -->
-              <td>{{ user.email }}<hr>{{ user.zipcode }} {{ user.country }}</td>
-
-              <!-- User created & updated dates -->
-              <td>{{ date(user.created_date)|date('d M Y') }} à {{ date(user.created_date)|date('H:i:s') }}<hr>{{ date(user.updated_date)|date('d M Y') }} à {{ date(user.updated_date)|date('H:i:s') }}</td>
-
-                <!-- Update user button -->
-                <td>
-                  <a class="btn info-btn solid-round-sm blur mb-sm" href="{{ url('user!update', {'id': user.id}) }}">
-                    <i class="fa fa-pencil-square-o fa-fw fa-lg" aria-hidden="true"></i>
-                  </a>
-
-                  <!-- Delete user button -->
-                  <a class="btn delete-btn solid-round-sm blur" href="{{ url('user!delete', {'id': user.id}) }}">
-                    <i class="fa fa-times-circle-o fa-fw fa-lg" aria-hidden="true"></i>
-                  </a>
-                </td>
-
-              </tr>
-              {% endfor %}
-
-            </tbody>
-          </table>
-        </section>
-
-
-        <!-- *************** -->
-        <!-- Comment Section -->
-        <section>
-          <h3>
-            <i class="fa fa-comments-o" aria-hidden="true"></i> Commentaires
-          </h3>
-
-          <!-- Comment table -->
-          <table class="cancel-glass ridge-lg inset-blur">
-
-            <!-- Table header -->
-            <thead>
-              <tr>
-                <th>Id</th>
-                <th>Article</th>
-                <th>Contenu</th>
-                <th>Création</th>
-                <th>Supprimer</th>
-              </tr>
-            </thead>
-
-            <tbody>
-
-              <!-- Comment foreach  -->
-              {% for comment in allComments %}
-              <tr>
-
-                <!-- Comment id -->
-                <td>{{ comment.id }}</td>
-
-                <!-- Article link button -->
-                <td>
-                  <a class="btn special-btn solid-round-sm blur" href="{{ url('article!read', {'id': comment.article_id}) }}">
-                    <i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i>
-                  </a>
-                </td>
-
-                <!-- Comment content -->
-                <td>{{ comment.content }}</td>
-
-                <!-- Comment create date -->
-                <td>{{ date(comment.created_date)|date('d M Y') }} à {{ date(comment.created_date)|date('H:i:s') }}</td>
-
-                <!-- Delete comment button -->
-                <td>
-                  <a class="btn delete-btn solid-round-sm blur" href={{ url('comment!delete', {'id': comment.id}) }}>
-                    <i class="fa fa-times-circle-o fa-fw fa-lg" aria-hidden="true"></i>
-                  </a>
-                </td>
-
-              </tr>
-              {% endfor %}
-
-            </tbody>
-          </table>
-        </section>
-      </section>
-
-      <section>
-        <h2 class="solid-slight mt-lg">
-          <i class="fa fa-suitcase" aria-hidden="true"></i> Portfolio
-        </h2>
-
-
-        <!-- *************** -->
-        <!-- Project Section -->
-        <section>
-          <h3>
-            <i class="fa fa-github-square" aria-hidden="true"></i> Projets
-          </h3>
-
-          <!-- Create project button -->
-          <a class="btn valid-outline double-rounder spread" href="{{ url('project!create') }}">
-            Ajouter un nouveau projet <i class="fa fa-github-square" aria-hidden="true"></i>
-          </a>
-
-          <!-- Project table -->
-          <table class="cancel-glass ridge-lg inset-blur">
-
-            <!-- Table header -->
-            <thead>
-              <tr>
-                <th>Id<br>Projet</th>
-                <th>Image</th>
-                <th>Description</th>
-                <th>Création</th>
-                <th>Modifier Supprimer</th>
-              </tr>
-            </thead>
-
-            <tbody>
-
-              <!-- Project foreach  -->
-              {% for project in allProjects %}
-              <tr>
-
-                <!-- Project name -->
-                <td>
-                  <a class="btn special-outline solid-rounder inset-spread" href="{{ project.link }}" title="Voir le code du projet">
-                    {{ project.id }}<br>{{ project.name }}
-                  </a>
-                </td>
-
-                <!-- Project image -->
-                <td>
-                  <a class="btn warning-light solid-rounded inset-blur" href="img/portfolio/{{ project.image }}" title="Voir le screenshot">
-                    <img src="img/portfolio/{{ project.image }}" alt="Screenshot du projet {{ project.name }}">
-                  </a>
-                </td>
-
-                <!-- Project description -->
-                <td>{{ project.description }}</td>
-
-                <!-- Project creation year -->
-                <td>{{ project.year }}</td>
-
-                <!-- Update project button -->
-                <td>
-                  <a class="btn info-btn solid-round-sm blur mb-sm" href="{{ url('project!update', {'id': project.id}) }}">
-                    <i class="fa fa-pencil-square-o fa-fw fa-lg" aria-hidden="true"></i>
-                  </a>
-
-                  <!-- Delete project button -->
-                  <a class="btn delete-btn solid-round-sm blur" href="{{ url('project!delete', {'id': project.id}) }}">
-                    <i class="fa fa-times-circle-o fa-fw fa-lg" aria-hidden="true"></i>
-                  </a>
-                </td>
-
-              </tr>
-              {% endfor %}
-
-            </tbody>
-          </table>
-        </section>
-
-
-        <!-- *********** -->
-        <!-- Pen Section -->
-        <section>
-          <h3>
-            <i class="fa fa-codepen" aria-hidden="true"></i> Pens
-          </h3>
-
-          <!-- Create pen button -->
-          <a class="btn valid-outline double-rounder spread" href="{{ url('pen!create') }}">
-            Ajouter un nouveau pen <i class="fa fa-codepen" aria-hidden="true"></i>
-          </a>
-
-          <!-- Pen table -->
-          <table class="cancel-glass ridge-lg inset-blur">
-
-            <!-- Table header -->
-            <thead>
-              <tr>
-                <th>Id<br>Nom</th>
-                <th>Pen</th>
-                <th>Objectifs</th>
-                <th>Modifier Supprimer</th>
-              </tr>
-            </thead>
-
-            <tbody>
-
-              <!-- Pen foreach  -->
-              {% for pen in allPens %}
-              <tr>
-
-                <!-- Pen name -->
-                <td>{{ pen.id }}<br>{{ pen.name }}</td>
-
-                <!-- Pen link -->
-                <td>
-                  <a class="btn default-btn solid-round-sm blur" href="{{ pen.link }}" title="Voir le pen">
-                    <i class="fa fa-codepen fa-fw fa-lg" aria-hidden="true"></i>
-                  </a>
-                </td>
-
-                <!-- Pen objective link -->
-                <td>
-                  <a class="btn freecodecamp-btn solid-round-sm blur" href="{{ pen.objective_link }}" title="Voir les objectifs">
-                    <i class="fa fa-free-code-camp fa-fw fa-lg" aria-hidden="true"></i>
-                  </a>
-                </td>
-
-                <!-- Update pen button -->
-                <td>
-                  <a class="btn info-btn solid-round-sm blur mb-sm" href="{{ url('pen!update', {'id': pen.id}) }}" title="Editer ce pen">
-                    <i class="fa fa-pencil-square-o fa-fw fa-lg" aria-hidden="true"></i>
-                  </a>
-
-                  <!-- Delete pen button -->
-                  <a class="btn delete-btn solid-round-sm blur" href="{{ url('pen!delete', {'id': pen.id}) }}" title="Supprimer ce pen">
-                    <i class="fa fa-times-circle-o fa-fw fa-lg" aria-hidden="true"></i>
-                  </a>
-                </td>
-
-              </tr>
-              {% endfor %}
-
-            </tbody>
-          </table>
-        </section>
-
-
-        <!-- ************* -->
-        <!-- Route Section -->
-        <section>
-          <h3>
-            <i class="fa fa-road" aria-hidden="true"></i> Parcours
-          </h3>
-
-          <!-- Create route button -->
-          <a class="btn valid-outline double-rounder spread" href="{{ url('route!create') }}">
-            Ajouter un nouveau parcours certifié <i class="fa fa-road" aria-hidden="true"></i>
-          </a>
-
-          <!-- Route table -->
-          <table class="cancel-glass ridge-lg inset-blur">
-
-            <!-- Table header -->
-            <thead>
-              <tr>
-                <th>Id<br>Parcours</th>
-                <th>Certificat</th>
-                <th>Obtention</th>
-                <th>Modifier Supprimer</th>
-              </tr>
-            </thead>
-
-            <tbody>
-
-              <!-- Loop on all routes -->
-              {% for route in allRoutes %}
-              <tr>
-
-                <!-- Route name -->
-                <td>{{ route.id }}<br>{{ route.name }}</td>
-
-                <!-- Route certificate -->
-                <td>
-                  <a class="btn valid-outline solid-rounder inset-spread-sm" href="{{ route.certif_link }}" title="Voir le certificat">
-                    {{ route.certif_id }}
-                  </a>
-                </td>
-
-                <!-- Route certificate date -->
-                <td>{{ date(route.certif_date)|date('d M Y') }}</td>
-
-                <!-- Update route button -->
-                <td>
-                  <a class="btn info-btn solid-round-sm blur mb-sm" href="{{ url('route!update', {'id': route.id}) }}">
-                    <i class="fa fa-pencil-square-o fa-fw fa-lg" aria-hidden="true"></i>
-                  </a>
-
-                  <!-- Delete route button -->
-                  <a class="btn delete-btn solid-round-sm blur" href="{{ url('route!delete', {'id': route.id}) }}">
-                    <i class="fa fa-times-circle-o fa-fw fa-lg" aria-hidden="true"></i>
-                  </a>
-                </td>
-
-              </tr>
-              {% endfor %}
-
-            </tbody>
-          </table>
-        </section>
-
-
-        <!-- ************** -->
-        <!-- Course Section -->
-        <section>
-          <h3>
-            <i class="fa fa-book" aria-hidden="true"></i> Cours
-          </h3>
-
-          <!-- Create course button -->
-          <a class="btn valid-outline double-rounder spread" href="{{ url('course!create') }}">
-            Ajouter un nouveau cours certifié <i class="fa fa-book" aria-hidden="true"></i>
-          </a>
-
-          <!-- Course table -->
-          <table class="cancel-glass ridge-lg inset-blur">
-
-            <!-- Table header -->
-            <thead>
-              <tr>
-                <th>Id<br>Cours</th>
-                <th>Certificat</th>
-                <th>Obtention</th>
-                <th>Modifier Supprimer</th>
-              </tr>
-            </thead>
-
-            <tbody>
-
-              <!-- Loop on all courses -->
-              {% for course in allCourses %}
-              <tr>
-
-                <!-- Course name -->
-                <td>
-                  <a class="btn info-outline solid-rounder inset-spread-sm" href="{{ course.link }}" title="Accéder au cours">
-                    {{ course.id }}<br>{{ course.name }}
-                  </a>
-                </td>
-
-                <!-- Course certificate -->
-                <td>
-                  <a class="btn valid-outline solid-rounder inset-spread-sm" href="{{ course.certif_link }}" title="Voir le certificat">
-                    {{ course.certif_id }}
-                  </a>
-                </td>
-
-                <!-- Course create date -->
-                <td>{{ date(course.certif_date)|date('d M Y') }}</td>
-
-                <!-- Update course button -->
-                <td>
-                  <a class="btn info-btn solid-round-sm blur mb-sm" href="{{ url('course!update', {'id': course.id}) }}">
-                    <i class="fa fa-pencil-square-o fa-fw fa-lg" aria-hidden="true"></i>
-                  </a>
-
-                  <!-- Delete course button -->
-                  <a class="btn delete-btn solid-round-sm blur" href="{{ url('course!delete', {'id': course.id}) }}">
-                    <i class="fa fa-times-circle-o fa-fw fa-lg" aria-hidden="true"></i>
-                  </a>
-                </td>
-
-              </tr>
-              {% endfor %}
-
-            </tbody>
-          </table>
-        </section>
-      </section>
-    </main>
-
-    {% endblock %}
+            <!-- Update article button -->
+            <td>
+              <a class="btn info-btn solid-round-sm blur mb-sm" href="{{ url('article!update', {'id': article.id}) }}" title="Modifier l'article">
+                <i class="fa fa-pencil-square-o fa-fw fa-lg" aria-hidden="true"></i>
+              </a>
+
+              <!-- Delete Article Button -->
+              <a class="btn delete-btn solid-round-sm blur" href="{{ url('article!delete', {'id': article.id}) }}" title="Supprimer l'article">
+                <i class="fa fa-times-circle-o fa-fw fa-lg" aria-hidden="true"></i>
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+
+
+    <!-- ************ -->
+    <!-- User Section -->
+    <section>
+      <h3>
+        <i class="fa fa-users" aria-hidden="true"></i> Utilisateurs
+      </h3>
+
+      <!-- Create user button -->
+      <a class="btn valid-outline double-rounder spread" href="{{ url('user!create') }}">
+        Créer un nouvel utilisateur <i class="fa fa-user" aria-hidden="true"></i>
+      </a>
+
+      <!-- User table -->
+      <table class="cancel-glass ridge-lg inset-blur">
+
+        <!-- Table header -->
+        <thead>
+          <tr>
+            <th>Id<br>Nom</th>
+            <th>Photo</th>
+            <th>Email<br>Résidence</th>
+            <th>Création<br>Édition</th>
+            <th>Modifier Supprimer</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <!-- Loop on all users -->
+          {% for user in allUsers %}
+          <tr>
+
+            <!-- User name -->
+            <td>{{ user.id }}<br>{{ user.first_name }} {{ user.last_name }}</td>
+
+            <!-- User photo -->
+            <td>
+              <img class="solid-rounded-sm" src="img/user/{{ user.image }}" alt="Photo de profil" width="50px">
+            </td>
+
+            <!-- User email -->
+            <td>{{ user.email }}<hr>{{ user.zipcode }} {{ user.country }}</td>
+
+            <!-- User created & updated dates -->
+            <td>{{ date(user.created_date)|date('d M Y') }} à {{ date(user.created_date)|date('H:i:s') }}<hr>{{ date(user.updated_date)|date('d M Y') }} à {{ date(user.updated_date)|date('H:i:s') }}</td>
+
+            <!-- Update user button -->
+            <td>
+              <a class="btn info-btn solid-round-sm blur mb-sm" href="{{ url('user!update', {'id': user.id}) }}">
+                <i class="fa fa-pencil-square-o fa-fw fa-lg" aria-hidden="true"></i>
+              </a>
+
+              <!-- Delete user button -->
+              <a class="btn delete-btn solid-round-sm blur" href="{{ url('user!delete', {'id': user.id}) }}">
+                <i class="fa fa-times-circle-o fa-fw fa-lg" aria-hidden="true"></i>
+              </a>
+            </td>
+
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+    </section>
+
+
+    <!-- *************** -->
+    <!-- Comment Section -->
+    <section>
+      <h3>
+        <i class="fa fa-comments-o" aria-hidden="true"></i> Commentaires
+      </h3>
+
+      <!-- Comment table -->
+      <table class="cancel-glass ridge-lg inset-blur">
+
+        <!-- Table header -->
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Article</th>
+            <th>Contenu</th>
+            <th>Création</th>
+            <th>Supprimer</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <!-- Comment foreach  -->
+          {% for comment in allComments %}
+          <tr>
+
+            <!-- Comment id -->
+            <td>{{ comment.id }}</td>
+
+            <!-- Article link button -->
+            <td>
+              <a class="btn special-btn solid-round-sm blur" href="{{ url('article!read', {'id': comment.article_id}) }}">
+                <i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i>
+              </a>
+            </td>
+
+            <!-- Comment content -->
+            <td>{{ comment.content }}</td>
+
+            <!-- Comment create date -->
+            <td>{{ date(comment.created_date)|date('d M Y') }} à {{ date(comment.created_date)|date('H:i:s') }}</td>
+
+            <!-- Delete comment button -->
+            <td>
+              <a class="btn delete-btn solid-round-sm blur" href={{ url('comment!delete', {'id': comment.id}) }}>
+                <i class="fa fa-times-circle-o fa-fw fa-lg" aria-hidden="true"></i>
+              </a>
+            </td>
+
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+    </section>
+  </section>
+
+  <section>
+    <h2 class="solid-slight mt-lg">
+      <i class="fa fa-suitcase" aria-hidden="true"></i> Portfolio
+    </h2>
+
+
+    <!-- *************** -->
+    <!-- Project Section -->
+    <section>
+      <h3>
+        <i class="fa fa-github-square" aria-hidden="true"></i> Projets
+      </h3>
+
+      <!-- Create project button -->
+      <a class="btn valid-outline double-rounder spread" href="{{ url('project!create') }}">
+        Ajouter un nouveau projet <i class="fa fa-github-square" aria-hidden="true"></i>
+      </a>
+
+      <!-- Project table -->
+      <table class="cancel-glass ridge-lg inset-blur">
+
+        <!-- Table header -->
+        <thead>
+          <tr>
+            <th>Id<br>Projet</th>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Création</th>
+            <th>Modifier Supprimer</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <!-- Project foreach  -->
+          {% for project in allProjects %}
+          <tr>
+
+            <!-- Project name -->
+            <td>
+              <a class="btn special-outline solid-rounder inset-spread" href="{{ project.link }}" title="Voir le code du projet">
+                {{ project.id }}<br>{{ project.name }}
+              </a>
+            </td>
+
+            <!-- Project image -->
+            <td>
+              <a class="btn warning-light solid-rounded inset-blur" href="img/portfolio/{{ project.image }}" title="Voir le screenshot">
+                <img src="img/portfolio/{{ project.image }}" alt="Screenshot du projet {{ project.name }}">
+              </a>
+            </td>
+
+            <!-- Project description -->
+            <td>{{ project.description }}</td>
+
+            <!-- Project creation year -->
+            <td>{{ project.year }}</td>
+
+            <!-- Update project button -->
+            <td>
+              <a class="btn info-btn solid-round-sm blur mb-sm" href="{{ url('project!update', {'id': project.id}) }}">
+                <i class="fa fa-pencil-square-o fa-fw fa-lg" aria-hidden="true"></i>
+              </a>
+
+              <!-- Delete project button -->
+              <a class="btn delete-btn solid-round-sm blur" href="{{ url('project!delete', {'id': project.id}) }}">
+                <i class="fa fa-times-circle-o fa-fw fa-lg" aria-hidden="true"></i>
+              </a>
+            </td>
+
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+    </section>
+
+
+    <!-- *********** -->
+    <!-- Pen Section -->
+    <section>
+      <h3>
+        <i class="fa fa-codepen" aria-hidden="true"></i> Pens
+      </h3>
+
+      <!-- Create pen button -->
+      <a class="btn valid-outline double-rounder spread" href="{{ url('pen!create') }}">
+        Ajouter un nouveau pen <i class="fa fa-codepen" aria-hidden="true"></i>
+      </a>
+
+      <!-- Pen table -->
+      <table class="cancel-glass ridge-lg inset-blur">
+
+        <!-- Table header -->
+        <thead>
+          <tr>
+            <th>Id<br>Nom</th>
+            <th>Objectifs</th>
+            <th>Pen</th>
+            <th>Modifier Supprimer</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <!-- Pen foreach  -->
+          {% for pen in allPens %}
+          <tr>
+
+            <!-- Pen name -->
+            <td>{{ pen.id }}<br>{{ pen.name }}</td>
+
+            <!-- Pen objective link -->
+            <td>
+              <a class="btn freecodecamp-btn solid-round-sm blur" href="{{ pen.objective_link }}" title="Voir les objectifs">
+                <i class="fa fa-free-code-camp fa-fw fa-lg" aria-hidden="true"></i>
+              </a>
+            </td>
+
+            <!-- Pen link -->
+            <td>
+              <a class="btn default-btn solid-round-sm blur" href="{{ pen.link }}" title="Voir le pen">
+                <i class="fa fa-codepen fa-fw fa-lg" aria-hidden="true"></i>
+              </a>
+            </td>
+
+            <!-- Update pen button -->
+            <td>
+              <a class="btn info-btn solid-round-sm blur mb-sm" href="{{ url('pen!update', {'id': pen.id}) }}" title="Editer ce pen">
+                <i class="fa fa-pencil-square-o fa-fw fa-lg" aria-hidden="true"></i>
+              </a>
+
+              <!-- Delete pen button -->
+              <a class="btn delete-btn solid-round-sm blur" href="{{ url('pen!delete', {'id': pen.id}) }}" title="Supprimer ce pen">
+                <i class="fa fa-times-circle-o fa-fw fa-lg" aria-hidden="true"></i>
+              </a>
+            </td>
+
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+    </section>
+
+
+    <!-- ************* -->
+    <!-- Route Section -->
+    <section>
+      <h3>
+        <i class="fa fa-road" aria-hidden="true"></i> Parcours
+      </h3>
+
+      <!-- Create route button -->
+      <a class="btn valid-outline double-rounder spread" href="{{ url('route!create') }}">
+        Ajouter un nouveau parcours certifié <i class="fa fa-road" aria-hidden="true"></i>
+      </a>
+
+      <!-- Route table -->
+      <table class="cancel-glass ridge-lg inset-blur">
+
+        <!-- Table header -->
+        <thead>
+          <tr>
+            <th>Id<br>Parcours</th>
+            <th>Certificat</th>
+            <th>Obtention</th>
+            <th>Modifier Supprimer</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <!-- Loop on all routes -->
+          {% for route in allRoutes %}
+          <tr>
+
+            <!-- Route name -->
+            <td>{{ route.id }}<br>{{ route.name }}</td>
+
+            <!-- Route certificate -->
+            <td>
+              <a class="btn valid-outline solid-rounder inset-spread-sm" href="{{ route.certif_link }}" title="Voir le certificat">
+                {{ route.certif_id }}
+              </a>
+            </td>
+
+            <!-- Route certificate date -->
+            <td>{{ date(route.certif_date)|date('d M Y') }}</td>
+
+            <!-- Update route button -->
+            <td>
+              <a class="btn info-btn solid-round-sm blur mb-sm" href="{{ url('route!update', {'id': route.id}) }}">
+                <i class="fa fa-pencil-square-o fa-fw fa-lg" aria-hidden="true"></i>
+              </a>
+
+              <!-- Delete route button -->
+              <a class="btn delete-btn solid-round-sm blur" href="{{ url('route!delete', {'id': route.id}) }}">
+                <i class="fa fa-times-circle-o fa-fw fa-lg" aria-hidden="true"></i>
+              </a>
+            </td>
+
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+    </section>
+
+
+    <!-- ************** -->
+    <!-- Course Section -->
+    <section>
+      <h3>
+        <i class="fa fa-book" aria-hidden="true"></i> Cours
+      </h3>
+
+      <!-- Create course button -->
+      <a class="btn valid-outline double-rounder spread" href="{{ url('course!create') }}">
+        Ajouter un nouveau cours certifié <i class="fa fa-book" aria-hidden="true"></i>
+      </a>
+
+      <!-- Course table -->
+      <table class="cancel-glass ridge-lg inset-blur">
+
+        <!-- Table header -->
+        <thead>
+          <tr>
+            <th>Id<br>Cours</th>
+            <th>Certificat</th>
+            <th>Obtention</th>
+            <th>Modifier Supprimer</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <!-- Loop on all courses -->
+          {% for course in allCourses %}
+          <tr>
+
+            <!-- Course name -->
+            <td>
+              <a class="btn info-outline solid-rounder inset-spread-sm" href="{{ course.link }}" title="Accéder au cours">
+                {{ course.id }}<br>{{ course.name }}
+              </a>
+            </td>
+
+            <!-- Course certificate -->
+            <td>
+              <a class="btn valid-outline solid-rounder inset-spread-sm" href="{{ course.certif_link }}" title="Voir le certificat">
+                {{ course.certif_id }}
+              </a>
+            </td>
+
+            <!-- Course create date -->
+            <td>{{ date(course.certif_date)|date('d M Y') }}</td>
+
+            <!-- Update course button -->
+            <td>
+              <a class="btn info-btn solid-round-sm blur mb-sm" href="{{ url('course!update', {'id': course.id}) }}">
+                <i class="fa fa-pencil-square-o fa-fw fa-lg" aria-hidden="true"></i>
+              </a>
+
+              <!-- Delete course button -->
+              <a class="btn delete-btn solid-round-sm blur" href="{{ url('course!delete', {'id': course.id}) }}">
+                <i class="fa fa-times-circle-o fa-fw fa-lg" aria-hidden="true"></i>
+              </a>
+            </td>
+
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+    </section>
+  </section>
+</main>
+
+{% endblock %}
