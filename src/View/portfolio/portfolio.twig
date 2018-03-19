@@ -235,10 +235,23 @@
             <a class="btn info-outline solid-rounder inset-spread-sm" href="{{ course.link }}" title="Accéder au cours" itemprop="url">
               <span itemprop="name">{{ course.name }}</span>
             </a>
+            <p itemprop="description">{{ course.description }}</p>
           </td>
 
           <!-- Course certificate & link -->
           <td>
+            <figure>
+              {% if course.provider_logo == 'oc' %}
+                <a href="https://openclassrooms.com" title="Accéder à OpenClassrooms" itemprop="provider">
+                  {{ include('svg/oc.svg.twig') }}
+                </a>
+              {% else %}
+                <a href="https://www.sololearn.com" title="Accéder à SoloLearn" itemprop="provider">
+                  {{ include('svg/sl.svg.twig') }}
+                </a>
+              {% endif %}
+            </figure>
+
             <a class="btn valid-outline solid-rounder inset-blur" href="{{ course.certif_link }}" title="Voir le certificat n° {{ course.certif_id }}" itemprop="educationalCredentialAwarded">
               {{ date(course.certif_date)|date('d/m/y') }}
             </a>
