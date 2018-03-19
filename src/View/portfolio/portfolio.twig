@@ -178,7 +178,7 @@
       <thead>
         <tr>
           <th>Parcours</th>
-          <th>Certification</th>
+          <th>Certificat</th>
         </tr>
       </thead>
 
@@ -191,9 +191,9 @@
           <!-- Route name -->
           <td>{{ route.name }}</td>
 
-          <!-- Route certificate & link -->
+          <!-- Route certificate -->
           <td>
-            <a class="btn valid-outline solid-rounder inset-blur" href="{{ route.certif_link }}" title="Voir le certificat n° {{ route.certif_id }}">
+            <a class="btn valid-outline solid-rounder inset-spread-sm" href="{{ route.certif_link }}" title="Voir le certificat n° {{ route.certif_id }}">
               {{ date(route.certif_date)|date('d/m/y') }}
             </a>
           </td>
@@ -220,7 +220,7 @@
       <thead>
         <tr>
           <th>Cours</th>
-          <th>Certification</th>
+          <th>Certificat</th>
         </tr>
       </thead>
 
@@ -230,7 +230,7 @@
         {% for course in allCourses %}
         <tr itemscope itemtype="http://schema.org/Course">
 
-          <!-- Course name & link -->
+          <!-- Course name -->
           <td>
             <a class="btn info-outline solid-rounder inset-spread-sm" href="{{ course.link }}" title="Accéder au cours" itemprop="url">
               <span itemprop="name">{{ course.name }}</span>
@@ -238,7 +238,7 @@
             <p itemprop="description">{{ course.description }}</p>
           </td>
 
-          <!-- Course certificate & link -->
+          <!-- Course certificate -->
           <td>
             <figure>
               {% if course.provider_logo == 'oc' %}
@@ -251,8 +251,7 @@
                 </a>
               {% endif %}
             </figure>
-
-            <a class="btn valid-outline solid-rounder inset-blur" href="{{ course.certif_link }}" title="Voir le certificat n° {{ course.certif_id }}" itemprop="educationalCredentialAwarded">
+            <a class="btn valid-outline solid-rounder inset-spread-sm" href="{{ course.certif_link }}" title="Voir le certificat n° {{ course.certif_id }}" itemprop="educationalCredentialAwarded">
               {{ date(course.certif_date)|date('d/m/y') }}
             </a>
           </td>
