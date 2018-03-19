@@ -34,16 +34,28 @@
           <input id="link" name="link" type="text" maxlength="100" required value="{{ course.link }}">
         </li>
 
-        <!-- Course certif id field -->
+        <!-- Course description field -->
         <li>
-          <label for="certif_id">Id</label>
-          <input id="certif_id" name="certif_id" type="text" maxlength="20" required value="{{ course.certif_id }}">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" rows="5" required>{{ course.description }}</textarea>
+        </li>
+
+        <!-- Course provider field -->
+        <li>
+          <label for="provider">Plateforme</label>
+          <input id="provider" name="provider" type="text" maxlength="20" required value="{{ course.provider }}">
         </li>
 
         <!-- Course certif link field -->
         <li>
           <label for="certif_link">Certificat</label>
           <input id="certif_link" name="certif_link" type="text" maxlength="100" required value="{{ course.certif_link }}">
+        </li>
+
+        <!-- Course certif id field -->
+        <li>
+          <label for="certif_id">Id</label>
+          <input id="certif_id" name="certif_id" type="text" maxlength="20" required value="{{ course.certif_id }}">
         </li>
 
         <!-- Course certif date field -->
