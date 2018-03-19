@@ -469,6 +469,15 @@ main {
   }
 }
 
+#course table p {
+  max-width: 60rem;
+}
+
+#course svg {
+  max-width: 13rem;
+}
+
+
 
 /* ***** Pjs ***** */
 
