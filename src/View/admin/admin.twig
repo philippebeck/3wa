@@ -108,7 +108,7 @@
           <tr>
             <th>Id<br>Nom</th>
             <th>Photo</th>
-            <th>Email<br>Résidence</th>
+            <th>Email<br>Localisation</th>
             <th>Création<br>Édition</th>
             <th>Modifier Supprimer</th>
           </tr>
@@ -238,8 +238,7 @@
           <tr>
             <th>Id<br>Projet</th>
             <th>Image</th>
-            <th>Description</th>
-            <th>Création</th>
+            <th>Description<br>Création</th>
             <th>Modifier Supprimer</th>
           </tr>
         </thead>
@@ -264,11 +263,12 @@
               </a>
             </td>
 
-            <!-- Project description -->
-            <td>{{ project.description }}</td>
-
-            <!-- Project creation year -->
-            <td>{{ project.year }}</td>
+            <!-- Project description & year -->
+            <td>
+             {{ project.description }}
+            <hr>
+            {{ project.year }}
+          </td>
 
             <!-- Update project button -->
             <td>
@@ -378,7 +378,6 @@
           <tr>
             <th>Id<br>Parcours</th>
             <th>Certificat</th>
-            <th>Obtention</th>
             <th>Modifier Supprimer</th>
           </tr>
         </thead>
@@ -392,15 +391,12 @@
             <!-- Route name -->
             <td>{{ route.id }}<br>{{ route.name }}</td>
 
-            <!-- Route certificate -->
+            <!-- Route certificate : id, link & date -->
             <td>
-              <a class="btn valid-outline solid-rounder inset-spread-sm" href="{{ route.certif_link }}" title="Voir le certificat">
-                {{ route.certif_id }}
+              <a class="btn valid-outline solid-rounder inset-spread-sm" href="{{ route.certif_link }}" title="Voir le certificat n° {{ route.certif_id }}">
+                {{ date(route.certif_date)|date('d/m/y') }}
               </a>
             </td>
-
-            <!-- Route certificate date -->
-            <td>{{ date(route.certif_date)|date('d M Y') }}</td>
 
             <!-- Update route button -->
             <td>
@@ -442,7 +438,6 @@
           <tr>
             <th>Id<br>Cours</th>
             <th>Certificat</th>
-            <th>Obtention</th>
             <th>Modifier Supprimer</th>
           </tr>
         </thead>
@@ -458,17 +453,26 @@
               <a class="btn info-outline solid-rounder inset-spread-sm" href="{{ course.link }}" title="Accéder au cours">
                 {{ course.id }}<br>{{ course.name }}
               </a>
+              <p>{{ course.description }}</p>
             </td>
 
             <!-- Course certificate -->
             <td>
-              <a class="btn valid-outline solid-rounder inset-spread-sm" href="{{ course.certif_link }}" title="Voir le certificat">
-                {{ course.certif_id }}
+              <figure>
+                {% if course.provider_logo == 'oc' %}
+                  <a href="https://openclassrooms.com" title="Accéder à OpenClassrooms">
+                    {{ include('svg/oc.svg.twig') }}
+                  </a>
+                {% else %}
+                  <a href="https://www.sololearn.com" title="Accéder à SoloLearn">
+                    {{ include('svg/sl.svg.twig') }}
+                  </a>
+                {% endif %}
+              </figure>
+              <a class="btn valid-outline solid-rounder inset-spread-sm" href="{{ course.certif_link }}" title="Voir le certificat n° {{ course.certif_id }}">
+                {{ date(course.certif_date)|date('d/m/y') }}
               </a>
             </td>
-
-            <!-- Course create date -->
-            <td>{{ date(course.certif_date)|date('d M Y') }}</td>
 
             <!-- Update course button -->
             <td>
