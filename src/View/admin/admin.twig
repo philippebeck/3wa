@@ -265,10 +265,10 @@
 
             <!-- Project description & year -->
             <td>
-             {{ project.description }}
-            <hr>
-            {{ project.year }}
-          </td>
+              {{ project.description }}
+              <hr>
+              {{ project.year }}
+            </td>
 
             <!-- Update project button -->
             <td>
@@ -460,13 +460,13 @@
             <td>
               <figure>
                 {% if course.provider_logo == 'oc' %}
-                  <a href="https://openclassrooms.com" title="Accéder à OpenClassrooms">
-                    {{ include('svg/oc.svg.twig') }}
-                  </a>
+                <a href="https://openclassrooms.com" title="Accéder à OpenClassrooms">
+                  <img src="img/logo/oc.svg" alt="Logo OpenClassrooms">
+                </a>
                 {% else %}
-                  <a href="https://www.sololearn.com" title="Accéder à SoloLearn">
-                    {{ include('svg/sl.svg.twig') }}
-                  </a>
+                <a href="https://www.sololearn.com" title="Accéder à SoloLearn">
+                  <img src="img/logo/sl.svg" alt="Logo SoloLearn">
+                </a>
                 {% endif %}
               </figure>
               <a class="btn valid-outline solid-rounder inset-spread-sm" href="{{ course.certif_link }}" title="Voir le certificat n° {{ course.certif_id }}">

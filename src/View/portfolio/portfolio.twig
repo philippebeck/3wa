@@ -242,19 +242,19 @@
           <td>
             <figure itemprop="provider" itemscope itemtype="http://schema.org/Organization">
               {% if course.provider_logo == 'oc' %}
-                <a href="https://openclassrooms.com" title="Accéder à OpenClassrooms" itemprop="url">
-                  <img src="img/logo/oc.svg" alt="Logo OpenClassrooms" itemprop="logo">
-                </a>
-                <figcaption itemprop="name">OpenClassrooms</figcaption>
+              <a href="https://openclassrooms.com" title="Accéder à OpenClassrooms" itemprop="url">
+                <img src="img/logo/oc.svg" alt="Logo OpenClassrooms" itemprop="logo">
+              </a>
+              <figcaption class="pb-0">Certificat <span itemprop="name">OpenClassrooms</span></figcaption>
               {% else %}
-                <a href="https://www.sololearn.com" title="Accéder à SoloLearn" itemprop="url">
-                  <img src="img/logo/sl.svg" alt="Logo SoloLearn" itemprop="logo">
-                </a>
-                <figcaption itemprop="name">SoloLearn</figcaption>
+              <a href="https://www.sololearn.com" title="Accéder à SoloLearn" itemprop="url">
+                <img src="img/logo/sl.svg" alt="Logo SoloLearn" itemprop="logo">
+              </a>
+              <figcaption class="pb-0">Certificat <span itemprop="name">SoloLearn</span></figcaption>
               {% endif %}
             </figure>
-            <a class="btn valid-outline solid-rounder inset-spread-sm" href="{{ course.certif_link }}" title="Voir le certificat n° {{ course.certif_id }}" itemprop="educationalCredentialAwarded">
-              {{ date(course.certif_date)|date('d/m/y') }}
+            <a class="btn valid-outline solid-rounder inset-spread-sm mb-md" href="{{ course.certif_link }}" title="Certificat obtenu le {{ date(course.certif_date)|date('d/m/y') }}" itemprop="educationalCredentialAwarded">
+              {{ course.certif_id }}
             </a>
           </td>
 
