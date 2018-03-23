@@ -240,15 +240,17 @@
 
           <!-- Course certificate -->
           <td>
-            <figure>
+            <figure itemprop="provider" itemscope itemtype="http://schema.org/Organization">
               {% if course.provider_logo == 'oc' %}
-                <a href="https://openclassrooms.com" title="Accéder à OpenClassrooms" itemprop="provider">
-                  <img src="img/logo/oc.svg" alt="Logo OpenClassrooms">
+                <a href="https://openclassrooms.com" title="Accéder à OpenClassrooms" itemprop="url">
+                  <img src="img/logo/oc.svg" alt="Logo OpenClassrooms" itemprop="logo">
                 </a>
+                <figcaption itemprop="name">OpenClassrooms</figcaption>
               {% else %}
-                <a href="https://www.sololearn.com" title="Accéder à SoloLearn" itemprop="provider">
-                  <img src="img/logo/sl.svg" alt="Logo SoloLearn">
+                <a href="https://www.sololearn.com" title="Accéder à SoloLearn" itemprop="url">
+                  <img src="img/logo/sl.svg" alt="Logo SoloLearn" itemprop="logo">
                 </a>
+                <figcaption itemprop="name">SoloLearn</figcaption>
               {% endif %}
             </figure>
             <a class="btn valid-outline solid-rounder inset-spread-sm" href="{{ course.certif_link }}" title="Voir le certificat n° {{ course.certif_id }}" itemprop="educationalCredentialAwarded">
