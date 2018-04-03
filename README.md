@@ -1,6 +1,6 @@
 # Philippe Beck
 
-Pjs, Pam, Jim, Sam, Me & Myself
+Pjs, Pam, Jim, Sam & Myself
 
 
 
