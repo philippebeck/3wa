@@ -7,7 +7,7 @@
 
 {% block title %}Pjs : Pam, Jim & Sam{% endblock %}
 
-{% block description %}Pjs est un Micro Système de Management de Contenu fait maison composé de 3 outils dédiés chacun à un langage : Pam, Php Approachable Microframework, Jim, Javascript Interactive Microlibrary & Sam, Scss Animated Microframework{% endblock %}
+{% block description %}Pjs est un Micro Système de Gestion de Contenu fait maison composé de 3 outils dédiés chacun à un langage : Pam, Php Approachable Microframework, Jim, Javascript Interactive Microlibrary & Sam, Scss Animated Microframework{% endblock %}
 
 
 {% block main %}
@@ -33,18 +33,18 @@
   <!-- *********************** -->
   <!-- ***** Pjs section ***** -->
 
-  <section>
+  <section itemscope itemtype="http://schema.org/WebApplication">
     <h2 class="primary solid-slight mb-lg">Le Micro "Content Management System" fait main</h2>
 
     <ul id="cms" class="grid">
 
       <li class="col items-center special-sea double-rounder-lg">
 
-        <article class="col items-center gp-tn gm-tn" itemscope itemtype="http://schema.org/SoftwareApplication">
+        <article class="col items-center gp-tn gm-tn">
 
           <h3 itemprop="name">PJS</h3>
 
-          <figure class="child-fallYL-sm" itemprop="">
+          <figure class="child-fallYL-sm">
             {{ include('svg/pjs.svg.twig') }}
             <figcaption class="anime-slipT-tn">Le microCMS pour coder en pyjamas</figcaption>
           </figure>
@@ -59,7 +59,7 @@
             <!-- Tweet button -->
             <li>
               <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
-              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              <script async src="https://platform.twitter.com/widgets.js"></script>
             </li>
 
             <!-- linkedIn button -->
@@ -68,6 +68,25 @@
               <script type="IN/Share" data-url="https://philippebeck.net/index.php?access=pjs" data-counter="right"></script>
             </li>
           </ul>
+
+          <table>
+            <tr>
+              <td class="italic">Catégorie</td>
+              <td class="bold" itemprop="applicationCategory">Web</td>
+            </tr>
+            <tr>
+              <td class="italic">Sous-Catégorie</td>
+              <td class="bold" itemprop="applicationSubCategory">Système de Gestion de Contenu</td>
+            </tr>
+            <tr>
+              <td class="italic">Système d'Exploitation</td>
+              <td class="bold" itemprop="operatingSystem">Linux, MacOS, Windows</td>
+            </tr>
+            <tr>
+              <td class="italic">Package</td>
+              <td class="bold" itemprop="offers">FreeWare</td>
+            </tr>
+          </table>
 
           <p>Pjs est un outil simple & efficace, combinant Pam, Jim & Sam, afin de créer des applications originales.</p>
 
@@ -119,7 +138,7 @@
       <!-- ******************** -->
       <!-- ***** Pam part ***** -->
 
-      <li class="col items-center info-sea solid-rounded" itemscope itemtype="http://schema.org/SoftwareApplication">
+      <li class="col items-center info-sea solid-rounded" itemscope itemtype="http://schema.org/WebApplication">
 
         <h3 itemprop="name">PAM<br>Php Approachable Microframework</h3>
 
@@ -129,6 +148,25 @@
             <figcaption>Documentation</figcaption>
           </figure>
         </a>
+
+        <table>
+          <tr>
+            <td class="italic">Catégorie</td>
+            <td class="bold" itemprop="applicationCategory">Web</td>
+          </tr>
+          <tr>
+            <td class="italic">Sous-Catégorie</td>
+            <td class="bold" itemprop="applicationSubCategory">Framework</td>
+          </tr>
+          <tr>
+            <td class="italic">Système d'Exploitation</td>
+            <td class="bold" itemprop="operatingSystem">Linux, MacOS, Windows</td>
+          </tr>
+          <tr>
+            <td class="italic">Package</td>
+            <td class="bold" itemprop="offers">FreeWare</td>
+          </tr>
+        </table>
 
         <p>
           Installer Pam via composer :<br>
@@ -159,7 +197,7 @@
       <!-- ******************** -->
       <!-- ***** Jim part ***** -->
 
-      <li class="col items-center valid-sea solid-rounded" itemscope itemtype="http://schema.org/SoftwareApplication">
+      <li class="col items-center valid-sea solid-rounded" itemscope itemtype="http://schema.org/WebApplication">
 
         <h3 itemprop="name">JIM<br>Javascript Interactive Microlibrary</h3>
 
@@ -169,6 +207,25 @@
             <figcaption>Documentation</figcaption>
           </figure>
         </a>
+
+        <table class="mt-md">
+          <tr>
+            <td class="italic">Catégorie</td>
+            <td class="bold" itemprop="applicationCategory">Web</td>
+          </tr>
+          <tr>
+            <td class="italic">Sous-Catégorie</td>
+            <td class="bold" itemprop="applicationSubCategory">Librairie</td>
+          </tr>
+          <tr>
+            <td class="italic">Système d'Exploitation</td>
+            <td class="bold" itemprop="operatingSystem">Linux, MacOS, Windows</td>
+          </tr>
+          <tr>
+            <td class="italic">Package</td>
+            <td class="bold" itemprop="offers">FreeWare</td>
+          </tr>
+        </table>
 
         <p>
           Installer Jim via npm :<br>
@@ -203,7 +260,7 @@
       <!-- ******************** -->
       <!-- ***** Sam part ***** -->
 
-      <li class="col items-center delete-sea solid-rounded" itemscope itemtype="http://schema.org/SoftwareApplication">
+      <li class="col items-center delete-sea solid-rounded" itemscope itemtype="http://schema.org/WebApplication">
 
         <h3 itemprop="name">SAM<br>Scss Animated Microframework</h3>
 
@@ -213,6 +270,25 @@
             <figcaption>Documentation</figcaption>
           </figure>
         </a>
+
+        <table class="mt-md">
+          <tr>
+            <td class="italic">Catégorie</td>
+            <td class="bold" itemprop="applicationCategory">Web</td>
+          </tr>
+          <tr>
+            <td class="italic">Sous-Catégorie</td>
+            <td class="bold" itemprop="applicationSubCategory">Framework</td>
+          </tr>
+          <tr>
+            <td class="italic">Système d'Exploitation</td>
+            <td class="bold" itemprop="operatingSystem">Linux, MacOS, Windows</td>
+          </tr>
+          <tr>
+            <td class="italic">Package</td>
+            <td class="bold" itemprop="offers">FreeWare</td>
+          </tr>
+        </table>
 
         <p>
           Installer Sam via npm :<br>
