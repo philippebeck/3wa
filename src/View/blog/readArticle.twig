@@ -30,7 +30,7 @@
     <script type="IN/Share" data-url="https://philippebeck.net/index.php?id={{ article.id }}&access=article" data-counter="right"></script>
 
     <!-- Article Infos -->
-    <p class="italic">Posté le {{ date(article.created_date)|date('d M Y') }} à {{ date(article.created_date)|date('H:i') }}</p>
+    <p class="italic">Posté le {{ date(article.created_date)|date('d M Y') }} à {{ date(article.created_date)|date('H:i') }} / Modifié le {{ date(article.updated_date)|date('d M Y') }} à {{ date(article.updated_date)|date('H:i') }}</p>
 
     <!-- Article Image -->
     <a class="btn warning-light solid-rounded inset-blur" href="{{ article.link }}" title="Voir la source">

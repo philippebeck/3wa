@@ -271,7 +271,10 @@ pre {
   background-color: PaleGreen;
 }
 
-#access,
+#access {
+  width: 4.3rem;
+}
+
 #help-btn {
   width: 4rem;
 }
