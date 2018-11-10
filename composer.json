@@ -1,12 +1,17 @@
 {
   "name": "philippebeck",
-  "version": "0.2.17",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/philippebeck/philippebeck"
-  },
-  "type": "personal website",
+  "version": "0.2.18",
+  "type": "website",
   "description": "Web Development - Open-source Technologies - HTML, CSS, JavaScript, PHP, SQL - 3W Academy, OpenClassrooms, Free Code Camp, SoloLearn",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Philippe Beck",
+      "email": "philippe@philippebeck.net",
+      "homepage": "https://philippebeck.net",
+      "role": "Lead Developer"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "App\\": "src/",
@@ -15,12 +20,12 @@
     }
   },
   "require": {
-    "phpunit/phpunit": "^6.4",
-    "pjs/pam": "^0.2.3"
+    "php": "^7.0",
+    "pjs/pjs": "^0.2.5"
   },
   "config": {
     "platform": {
-      "php": "7.0.22"
+      "php": "7.0"
     }
   }
 }
