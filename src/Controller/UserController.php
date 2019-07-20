@@ -93,7 +93,7 @@ class UserController extends Controller
                 $data['image'] = $this->files->uploadFile('img/user');
             }
 
-            $data['pass']   = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+            $data['pass']   = password_hash($this->post->getPostVar('pass'), PASSWORD_DEFAULT);
             $data['name']   = $this->post->getPostVar('name');
             $data['email']  = $this->post->getPostVar('email');
 
