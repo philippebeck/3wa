@@ -1,91 +1,62 @@
 <?php
 
-// ***************************** \\
-// ***** COURSE CONTROLLER ***** \\
-// ***************************** \\
-
 namespace App\Controller;
 
 use Pam\Controller\Controller;
 use Pam\Model\ModelFactory;
-use Pam\Helper\Session;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
-
-/** ********************************\
-* All control actions to the courses
-*/
+/**
+ * Class CourseController
+ * @package App\Controller
+ */
 class CourseController extends Controller
 {
-
-  /** ******************\
-  * Creates a new course
-  * @return mixed => the rendering of the view createCourse
-  */
-  public function CreateAction()
-  {
-    // Checks if the form has been completed
-    if (!empty($_POST))
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function CreateAction()
     {
-      // Creates the course
-      ModelFactory::get('Course')->create($_POST);
+        if (!empty($this->post->getPostArray())) {
 
-      // Creates a valid message to confirm the creation of a new course
-      htmlspecialchars(Session::createAlert('Nouveau cours créé avec succès !', 'valid'));
+            ModelFactory::get('Course')->create($this->post->getPostArray());
+            $this->cookie->createAlert('Nouveau cours créé avec succès !');
 
-      // Redirects to the view admin
-      $this->redirect('admin');
+            $this->redirect('admin');
+        }
+        return $this->render('admin/portfolio/createCourse.twig');
     }
-    else {
-      // Returns the rendering of the view createCourse with the empty fields
-      return $this->render('admin/portfolio/createCourse.twig');
-    }
-  }
 
-
-  /** **************\
-  * Updates a course
-  * @return mixed => the rendering of the view updateCourse
-  */
-  public function UpdateAction()
-  {
-    // Gets the course id, then stores it
-    $id = $_GET['id'];
-
-    // Checks if the form has been completed
-    if (!empty($_POST))
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function UpdateAction()
     {
-      // Updates the selected course
-      ModelFactory::get('Course')->update($id, $_POST);
+        if (!empty($this->post->getPostArray())) {
 
-      // Creates an info message to confirm the update of the selected course
-      htmlspecialchars(Session::createAlert('Modification réussie du cours sélectionné !', 'info'));
+            ModelFactory::get('Course')->update($this->get->getGetVar('id'), $this->post->getPostArray());
+            $this->cookie->createAlert('Modification réussie du cours sélectionné !');
 
-      // Redirects to the view admin
-      $this->redirect('admin');
+            $this->redirect('admin');
+        }
+        $course = ModelFactory::get('Course')->read($this->get->getGetVar('id'));
+
+        return $this->render('admin/portfolio/updateCourse.twig', ['course' => $course]);
     }
-    // Reads the selected course, then stores it
-    $course = ModelFactory::get('Course')->read($id);
 
-    // Returns the rendering of the view updateCourse with the course
-    return $this->render('admin/portfolio/updateCourse.twig', ['course' => $course]);
-  }
+    public function DeleteAction()
+    {
+        ModelFactory::get('Course')->delete($this->get->getGetVar('id'));
+        $this->cookie->createAlert('Cours définitivement supprimé !');
 
-
-  /** **************\
-  * Deletes a course
-  */
-  public function DeleteAction()
-  {
-    // Gets the course id, then stores it
-    $id = $_GET['id'];
-
-    // Deletes the selected course
-    ModelFactory::get('Course')->delete($id);
-
-    // Creates a delete message to confirm the removal of the selected course
-    htmlspecialchars(Session::createAlert('Cours définitivement supprimé !', 'delete'));
-
-    // Redirects to the view admin
-    $this->redirect('admin');
-  }
+        $this->redirect('admin');
+    }
 }
