@@ -1,6 +1,7 @@
-app/config.php
-htdocs/fonts/
-htdocs/img/
-htdocs/node_modules/
-vendor/
 .idea/
+config/db.php
+config/db.sql
+public/fonts/
+public/img/
+public/node_modules/
+vendor/
