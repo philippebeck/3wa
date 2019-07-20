@@ -1,15 +1,11 @@
 <?php
 
-// ******************************* \\
-// ***** CONSTELLATION MODEL ***** \\
-// ******************************* \\
-
 namespace App\Model;
 
 use Pam\Model\Model;
 
-
-/** **********************\
- * CRUD for constellations
+/**
+ * Class ConstellationModel
+ * @package App\Model
  */
 class ConstellationModel extends Model {}

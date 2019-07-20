@@ -1,15 +1,11 @@
 <?php
 
-// ************************* \\
-// ***** PROJECT MODEL ***** \\
-// ************************* \\
-
 namespace App\Model;
 
 use Pam\Model\Model;
 
-
-/** ****************\
- * CRUD for projects
+/**
+ * Class ProjectModel
+ * @package App\Model
  */
 class ProjectModel extends Model {}

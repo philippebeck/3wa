@@ -1,15 +1,11 @@
 <?php
 
-// ********************* \\
-// ***** PEN MODEL ***** \\
-// ********************* \\
-
 namespace App\Model;
 
 use Pam\Model\Model;
 
-
-/** ************\
- * CRUD for pens
+/**
+ * Class PenModel
+ * @package App\Model
  */
 class PenModel extends Model {}

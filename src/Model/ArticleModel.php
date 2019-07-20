@@ -1,15 +1,11 @@
 <?php
 
-// ************************* \\
-// ***** ARTICLE MODEL ***** \\
-// ************************* \\
-
 namespace App\Model;
 
 use Pam\Model\Model;
 
-
-/** ****************\
- * CRUD for articles
+/**
+ * Class ArticleModel
+ * @package App\Model
  */
 class ArticleModel extends Model {}

@@ -1,15 +1,11 @@
 <?php
 
-// *********************** \\
-// ***** ATLAS MODEL ***** \\
-// *********************** \\
-
 namespace App\Model;
 
 use Pam\Model\Model;
 
-
-/** *************\
- * CRUD for atlas
+/**
+ * Class AtlasModel
+ * @package App\Model
  */
 class AtlasModel extends Model {}

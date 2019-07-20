@@ -1,15 +1,11 @@
 <?php
 
-// *********************** \\
-// ***** ROUTE MODEL ***** \\
-// *********************** \\
-
 namespace App\Model;
 
 use Pam\Model\Model;
 
-
-/** **************\
- * CRUD for routes
+/**
+ * Class RouteModel
+ * @package App\Model
  */
 class RouteModel extends Model {}

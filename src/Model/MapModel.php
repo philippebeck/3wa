@@ -1,15 +1,11 @@
 <?php
 
-// ********************* \\
-// ***** MAP MODEL ***** \\
-// ********************* \\
-
 namespace App\Model;
 
 use Pam\Model\Model;
 
-
-/** ************\
- * CRUD for maps
+/**
+ * Class MapModel
+ * @package App\Model
  */
 class MapModel extends Model {}

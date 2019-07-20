@@ -1,15 +1,11 @@
 <?php
 
-// ************************* \\
-// ***** COMMENT MODEL ***** \\
-// ************************* \\
-
 namespace App\Model;
 
 use Pam\Model\Model;
 
-
-/** ****************\
- * CRUD for comments
+/**
+ * Class CommentModel
+ * @package App\Model
  */
 class CommentModel extends Model {}

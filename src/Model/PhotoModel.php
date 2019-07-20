@@ -1,15 +1,11 @@
 <?php
 
-// *********************** \\
-// ***** PHOTO MODEL ***** \\
-// *********************** \\
-
 namespace App\Model;
 
 use Pam\Model\Model;
 
-
-/** **************\
- * CRUD for photos
+/**
+ * Class PhotoModel
+ * @package App\Model
  */
 class PhotoModel extends Model {}
