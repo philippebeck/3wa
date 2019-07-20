@@ -71,7 +71,7 @@ class ProjectController extends Controller
     public function deleteAction()
   {
     ModelFactory::get('Project')->delete($this->get->getGetVar('id'));
-    htmlspecialchars(Session::createAlert('Projet réellement supprimé !', 'delete'));
+    $this->cookie->createAlert('Projet réellement supprimé !');
 
     $this->redirect('admin');
   }
