@@ -2,6 +2,9 @@
 
 Pjs, Pam, Jim, Sam & Myself
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f95d679b497d4bb59e0e5068225f3cb9)](https://www.codacy.com/app/philippebeck/philippebeck?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=philippebeck/philippebeck&amp;utm_campaign=Badge_Grade)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b465b933b803ba72cb2e/maintainability)](https://codeclimate.com/github/philippebeck/philippebeck/maintainability)
+
 ## Overview
 
 This project is the main project of my current study.
