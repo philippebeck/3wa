@@ -1,61 +1,59 @@
 <?php
 
-// ************************** \\
-// ***** PJS CONTROLLER ***** \\
-// ************************** \\
-
 namespace App\Controller;
 
 use Pam\Controller\Controller;
-use Pam\Helper\Session;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
-
-/** ************************\
-* All control actions to Pjs
-*/
+/**
+ * Class PjsController
+ * @package App\Controller
+ */
 class PjsController extends Controller
 {
-
-  /** ******************\
-  * Render the Pjs view
-  * @return mixed => the rendering of the view pjs
-  */
-  public function IndexAction()
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function indexAction()
   {
-    // Returns the rendering of the view pjs
     return $this->render('pjs/pjs.twig');
   }
 
-
-  /** ******************\
-  * Render the Pam view
-  * @return mixed => the rendering of the view pam
-  */
-  public function PamAction()
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function pamAction()
   {
-    // Returns the rendering of the view pam
     return $this->render('pjs/pam.twig');
   }
 
-
-  /** ******************\
-  * Render the Jim view
-  * @return mixed => the rendering of the view jim
-  */
-  public function JimAction()
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function jimAction()
   {
-    // Returns the rendering of the view jim
     return $this->render('pjs/jim.twig');
   }
 
-
-  /** ******************\
-  * Render the Sam view
-  * @return mixed => the rendering of the view sam
-  */
-  public function SamAction()
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function samAction()
   {
-    // Returns the rendering of the view sam
     return $this->render('pjs/sam.twig');
   }
 }
