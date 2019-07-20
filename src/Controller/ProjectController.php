@@ -1,113 +1,78 @@
 <?php
 
-// ****************************** \\
-// ***** PROJECT CONTROLLER ***** \\
-// ****************************** \\
-
 namespace App\Controller;
 
 use Pam\Controller\Controller;
 use Pam\Model\ModelFactory;
-use Pam\Helper\Session;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
-
-/** *********************************\
-* All control actions to the projects
-*/
+/**
+ * Class ProjectController
+ * @package App\Controller
+ */
 class ProjectController extends Controller
 {
-
-  /** *******************\
-  * Creates a new project
-  * @return mixed => the rendering of the view createProject
-  */
-  public function CreateAction()
-  {
-    // Checks if the form has been completed
-    if (!empty($_POST))
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function createAction()
     {
-      // Uploads the image, then stores it
-      $data['image'] = $this->upload('img/portfolio');
+        if (!empty($this->post->getPostArray())) {
 
-      // Retrieves form data, then stores them
-      $data['name']         = $_POST['name'];
-      $data['link']         = $_POST['link'];
-      $data['year']         = $_POST['year'];
-      $data['description']  = $_POST['description'];
+            $data['image'] = $this->files->uploadFile('img/portfolio');
 
-      // Creates a new project
-      ModelFactory::get('Project')->create($data);
+            $data['name']         = $this->post->getPostVar('name');
+            $data['link']         = $this->post->getPostVar('link');
+            $data['year']         = $this->post->getPostVar('year');
+            $data['description']  = $this->post->getPostVar('description');
 
-      // Creates a valid message to confirm the creation of a new project
-      htmlspecialchars(Session::createAlert('Nouveau projet créé avec succès !', 'valid'));
+            ModelFactory::get('Project')->create($data);
+            $this->cookie->createAlert('Nouveau projet créé avec succès !');
 
-      // Redirects to the view admin
-      $this->redirect('admin');
+            $this->redirect('admin');
+        }
+        return $this->render('admin/portfolio/createProject.twig');
     }
-    else {
-      // Returns the rendering of the view createProject with the empty fields
-      return $this->render('admin/portfolio/createProject.twig');
-    }
-  }
 
-
-  /** ***************\
-  * Updates a project
-  * @return mixed => the rendering of the view updateProject
-  */
-  public function UpdateAction()
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function updateAction()
   {
-    // Gets the project id, then stores it
-    $id = $_GET['id'];
+    if (!empty($this->post->getPostArray())) {
 
-    // Checks if the form has been completed
-    if (!empty($_POST))
-    {
-      // Checks if a new file has been uploaded
-      if (!empty($_FILES['file']['name']))
-      {
-        // Uploads the image, then stores it
-        $data['image'] = $this->upload('img/portfolio');
+      if (!empty($this->files->getFileVar('name'))) {
+        $data['image'] = $this->files->uploadFile('img/portfolio');
       }
 
-      // Retrieves form data, then stores them
-      $data['name']         = $_POST['name'];
-      $data['link']         = $_POST['link'];
-      $data['year']         = $_POST['year'];
-      $data['description']  = $_POST['description'];
+      $data['name']         = $this->post->getPostVar('name');
+      $data['link']         = $this->post->getPostVar('link');
+      $data['year']         = $this->post->getPostVar('year');
+      $data['description']  = $this->post->getPostVar('description');
 
-      // Updates the selected article
-      ModelFactory::get('Project')->update($id, $data);
+      ModelFactory::get('Project')->update($this->get->getGetVar('id'), $data);
+      $this->cookie->createAlert('Modification réussie du projet sélectionné !');
 
-      // Creates an info message to confirm the update of the selected project
-      htmlspecialchars(Session::createAlert('Modification réussie du projet sélectionné !', 'info'));
-
-      // Redirects to the view admin
       $this->redirect('admin');
     }
-    // Reads the selected project, then stores it
-    $project = ModelFactory::get('Project')->read($id);
+    $project = ModelFactory::get('Project')->read($this->get->getGetVar('id'));
 
-    // Returns the rendering of the view updateArticle with the article
     return $this->render('admin/portfolio/updateProject.twig', ['project' => $project]);
   }
 
-
-  /** ***************\
-  * Deletes a project
-  */
-  public function DeleteAction()
+    public function deleteAction()
   {
-    // Gets the article id, then stores it
-    $id = $_GET['id'];
-
-    // Deletes the selected article
-    ModelFactory::get('Project')->delete($id);
-
-    // Creates a delete message to confirm the removal of the selected project
+    ModelFactory::get('Project')->delete($this->get->getGetVar('id'));
     htmlspecialchars(Session::createAlert('Projet réellement supprimé !', 'delete'));
 
-    // Redirects to the view admin
     $this->redirect('admin');
   }
 }
