@@ -1,91 +1,62 @@
 <?php
 
-// ************************* \\
-// ***** PENCONTROLLER ***** \\
-// ************************* \\
-
 namespace App\Controller;
 
 use Pam\Controller\Controller;
 use Pam\Model\ModelFactory;
-use Pam\Helper\Session;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
-
-/** *****************************\
-* All control actions to the pens
-*/
+/**
+ * Class PenController
+ * @package App\Controller
+ */
 class PenController extends Controller
 {
-
-  /** ***************\
-  * Creates a new pen
-  * @return mixed => the rendering of the view createPen
-  */
-  public function CreateAction()
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function createAction()
   {
-    // Checks if the form has been completed
-    if (!empty($_POST))
-    {
-      // Creates the pen
-      ModelFactory::get('Pen')->create($_POST);
+      if (!empty($this->post->getPostArray())) {
 
-      // Creates a valid message to confirm the creation of a new
-      htmlspecialchars(Session::createAlert('Nouveau pen créé avec succès !', 'valid'));
+          ModelFactory::get('Pen')->create($this->post->getPostArray());
+          $this->cookie->createAlert('Nouveau pen créé avec succès !');
 
-      // Redirects to the view admin
-      $this->redirect('admin');
-    }
-    else {
-      // Returns the rendering of the view createPen with the empty fields
+          $this->redirect('admin');
+      }
       return $this->render('admin/portfolio/createPen.twig');
-    }
   }
 
-
-  /** ***********\
-  * Updates a pen
-  * @return mixed => the rendering of the view updatePen
-  */
-  public function UpdateAction()
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function updateAction()
   {
-    // Gets the pen id, then stores it
-    $id = $_GET['id'];
+    if (!empty($this->post->getPostArray())) {
 
-    // Checks if the form has been completed
-    if (!empty($_POST))
-    {
-      // Updates the selected pen
-      ModelFactory::get('Pen')->update($id, $_POST);
+      ModelFactory::get('Pen')->update($this->get->getGetVar('id'), $this->post->getPostArray());
+      $this->cookie->createAlert('Modification réussie du pen sélectionné !');
 
-      // Creates an info message to confirm the update of the selected pen
-      htmlspecialchars(Session::createAlert('Modification réussie du pen sélectionné !', 'info'));
-
-      // Redirects to the view admin
       $this->redirect('admin');
     }
-    // Reads the selected pen, then stores it
-    $pen = ModelFactory::get('Pen')->read($id);
+    $pen = ModelFactory::get('Pen')->read($this->get->getGetVar('id'));
 
-    // Returns the rendering of the view updatePen with the pen
     return $this->render('admin/portfolio/updatePen.twig', ['pen' => $pen]);
   }
 
-
-  /** ***********\
-  * Deletes a pen
-  */
-  public function DeleteAction()
+    public function deleteAction()
   {
-    // Gets the pen id, then stores it
-    $id = $_GET['id'];
+    ModelFactory::get('Pen')->delete($this->get->getGetVar('id'));
+    $this->cookie->createAlert('Pen réellement supprimé !');
 
-    // Deletes the selected pen
-    ModelFactory::get('Pen')->delete($id);
-
-    // Creates a delete message to confirm the removal of the selected pen
-    htmlspecialchars(Session::createAlert('Pen réellement supprimé !', 'delete'));
-
-    // Redirects to the view admin
     $this->redirect('admin');
   }
 }
