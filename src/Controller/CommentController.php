@@ -11,7 +11,7 @@ use Pam\Model\ModelFactory;
  */
 class CommentController extends Controller
 {
-    public function CreateAction()
+    public function createAction()
     {
         if ($this->session->islogged()) {
 
@@ -31,7 +31,7 @@ class CommentController extends Controller
         $this->redirect('user!login');
     }
 
-    public function DeleteAction()
+    public function deleteAction()
     {
         ModelFactory::get('Comment')->delete($this->get->getGetVar('id'));
         $this->cookie->createAlert('Commentaire définitivement supprimé !');

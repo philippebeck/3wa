@@ -20,7 +20,7 @@ class CourseController extends Controller
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function CreateAction()
+    public function createAction()
     {
         if (!empty($this->post->getPostArray())) {
 
@@ -38,7 +38,7 @@ class CourseController extends Controller
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function UpdateAction()
+    public function updateAction()
     {
         if (!empty($this->post->getPostArray())) {
 
@@ -52,7 +52,7 @@ class CourseController extends Controller
         return $this->render('admin/portfolio/updateCourse.twig', ['course' => $course]);
     }
 
-    public function DeleteAction()
+    public function deleteAction()
     {
         ModelFactory::get('Course')->delete($this->get->getGetVar('id'));
         $this->cookie->createAlert('Cours définitivement supprimé !');
