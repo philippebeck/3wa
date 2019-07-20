@@ -1,169 +1,123 @@
 <?php
 
-// ****************************** \\
-// ***** ARTICLE CONTROLLER ***** \\
-// ****************************** \\
-
 namespace App\Controller;
 
 use Pam\Controller\Controller;
 use Pam\Model\ModelFactory;
-use Pam\Helper\Session;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
-
-/** *********************************\
-* All control actions to the articles
-*/
+/**
+ * Class ArticleController
+ * @package App\Controller
+ */
 class ArticleController extends Controller
 {
-
-  /** ****************\
-  * Reads all articles
-  * @return mixed => the rendering of the view article
-  */
-  public function IndexAction()
-  {
-    // Reads all articles, then stores them
-    $allArticles = ModelFactory::get('Article')->list();
-
-    // Returns the rendering of the view blog with all articles
-    return $this->render('blog/blog.twig', ['allArticles' => $allArticles]);
-  }
-
-
-  /** *******************\
-  * Creates a new article
-  * @return mixed => the rendering of the view createArticle
-  */
-  public function CreateAction()
-  {
-    // Checks if the form has been completed
-    if (!empty($_POST))
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function IndexAction()
     {
-      // Uploads the image & gets back the file name
-      $data['image'] = $this->upload('img/blog');
+        $allArticles = ModelFactory::get('Article')->list();
 
-      // Creates the $data array to store the new article
-      $data['title']        = $_POST['title'];
-      $data['link']         = $_POST['link'];
-      $data['content']      = $_POST['content'];
-      $data['created_date'] = $_POST['date'];
-      $data['updated_date'] = $_POST['date'];
-
-      // Creates the article
-      ModelFactory::get('Article')->create($data);
-
-      // Creates a valid message to confirm the creation of a new article
-      htmlspecialchars(Session::createAlert('Nouvel article créé avec succès !', 'valid'));
-
-      // Redirects to the admin
-      $this->redirect('admin');
+        return $this->render('blog/blog.twig', ['allArticles' => $allArticles]);
     }
-    else {
-      // Returns the rendering of the view createArticle with the empty fields
-      return $this->render('admin/blog/createArticle.twig');
-    }
-  }
 
-
-  /** ***********************************************************\
-  * Reads an article, his comments & attributes the user comments
-  * @return mixed => the rendering of the view readArticle
-  */
-  public function ReadAction()
-  {
-    // Gets the article id, then stores it
-    $id = $_GET['id'];
-
-    // Reads the article & his comments, then stores them
-    $article  = ModelFactory::get('Article')->read($id);
-    $comments = ModelFactory::get('Comment')->list($id, 'article_id');
-
-    if(!empty($comments))
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function CreateAction()
     {
-      // Loops on each comment
-      for ($i = 0; $i < count($comments); $i++)
-      {
-        // Stores the comment user_id value
-        $userId = $comments[$i]['user_id'];
+        if (!empty($this->post->getPostArray())) {
 
-        // Reads the user table with $userId instead of the user id value, then stores the user results
-        $user = ModelFactory::get('User')->read($userId);
+            $data['image'] = $this->files->uploadFile('img/blog');
 
-        // Stores the first_name value & the image value with new keys
-        $comments[$i]['user']   = $user['first_name'];
-        $comments[$i]['image']  = $user['image'];
-      }
+            $data['title']        = $this->post->getPostVar('title');
+            $data['link']         = $this->post->getPostVar('link');
+            $data['content']      = $this->post->getPostVar('content');
+            $data['created_date'] = $this->post->getPostVar('date');
+            $data['updated_date'] = $this->post->getPostVar('date');
+
+            ModelFactory::get('Article')->create($data);
+            $this->cookie->createAlert('Nouvel article créé avec succès !');
+
+            $this->redirect('admin');
+        }
+        return $this->render('admin/blog/createArticle.twig');
     }
-    else {
-      // Creates an info message to propose to comment the selected article
-      htmlspecialchars(Session::createAlert('Soyez le premier à commenter cet article !', 'info'));
-    }
 
-    // Returns the rendering of the view readArticle with the article & his comments
-    return $this->render('blog/readArticle.twig', [
-      'article'   => $article,
-      'comments'  => $comments
-    ]);
-  }
-
-
-  /** ****************\
-  * Updates an article
-  * @return mixed => the rendering of the view updateArticle
-  */
-  public function UpdateAction()
-  {
-    // Gets the article id, then stores it
-    $id = $_GET['id'];
-
-    // Checks if the form has been completed
-    if (!empty($_POST))
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function ReadAction()
     {
-      // Checks if a new file has been uploaded
-      if (!empty($_FILES['file']['name']))
-      {
-        // Uploads the image, then gets back the file name
-        $data['image'] = $this->upload('img/blog');
-      }
-      // Retrieves form data & stores them
-      $data['title']        = $_POST['title'];
-      $data['link']         = $_POST['link'];
-      $data['content']      = $_POST['content'];
-      $data['updated_date'] = $_POST['date'];
+        $article    = ModelFactory::get('Article')->read($this->get->getGetVar('id'));
+        $comments   = ModelFactory::get('Comment')->list($this->get->getGetVar('id'), 'article_id');
 
-      // Updates the article
-      ModelFactory::get('Article')->update($id, $data);
+        if(!empty($comments)) {
 
-      // Creates an info message to confirm the update of the selected article
-      htmlspecialchars(Session::createAlert('Modification réussie de l\'article sélectionné !', 'info'));
+            for ($i = 0; $i < count($comments); $i++) {
 
-      // Redirects to the admin
-      $this->redirect('admin');
+                $userId = $comments[$i]['user_id'];
+                $user   = ModelFactory::get('User')->read($userId);
+
+                $comments[$i]['user']   = $user['first_name'];
+                $comments[$i]['image']  = $user['image'];
+            }
+        } else {
+            $this->cookie->createAlert('Soyez le premier à commenter cet article !');
+        }
+
+        return $this->render('blog/readArticle.twig', [
+            'article'   => $article,
+            'comments'  => $comments
+        ]);
     }
-    // Reads the article, then store it
-    $article = ModelFactory::get('Article')->read($id);
 
-    // Returns the rendering of the view updateArticle with the current article
-    return $this->render('admin/blog/updateArticle.twig', ['article' => $article]);
-  }
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function UpdateAction()
+    {
+        if (!empty($this->post->getPostArray())) {
 
+            if (!empty($this->files->getFileVar('name'))) {
+                $data['image'] = $this->files->uploadFile('img/blog');
+            }
 
-  /** ****************\
-  * Deletes an article
-  */
-  public function DeleteAction()
-  {
-    // Gets the article id, then stores it
-    $id = $_GET['id'];
+            $data['title']        = $this->post->getPostVar('title');
+            $data['link']         = $this->post->getPostVar('link');
+            $data['content']      = $this->post->getPostVar('content');
+            $data['updated_date'] = $this->post->getPostVar('date');
 
-    // Deletes the article
-    ModelFactory::get('Article')->delete($id);
+            ModelFactory::get('Article')->update($this->get->getGetVar('id'), $data);
+            $this->cookie->createAlert('Modification réussie de l\'article sélectionné !');
 
-    // Creates a delete message to confirm the removal of the selected article
-    htmlspecialchars(Session::createAlert('Article définitivement supprimé !', 'delete'));
+            $this->redirect('admin');
+        }
+        $article = ModelFactory::get('Article')->read($this->get->getGetVar('id'));
 
-    // Redirects to the admin
-    $this->redirect('admin');
-  }
+        return $this->render('admin/blog/updateArticle.twig', ['article' => $article]);
+    }
+
+    public function DeleteAction()
+    {
+        ModelFactory::get('Article')->delete($this->get->getGetVar('id'));
+        $this->cookie->createAlert('Article définitivement supprimé !');
+
+        $this->redirect('admin');
+    }
 }
