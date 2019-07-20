@@ -21,24 +21,24 @@ class HomeController extends Controller
      * @throws SyntaxError
      */
     public function indexAction()
-  {
-    $allArticles  = ModelFactory::get('Article')->list();
-    $allProjects  = ModelFactory::get('Project')->list();
-    $allPhotos    = ModelFactory::get('Photo')  ->list();
-    $allMaps      = ModelFactory::get('Map')    ->list();
+    {
+        $allArticles  = ModelFactory::get('Article')->list();
+        $allProjects  = ModelFactory::get('Project')->list();
+        $allPhotos    = ModelFactory::get('Photo')  ->list();
+        $allMaps      = ModelFactory::get('Map')    ->list();
 
-    unset($allProjects[0]);
+        unset($allProjects[0]);
 
-    $article  = $allArticles[array_rand($allArticles)];
-    $project  = $allProjects[array_rand($allProjects)];
-    $photo    = $allPhotos[array_rand($allPhotos)];
-    $map      = $allMaps[array_rand($allMaps)];
+        $article  = $allArticles[array_rand($allArticles)];
+        $project  = $allProjects[array_rand($allProjects)];
+        $photo    = $allPhotos[array_rand($allPhotos)];
+        $map      = $allMaps[array_rand($allMaps)];
 
-    return $this->render('home.twig', [
-      'article' => $article,
-      'project' => $project,
-      'photo'   => $photo,
-      'map'     => $map
-    ]);
-  }
+        return $this->render('home.twig', [
+            'article' => $article,
+            'project' => $project,
+            'photo'   => $photo,
+            'map'     => $map
+        ]);
+    }
 }

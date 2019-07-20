@@ -21,13 +21,13 @@ class PhotoController extends Controller
      * @throws SyntaxError
      */
     public function indexAction()
-  {
-    $allPhotos = ModelFactory::get('Photo')->list();
+    {
+        $allPhotos = ModelFactory::get('Photo')->list();
 
-    return $this->render('photo/photos.twig', [
-      'allPhotos' => $allPhotos
-    ]);
-  }
+        return $this->render('photo/photos.twig', [
+            'allPhotos' => $allPhotos
+        ]);
+    }
 
     /**
      * @return string
@@ -36,15 +36,15 @@ class PhotoController extends Controller
      * @throws SyntaxError
      */
     public function ReadAction()
-  {
-    $photo      = ModelFactory::get('Photo')->read($this->get->getGetVar('id'));
-    $photoObj   = ModelFactory::get('Object')->read($photo['object_id']);
-    $photoConst = ModelFactory::get('Constellation')->read($photo['const_id']);
+    {
+        $photo      = ModelFactory::get('Photo')->read($this->get->getGetVar('id'));
+        $photoObj   = ModelFactory::get('Object')->read($photo['object_id']);
+        $photoConst = ModelFactory::get('Constellation')->read($photo['const_id']);
 
-    return $this->render('photo/readPhoto.twig', [
-      'photo'      => $photo,
-      'photoObj'   => $photoObj,
-      'photoConst' => $photoConst
-    ]);
-  }
+        return $this->render('photo/readPhoto.twig', [
+            'photo'      => $photo,
+            'photoObj'   => $photoObj,
+            'photoConst' => $photoConst
+        ]);
+    }
 }

@@ -21,15 +21,15 @@ class RouteController extends Controller
      * @throws SyntaxError
      */
     public function createAction()
-  {
-    if (!empty($this->post->getPostArray())) {
+    {
+        if (!empty($this->post->getPostArray())) {
 
-      ModelFactory::get('Route')->create($this->post->getPostArray());
-      $this->cookie->createAlert('Nouveau parcours créé avec succès !');
+            ModelFactory::get('Route')->create($this->post->getPostArray());
+            $this->cookie->createAlert('Nouveau parcours créé avec succès !');
 
-      $this->redirect('admin');
-    }
-      return $this->render('admin/portfolio/createRoute.twig');
+            $this->redirect('admin');
+        }
+        return $this->render('admin/portfolio/createRoute.twig');
     }
 
     /**
@@ -39,24 +39,24 @@ class RouteController extends Controller
      * @throws SyntaxError
      */
     public function updateAction()
-  {
-    if (!empty($this->post->getPostArray())) {
+    {
+        if (!empty($this->post->getPostArray())) {
 
-      ModelFactory::get('Route')->update($this->get->getGetVar('id'), $this->post->getPostArray());
-      $this->cookie->createAlert('Modification réussie du parcours sélectionné !');
+            ModelFactory::get('Route')->update($this->get->getGetVar('id'), $this->post->getPostArray());
+            $this->cookie->createAlert('Modification réussie du parcours sélectionné !');
 
-      $this->redirect('admin');
+            $this->redirect('admin');
+        }
+        $route = ModelFactory::get('Route')->read($this->get->getGetVar('id'));
+
+        return $this->render('admin/portfolio/updateRoute.twig', ['route' => $route]);
     }
-    $route = ModelFactory::get('Route')->read($this->get->getGetVar('id'));
-
-    return $this->render('admin/portfolio/updateRoute.twig', ['route' => $route]);
-  }
 
     public function deleteAction()
-  {
-    ModelFactory::get('Route')->delete($this->get->getGetVar('id'));
-    $this->cookie->createAlert('Parcours définitivement supprimé !');
+    {
+        ModelFactory::get('Route')->delete($this->get->getGetVar('id'));
+        $this->cookie->createAlert('Parcours définitivement supprimé !');
 
-    $this->redirect('admin');
-  }
+        $this->redirect('admin');
+    }
 }

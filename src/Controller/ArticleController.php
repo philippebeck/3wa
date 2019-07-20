@@ -20,7 +20,7 @@ class ArticleController extends Controller
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function IndexAction()
+    public function indexAction()
     {
         $allArticles = ModelFactory::get('Article')->list();
 
@@ -33,7 +33,7 @@ class ArticleController extends Controller
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function CreateAction()
+    public function createAction()
     {
         if (!empty($this->post->getPostArray())) {
 
@@ -59,7 +59,7 @@ class ArticleController extends Controller
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function ReadAction()
+    public function readAction()
     {
         $article    = ModelFactory::get('Article')->read($this->get->getGetVar('id'));
         $comments   = ModelFactory::get('Comment')->list($this->get->getGetVar('id'), 'article_id');
@@ -90,7 +90,7 @@ class ArticleController extends Controller
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function UpdateAction()
+    public function updateAction()
     {
         if (!empty($this->post->getPostArray())) {
 
@@ -113,7 +113,7 @@ class ArticleController extends Controller
         return $this->render('admin/blog/updateArticle.twig', ['article' => $article]);
     }
 
-    public function DeleteAction()
+    public function deleteAction()
     {
         ModelFactory::get('Article')->delete($this->get->getGetVar('id'));
         $this->cookie->createAlert('Article définitivement supprimé !');

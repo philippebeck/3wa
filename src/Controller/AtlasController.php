@@ -21,13 +21,13 @@ class AtlasController extends Controller
      * @throws SyntaxError
      */
     public function indexAction()
-  {
-    $allAtlas = ModelFactory::get('Atlas')->list();
+    {
+        $allAtlas = ModelFactory::get('Atlas')->list();
 
-    return $this->render('atlas/atlas.twig', [
-      'allAtlas' => $allAtlas
-    ]);
-  }
+        return $this->render('atlas/atlas.twig', [
+            'allAtlas' => $allAtlas
+        ]);
+    }
 
     /**
      * @return string
@@ -36,13 +36,13 @@ class AtlasController extends Controller
      * @throws SyntaxError
      */
     public function readAction()
-  {
-    $atlas      = ModelFactory::get('Atlas')->read($this->get->getGetVar('id'));
-    $atlasMaps  = ModelFactory::get('Map')->list($this->get->getGetVar('id'), 'atlas_id', 1);
+    {
+        $atlas      = ModelFactory::get('Atlas')->read($this->get->getGetVar('id'));
+        $atlasMaps  = ModelFactory::get('Map')->list($this->get->getGetVar('id'), 'atlas_id', 1);
 
-    return $this->render('atlas/readAtlas.twig', [
-      'atlas'     => $atlas,
-      'atlasMaps' => $atlasMaps
-    ]);
-  }
+        return $this->render('atlas/readAtlas.twig', [
+            'atlas'     => $atlas,
+            'atlasMaps' => $atlasMaps
+        ]);
+    }
 }
