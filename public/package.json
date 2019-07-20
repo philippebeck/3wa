@@ -1,5 +1,6 @@
 {
   "name": "philippebeck",
+  "version": "0.3.0",
   "description": "Pjs, Pam, Jim, Sam, me & myself (portfolio, creations, blog, passions, galleries, etc...) ",
   "main": "index.php",
   "repository": {
@@ -22,8 +23,8 @@
   },
   "homepage": "https://github.com/philippebeck/philippebeck#readme",
   "dependencies": {
-    "font-awesome": "^4.7.0",
-    "jim-js": "^0.2.3",
-    "sam.scss": "^0.2.4"
+    "font-awesome": "4.x",
+    "jim-js": "0.x",
+    "sam.scss": "0.x"
   }
 }

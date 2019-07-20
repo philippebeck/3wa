@@ -1,6 +1,6 @@
 {
-  "name": "philippebeck",
-  "version": "0.2.18",
+  "name": "philippebeck/philippebeck",
+  "version": "0.3.0",
   "type": "website",
   "description": "Web Development - Open-source Technologies - HTML, CSS, JavaScript, PHP, SQL - 3W Academy, OpenClassrooms, Free Code Camp, SoloLearn",
   "license": "MIT",
@@ -14,18 +14,16 @@
   ],
   "autoload": {
     "psr-4": {
-      "App\\": "src/",
-      "Tests\\": "tests/",
-      "Pam\\": "vendor/pjs/pam/"
+      "App\\": "src/"
     }
   },
   "require": {
-    "php": "^7.0",
-    "pjs/pjs": "^0.2.5"
+    "php": "^7.2",
+    "pjs/pjs": "0.x"
   },
   "config": {
     "platform": {
-      "php": "7.0"
+      "php": "7.2"
     }
   }
 }
