@@ -1,91 +1,62 @@
 <?php
 
-// **************************** \\
-// ***** ROUTE CONTROLLER ***** \\
-// **************************** \\
-
 namespace App\Controller;
 
 use Pam\Controller\Controller;
 use Pam\Model\ModelFactory;
-use Pam\Helper\Session;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
-
-/** *******************************\
-* All control actions to the routes
-*/
+/**
+ * Class RouteController
+ * @package App\Controller
+ */
 class RouteController extends Controller
 {
-
-  /** *****************\
-  * Creates a new route
-  * @return mixed => the rendering of the view createRoute
-  */
-  public function CreateAction()
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function createAction()
   {
-    // Checks if the form has been completed
-    if (!empty($_POST))
-    {
-      // Creates a new route
-      ModelFactory::get('Route')->create($_POST);
+    if (!empty($this->post->getPostArray())) {
 
-      // Creates a valid message to confirm the creation of a new route
-      htmlspecialchars(Session::createAlert('Nouveau parcours créé avec succès !', 'valid'));
+      ModelFactory::get('Route')->create($this->post->getPostArray());
+      $this->cookie->createAlert('Nouveau parcours créé avec succès !');
 
-      // Redirects to the view admin
       $this->redirect('admin');
     }
-    else {
-      // Returns the rendering of the view createRoute with the empty fields
       return $this->render('admin/portfolio/createRoute.twig');
     }
-  }
 
-
-  /** *************\
-  * Updates a route
-  * @return mixed => the rendering of the view updateRoute
-  */
-  public function UpdateAction()
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function updateAction()
   {
-    // Gets the route id, then stores it
-    $id = $_GET['id'];
+    if (!empty($this->post->getPostArray())) {
 
-    // Checks if the form has been completed
-    if (!empty($_POST))
-    {
-      // Updates the selected route
-      ModelFactory::get('Route')->update($id, $_POST);
+      ModelFactory::get('Route')->update($this->get->getGetVar('id'), $this->post->getPostArray());
+      $this->cookie->createAlert('Modification réussie du parcours sélectionné !');
 
-      // Creates an info message to confirm the update of the selected route
-      htmlspecialchars(Session::createAlert('Modification réussie du parcours sélectionné !', 'info'));
-
-      // Redirects to the view admin
       $this->redirect('admin');
     }
-    // Reads the selected route, then stores it
-    $route = ModelFactory::get('Route')->read($id);
+    $route = ModelFactory::get('Route')->read($this->get->getGetVar('id'));
 
-    // Returns the rendering of the view updateRoute with the route
     return $this->render('admin/portfolio/updateRoute.twig', ['route' => $route]);
   }
 
-
-  /** *************\
-  * Deletes a route
-  */
-  public function DeleteAction()
+    public function deleteAction()
   {
-    // Gets the route id, then stores it
-    $id = $_GET['id'];
+    ModelFactory::get('Route')->delete($this->get->getGetVar('id'));
+    $this->cookie->createAlert('Parcours définitivement supprimé !');
 
-    // Deletes the selected route
-    ModelFactory::get('Route')->delete($id);
-
-    // Creates a delete message to confirm the removal of the selected route
-    htmlspecialchars(Session::createAlert('Parcours définitivement supprimé !', 'delete'));
-
-    // Redirects to the view admin
     $this->redirect('admin');
   }
 }
