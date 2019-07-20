@@ -1,41 +1,7 @@
--- *********************************
--- ***** DATABASE PHILIPPEBECK *****
--- *********************************
-
-
-
--- Drops the old database before creates a new one
-DROP DATABASE IF EXISTS philippebeck;
-
--- Creates the database philippebeck
-CREATE DATABASE philippebeck CHARACTER SET 'utf8';
-
--- Uses the database philippebeck
 USE philippebeck;
 
-
-
-
--- ************************************
 -- ***** Tables for the Blog part *****
--- ************************************
 
-
--- *************************
--- Creates the table Article
-CREATE TABLE IF NOT EXISTS Article
-(
-  id            SMALLINT      UNSIGNED  PRIMARY KEY AUTO_INCREMENT,
-  title         VARCHAR(50)   NOT NULL  UNIQUE,
-  image         VARCHAR(50)   NOT NULL  UNIQUE,
-  created_date  DATETIME      NOT NULL,
-  updated_date  DATETIME      NOT NULL,
-  link          VARCHAR(255)  NOT NULL  UNIQUE,
-  content       TEXT          NOT NULL
-)
-ENGINE=INNODB DEFAULT CHARSET=utf8;
-
--- Inserts the Article data
 INSERT INTO Article
 (title,                                   image,              created_date,           updated_date,           link,                                                                                                                                                                                   content)
 VALUES
@@ -57,64 +23,8 @@ VALUES
 
 ('PJS l\'éléphant en pyjama est là',      'pjs.png',          '2018-01-23 12:00:00',  '2017-01-23 12:00:00',  'https://packagist.org/packages/pjs/pjs',                                                                                                                                                 'Et voilà, PJS, le microCMS intégrant Pam, Jim & Sam est disponible sur GitHub et Packagist : "https://github.com/philippebeck/pjs" & "https://packagist.org/packages/pjs/pjs" Installation : "composer require pjs/pjs" Les docs seront disponibles d\'ici la fin du week-end...');
 
-
-
-
--- **********************
--- Creates the table User
-CREATE TABLE IF NOT EXISTS User
-(
-  id            SMALLINT      UNSIGNED  PRIMARY KEY AUTO_INCREMENT,
-  first_name    VARCHAR(20)   NOT NULL,
-  last_name     VARCHAR(20)   NOT NULL,
-  image         VARCHAR(50),
-  zipcode       MEDIUMINT     UNSIGNED,
-  country       VARCHAR(20)   NOT NULL,
-  email         VARCHAR(100)  NOT NULL  UNIQUE,
-  pass          VARCHAR(100)  NOT NULL,
-  created_date  DATETIME      NOT NULL,
-  updated_date  DATETIME      NOT NULL
-)
-ENGINE=INNODB DEFAULT CHARSET=utf8;
-
-
-
--- *************************
--- Creates the table Comment
-CREATE TABLE IF NOT EXISTS Comment
-(
-  id            SMALLINT        UNSIGNED      PRIMARY KEY   AUTO_INCREMENT,
-  content       TEXT            NOT NULL,
-  created_date  DATETIME        NOT NULL,
-  article_id    SMALLINT        UNSIGNED      NOT NULL,
-  user_id       SMALLINT        UNSIGNED      NOT NULL,
-  CONSTRAINT    fk_article_id   FOREIGN KEY   (article_id)  REFERENCES      Article(id),
-  CONSTRAINT    fk_user_id      FOREIGN KEY   (user_id)     REFERENCES      User(id)
-)
-ENGINE=INNODB DEFAULT CHARSET=utf8;
-
-
-
-
--- *****************************************
 -- ***** Tables for the Portfolio part *****
--- *****************************************
 
-
--- *************************
--- Creates the table Project
-CREATE TABLE IF NOT EXISTS Project
-(
-  id           TINYINT       UNSIGNED  PRIMARY KEY   AUTO_INCREMENT,
-  name         VARCHAR(50)   NOT NULL,
-  image        VARCHAR(50)   NOT NULL  UNIQUE,
-  link         VARCHAR(50)   NOT NULL  UNIQUE,
-  year         YEAR          NOT NULL,
-  description  VARCHAR(255)  NOT NULL
-)
-ENGINE=INNODB DEFAULT CHARSET=utf8;
-
--- Inserts the Project data
 INSERT INTO Project
 (name,                    image,                     link,                                                  year,   description)
 VALUES
@@ -126,41 +36,12 @@ VALUES
 ('Pam',                   'pam.png',                 'https://github.com/philippebeck/pam.php',             2018,   'Php Approachable Microframework'),
 ('Pjs',                   'pjs.png',                 'https://github.com/philippebeck/pjs',                 2018,   'A microCMS for coding in Pyjamas');
 
-
-
--- *********************
--- Creates the table Pen
-CREATE TABLE IF NOT EXISTS Pen
-(
-  id              TINYINT       UNSIGNED  PRIMARY KEY   AUTO_INCREMENT,
-  name            VARCHAR(50)   NOT NULL  UNIQUE,
-  link            VARCHAR(50)   NOT NULL  UNIQUE,
-  objective_link  VARCHAR(100)  NOT NULL  UNIQUE
-)
-ENGINE=INNODB DEFAULT CHARSET=utf8;
-
--- Inserts the Pen data
 INSERT INTO Pen
 (name,                                      link,                                             objective_link)
 VALUES
 ('Build a Tribute Page',                    'https://codepen.io/philippebeck/full/MpJQmg',    'https://www.freecodecamp.org/challenges/build-a-tribute-page'),
 ('Build a Personal Portfolio Webpage',      'https://codepen.io/philippebeck/full/vxxQbP',    'https://www.freecodecamp.org/challenges/build-a-personal-portfolio-webpage');
 
-
-
--- ***********************
--- Creates the table Route
-CREATE TABLE IF NOT EXISTS Route
-(
-  id           TINYINT       UNSIGNED  PRIMARY KEY   AUTO_INCREMENT,
-  name         VARCHAR(100)  NOT NULL,
-  certif_id    VARCHAR(20)   NOT NULL  UNIQUE,
-  certif_link  VARCHAR(100)  NOT NULL  UNIQUE,
-  certif_date  DATE          NOT NULL
-)
-ENGINE=INNODB DEFAULT CHARSET=utf8;
-
--- Inserts the Route data
 INSERT INTO Route
 (name,                                                              certif_id,        certif_link,                                                          certif_date)
 VALUES
@@ -172,22 +53,6 @@ VALUES
 ('Déployez vos applications Node.js sur le Cloud d’IBM Bluemix',    '3258888279',     'https://openclassrooms.com/learning-path-certificates/3258888279',   '2016-12-19'),
 ('Simplonline',                                                     '4762327938',     'https://openclassrooms.com/learning-path-certificates/4762327938',   '2017-03-13');
 
-
-
--- ************************
--- Creates the table Course
-CREATE TABLE IF NOT EXISTS Course
-(
-  id           TINYINT       UNSIGNED  PRIMARY KEY   AUTO_INCREMENT,
-  name         VARCHAR(100)  NOT NULL,
-  link         VARCHAR(100)  NOT NULL  UNIQUE,
-  certif_id    VARCHAR(20)   NOT NULL  UNIQUE,
-  certif_link  VARCHAR(100)  NOT NULL  UNIQUE,
-  certif_date  DATE          NOT NULL
-)
-ENGINE=INNODB DEFAULT CHARSET=utf8;
-
--- Inserts the Course data
 INSERT INTO Course
 (name,                                                              link,                                                                                                 certif_id,        certif_link,                                                  certif_date)
 VALUES
@@ -246,26 +111,8 @@ VALUES
 ('Développez votre site web avec le framework Symfony',             'https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-symfony',             '7355911436',     'https://openclassrooms.com/course-certificates/7355911436',  '2017-04-09'),
 ('Découvrez le fonctionnement des algorithmes',                     'https://openclassrooms.com/courses/decouvrez-le-fonctionnement-des-algorithmes',                     '6583971979',     'https://openclassrooms.com/course-certificates/6583971979',  '2017-05-16');
 
-
-
-
--- *************************************
 -- ***** Tables for the Photo part *****
--- *************************************
 
-
--- *******************************
--- Creates the table Constellation
-CREATE TABLE IF NOT EXISTS Constellation
-(
-  id            TINYINT       UNSIGNED    PRIMARY KEY   AUTO_INCREMENT,
-  name          VARCHAR(20)   NOT NULL,
-  surname       VARCHAR(30)   NOT NULL,
-  wiki          VARCHAR(40)   NOT NULL
-)
-ENGINE=INNODB DEFAULT CHARSET=utf8;
-
--- Inserts the Constellation data
 INSERT INTO Constellation
 (name,                    surname,                      wiki)
 VALUES
@@ -358,29 +205,6 @@ VALUES
 ('Volans',                'Le Poisson Volant',          'Poisson_volant_(constellation)'),
 ('Vulpecula',             'Le Petit Renard',            'Petit_Renard');
 
-
-
--- ************************
--- Creates the table Object
-CREATE TABLE IF NOT EXISTS Object
-(
-  id            MEDIUMINT     UNSIGNED    PRIMARY KEY  AUTO_INCREMENT,
-  name          VARCHAR(50),
-  messier       VARCHAR(10),
-  ngc           VARCHAR(20),
-  ugc           VARCHAR(20),
-  eso           VARCHAR(20),
-  apg           VARCHAR(20),
-  pgc           VARCHAR(20),
-  distance      VARCHAR(20)   NOT NULL,
-  leda          VARCHAR(20),
-  ned           VARCHAR(20),
-  cds           VARCHAR(20)   NOT NULL,
-  wiki          VARCHAR(100)
-)
-ENGINE=INNODB DEFAULT CHARSET=utf8;
-
--- Inserts the Object data
 INSERT INTO Object
 (name,                        messier,  ngc,          ugc,          eso,            apg,        pgc,            distance,         leda,       ned,              cds,                      wiki)
 VALUES
@@ -450,28 +274,6 @@ VALUES
 ('',                          '',       '',           'UGC 12158',  '',             '',         'PGC 69533',    '400 millions',   'UGC12158', 'UGC12158',       'UGC12158',               'https://en.wikipedia.org/wiki/UGC_12158'),
 ('',                          '',       '',           '',           'ESO 498-5',    '',         'PGC 26671',    '100 millions',   'ESO498-5', 'ESO498-5',       'ESO498-5',               '');
 
-
-
--- ***********************
--- Creates the table Photo
-CREATE TABLE IF NOT EXISTS Photo
-(
-  id            MEDIUMINT     UNSIGNED     PRIMARY KEY  AUTO_INCREMENT,
-  image         VARCHAR(20)   NOT NULL     UNIQUE,
-  ra            VARCHAR(20)   NOT NULL,
-  declination   VARCHAR(20)   NOT NULL,
-  size          VARCHAR(20)   NOT NULL,
-  view_field    VARCHAR(20),
-  release_date  DATETIME      NOT NULL,
-  const_id      TINYINT       UNSIGNED     NOT NULL,
-  object_id     MEDIUMINT     UNSIGNED     NOT NULL,
-  credit        TEXT          NOT NULL,
-  CONSTRAINT    fk_const_id   FOREIGN KEY  (const_id)   REFERENCES      Constellation(id),
-  CONSTRAINT    fk_object_id  FOREIGN KEY  (object_id)  REFERENCES      Object(id)
-)
-ENGINE=INNODB DEFAULT CHARSET=utf8;
-
--- Inserts the Photo data
 INSERT INTO Photo
 (image,         ra,                 declination,          size,             view_field,       release_date,           const_id,   object_id,  credit)
 VALUES
@@ -539,28 +341,8 @@ VALUES
 ('potw1427a',   '3h 42m 2.33s',     'S 47° 13\' 20.61"',  '4183 x 3572',    '2.76 x 2.36',    '2014-07-07 10:00:00',  41,         37,         'ESA/Hubble & NASA. Acknowledgements: D. Calzetti (UMass) & the LEGUS Team'),
 ('potw1437a',   '20h 17m 11.72s',   'S 70° 45\' 23.28"',  '2587 x 1387',    '4.32 x 2.32',    '2014-09-15 10:00:00',  61,         56,         'Image credit: ESA/Hubble & NASA. Acknowledgement: Judy Schmidt (geckzilla.com)');
 
-
-
-
--- *************************************
 -- ***** Tables for the Atlas part *****
--- *************************************
 
-
--- ***********************
--- Creates the table Atlas
-CREATE TABLE IF NOT EXISTS Atlas
-(
-  id            TINYINT        UNSIGNED  PRIMARY KEY AUTO_INCREMENT,
-  name          VARCHAR(50)    NOT NULL,
-  wiki          VARCHAR(50),
-  year          VARCHAR(5)     NOT NULL,
-  author_name   VARCHAR(50)    NOT NULL,
-  author_wiki   VARCHAR(100)
-)
-ENGINE=INNODB DEFAULT CHARSET=utf8;
-
--- Inserts the Atlas data
 INSERT INTO Atlas
 (name,                                            wiki,                                                 year,           author_name,                                      author_wiki)
 VALUES
@@ -584,21 +366,6 @@ VALUES
 ('The Stars',                                     '',                                                   '1865',         'Society for the Diffusion of Useful Knowledge',  'https://en.wikipedia.org/wiki/Society_for_the_Diffusion_of_Useful_Knowledge'),
 ('Atlas of Astronomy',                            '',                                                   '1869',         'Alexander Keith Johnston',                       'https://en.wikipedia.org/wiki/Alexander_Keith_Johnston_(1844–1879)');
 
-
-
--- *********************
--- Creates the table Map
-CREATE TABLE IF NOT EXISTS Map
-(
-  id           SMALLINT      UNSIGNED     PRIMARY KEY  AUTO_INCREMENT,
-  name         VARCHAR(20)   NOT NULL,
-  description  VARCHAR(150)  NOT NULL,
-  atlas_id     TINYINT       UNSIGNED     NOT NULL,
-  CONSTRAINT   fk_atlas_id   FOREIGN KEY  (atlas_id)   REFERENCES       Atlas(id)
-)
-ENGINE=INNODB DEFAULT CHARSET=utf8;
-
--- Inserts the Map data
 INSERT INTO Map
 (name,          description,                                                                                                                atlas_id)
 VALUES
