@@ -8,29 +8,17 @@ var Slider = function()
   this.slides =
   [
     { image: "img/photo/1024x768/heic1501a.jpg", legend: "Eagle Nebula"},
-    { image: "img/photo/1024x768/heic0506a.jpg", legend: "Whirlpool Galaxy"},
     { image: "img/photo/1024x768/opo0432d.jpg", legend: "Helix Nebula"},
-    { image: "img/photo/1024x768/opo0328a.jpg", legend: "Sombrero Galaxy"},
     { image: "img/photo/1024x768/heic0601a.jpg", legend: "Orion Nebula"},
-    { image: "img/photo/1024x768/potw1345a.jpg", legend: "Antennae Galaxy"},
     { image: "img/photo/1024x768/heic0515a.jpg", legend: "Crab Nebula"},
-    { image: "img/photo/1024x768/heic1110a.jpg", legend: "Centaurus A"},
     { image: "img/photo/1024x768/heic1307a.jpg", legend: "Horsehead Nebula"},
-    { image: "img/photo/1024x768/heic0710a.jpg", legend: "Bode\"s Galaxy"},
     { image: "img/photo/1024x768/heic1310a.jpg", legend: "Ring Nebula"},
-    { image: "img/photo/1024x768/heic1403a.jpg", legend: "Southern Pinwheel Galaxy"},
     { image: "img/photo/1024x768/heic0206c.jpg", legend: "Cone Nebula"},
-    { image: "img/photo/1024x768/opo1247a.jpg", legend: "Hercules A"},
     { image: "img/photo/1024x768/heic1015a.jpg", legend: "Lagoon Nebula"},
-    { image: "img/photo/1024x768/heic0604a.jpg", legend: "Cigar Galaxy"},
     { image: "img/photo/1024x768/heic0910h.jpg", legend: "Bug Nebula"},
-    { image: "img/photo/1024x768/heic0817a.jpg", legend: "Perseus A"},
     { image: "img/photo/1024x768/heic0707a.jpg", legend: "Carina Nebula"},
-    { image: "img/photo/1024x768/heic0206a.jpg", legend: "Tadpole Galaxy"},
     { image: "img/photo/1024x768/heic0206d.jpg", legend: "Omega Nebula"},
-    { image: "img/photo/1024x768/opo0511a.jpg", legend: "Fornax A"},
-    { image: "img/photo/1024x768/heic1105a.jpg", legend: "Tarantula Nebula"},
-    { image: "img/photo/1024x768/heic0206b.jpg", legend: "Mice Galaxy"}
+    { image: "img/photo/1024x768/heic1105a.jpg", legend: "Tarantula Nebula"}
   ];
 
   this.state =
