@@ -1,52 +1,45 @@
 <?php
 
-// **************************** \\
-// ***** ATLAS CONTROLLER ***** \\
-// **************************** \\
-
 namespace App\Controller;
 
 use Pam\Controller\Controller;
 use Pam\Model\ModelFactory;
-use Pam\Helper\Session;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
-
-/** ******************************\
-* All control actions to the atlas
-*/
+/**
+ * Class AtlasController
+ * @package App\Controller
+ */
 class AtlasController extends Controller
 {
-
-  /** *************\
-  * Reads all atlas
-  * @return mixed => the rendering of the view atlas
-  */
-  public function IndexAction()
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function IndexAction()
   {
-    // Reads all atlas & maps, then stores them
     $allAtlas = ModelFactory::get('Atlas')->list();
 
-    // Returns the rendering of the view atlas with all atlas
     return $this->render('atlas/atlas.twig', [
       'allAtlas' => $allAtlas
     ]);
   }
 
-
-  /** ***********************\
-  * Reads an atlas & his maps
-  * @return mixed => the rendering of the view readAtlas
-  */
-  public function ReadAction()
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function ReadAction()
   {
-    // Gets the atlas id, then stores it
-    $id = $_GET['id'];
+    $atlas      = ModelFactory::get('Atlas')->read($this->get->getGetVar('id'));
+    $atlasMaps  = ModelFactory::get('Map')->list($this->get->getGetVar('id'), 'atlas_id', 1);
 
-    // Reads the atlas & his maps, then stores them
-    $atlas      = ModelFactory::get('Atlas')->read($id);
-    $atlasMaps  = ModelFactory::get('Map')  ->list($id, 'atlas_id', 1);
-
-    // Returns the rendering of the view readAtlas with the current atlas & his maps
     return $this->render('atlas/readAtlas.twig', [
       'atlas'     => $atlas,
       'atlasMaps' => $atlasMaps
