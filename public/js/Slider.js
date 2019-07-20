@@ -44,7 +44,7 @@ var Slider = function()
   installEventListener("#slider-next", "click", this.onSliderNext.bind(this));
   installEventListener("#slider-toggle", "click", this.onSliderToggle.bind(this));
   installEventListener("#toolbar-toggle", "click", this.onToolbarToggle.bind(this));
-}
+};
 
 /******************************************\
 * Refreshs the Slider with the next picture
@@ -53,7 +53,7 @@ Slider.prototype.onSliderNext = function(event)
 {
   this.state.index++;
 
-  if (this.state.index == this.slides.length) {
+  if (this.state.index === this.slides.length) {
     this.state.index = 0;
   }
   this.refreshSlider();
@@ -82,7 +82,7 @@ Slider.prototype.onSliderRandom = function(event)
   do {
     index = getRandomInteger(0, this.slides.length - 1);
   }
-  while (index == this.state.index);
+  while (index === this.state.index);
 
   this.state.index = index;
 
