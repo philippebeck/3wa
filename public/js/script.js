@@ -1,21 +1,9 @@
-// *********************** \\
-// ***** MAIN SCRIPT ***** \\
-// *********************** \\
+"use strict";
 
-
-// Strict mode
-'use strict';
-
-
-document.addEventListener('DOMContentLoaded', function(e)
+document.addEventListener("DOMContentLoaded", function(e)
 {
-  // Checks if we are on the Photo page
-  if (typeof Slider != 'undefined')
-  {
-    // Creates the object slider
+  if (typeof Slider != "undefined") {
     var slider = new Slider();
-
-    // Launch the slider
     slider.onSliderNext();
   }
 });
