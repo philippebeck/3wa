@@ -103,27 +103,12 @@
       </a>
     </li>
 
-    {% if (userEmail() == adminEmail() or userEmail() == ownerEmail()) %}
-
     <!-- Admin access -->
     <li>
       <a href="{{ url('admin') }}" title="Administration">
         <i class="fa fa-unlock-alt fa-fw" aria-hidden="true"></i>
       </a>
     </li>
-
-    {% endif %}
-
-    {% if (userEmail() == adminEmail() or userEmail() == ownerEmail()) %}
-
-    <!-- Owner access -->
-    <li>
-      <a href="{{ url('owner') }}" title="jury 3W Academy">
-        <i class="fa fa-university fa-fw" aria-hidden="true"></i>
-      </a>
-    </li>
-
-    {% endif %}
 
     {% else %}
 
