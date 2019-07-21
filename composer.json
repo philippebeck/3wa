@@ -1,7 +1,7 @@
 {
   "name": "philippebeck/philippebeck",
-  "version": "0.3.0",
-  "type": "website",
+  "version": "0.3.1",
+  "type": "library",
   "description": "Web Development - Open-source Technologies - HTML, CSS, JavaScript, PHP, SQL - 3W Academy, OpenClassrooms, Free Code Camp, SoloLearn",
   "license": "MIT",
   "authors": [
