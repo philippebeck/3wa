@@ -12,4 +12,4 @@ define('DB_USER', 'username');
 // You need to replace userpass with the user password of the database
 define('DB_PASS', 'userpass');
 
-// Then remove the '-example' from 'db-example.php' to get 'db.php'
+// Then remove the '-example' from 'parameters-example.php' to get 'parameters.php'
