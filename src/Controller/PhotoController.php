@@ -20,7 +20,7 @@ class PhotoController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function indexAction()
+    public function defaultMethod()
     {
         $allPhotos = ModelFactory::get('Photo')->list();
 
@@ -35,7 +35,7 @@ class PhotoController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function ReadAction()
+    public function readMethod()
     {
         $photo      = ModelFactory::get('Photo')->read($this->get->getGetVar('id'));
         $photoObj   = ModelFactory::get('Object')->read($photo['object_id']);

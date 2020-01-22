@@ -20,7 +20,7 @@ class AtlasController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function indexAction()
+    public function defaultMethod()
     {
         $allAtlas = ModelFactory::get('Atlas')->list();
 
@@ -35,7 +35,7 @@ class AtlasController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function readAction()
+    public function readMethod()
     {
         $atlas      = ModelFactory::get('Atlas')->read($this->get->getGetVar('id'));
         $atlasMaps  = ModelFactory::get('Map')->list($this->get->getGetVar('id'), 'atlas_id', 1);

@@ -20,7 +20,7 @@ class ProjectController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function createAction()
+    public function createMethod()
     {
         if (!empty($this->post->getPostArray())) {
 
@@ -45,7 +45,7 @@ class ProjectController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function updateAction()
+    public function updateMethod()
   {
     if (!empty($this->post->getPostArray())) {
 
@@ -68,7 +68,7 @@ class ProjectController extends MainController
     return $this->render('admin/portfolio/updateProject.twig', ['project' => $project]);
   }
 
-    public function deleteAction()
+    public function deleteMethod()
   {
     ModelFactory::get('Project')->delete($this->get->getGetVar('id'));
     $this->cookie->createAlert('Projet réellement supprimé !');

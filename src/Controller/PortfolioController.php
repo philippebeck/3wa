@@ -20,7 +20,7 @@ class PortfolioController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function indexAction()
+    public function defaultMethod()
   {
     $allProjects = ModelFactory::get('Project')->list();
     $allPens     = ModelFactory::get('Pen')    ->list();

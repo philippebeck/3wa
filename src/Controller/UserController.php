@@ -20,7 +20,7 @@ class UserController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function loginAction()
+    public function loginMethod()
     {
         if (!empty($this->post->getPostArray())) {
 
@@ -44,7 +44,7 @@ class UserController extends MainController
         return $this->render('user/loginUser.twig');
     }
 
-    public function logoutAction()
+    public function logoutMethod()
     {
         $this->session->destroySession();
 
@@ -57,7 +57,7 @@ class UserController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function createAction()
+    public function createMethod()
     {
         if (!empty($this->post->getPostArray())) {
             $user = ModelFactory::get('User')->read($this->post->getPostVar('email'), 'email');
@@ -85,7 +85,7 @@ class UserController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function updateAction()
+    public function updateMethod()
     {
         if (!empty($this->post->getPostArray())) {
 
@@ -107,7 +107,7 @@ class UserController extends MainController
         return $this->render('user/updateUser.twig', ['user' => $user]);
     }
 
-    public function deleteAction()
+    public function deleteMethod()
     {
         ModelFactory::get('User')->delete($this->get->getGetVar('id'));
         $this->cookie->createAlert('Utilisateur définitivement supprimé !');

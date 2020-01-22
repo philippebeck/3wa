@@ -20,7 +20,7 @@ class HomeController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function indexAction()
+    public function defaultMethod()
     {
         $allArticles  = ModelFactory::get('Article')->list();
         $allProjects  = ModelFactory::get('Project')->list();

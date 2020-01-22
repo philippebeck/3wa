@@ -19,7 +19,7 @@ class PjsController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function indexAction()
+    public function defaultMethod()
   {
     return $this->render('pjs/pjs.twig');
   }

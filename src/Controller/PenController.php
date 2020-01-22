@@ -20,7 +20,7 @@ class PenController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function createAction()
+    public function createMethod()
     {
         if (!empty($this->post->getPostArray())) {
 
@@ -38,7 +38,7 @@ class PenController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function updateAction()
+    public function updateMethod()
     {
         if (!empty($this->post->getPostArray())) {
 
@@ -52,7 +52,7 @@ class PenController extends MainController
         return $this->render('admin/portfolio/updatePen.twig', ['pen' => $pen]);
     }
 
-    public function deleteAction()
+    public function deleteMethod()
     {
         ModelFactory::get('Pen')->delete($this->get->getGetVar('id'));
         $this->cookie->createAlert('Pen réellement supprimé !');
