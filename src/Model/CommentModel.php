@@ -2,10 +2,10 @@
 
 namespace App\Model;
 
-use Pam\Model\Model;
+use Pam\Model\MainModel;
 
 /**
  * Class CommentModel
  * @package App\Model
  */
-class CommentModel extends Model {}
+class CommentModel extends MainModel {}

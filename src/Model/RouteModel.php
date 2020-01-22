@@ -2,10 +2,10 @@
 
 namespace App\Model;
 
-use Pam\Model\Model;
+use Pam\Model\MainModel;
 
 /**
  * Class RouteModel
  * @package App\Model
  */
-class RouteModel extends Model {}
+class RouteModel extends MainModel {}

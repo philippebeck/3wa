@@ -2,10 +2,10 @@
 
 namespace App\Model;
 
-use Pam\Model\Model;
+use Pam\Model\MainModel;
 
 /**
  * Class ConstellationModel
  * @package App\Model
  */
-class ConstellationModel extends Model {}
+class ConstellationModel extends MainModel {}
