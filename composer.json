@@ -19,7 +19,10 @@
   },
   "require": {
     "php": "^7.2",
-    "pjs/pjs": "0.x"
+    "philippebeck/pam": "^2.0.4"
+  },
+  "require-dev": {
+    "tracy/tracy": "^2.7.2"
   },
   "config": {
     "platform": {
