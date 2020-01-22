@@ -20,7 +20,7 @@ class CommentController extends MainController
             $data['created_date'] = $this->post->getPostVar('date');
             $data['user_id']      = $this->session->userId();
 
-            ModelFactory::get('Comment')->create($data);
+            ModelFactory::getModel('Comment')->createData($data);
 
             $this->cookie->createAlert('Nouveau commentaire créé avec succès !');
 
@@ -33,7 +33,7 @@ class CommentController extends MainController
 
     public function deleteMethod()
     {
-        ModelFactory::get('Comment')->delete($this->get->getGetVar('id'));
+        ModelFactory::getModel('Comment')->deleteData($this->get->getGetVar('id'));
         $this->cookie->createAlert('Commentaire définitivement supprimé !');
 
         $this->redirect('admin');

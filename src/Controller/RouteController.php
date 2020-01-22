@@ -24,7 +24,7 @@ class RouteController extends MainController
     {
         if (!empty($this->post->getPostArray())) {
 
-            ModelFactory::get('Route')->create($this->post->getPostArray());
+            ModelFactory::getModel('Route')->createData($this->post->getPostArray());
             $this->cookie->createAlert('Nouveau parcours créé avec succès !');
 
             $this->redirect('admin');
@@ -42,19 +42,19 @@ class RouteController extends MainController
     {
         if (!empty($this->post->getPostArray())) {
 
-            ModelFactory::get('Route')->update($this->get->getGetVar('id'), $this->post->getPostArray());
+            ModelFactory::getModel('Route')->updateData($this->get->getGetVar('id'), $this->post->getPostArray());
             $this->cookie->createAlert('Modification réussie du parcours sélectionné !');
 
             $this->redirect('admin');
         }
-        $route = ModelFactory::get('Route')->read($this->get->getGetVar('id'));
+        $route = ModelFactory::getModel('Route')->readData($this->get->getGetVar('id'));
 
         return $this->render('admin/portfolio/updateRoute.twig', ['route' => $route]);
     }
 
     public function deleteMethod()
     {
-        ModelFactory::get('Route')->delete($this->get->getGetVar('id'));
+        ModelFactory::getModel('Route')->deleteData($this->get->getGetVar('id'));
         $this->cookie->createAlert('Parcours définitivement supprimé !');
 
         $this->redirect('admin');

@@ -22,7 +22,7 @@ class PhotoController extends MainController
      */
     public function defaultMethod()
     {
-        $allPhotos = ModelFactory::get('Photo')->list();
+        $allPhotos = ModelFactory::getModel('Photo')->listData();
 
         return $this->render('photo/photos.twig', [
             'allPhotos' => $allPhotos
@@ -37,9 +37,9 @@ class PhotoController extends MainController
      */
     public function readMethod()
     {
-        $photo      = ModelFactory::get('Photo')->read($this->get->getGetVar('id'));
-        $photoObj   = ModelFactory::get('Object')->read($photo['object_id']);
-        $photoConst = ModelFactory::get('Constellation')->read($photo['const_id']);
+        $photo      = ModelFactory::getModel('Photo')->readData($this->get->getGetVar('id'));
+        $photoObj   = ModelFactory::getModel('Object')->readData($photo['object_id']);
+        $photoConst = ModelFactory::getModel('Constellation')->readData($photo['const_id']);
 
         return $this->render('photo/readPhoto.twig', [
             'photo'      => $photo,

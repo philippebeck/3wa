@@ -22,7 +22,7 @@ class ArticleController extends MainController
      */
     public function defaultMethod()
     {
-        $allArticles = ModelFactory::get('Article')->list();
+        $allArticles = ModelFactory::getModel('Article')->listData();
 
         return $this->render('blog/blog.twig', ['allArticles' => $allArticles]);
     }
@@ -45,7 +45,7 @@ class ArticleController extends MainController
             $data['created_date'] = $this->post->getPostVar('date');
             $data['updated_date'] = $this->post->getPostVar('date');
 
-            ModelFactory::get('Article')->create($data);
+            ModelFactory::getModel('Article')->createData($data);
             $this->cookie->createAlert('Nouvel article créé avec succès !');
 
             $this->redirect('admin');
@@ -61,15 +61,15 @@ class ArticleController extends MainController
      */
     public function readMethod()
     {
-        $article    = ModelFactory::get('Article')->read($this->get->getGetVar('id'));
-        $comments   = ModelFactory::get('Comment')->list($this->get->getGetVar('id'), 'article_id');
+        $article    = ModelFactory::getModel('Article')->readData($this->get->getGetVar('id'));
+        $comments   = ModelFactory::getModel('Comment')->list($this->get->getGetVar('id'), 'article_id');
 
         if(!empty($comments)) {
 
             for ($i = 0; $i < count($comments); $i++) {
 
                 $userId = $comments[$i]['user_id'];
-                $user   = ModelFactory::get('User')->read($userId);
+                $user   = ModelFactory::getModel('User')->readData($userId);
 
                 $comments[$i]['user']   = $user['first_name'];
                 $comments[$i]['image']  = $user['image'];
@@ -103,19 +103,19 @@ class ArticleController extends MainController
             $data['content']      = $this->post->getPostVar('content');
             $data['updated_date'] = $this->post->getPostVar('date');
 
-            ModelFactory::get('Article')->update($this->get->getGetVar('id'), $data);
+            ModelFactory::getModel('Article')->updateData($this->get->getGetVar('id'), $data);
             $this->cookie->createAlert('Modification réussie de l\'article sélectionné !');
 
             $this->redirect('admin');
         }
-        $article = ModelFactory::get('Article')->read($this->get->getGetVar('id'));
+        $article = ModelFactory::getModel('Article')->readData($this->get->getGetVar('id'));
 
         return $this->render('admin/blog/updateArticle.twig', ['article' => $article]);
     }
 
     public function deleteMethod()
     {
-        ModelFactory::get('Article')->delete($this->get->getGetVar('id'));
+        ModelFactory::getModel('Article')->deleteData($this->get->getGetVar('id'));
         $this->cookie->createAlert('Article définitivement supprimé !');
 
         $this->redirect('admin');

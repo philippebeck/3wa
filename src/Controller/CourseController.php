@@ -24,7 +24,7 @@ class CourseController extends MainController
     {
         if (!empty($this->post->getPostArray())) {
 
-            ModelFactory::get('Course')->create($this->post->getPostArray());
+            ModelFactory::getModel('Course')->createData($this->post->getPostArray());
             $this->cookie->createAlert('Nouveau cours créé avec succès !');
 
             $this->redirect('admin');
@@ -42,19 +42,19 @@ class CourseController extends MainController
     {
         if (!empty($this->post->getPostArray())) {
 
-            ModelFactory::get('Course')->update($this->get->getGetVar('id'), $this->post->getPostArray());
+            ModelFactory::getModel('Course')->updateData($this->get->getGetVar('id'), $this->post->getPostArray());
             $this->cookie->createAlert('Modification réussie du cours sélectionné !');
 
             $this->redirect('admin');
         }
-        $course = ModelFactory::get('Course')->read($this->get->getGetVar('id'));
+        $course = ModelFactory::getModel('Course')->readData($this->get->getGetVar('id'));
 
         return $this->render('admin/portfolio/updateCourse.twig', ['course' => $course]);
     }
 
     public function deleteMethod()
     {
-        ModelFactory::get('Course')->delete($this->get->getGetVar('id'));
+        ModelFactory::getModel('Course')->deleteData($this->get->getGetVar('id'));
         $this->cookie->createAlert('Cours définitivement supprimé !');
 
         $this->redirect('admin');

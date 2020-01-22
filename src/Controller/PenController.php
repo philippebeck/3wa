@@ -24,7 +24,7 @@ class PenController extends MainController
     {
         if (!empty($this->post->getPostArray())) {
 
-            ModelFactory::get('Pen')->create($this->post->getPostArray());
+            ModelFactory::getModel('Pen')->createData($this->post->getPostArray());
             $this->cookie->createAlert('Nouveau pen créé avec succès !');
 
             $this->redirect('admin');
@@ -42,19 +42,19 @@ class PenController extends MainController
     {
         if (!empty($this->post->getPostArray())) {
 
-            ModelFactory::get('Pen')->update($this->get->getGetVar('id'), $this->post->getPostArray());
+            ModelFactory::getModel('Pen')->updateData($this->get->getGetVar('id'), $this->post->getPostArray());
             $this->cookie->createAlert('Modification réussie du pen sélectionné !');
 
             $this->redirect('admin');
         }
-        $pen = ModelFactory::get('Pen')->read($this->get->getGetVar('id'));
+        $pen = ModelFactory::getModel('Pen')->readData($this->get->getGetVar('id'));
 
         return $this->render('admin/portfolio/updatePen.twig', ['pen' => $pen]);
     }
 
     public function deleteMethod()
     {
-        ModelFactory::get('Pen')->delete($this->get->getGetVar('id'));
+        ModelFactory::getModel('Pen')->deleteData($this->get->getGetVar('id'));
         $this->cookie->createAlert('Pen réellement supprimé !');
 
         $this->redirect('admin');

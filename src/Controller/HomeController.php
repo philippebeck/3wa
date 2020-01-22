@@ -22,10 +22,10 @@ class HomeController extends MainController
      */
     public function defaultMethod()
     {
-        $allArticles  = ModelFactory::get('Article')->list();
-        $allProjects  = ModelFactory::get('Project')->list();
-        $allPhotos    = ModelFactory::get('Photo')  ->list();
-        $allMaps      = ModelFactory::get('Map')    ->list();
+        $allArticles  = ModelFactory::getModel('Article')->listData();
+        $allProjects  = ModelFactory::getModel('Project')->listData();
+        $allPhotos    = ModelFactory::getModel('Photo')  ->listData();
+        $allMaps      = ModelFactory::getModel('Map')    ->listData();
 
         unset($allProjects[0]);
 

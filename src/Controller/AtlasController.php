@@ -22,7 +22,7 @@ class AtlasController extends MainController
      */
     public function defaultMethod()
     {
-        $allAtlas = ModelFactory::get('Atlas')->list();
+        $allAtlas = ModelFactory::getModel('Atlas')->listData();
 
         return $this->render('atlas/atlas.twig', [
             'allAtlas' => $allAtlas
@@ -37,8 +37,8 @@ class AtlasController extends MainController
      */
     public function readMethod()
     {
-        $atlas      = ModelFactory::get('Atlas')->read($this->get->getGetVar('id'));
-        $atlasMaps  = ModelFactory::get('Map')->list($this->get->getGetVar('id'), 'atlas_id', 1);
+        $atlas      = ModelFactory::getModel('Atlas')->readData($this->get->getGetVar('id'));
+        $atlasMaps  = ModelFactory::getModel('Map')->list($this->get->getGetVar('id'), 'atlas_id', 1);
 
         return $this->render('atlas/readAtlas.twig', [
             'atlas'     => $atlas,

@@ -24,7 +24,7 @@ class UserController extends MainController
     {
         if (!empty($this->post->getPostArray())) {
 
-            $user = ModelFactory::get('User')->read($this->post->getPostVar('email'), 'email');
+            $user = ModelFactory::getModel('User')->readData($this->post->getPostVar('email'), 'email');
 
             if (password_verify($this->post->getPostVar('pass'), $user['pass'])) {
 
@@ -60,7 +60,7 @@ class UserController extends MainController
     public function createMethod()
     {
         if (!empty($this->post->getPostArray())) {
-            $user = ModelFactory::get('User')->read($this->post->getPostVar('email'), 'email');
+            $user = ModelFactory::getModel('User')->readData($this->post->getPostVar('email'), 'email');
 
             if (empty($user) == false) {
                 $this->cookie->createAlert('Il existe déjà un compte utilisateur avec cette adresse e-mail');
@@ -71,7 +71,7 @@ class UserController extends MainController
             $data['name']   = $this->post->getPostVar('name');
             $data['email']  = $this->post->getPostVar('email');
 
-            ModelFactory::get('User')->create($data);
+            ModelFactory::getModel('User')->createData($data);
             $this->cookie->createAlert('Nouvel utilisateur créé avec succès !');
 
             $this->redirect('home');
@@ -97,19 +97,19 @@ class UserController extends MainController
             $data['name']   = $this->post->getPostVar('name');
             $data['email']  = $this->post->getPostVar('email');
 
-            ModelFactory::get('User')->update($this->get->getGetVar('id'), $data);
+            ModelFactory::getModel('User')->updateData($this->get->getGetVar('id'), $data);
             $this->cookie->createAlert('Modification réussie de l\'utilisateur sélectionné !');
 
             $this->redirect('home');
         }
-        $user = ModelFactory::get('User')->read($this->get->getGetVar('id'));
+        $user = ModelFactory::getModel('User')->readData($this->get->getGetVar('id'));
 
         return $this->render('user/updateUser.twig', ['user' => $user]);
     }
 
     public function deleteMethod()
     {
-        ModelFactory::get('User')->delete($this->get->getGetVar('id'));
+        ModelFactory::getModel('User')->deleteData($this->get->getGetVar('id'));
         $this->cookie->createAlert('Utilisateur définitivement supprimé !');
 
         $this->redirect('home');

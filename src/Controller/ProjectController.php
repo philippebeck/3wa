@@ -31,7 +31,7 @@ class ProjectController extends MainController
             $data['year']         = $this->post->getPostVar('year');
             $data['description']  = $this->post->getPostVar('description');
 
-            ModelFactory::get('Project')->create($data);
+            ModelFactory::getModel('Project')->createData($data);
             $this->cookie->createAlert('Nouveau projet créé avec succès !');
 
             $this->redirect('admin');
@@ -58,19 +58,19 @@ class ProjectController extends MainController
       $data['year']         = $this->post->getPostVar('year');
       $data['description']  = $this->post->getPostVar('description');
 
-      ModelFactory::get('Project')->update($this->get->getGetVar('id'), $data);
+      ModelFactory::getModel('Project')->updateData($this->get->getGetVar('id'), $data);
       $this->cookie->createAlert('Modification réussie du projet sélectionné !');
 
       $this->redirect('admin');
     }
-    $project = ModelFactory::get('Project')->read($this->get->getGetVar('id'));
+    $project = ModelFactory::getModel('Project')->readData($this->get->getGetVar('id'));
 
     return $this->render('admin/portfolio/updateProject.twig', ['project' => $project]);
   }
 
     public function deleteMethod()
   {
-    ModelFactory::get('Project')->delete($this->get->getGetVar('id'));
+    ModelFactory::getModel('Project')->deleteData($this->get->getGetVar('id'));
     $this->cookie->createAlert('Projet réellement supprimé !');
 
     $this->redirect('admin');

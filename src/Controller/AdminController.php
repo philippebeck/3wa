@@ -24,14 +24,14 @@ class AdminController extends MainController
     {
         if ($this->session->isLogged()) {
 
-            $allArticles = ModelFactory::get('Article')->list();
-            $allComments = ModelFactory::get('Comment')->list();
-            $allUsers    = ModelFactory::get('User')   ->list();
+            $allArticles = ModelFactory::getModel('Article')->listData();
+            $allComments = ModelFactory::getModel('Comment')->listData();
+            $allUsers    = ModelFactory::getModel('User')   ->listData();
 
-            $allProjects = ModelFactory::get('Project')->list();
-            $allPens     = ModelFactory::get('Pen')    ->list();
-            $allRoutes   = ModelFactory::get('Route')  ->list();
-            $allCourses  = ModelFactory::get('Course') ->list();
+            $allProjects = ModelFactory::getModel('Project')->listData();
+            $allPens     = ModelFactory::getModel('Pen')    ->listData();
+            $allRoutes   = ModelFactory::getModel('Route')  ->listData();
+            $allCourses  = ModelFactory::getModel('Course') ->listData();
 
             return $this->render('admin/admin.twig', [
                 'allArticles'       => $allArticles,

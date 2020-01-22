@@ -22,10 +22,10 @@ class PortfolioController extends MainController
      */
     public function defaultMethod()
   {
-    $allProjects = ModelFactory::get('Project')->list();
-    $allPens     = ModelFactory::get('Pen')    ->list();
-    $allRoutes   = ModelFactory::get('Route')  ->list();
-    $allCourses  = ModelFactory::get('Course') ->list();
+    $allProjects = ModelFactory::getModel('Project')->listData();
+    $allPens     = ModelFactory::getModel('Pen')    ->listData();
+    $allRoutes   = ModelFactory::getModel('Route')  ->listData();
+    $allCourses  = ModelFactory::getModel('Course') ->listData();
 
     return $this->render('portfolio/portfolio.twig', [
       'allProjects' => $allProjects,
