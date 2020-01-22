@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/philippebeck/philippebeck#readme",
   "dependencies": {
-    "font-awesome": "4.x",
-    "jim-js": "0.x",
-    "sam.scss": "0.x"
+    "font-awesome": "^4.7.0",
+    "jim-js": "^0.2.3",
+    "sam.scss": "^0.2.5"
   }
 }
