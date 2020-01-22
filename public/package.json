@@ -1,7 +1,6 @@
 {
   "name": "philippebeck",
-  "version": "0.3.1",
-  "description": "Pjs, Pam, Jim, Sam, me & myself (portfolio, creations, blog, passions, galleries, etc...) ",
+  "description": "Web Development - Open-source Technologies - HTML, CSS, JavaScript, PHP, SQL - 3W Academy, OpenClassrooms, Free Code Camp, SoloLearn",
   "main": "index.php",
   "repository": {
     "type": "git",
