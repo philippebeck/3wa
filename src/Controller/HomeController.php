@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use Pam\Controller\Controller;
+use Pam\Controller\MainController;
 use Pam\Model\ModelFactory;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -12,7 +12,7 @@ use Twig\Error\SyntaxError;
  * Class HomeController
  * @package App\Controller
  */
-class HomeController extends Controller
+class HomeController extends MainController
 {
     /**
      * @return string

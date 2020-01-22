@@ -2,14 +2,14 @@
 
 namespace App\Controller;
 
-use Pam\Controller\Controller;
+use Pam\Controller\MainController;
 use Pam\Model\ModelFactory;
 
 /**
  * Class CommentController
  * @package App\Controller
  */
-class CommentController extends Controller
+class CommentController extends MainController
 {
     public function createAction()
     {

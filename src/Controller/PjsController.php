@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use Pam\Controller\Controller;
+use Pam\Controller\MainController;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
@@ -11,7 +11,7 @@ use Twig\Error\SyntaxError;
  * Class PjsController
  * @package App\Controller
  */
-class PjsController extends Controller
+class PjsController extends MainController
 {
     /**
      * @return string
