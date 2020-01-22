@@ -1,18 +1,16 @@
 <?php
 
-use Pam\Controller\FrontController;
+use Pam\Router;
 use Tracy\Debugger;
 
 require_once '../vendor/autoload.php';
+require_once '../config/parameters.php';
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-$frontController = new FrontController();
-
 Debugger::enable();
-// print_r($_SESSION);
-// var_dump($frontController);
 
-$frontController->run();
+$router = new Router();
+$router->run();
