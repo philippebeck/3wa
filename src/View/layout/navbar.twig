@@ -87,12 +87,12 @@
     {% if (isLogged()) %}
 
     <li>
-      <p>Bonjour {{ userName() }} !</p>
+      <p>Bonjour {{ getUserVar('name') }} !</p>
     </li>
 
     <li>
-      <a href="{{ url('user!update', {'id': userId()}) }}" title="Modifier mon profil">
-        <img class="solid-round-sm hover-full-sm visible" src="img/user/{{ userImage() }}" alt="Photo de profil de l'utilisateur">
+      <a href="{{ url('user!update', {'id': getUserVar('id')}) }}" title="Modifier mon profil">
+        <img class="solid-round-sm hover-full-sm visible" src="img/user/{{ getUserVar('image') }}" alt="Photo de profil de l'utilisateur">
       </a>
     </li>
 
@@ -114,7 +114,7 @@
 
     <!-- Login access -->
     <li>
-      <a href="{{ url('user!login') }}" title="Connexion">
+      <a href="{{ url('user') }}" title="Connexion">
         <i class="fa fa-sign-in fa-fw" aria-hidden="true"></i>
       </a>
     </li>

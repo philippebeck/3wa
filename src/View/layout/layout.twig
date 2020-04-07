@@ -72,7 +72,7 @@
     <!-- Alert Message -->
     {% if (hasAlert()) %}
 
-    <p id="alert" class="solid p-sm center">{{ readAlert() }}</p>
+    <p id="alert" class="solid p-sm center {{ getAlertType() }}">{{ getAlertMessage() }}</p>
 
     {% endif %}
 
