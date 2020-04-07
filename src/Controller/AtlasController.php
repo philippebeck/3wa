@@ -37,8 +37,8 @@ class AtlasController extends MainController
      */
     public function readMethod()
     {
-        $atlas      = ModelFactory::getModel('Atlas')->readData($this->get->getGetVar('id'));
-        $atlasMaps  = ModelFactory::getModel('Map')->list($this->get->getGetVar('id'), 'atlas_id', 1);
+        $atlas      = ModelFactory::getModel('Atlas')->readData($this->globals->getGet()->getGetVar('id'));
+        $atlasMaps  = ModelFactory::getModel('Map')->list($this->globals->getGet()->getGetVar('id'), 'atlas_id', 1);
 
         return $this->render('atlas/readAtlas.twig', [
             'atlas'     => $atlas,

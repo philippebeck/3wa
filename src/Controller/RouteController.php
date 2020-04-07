@@ -22,10 +22,10 @@ class RouteController extends MainController
      */
     public function createMethod()
     {
-        if (!empty($this->post->getPostArray())) {
+        if (!empty($this->globals->getPost()->getPostArray())) {
 
-            ModelFactory::getModel('Route')->createData($this->post->getPostArray());
-            $this->cookie->createAlert('Nouveau parcours créé avec succès !');
+            ModelFactory::getModel('Route')->createData($this->globals->getPost()->getPostArray());
+            $this->globals->getSession()->createAlert('Nouveau parcours créé avec succès !', 'valid');
 
             $this->redirect('admin');
         }
@@ -40,22 +40,22 @@ class RouteController extends MainController
      */
     public function updateMethod()
     {
-        if (!empty($this->post->getPostArray())) {
+        if (!empty($this->globals->getPost()->getPostArray())) {
 
-            ModelFactory::getModel('Route')->updateData($this->get->getGetVar('id'), $this->post->getPostArray());
-            $this->cookie->createAlert('Modification réussie du parcours sélectionné !');
+            ModelFactory::getModel('Route')->updateData($this->globals->getGet()->getGetVar('id'), $this->globals->getPost()->getPostArray());
+            $this->globals->getSession()->createAlert('Modification réussie du parcours sélectionné !', 'info');
 
             $this->redirect('admin');
         }
-        $route = ModelFactory::getModel('Route')->readData($this->get->getGetVar('id'));
+        $route = ModelFactory::getModel('Route')->readData($this->globals->getGet()->getGetVar('id'));
 
         return $this->render('admin/portfolio/updateRoute.twig', ['route' => $route]);
     }
 
     public function deleteMethod()
     {
-        ModelFactory::getModel('Route')->deleteData($this->get->getGetVar('id'));
-        $this->cookie->createAlert('Parcours définitivement supprimé !');
+        ModelFactory::getModel('Route')->deleteData($this->globals->getGet()->getGetVar('id'));
+        $this->globals->getSession()->createAlert('Parcours définitivement supprimé !', 'delete');
 
         $this->redirect('admin');
     }

@@ -37,7 +37,7 @@ class PhotoController extends MainController
      */
     public function readMethod()
     {
-        $photo      = ModelFactory::getModel('Photo')->readData($this->get->getGetVar('id'));
+        $photo      = ModelFactory::getModel('Photo')->readData($this->globals->getGet()->getGetVar('id'));
         $photoObj   = ModelFactory::getModel('Object')->readData($photo['object_id']);
         $photoConst = ModelFactory::getModel('Constellation')->readData($photo['const_id']);
 

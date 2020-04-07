@@ -35,18 +35,18 @@ class ArticleController extends MainController
      */
     public function createMethod()
     {
-        if (!empty($this->post->getPostArray())) {
+        if (!empty($this->globals->getPost()->getPostArray())) {
 
-            $data['image'] = $this->files->uploadFile('img/blog');
+            $data['image'] = $this->globals->getFiles()->uploadFile('img/blog');
 
-            $data['title']        = $this->post->getPostVar('title');
-            $data['link']         = $this->post->getPostVar('link');
-            $data['content']      = $this->post->getPostVar('content');
-            $data['created_date'] = $this->post->getPostVar('date');
-            $data['updated_date'] = $this->post->getPostVar('date');
+            $data['title']        = $this->globals->getPost()->getPostVar('title');
+            $data['link']         = $this->globals->getPost()->getPostVar('link');
+            $data['content']      = $this->globals->getPost()->getPostVar('content');
+            $data['created_date'] = $this->globals->getPost()->getPostVar('date');
+            $data['updated_date'] = $this->globals->getPost()->getPostVar('date');
 
             ModelFactory::getModel('Article')->createData($data);
-            $this->cookie->createAlert('Nouvel article créé avec succès !');
+            $this->globals->getSession()->createAlert('Nouvel article créé avec succès !', 'valid');
 
             $this->redirect('admin');
         }
@@ -61,8 +61,8 @@ class ArticleController extends MainController
      */
     public function readMethod()
     {
-        $article    = ModelFactory::getModel('Article')->readData($this->get->getGetVar('id'));
-        $comments   = ModelFactory::getModel('Comment')->list($this->get->getGetVar('id'), 'article_id');
+        $article    = ModelFactory::getModel('Article')->readData($this->globals->getGet()->getGetVar('id'));
+        $comments   = ModelFactory::getModel('Comment')->list($this->globals->getGet()->getGetVar('id'), 'article_id');
 
         if(!empty($comments)) {
 
@@ -75,7 +75,7 @@ class ArticleController extends MainController
                 $comments[$i]['image']  = $user['image'];
             }
         } else {
-            $this->cookie->createAlert('Soyez le premier à commenter cet article !');
+            $this->globals->getSession()->createAlert('Soyez le premier à commenter cet article !', 'valid');
         }
 
         return $this->render('blog/readArticle.twig', [
@@ -92,31 +92,31 @@ class ArticleController extends MainController
      */
     public function updateMethod()
     {
-        if (!empty($this->post->getPostArray())) {
+        if (!empty($this->globals->getPost()->getPostArray())) {
 
-            if (!empty($this->files->getFileVar('name'))) {
-                $data['image'] = $this->files->uploadFile('img/blog');
+            if (!empty($this->globals->getFiles()->getFileVar('name'))) {
+                $data['image'] = $this->globals->getFiles()->uploadFile('img/blog');
             }
 
-            $data['title']        = $this->post->getPostVar('title');
-            $data['link']         = $this->post->getPostVar('link');
-            $data['content']      = $this->post->getPostVar('content');
-            $data['updated_date'] = $this->post->getPostVar('date');
+            $data['title']        = $this->globals->getPost()->getPostVar('title');
+            $data['link']         = $this->globals->getPost()->getPostVar('link');
+            $data['content']      = $this->globals->getPost()->getPostVar('content');
+            $data['updated_date'] = $this->globals->getPost()->getPostVar('date');
 
-            ModelFactory::getModel('Article')->updateData($this->get->getGetVar('id'), $data);
-            $this->cookie->createAlert('Modification réussie de l\'article sélectionné !');
+            ModelFactory::getModel('Article')->updateData($this->globals->getGet()->getGetVar('id'), $data);
+            $this->globals->getSession()->createAlert('Modification réussie de l\'article sélectionné !', 'info');
 
             $this->redirect('admin');
         }
-        $article = ModelFactory::getModel('Article')->readData($this->get->getGetVar('id'));
+        $article = ModelFactory::getModel('Article')->readData($this->globals->getGet()->getGetVar('id'));
 
         return $this->render('admin/blog/updateArticle.twig', ['article' => $article]);
     }
 
     public function deleteMethod()
     {
-        ModelFactory::getModel('Article')->deleteData($this->get->getGetVar('id'));
-        $this->cookie->createAlert('Article définitivement supprimé !');
+        ModelFactory::getModel('Article')->deleteData($this->globals->getGet()->getGetVar('id'));
+        $this->globals->getSession()->createAlert('Article définitivement supprimé !', 'delete');
 
         $this->redirect('admin');
     }

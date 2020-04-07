@@ -30,7 +30,7 @@ class PjsController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function pamAction()
+    public function pamMethod()
   {
     return $this->render('pjs/pam.twig');
   }
@@ -41,7 +41,7 @@ class PjsController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function jimAction()
+    public function jimMethod()
   {
     return $this->render('pjs/jim.twig');
   }
@@ -52,7 +52,7 @@ class PjsController extends MainController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function samAction()
+    public function samMethod()
   {
     return $this->render('pjs/sam.twig');
   }

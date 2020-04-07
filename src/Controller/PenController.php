@@ -22,10 +22,10 @@ class PenController extends MainController
      */
     public function createMethod()
     {
-        if (!empty($this->post->getPostArray())) {
+        if (!empty($this->globals->getPost()->getPostArray())) {
 
-            ModelFactory::getModel('Pen')->createData($this->post->getPostArray());
-            $this->cookie->createAlert('Nouveau pen créé avec succès !');
+            ModelFactory::getModel('Pen')->createData($this->globals->getPost()->getPostArray());
+            $this->globals->getSession()->createAlert('Nouveau pen créé avec succès !', 'valid');
 
             $this->redirect('admin');
         }
@@ -40,22 +40,22 @@ class PenController extends MainController
      */
     public function updateMethod()
     {
-        if (!empty($this->post->getPostArray())) {
+        if (!empty($this->globals->getPost()->getPostArray())) {
 
-            ModelFactory::getModel('Pen')->updateData($this->get->getGetVar('id'), $this->post->getPostArray());
-            $this->cookie->createAlert('Modification réussie du pen sélectionné !');
+            ModelFactory::getModel('Pen')->updateData($this->globals->getGet()->getGetVar('id'), $this->globals->getPost()->getPostArray());
+            $this->globals->getSession()->createAlert('Modification réussie du pen sélectionné !', 'info');
 
             $this->redirect('admin');
         }
-        $pen = ModelFactory::getModel('Pen')->readData($this->get->getGetVar('id'));
+        $pen = ModelFactory::getModel('Pen')->readData($this->globals->getGet()->getGetVar('id'));
 
         return $this->render('admin/portfolio/updatePen.twig', ['pen' => $pen]);
     }
 
     public function deleteMethod()
     {
-        ModelFactory::getModel('Pen')->deleteData($this->get->getGetVar('id'));
-        $this->cookie->createAlert('Pen réellement supprimé !');
+        ModelFactory::getModel('Pen')->deleteData($this->globals->getGet()->getGetVar('id'));
+        $this->globals->getSession()->createAlert('Pen réellement supprimé !', 'delete');
 
         $this->redirect('admin');
     }

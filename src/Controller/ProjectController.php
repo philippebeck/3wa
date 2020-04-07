@@ -22,17 +22,17 @@ class ProjectController extends MainController
      */
     public function createMethod()
     {
-        if (!empty($this->post->getPostArray())) {
+        if (!empty($this->globals->getPost()->getPostArray())) {
 
-            $data['image'] = $this->files->uploadFile('img/portfolio');
+            $data['image'] = $this->globals->getFiles()->uploadFile('img/portfolio');
 
-            $data['name']         = $this->post->getPostVar('name');
-            $data['link']         = $this->post->getPostVar('link');
-            $data['year']         = $this->post->getPostVar('year');
-            $data['description']  = $this->post->getPostVar('description');
+            $data['name']         = $this->globals->getPost()->getPostVar('name');
+            $data['link']         = $this->globals->getPost()->getPostVar('link');
+            $data['year']         = $this->globals->getPost()->getPostVar('year');
+            $data['description']  = $this->globals->getPost()->getPostVar('description');
 
             ModelFactory::getModel('Project')->createData($data);
-            $this->cookie->createAlert('Nouveau projet créé avec succès !');
+            $this->globals->getSession()->createAlert('Nouveau projet créé avec succès !', 'valid');
 
             $this->redirect('admin');
         }
@@ -47,31 +47,31 @@ class ProjectController extends MainController
      */
     public function updateMethod()
   {
-    if (!empty($this->post->getPostArray())) {
+    if (!empty($this->globals->getPost()->getPostArray())) {
 
-      if (!empty($this->files->getFileVar('name'))) {
-        $data['image'] = $this->files->uploadFile('img/portfolio');
+      if (!empty($this->globals->getFiles()->getFileVar('name'))) {
+        $data['image'] = $this->globals->getFiles()->uploadFile('img/portfolio');
       }
 
-      $data['name']         = $this->post->getPostVar('name');
-      $data['link']         = $this->post->getPostVar('link');
-      $data['year']         = $this->post->getPostVar('year');
-      $data['description']  = $this->post->getPostVar('description');
+      $data['name']         = $this->globals->getPost()->getPostVar('name');
+      $data['link']         = $this->globals->getPost()->getPostVar('link');
+      $data['year']         = $this->globals->getPost()->getPostVar('year');
+      $data['description']  = $this->globals->getPost()->getPostVar('description');
 
-      ModelFactory::getModel('Project')->updateData($this->get->getGetVar('id'), $data);
-      $this->cookie->createAlert('Modification réussie du projet sélectionné !');
+      ModelFactory::getModel('Project')->updateData($this->globals->getGet()->getGetVar('id'), $data);
+      $this->globals->getSession()->createAlert('Modification réussie du projet sélectionné !', 'info');
 
       $this->redirect('admin');
     }
-    $project = ModelFactory::getModel('Project')->readData($this->get->getGetVar('id'));
+    $project = ModelFactory::getModel('Project')->readData($this->globals->getGet()->getGetVar('id'));
 
     return $this->render('admin/portfolio/updateProject.twig', ['project' => $project]);
   }
 
     public function deleteMethod()
   {
-    ModelFactory::getModel('Project')->deleteData($this->get->getGetVar('id'));
-    $this->cookie->createAlert('Projet réellement supprimé !');
+    ModelFactory::getModel('Project')->deleteData($this->globals->getGet()->getGetVar('id'));
+    $this->globals->getSession()->createAlert('Projet réellement supprimé !', 'delete');
 
     $this->redirect('admin');
   }

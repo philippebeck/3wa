@@ -22,7 +22,7 @@ class AdminController extends MainController
      */
     public function defaultMethod()
     {
-        if ($this->session->isLogged()) {
+        if ($this->globals->getSession()->isLogged()) {
 
             $allArticles = ModelFactory::getModel('Article')->listData();
             $allComments = ModelFactory::getModel('Comment')->listData();
@@ -43,7 +43,7 @@ class AdminController extends MainController
                 'allCourses'        => $allCourses
             ]);
         }
-        $this->cookie->createAlert('Vous devez être connecté pour accéder à l\'administration');
+        $this->globals->getSession()->createAlert('Vous devez être connecté pour accéder à l\'administration', 'warning');
 
         $this->redirect('user!login');
     }
