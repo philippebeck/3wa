@@ -1,8 +1,5 @@
 # Philippe Beck Website
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f95d679b497d4bb59e0e5068225f3cb9)](https://www.codacy.com/app/philippebeck/philippebeck?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=philippebeck/philippebeck&amp;utm_campaign=Badge_Grade)
-[![Maintainability](https://api.codeclimate.com/v1/badges/b465b933b803ba72cb2e/maintainability)](https://codeclimate.com/github/philippebeck/philippebeck/maintainability)
-
 ## Overview
 
 This was the main project of my study [@3WAcademy](https://3wa.fr).
@@ -50,7 +47,7 @@ For my main project, I chose to build my personal website, with 5 main categorie
 -   Univers, a section showing an image gallery of Hubble, with a lot of things about the main object of the image, such as basic information, images, official databases & wallpapers;  
 -   Atlas, another section on astronomy, presenting a table of rare & ancient atlases, in color & covering a millennium; opening to the celestial card galleries & to Wikipedia articles.  
 
-[![CSS Code Size](https://img.shields.io/github/languages/code-size/philippebeck/philippebeck.svg?label=Code+Size)](https://github.com/philippebeck/philippebeck/tree/master)
+[![Code Size](https://img.shields.io/github/languages/code-size/philippebeck/philippebeck.svg?label=Code+Size)](https://github.com/philippebeck/philippebeck/tree/master)
 
 ---
 
